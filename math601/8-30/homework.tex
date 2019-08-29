@@ -114,4 +114,71 @@ We claim that this $g$ satisfies the desired properties:
 Therefore, $f$ is indeed an isomorphism in the category of rings.
 \end{proof}
 
+\begin{exer}
+  Let $A$ and $B$ be two objects in a category $\mathbf{C}$.
+  An object, $P$, of $\mathbf{C}$ together with two morphisms, $p_A \in \Hom_{\mathbf{C}}(P, A), p_B \in \Hom_{\mathbf{C}}(P, B)$, is a product of $A$ and $B$ if the following property holds:
+  Given any object $C$ of $\mathbf{C}$ and any two morphisms, $f \in \Hom_{\mathbf{C}}(C, A)$ and $g \in \Hom_{\mathbf{C}}(C, B)$, then there is a unique element, $h \in \Hom_{\mathbf{C}}(C, P)$ such that $f = p_A \circ h$ and $g = p_B \circ h$.
+\end{exer}
+
+\begin{proof}
+  \begin{figure}
+    \includegraphics[width=\linewidth]{maps.jpeg}
+      \caption{Diagram of maps for the second problem}
+    \label{fig:maps}
+  \end{figure}
+
+  First, we will consider the case when $C = P, f = p_A, g = p_B$.
+
+  Then there exists a unique map $h' \in \Hom_{\mathbf{C}}(C, P') = \Hom_{\mathbf{C}}(P, P')$ such that $f = p_A' \circ h'$.
+  In other words, $p_A = p_A' \circ h'$.
+
+  Similarly, we will consider the case when $C = P', f = p_A', g = p_B'$.
+  Then there exists a unique map $h \in \Hom_{\mathbf{C}}(C, P) = \Hom_{\mathbf{C}}(P', P)$ such that $f = p_A \circ h$.
+  In other words, $p_A' = p_A \circ h$.
+
+  \begin{align*}
+    p_A
+      &= p_A' \circ h' \\
+      &= (p_A \circ h) \circ h' \\
+      &= p_A \circ (h \circ h')
+  \end{align*}
+
+  and 
+
+  \begin{align*}
+    p_A'
+      &= p_A \circ h \\
+      &= (p_A' \circ h') \circ h \\
+      &= p_A' \circ (h' \circ h).
+  \end{align*}
+
+  Again, we will consider the case when $C = P, f = p_A, g = p_B$.
+  Then there must exist a unique map $h'' \in \Hom_{\mathbf{C}}(P, P)$ such that $p_A = p_A \circ h''$.
+
+  \begin{itemize}
+    \item
+      $p_A = p_A \circ (h \circ h')$.
+    \item
+      $p_A = p_A \circ \Id_P$.
+  \end{itemize}
+
+  Therefore, $h \circ h' = \Id_P$ because of the uniqueness of $h''$.
+
+  Similarly, we will again consider the case when $C = P', f = p_A', g = p_B'$.
+  Then there must exist a unique map $h''' \in \Hom_{\mathbf{C}}(P', P')$ such that $p_A' = p_A' \circ h'''$.
+
+  \begin{itemize}
+    \item
+      $p_A' = p_A' \circ (h' \circ h)$.
+    \item
+      $p_A' = p_A' \circ \Id_{P'}$.
+  \end{itemize}
+
+  Therefore, $h' \circ h = \Id_{P'}$ because of the uniqueness of $h'''$.
+
+  We showed that $h \in \Hom_{\mathbf{C}}(P', P)$ and $h' \in \Hom_{\mathbf{C}}(P, P')$ satisfy $h \circ h' = \Id_P$ and $h' \circ h = \Id_{P'}$.
+  In addition, we showed that $p_A = p_A' \circ h'$ and $p_B = p_B' \circ h'$.
+  Therefore, $h'$ is the desired isomorphism.
+\end{proof}
+
 \end{document}
