@@ -1,5 +1,7 @@
 \documentclass[12pt, psamsfonts]{amsart}
 
+\usepackage{bbm}
+
 %-------Packages---------
 \usepackage{amssymb,amsfonts}
 \usepackage[all,arc]{xy}
@@ -50,5 +52,45 @@
 \title{Math 611 Problem Set 1 (Due 9/4)}
 \author{Hidenori Shinohara}
 \maketitle
+
+\begin{exer}{(Exercise 4, Chapter 0)}
+  A deformation retraction in the weak sense of a space $X$ to a subspace $A$ is a homotopy $f_t: X \rightarrow X$ such that $f_0 = \Id, f_1(X) \subset A$, and $f_t(A) \subset A$ for all $t$.
+  Show that if $X$ deformation retracts to $A$ in this weak sense, then the inclusion $A \rightarrow X$ is a homotopy equivalence.
+\end{exer}
+
+\begin{proof}
+  Let $i: A \rightarrow X$ denote the inclusion.
+  Let $F: X \times I \rightarrow X$ denote the associated map $(x, t) \rightarrow f_t(x)$.
+  Then $F$ is a continuous function by the definition of a homotopy.
+
+  Let $f: X \rightarrow A$ be defined by $f(x) = F(x, 1) = f_1(x)$.
+  This definition makes sense because $f_1(X) \subset A$.
+  We claim that $f_1 \circ i \simeq \Id_A$ and $i \circ f_1 \simeq \Id_X$.
+
+  Consider $G: A \times I \rightarrow A$ such that $G(a, t) = F(a, t)$ for all $(a, t) \in A \times I$.
+  This definition makes sense because $f_t(A) \subset A$ for all $t$.
+
+  Then $G$ is a homotopy in $A$ between $f \circ i$ and $\Id_A$ because:
+  \begin{itemize}
+    \item
+      $G$ is a restriction of $F$, so $G$ is continuous.
+    \item
+      $\forall a \in A, G(a, 0) = F(a, 0) = f_0(a) = \Id_X(a) = \Id_A(a)$.
+    \item
+      $\forall a \in A, G(a, 1) = F(a, 1) = f(a) = f(i(a)) = (f \circ i)(a)$.
+  \end{itemize}
+  Therefore, $f \circ i \simeq \Id_A$.
+
+  $F$ is a homotopy between $f_0$ and $f_1$.
+  \begin{itemize}
+    \item
+      We are given that $f_0 = \Id_X$.
+    \item
+      For any $x \in X$, $(i \circ f)(x) = i(f(x)) = f(x) = f_1(x)$, so $i \circ f = f_1$.
+  \end{itemize}
+  Therefore, $F$ is a homotopy between $\Id_X$ and $i \circ F$, so $i \circ f \simeq \Id_X$.
+
+  In conclusion, $i$ is indeed a homotopy equivalence.
+\end{proof}
 
 \end{document}
