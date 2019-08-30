@@ -127,56 +127,50 @@ Therefore, $f$ is indeed an isomorphism in the category of rings.
 
   First, we will consider the case when $C = P, f = p_A, g = p_B$.
 
-  Then there exists a unique map $h' \in \Hom_{\mathbf{C}}(C, P') = \Hom_{\mathbf{C}}(P, P')$ such that $f = p_A' \circ h'$.
-  In other words, $p_A = p_A' \circ h'$.
+  \begin{itemize}
+    \item
+      There exists a unique map $h_1 \in \Hom_{\mathbf{C}}(C, P) = \Hom_{\mathbf{C}}(P, P)$ such that $f = p_A \circ h_1$.
+      In other words, $p_A = p_A \circ h_1$.
+      By the uniqueness of $h_1$ and the equality $p_A = p_A \circ \Id_P$, we can conclude that $h_1 = \Id_P$.
+    \item
+      There exists a unique map $h_1' \in \Hom_{\mathbf{C}}(C, P') = \Hom_{\mathbf{C}}(P, P')$ such that $f = p_A' \circ h_1'$ and $g = p_B' \circ h_1'$
+      In other words, $p_A = p_A' \circ h_1'$ and $p_B = p_B' \circ h_1'$.
+  \end{itemize}
+
 
   Similarly, we will consider the case when $C = P', f = p_A', g = p_B'$.
-  Then there exists a unique map $h \in \Hom_{\mathbf{C}}(C, P) = \Hom_{\mathbf{C}}(P', P)$ such that $f = p_A \circ h$.
-  In other words, $p_A' = p_A \circ h$.
+
+  \begin{itemize}
+    \item
+      There exists a unique map $h_2 \in \Hom_{\mathbf{C}}(C, P) = \Hom_{\mathbf{C}}(P', P)$ such that $f = p_A \circ h_2$.
+      In other words, $p_A' = p_A \circ h_2$.
+    \item
+      There exists a unique map $h_2' \in \Hom_{\mathbf{C}}(C, P') = \Hom_{\mathbf{C}}(P', P')$ such that $f = p_A' \circ h_2'$.
+      In other words, $p_A' = p_A' \circ h_2'$.
+      By the uniqueness of $h_2'$ and the equality $p_A' = p_A' \circ \Id_{P'}$, we can conclude that $h_2' = \Id_{P'}$.
+  \end{itemize}
 
   \begin{align*}
     p_A
-      &= p_A' \circ h' \\
-      &= (p_A \circ h) \circ h' \\
-      &= p_A \circ (h \circ h')
+      &= p_A' \circ h_1' \\
+      &= (p_A \circ h_2) \circ h_1' \\
+      &= p_A \circ (h_2 \circ h_1')
   \end{align*}
 
-  and 
+  We showed earlier that $\Id_P$ is the only map that satisfies $p_A = p_A \circ \Id_P$, so $h_2 \circ h_1' = \Id_P$.
 
   \begin{align*}
     p_A'
-      &= p_A \circ h \\
-      &= (p_A' \circ h') \circ h \\
-      &= p_A' \circ (h' \circ h).
+      &= p_A \circ h_2 \\
+      &= (p_A' \circ h_1') \circ h_2 \\
+      &= p_A' \circ (h_1' \circ h_2).
   \end{align*}
 
-  Again, we will consider the case when $C = P, f = p_A, g = p_B$.
-  Then there must exist a unique map $h'' \in \Hom_{\mathbf{C}}(P, P)$ such that $p_A = p_A \circ h''$.
+  Similarly, $\Id_{P'}$ is the only map such that $p_A' = p_A' \circ \Id_{P'}$, so $h_1' \circ h_2 = \Id_{P'}$.
 
-  \begin{itemize}
-    \item
-      $p_A = p_A \circ (h \circ h')$.
-    \item
-      $p_A = p_A \circ \Id_P$.
-  \end{itemize}
-
-  Therefore, $h \circ h' = \Id_P$ because of the uniqueness of $h''$.
-
-  Similarly, we will again consider the case when $C = P', f = p_A', g = p_B'$.
-  Then there must exist a unique map $h''' \in \Hom_{\mathbf{C}}(P', P')$ such that $p_A' = p_A' \circ h'''$.
-
-  \begin{itemize}
-    \item
-      $p_A' = p_A' \circ (h' \circ h)$.
-    \item
-      $p_A' = p_A' \circ \Id_{P'}$.
-  \end{itemize}
-
-  Therefore, $h' \circ h = \Id_{P'}$ because of the uniqueness of $h'''$.
-
-  We showed that $h \in \Hom_{\mathbf{C}}(P', P)$ and $h' \in \Hom_{\mathbf{C}}(P, P')$ satisfy $h \circ h' = \Id_P$ and $h' \circ h = \Id_{P'}$.
-  In addition, we showed that $p_A = p_A' \circ h'$ and $p_B = p_B' \circ h'$.
-  Therefore, $h'$ is the desired isomorphism.
+  We showed that $h_1' \in \Hom_{\mathbf{C}}(P, P')$ and $h_2 \in \Hom_{\mathbf{C}}(P,' P)$ satisfy $h_2 \circ h_1' = \Id_P$ and $h_1' \circ h_2 = \Id_{P'}$.
+  In addition, we showed that $p_A = p_A' \circ h_1'$ and $p_B = p_B' \circ h_1'$.
+  Therefore, $h_1'$ is the desired isomorphism.
 \end{proof}
 
 \end{document}
