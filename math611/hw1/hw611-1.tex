@@ -93,4 +93,39 @@
   In conclusion, $i$ is indeed a homotopy equivalence.
 \end{proof}
 
+\begin{exer}{(Exercise 9, Chapter 0)}
+  Show that a retract of a contractible space is contractible.
+\end{exer}
+
+\begin{proof}
+  Let $X$ be a contractible space.
+  Then $\Id_X$ is homotopic to a constant map.
+  This implies the existence of a fixed point $p \in X$ and a continuous function $F: X \times I \rightarrow X$ such that
+  \begin{itemize}
+    \item
+      $\forall x \in X, F(x, 0) = x$,
+    \item
+      $\forall x \in X, F(x, 1) = p$.
+  \end{itemize}
+  Let $A \subset X$ be a retract of $X$, and let $r: X \rightarrow A$ denote a retraction.
+  In other words, $r(X) = A$ and $r \mid_A = \Id_A$.
+
+  Let $G: A \times I \rightarrow A$ be the restriction of $r \circ F$ to $A \times I$.
+  This makes sense because $F$ maps $A \times I$ into $X$, and $r$ maps $X$ into $A$.
+  We claim that $G$ is a homotopy between $\Id_A$ and the constant map $e_{r(p)}$ such that $e_{r(p)}(a) = r(p)$ for all $a \in A$.
+
+  \begin{itemize}
+    \item
+      $r \circ F$ is continuous since it is a composition of continuous functions.
+      $G$ is a restriction of a continuous function, so $G$ is continuous.
+    \item
+      $G(a, 0) = r(F(a, 0)) = r(a) = a = \Id_A(a)$.
+    \item
+      $G(a, 1) = r(F(a, 1)) = r(p) = e_{r(p)}(a)$.
+  \end{itemize}
+
+  Therefore, $G$ is indeed a homotopy between $\Id_A$ and the constant map at $r(p)$.
+  Since the identity map is homotopic to a constant map, $A$ is contractible.
+\end{proof}
+
 \end{document}
