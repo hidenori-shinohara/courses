@@ -4,6 +4,8 @@
 
 %-------Packages---------
 \usepackage{amssymb,amsfonts}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
 \usepackage[all,arc]{xy}
 \usepackage{enumerate}
 \usepackage{mathrsfs}
@@ -126,6 +128,62 @@
 
   Therefore, $G$ is indeed a homotopy between $\Id_A$ and the constant map at $r(p)$.
   Since the identity map is homotopic to a constant map, $A$ is contractible.
+\end{proof}
+
+\begin{exer}{(Exercise 20, Chapter 1.1)}
+  Suppose $f_t: X \rightarrow X$ is a homotopy such that $f_0$ and $f_1$ are each the identity map.
+  Use Lemma 1.19 to show that for any $x_0 \in X$, the loop $f_t(x_0)$ represents an element of the center of $\pi_1(X, x_0)$.
+\end{exer}
+
+\begin{proof}
+  Let $x_0 \in X$ be given.
+  Let $f: I \rightarrow X$ be the loop defined such that $f(t) = f_t(x_0)$.
+  \begin{itemize}
+    \item
+      $f_t: X \rightarrow X$ is a homotopy.
+    \item
+      $f$ is a path formed by the images of the base point $x_0$.
+  \end{itemize}
+  By Lemma 1.19, the following diagram commutes.
+
+  \begin{center}
+  \begin{tikzpicture}
+  \matrix (m) [matrix of math nodes,row sep=3em,column sep=4em,minimum width=2em]
+  {
+                  & \pi_1(X, f_1(x_0)) \\
+    \pi_1(X, x_0) &                    \\
+                  & \pi_1(X, f_0(x_0)) \\};
+  \path[-stealth]
+    (m-2-1) edge node [below] {$(f_1)_{*}$} (m-1-2)
+            edge node [below] {$(f_0)_{*}$} (m-3-2)
+    (m-1-2) edge node [right] {$\beta_f$} (m-3-2);
+  \end{tikzpicture}
+  \end{center}
+
+  $(f_0)_* = (f_1)_* = (\Id_X)_* = \Id_{\pi_1(X, x_0)}$ by a basic property of induced homomorphisms (P.34 of Hatcher).
+  Since $f_0 = f_1 = \Id_X$, $f_0(x_0) = f_1(x_0) = x_0$.
+  Therefore, the diagram above can be simplified as following:
+
+  \begin{center}
+  \begin{tikzpicture}
+  \matrix (m) [matrix of math nodes,row sep=3em,column sep=4em,minimum width=2em]
+  {
+                  & \pi_1(X, x_0) \\
+    \pi_1(X, x_0) &                    \\
+                  & \pi_1(X, x_0) \\};
+  \path[-stealth]
+    (m-2-1) edge node [below] {$\Id$} (m-1-2)
+            edge node [below] {$\Id$} (m-3-2)
+    (m-1-2) edge node [right] {$\beta_f$} (m-3-2);
+  \end{tikzpicture}
+  \end{center}
+
+  Let $[g] \in \pi_1(X, x_0)$.
+  Then by the diagram above, we have $\Id([g]) = \Id(\beta_f([g]))$.
+  This implies $[g] = [f \cdot g \cdot \overline{f}]$.
+  Therefore, $[g] \cdot [f] = [f] \cdot [g]$, so $[f]$ commutes with every element in $\pi_1(X, x_0)$.
+  Hence, $[f] \in Z(\pi_1(X, x_0))$.
+
 \end{proof}
 
 \end{document}
