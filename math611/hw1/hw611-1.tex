@@ -95,6 +95,59 @@
   In conclusion, $i$ is indeed a homotopy equivalence.
 \end{proof}
 
+
+\begin{exer}{(Exercise 5, Chapter 0)}
+  Show that if a space $X$ deformation retracts to a point $x \in X$, then for each neighborhood $U$ of $x$ in $X$ there exists a neighborhood $V \subset U$ of $x$ such that the inclusion map $V \rightarrow U$ is nullhomotopic.
+\end{exer}
+
+\begin{proof}
+  Let $p \in X$ be a point to which $X$ deformation retracts.
+  Since $X$ deformation retracts to $p$, there exists a map $F: X \times I \rightarrow X$ such that
+
+  \begin{enumerate}
+    \item
+      $\forall x \in X, F(x, 0) = x$.
+    \item
+      $\forall x \in X, F(x, 1) = p$.
+    \item
+      $\forall t \in I, F(p, t) = p$.
+    \item
+      $F$ is continuous.
+  \end{enumerate}
+  Let $U$ be a neighborhood of $p$.
+  Then $F^{-1}(U)$ is an open subset of the product space $X \times I$.
+  By the 3rd property of $F$ mentioned above, the slice $\{ p \} \times I$ is a subset of $F^{-1}(U)$.
+  Since $I$ is compact, there must be a open subset $V$ of $X$ such that $\{ p \} \times I \subset V \times I \subset F^{-1}(U)$ by the tube lemma.
+
+  We claim that this $V$ is a desired subset.
+
+  \begin{itemize}
+    \item
+      $V$ is an open subset of $X$.
+    \item
+      Since $\{ p \} \times I \subset V \times I$, $p \in V$.
+    \item
+      Since $V \times I \subset F^{-1}(U)$, $F(V \times I) \subset U$.
+      This implies that $\forall v \in V$, $F(v, 0) = v \in U$.
+      Therefore, $V \subset U$.
+    \item
+      We claim that the inclusion map $i: V \rightarrow U$ is nullhomotopic.
+      Let $e_p:V \rightarrow U$ denote the constant map at $p$, $G: V \times I \rightarrow U$ be defined by $G(x, t) = F(x, t)$ for all $x \in V, t \in I$.
+      \begin{itemize}
+        \item
+          $G$ indeed maps $V \times I$ into $U$ because $F(V \times I) \subset U$.
+          Therefore, $G$ is well-defined.
+        \item
+          Since $G$ is the restriction of $F$ to $V \times I$ and $F$ is continuous, $G$ is continuous.
+        \item
+          $\forall x \in V, G(x, 0) = F(x, 0) = x = i(x)$.
+        \item
+          $\forall x \in V, G(x, 1) = F(x, 1) = p = e_p(x)$.
+      \end{itemize}
+      Thus $i$ is indeed nullhomotopic.
+  \end{itemize}
+\end{proof}
+
 \begin{exer}{(Exercise 9, Chapter 0)}
   Show that a retract of a contractible space is contractible.
 \end{exer}
