@@ -27,7 +27,7 @@
 \newtheorem{notn}[thm]{Notation}
 \newtheorem{notns}[thm]{Notations}
 \newtheorem{addm}[thm]{Addendum}
-\newtheorem{exer}[thm]{Exercise}
+\newtheorem*{exer}{Exercise}
 
 \theoremstyle{remark}
 \newtheorem{rem}[thm]{Remark}
@@ -51,7 +51,46 @@
 \author{Hidenori Shinohara}
 \maketitle
 
-\begin{exer}{Exercise 2.2}
+\begin{exer}{(2.1)}
+  Show that the function $g: \mathbb{R} \rightarrow S^1$, $g(r) = \exp(2\pi ir)$, where $i^2 = -1$, satisfies the property that $g(r) = g(r')$ if and only if $r \sim r'$.
+  Use this to explicitly construct a bijective map from the orbit space of the action to $S^1$, $g: \mathbb{R} / \sim= \mathbb{Z} \ \mathbb{R} \rightarrow S^1$.
+\end{exer}
+
+\begin{proof}
+  \begin{itemize}
+    \item
+      Let $r, r' \in \mathbb{R}$ such that $r \sim r'$.
+      Then $\mathbb{Z} * r = \mathbb{Z} * r'$.
+      Since $0 * r = 0 + r = r \in \mathbb{Z} * r$, there must exist a $k \in \mathbb{Z}$ such that $k * r' = r$.
+      Therefore, $k + r' = r$.
+
+      \begin{align*}
+        g(r)
+          &= \exp(2\pi i r) \\
+          &= \exp(2\pi i (k + r')) \\
+          &= \exp(2\pi i k + 2\pi i r') \\
+          &= \exp(2\pi i k)\exp(2\pi i r') \\
+          &= \exp(2\pi i r') \\
+          &= g(r').
+      \end{align*}
+    \item
+      Let $r, r' \in \mathbb{R}$ such that $g(r) = g(r')$.
+      \begin{align*}
+        \exp(2\pi ir) = \exp(2 \pi ir')
+          &\implies \exp(2\pi i(r - r')) = 1 \\
+          &\implies \cos(2\pi (r - r')) + i\sin (2\pi (r - r')) = 1 \\
+          &\implies \sin (2\pi (r - r')) = 0 \\
+          &\implies r - r' \in \mathbb{Z}.
+      \end{align*}
+      Let $k = r - r'$.
+      Since $r = 0 + r = 0 * r \in \mathbb{Z} * r$ and $r = k + r' = k * r' \in \mathbb{Z} * r'$, $(\mathbb{Z} * r) \cap (\mathbb{Z} * r') \ne \emptyset$.
+      Since two equivalence classes are either disjoint or identical, this implies that $\mathbb{Z} * r = \mathbb{Z} * r'$.
+      In other words, $r \sim r'$.
+  \end{itemize}
+  TODO
+\end{proof}
+
+\begin{exer}{(2.2)}
   Let $*: G \times S \rightarrow S$ be a left action of $G$.
   Show that $s \star g = g^{-1} * s$ defines a right action of $G$ on $S$.
 \end{exer}
