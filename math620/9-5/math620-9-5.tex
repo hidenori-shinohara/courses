@@ -59,6 +59,50 @@
   TODO
 \end{proof}
 
+\begin{exer}
+  Show that $\{ dx^1, \cdots, dx^n \}$ is a basis of $T_p^*\mathbb{R}^n$ that is dual to $\{ \frac{\partial}{\partial x^j} \}^n_{j = 1} \subset T_p\mathbb{R}^n$.
+\end{exer}
+
+\begin{proof}
+$ $
+  \begin{itemize}
+    \item
+      Dual?
+      Let $i, j \in \{1, \cdots, n \}$.
+      $dx^i(\frac{\partial}{\partial x^j}) &= \frac{\partial}{\partial x^j} x^i$.
+      The partial derivative of $x^i$ with respect to $x^j$ is 1 if $i = j$ and 0 otherwise.
+      Thus $dx^i(\frac{\partial}{\partial x^j}) = \delta^i_j$.
+    \item
+      Linearly independent?
+      Let $c_1, \cdots, c_n \in \mathbb{R}$ be given.
+      Suppose that $c_1dx^1 + \cdots + c_ndx^n = 0$.
+      For any $i \in \{ 1, \cdots, n \}$,
+      \begin{align*}
+        (c_1dx^1 + \cdots + c_ndx^n)(\partial_i) = 0
+          &\implies c_1(dx^1(\partial_i)) + \cdots + c_n(dx^n(\partial_i)) = 0 \\
+          &\implies c_1(\partial_i(x^1)) + \cdots + c_n(\partial_i(x^n)) = 0 \\
+          &\implies c_i\partial_i(x^i) = 0 \\
+          &\implies c_i = 0.
+      \end{align*}
+      Therefore, $c_1 = \cdots = c_n = 0$.
+      Therefore, $\{ dx^1, \cdots, dx^n \}$ is indeed linearly independent.
+    \item
+      Span?
+      Let $f \in T_p^*\mathbb{R}^n$ be given.
+      We claim that $f = \sum_{i=1}^{n} f(\partial_i)dx^i$.
+      Let $\sum_{i=1}^{n} c_i\partial_i \in T_p \mathbb{R}^n$ be given where $c_i$'s are in $\mathbb{R}$.
+      (It makes sense to assume that every element in $T_p\mathbb{R}^n$ is in this form because we showed earlier that $\{ \partial_1, \cdots, \partial_n \}$ is a basis of $T_p \mathbb{R}^n$.)
+      \begin{align*}
+        (\sum_{i=1}^{n} f(\partial_i)dx^i)(\sum_{j=1}^{n} c_j\partial_j)
+          &= \sum_{i=1}^{n} \big[f(\partial_i)dx^i(\sum_{j=1}^{n} c_j\partial_j)\big] \\
+          &= \sum_{i=1}^{n} f(\partial_i) \big[\sum_{j=1}^{n} c_jdx^i(\partial_j)\big] \\
+          &= \sum_{i=1}^{n} f(\partial_i) \big[\sum_{j=1}^{n} c_j\partial_j(x^i)\big] \\
+          &= \sum_{i=1}^{n} f(\partial_i) c_i \\
+          &= f(\sum_{i=1}^{n} c_i\partial_i).
+      \end{align*}
+  \end{itemize}
+\end{proof}
+
 
 \end{document}
 
