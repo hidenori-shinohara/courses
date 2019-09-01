@@ -52,6 +52,46 @@
 \maketitle
 
 \begin{exer}
+  Show that $\{ e^{i_1} \otimes \cdots \otimes e^{i_k} \mid 1 \leq i_1, \cdots, i_k \leq n \}$ is a basis of $T^k(V^*)$.
+  Find $\dim T^k(V^*)$.
+\end{exer}
+
+\begin{proof}
+$ $
+  \begin{itemize}
+    \item
+      Linearly independent?
+      Suppose $\sum c_{i_1, \cdots, i_k} e^{i_1} \otimes \cdots \otimes e^{i_k} = 0$.
+      Let $1 \leq j_1, \cdots, j_k \leq n$ be given.
+      \begin{align*}
+        &(\sum_{i_1, \cdots, i_k} c_{i_1, \cdots, i_k} e^{i_1} \otimes \cdots \otimes e^{i_k})(e_{j_1}, \cdots, e_{j_k}) = 0 \\
+          &\implies \sum_{i_1, \cdots, i_k} c_{i_1, \cdots, i_k} (e^{i_1} \otimes \cdots \otimes e^{i_k})(e_{j_1}, \cdots, e_{j_k}) = 0 \\
+          &\implies \sum_{i_1, \cdots, i_k} c_{i_1, \cdots, i_k} e^{i_1}(e_{j_1}) \cdots e^{i_k}(e_{j_k}) = 0 \\
+          &\implies c_{j_1, \cdots, j_k} e^{j_1}(e_{j_1}) \cdots e^{j_k}(e_{j_k}) = 0 \\
+          &\implies c_{j_1, \cdots, j_k} = 0.
+      \end{align*}
+      Therefore, each $c_{i_1, \cdots, i_k} = 0$.
+    \item
+      Span?
+      Let $f \in T^k(V^*)$.
+      We claim that $f = \sum_{i_1, \cdots, i_k} f(e_{i_1}, \cdots, e_{i_k})e^{i_1} \otimes \cdots \otimes e^{i_k}$.
+      Let $v_1, \cdots, v_k \in V$ be given.
+      Since $\{ e_1, \cdots, e_n \}$ is a basis of $V$, so each $v_i$ can be represented as $v_i = \sum_{j} c^j_ie_j$.
+      \begin{align*}
+        &(\sum_{i_1, \cdots, i_k} f(e_{i_1}, \cdots, e_{i_k})e^{i_1} \otimes \cdots \otimes e^{i_k})(v_1, \cdots, v_k) \\
+          &= (\sum_{i_1, \cdots, i_k} f(e_{i_1}, \cdots, e_{i_k})e^{i_1} \otimes \cdots \otimes e^{i_k})(c^j_1e_j, \cdots, c^j_ke_j) \\
+          &= \sum_{i_1, \cdots, i_k} f(e_{i_1}, \cdots, e_{i_k})[(e^{i_1} \otimes \cdots \otimes e^{i_k})(c^j_1e_j, \cdots, c^j_ke_j)] \\
+          &= \sum_{i_1, \cdots, i_k} f(e_{i_1}, \cdots, e_{i_k})[(c^j_1e^{i_1}(e_j)) \cdots (c^j_ke^{i_k}(e_j))] \\
+          &= \sum_{i_1, \cdots, i_k} f(e_{i_1}, \cdots, e_{i_k})[(c^{i_1}_1e^{i_1}(e_{i_1})) \cdots (c^{i_k}_ke^{i_k}(e_{i_k}))] \\
+          &= \sum_{i_1, \cdots, i_k} f(e_{i_1}, \cdots, e_{i_k})c^{i_1} \cdots c^{i_k} \\
+          &= \sum_{i_1, \cdots, i_k} f(c^{i_1}e_{i_1}, \cdots, c^{i_k}e_{i_k}) \\
+          &= TODO!!!!!!!!!!!!
+      \end{align*}
+  \end{itemize}
+  The dimension is $n^k$ because each $i_j$ can be any integer between $1$ and $n$.
+\end{proof}
+
+\begin{exer}
   Prove that $\{ \partial_1, \cdots, \partial_n \}$ is a basis of $T_p \mathbb{R}^n$.
 \end{exer}
 
@@ -77,8 +117,7 @@ $ $
       Let $c_1, \cdots, c_n \in \mathbb{R}$ be given.
       Suppose that $c_1dx^1 + \cdots + c_ndx^n = 0$.
       For any $i \in \{ 1, \cdots, n \}$,
-      \begin{align*}
-        (c_1dx^1 + \cdots + c_ndx^n)(\partial_i) = 0
+      \begin{align*} (c_1dx^1 + \cdots + c_ndx^n)(\partial_i) = 0
           &\implies c_1(dx^1(\partial_i)) + \cdots + c_n(dx^n(\partial_i)) = 0 \\
           &\implies c_1(\partial_i(x^1)) + \cdots + c_n(\partial_i(x^n)) = 0 \\
           &\implies c_i\partial_i(x^i) = 0 \\
