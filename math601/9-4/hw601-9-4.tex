@@ -57,11 +57,11 @@
 \end{exer}
 
 \begin{proof}
+$ $
   \begin{itemize}
     \item
       Let $r, r' \in \mathbb{R}$ such that $r \sim r'$.
-      Then $\mathbb{Z} * r = \mathbb{Z} * r'$.
-      Since $0 * r = 0 + r = r \in \mathbb{Z} * r$, there must exist a $k \in \mathbb{Z}$ such that $k * r' = r$.
+      Let $k \in \mathbb{Z}$ such that $k * r' = r$.
       Therefore, $k + r' = r$.
 
       \begin{align*}
@@ -80,12 +80,10 @@
           &\implies \exp(2\pi i(r - r')) = 1 \\
           &\implies \cos(2\pi (r - r')) + i\sin (2\pi (r - r')) = 1 \\
           &\implies \sin (2\pi (r - r')) = 0 \\
-          &\implies r - r' \in \mathbb{Z}.
+          &\implies r - r' \in \mathbb{Z} \\
+          &\implies \exists k \in \mathbb{Z},  r = k * r' \\
+          &\implies r \sim r'.
       \end{align*}
-      Let $k = r - r'$.
-      Since $r = 0 + r = 0 * r \in \mathbb{Z} * r$ and $r = k + r' = k * r' \in \mathbb{Z} * r'$, $(\mathbb{Z} * r) \cap (\mathbb{Z} * r') \ne \emptyset$.
-      Since two equivalence classes are either disjoint or identical, this implies that $\mathbb{Z} * r = \mathbb{Z} * r'$.
-      In other words, $r \sim r'$.
   \end{itemize}
   TODO
 \end{proof}
