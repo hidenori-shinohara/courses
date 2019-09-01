@@ -105,8 +105,7 @@ $ $
       Surjective?
       Let $z \in S^1$.
       Express $z$ as $re^{i\theta}$ where $r, \theta \in \mathbb{R}$.
-      Since $\lvert z \rvert = 1$, we can assume that $r = 1$ without loss of generality.
-      (If $r = -1$, then $e^{i\pi} = -1$, so $\theta$ can be redefined as $\theta + \pi$.)
+      Since $\lvert z \rvert = 1$, we can assume that $r = 1$ without loss of generality.  (If $r = -1$, then $e^{i\pi} = -1$, so $\theta$ can be redefined as $\theta + \pi$.)
 
       Then $[\theta / 2\pi]$ is an element in $\mathbb{Z} \backslash \mathbb{R}$, and $\mathrm{g}([\theta / 2\pi]) = g(\theta / 2\pi) = \exp(2\pi i \cdot \theta / 2\pi) = \exp(i\theta) = z$.
       Therefore, $\mathrm{g}$ is indeed surjective.
@@ -138,6 +137,56 @@ $ $
   \end{align*}
 
   Therefore, $\star$ is indeed a right action of $G$ on $S$.
+\end{proof}
+
+\begin{exer}{(2.3)}
+$ $
+ \begin{enumerate}
+   \item
+     Let $h, h' \in G$ lie in the same conjugacy class.
+     Show that $h$ and $h'$ have the same order.
+   \item
+    Give an example of a group and two elements of the same order which do not line in the same conjugacy class.
+ \end{enumerate}
+\end{exer}
+
+\begin{proof}
+  \begin{enumerate}
+    \item
+      Since $h$ and $h'$ lie in the same conjugacy class, there must exist an element $g \in G$ such that $h = g * h'$.
+      In other words, $h = g \cdot h' \cdot g^{-1}$.
+      We will show that $h^n = g \cdot (h')^n \cdot g^{-1}$ for all $n \in \mathbb{N}$ using mathematical induction.
+      \begin{itemize}
+        \item
+          When $n = 1$, the statement is true.
+        \item
+          Suppose $h^n = g \cdot (h')^n \cdot g^{-1}$ for some $n \in \mathbb{N}$.
+          \begin{align*}
+            h^{n + 1}
+              &= h^n \cdot h \\
+              &= (g \cdot (h')^n \cdot g^{-1}) \cdot (g \cdot h' \cdot g^{-1}) \\
+              &= g \cdot (h')^n \cdot (g^{-1} \cdot g) \cdot h' \cdot g^{-1} \\
+              &= g \cdot (h')^n \cdot h' \cdot g^{-1} \\
+              &= g \cdot (h')^{n + 1} \cdot g^{-1}.
+          \end{align*}
+      \end{itemize}
+      Therefore, $h^n = g \cdot (h')^n \cdot g^{-1}$ for all $n \in \mathbb{N}$.
+
+      For any $n \in \mathbb{N}$, if $h^n = e$, then $g \cdot (h')^n \cdot g^{-1} = e$, so $(h')^n = g^{-1}g = e$.
+      For any $n \in \mathbb{N}$, If $(h')^n = e$, then $h^n = geg^{-1} = e$.
+      Therefore, $\forall n \in \mathbb{N}, h^n = e \iff (h')^n = e$.
+
+      This implies that if the order of one of $h$ or $h'$ is infinite, the other has to be infinite as well.
+      On the other hand, if the order of one of $h$ or $h'$ is finite, the other has to be finite as well.
+      Suppose that the orders of $h$ and $h'$ are finite and let $n$ denote the order of $h$.
+      Then $h^n = e$ and $h^m \ne e$ for each natural number $m < n$.
+      Then $(h')^n = e$ and $(h')^m \ne e$ for each natural number $m < n$.
+      Therefore, the order of $h'$ is $n$ as well.
+
+      We showed that, regardless of whether the order is finite, $h$ and $h'$ have the same order.
+    \item
+      TODO
+  \end{enumerate}
 \end{proof}
 
 \end{document}
