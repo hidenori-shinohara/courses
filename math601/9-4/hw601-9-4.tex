@@ -53,7 +53,7 @@
 
 \begin{exer}{(2.1)}
   Show that the function $g: \mathbb{R} \rightarrow S^1$, $g(r) = \exp(2\pi ir)$, where $i^2 = -1$, satisfies the property that $g(r) = g(r')$ if and only if $r \sim r'$.
-  Use this to explicitly construct a bijective map from the orbit space of the action to $S^1$, $g: \mathbb{R} / \sim= \mathbb{Z} \ \mathbb{R} \rightarrow S^1$.
+  Use this to explicitly construct a bijective map from the orbit space of the action to $S^1$, $\mathrm{g}: \mathbb{R} / \sim= \mathbb{Z} \backslash \mathbb{R} \rightarrow S^1$.
 \end{exer}
 
 \begin{proof}
@@ -85,7 +85,32 @@ $ $
           &\implies r \sim r'.
       \end{align*}
   \end{itemize}
-  TODO
+  Let $\mathrm{g}: \mathbb{Z} \backslash \mathbb{R} \rightarrow S^1$ be defined such that $\mathrm{g}([r]) = g(r)$ for each $[r] \in \mathbb{Z} \backslash \mathbb{R}$.
+  \begin{itemize}
+    \item
+      Well-defined?
+      Let $[r] = [r'] \in \mathbb{Z} \backslash \mathbb{R}$.
+      Then $r \sim r'$.
+      We showed that $g(r) = g(r')$ if $r \sim r'$ earlier.
+      Therefore, $\mathrm{g}$ is indeed well-defined.
+    \item
+      Injective?
+      Let $[r], [r'] \in \mathrm{Z} \backslash \mathbb{R}$.
+      Suppose $\mathrm{g}([r]) = \mathrm{g}([r'])$.
+      Then $g(r) = g(r')$.
+      We showed earlier that this implies $r \sim r'$.
+      In other words, $[r] = [r']$.
+      Therefore, $\mathrm{g}$ is injective.
+    \item
+      Surjective?
+      Let $z \in S^1$.
+      Express $z$ as $re^{i\theta}$ where $r, \theta \in \mathbb{R}$.
+      Since $\lvert z \rvert = 1$, we can assume that $r = 1$ without loss of generality.
+      (If $r = -1$, then $e^{i\pi} = -1$, so $\theta$ can be redefined as $\theta + \pi$.)
+
+      Then $[\theta / 2\pi]$ is an element in $\mathbb{Z} \backslash \mathbb{R}$, and $\mathrm{g}([\theta / 2\pi]) = g(\theta / 2\pi) = \exp(2\pi i \cdot \theta / 2\pi) = \exp(i\theta) = z$.
+      Therefore, $\mathrm{g}$ is indeed surjective.
+  \end{itemize}
 \end{proof}
 
 \begin{exer}{(2.2)}
