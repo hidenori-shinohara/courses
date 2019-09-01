@@ -1,0 +1,83 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem{exer}[thm]{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 601 Homework (Due 9/4)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\begin{exer}{Exercise 2.2}
+  Let $*: G \times S \rightarrow S$ be a left action of $G$.
+  Show that $s \star g = g^{-1} * s$ defines a right action of $G$ on $S$.
+\end{exer}
+
+\begin{proof}
+  Let $s \in S, g, h \in G$ be given.
+  \begin{align*}
+    (s \star g) \star h
+      &= h^{-1} * (s \star g) \\
+      &= h^{-1} * (g^{-1} * s) \\
+      &= (h^{-1}g^{-1}) * s \\
+      &= (gh)^{-1} * s \\
+      &= s \star (gh).
+  \end{align*}
+
+  Let $e \in G$ denote the identity element and let $s \in S$ be given.
+  \begin{align*}
+    s \star e
+      &= e^{-1} * s \\
+      &= e * s \\
+      &= s.
+  \end{align*}
+
+  Therefore, $\star$ is indeed a right action of $G$ on $S$.
+\end{proof}
+
+\end{document}
+
+
