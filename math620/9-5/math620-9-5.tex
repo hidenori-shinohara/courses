@@ -85,7 +85,11 @@ $ $
           &= \sum_{i_1, \cdots, i_k} f(e_{i_1}, \cdots, e_{i_k})[(c^{i_1}_1e^{i_1}(e_{i_1})) \cdots (c^{i_k}_ke^{i_k}(e_{i_k}))] \\
           &= \sum_{i_1, \cdots, i_k} f(e_{i_1}, \cdots, e_{i_k})c^{i_1} \cdots c^{i_k} \\
           &= \sum_{i_1, \cdots, i_k} f(c^{i_1}e_{i_1}, \cdots, c^{i_k}e_{i_k}) \\
-          &= TODO!!!!!!!!!!!!
+          &= \sum_{i_1, \cdots, i_{k - 1}} (\sum_{i_k} f(c^{i_1}e_{i_1}, \cdots, c^{i_k}e_{i_k})) \\
+          &= \sum_{i_1, \cdots, i_{k - 1}} f(c^{i_1}e_{i_1}, \cdots, c^{i_{k - 1}}e_{i_{k - 1}}, \sum_{i_k} c^{i_k}e_{i_k})) \\
+          &= \sum_{i_1, \cdots, i_{k - 1}} f(c^{i_1}e_{i_1}, \cdots, c^{i_{k - 1}}e_{i_{k - 1}}, v_k) \\
+          &  \vdots \\
+          &= f(v_1, \cdots, v_k).
       \end{align*}
   \end{itemize}
   The dimension is $n^k$ because each $i_j$ can be any integer between $1$ and $n$.
