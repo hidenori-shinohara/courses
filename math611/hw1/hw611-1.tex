@@ -183,6 +183,39 @@
   Since the identity map is homotopic to a constant map, $A$ is contractible.
 \end{proof}
 
+\begin{exer}{(Exercise 13, Chapter 0)}
+  Show that any two deformation retractions $r_t^0$ and $r_t^1$ of a space $X$ onto a subspace $A$ can be joined by a continuous family of deformation retractions $r^s_t$, $0 \leq s \leq 1$, of $X$ onto $A$, where continuity means that the map $X \times I \times I \rightarrow X$ sending $(x, s, t)$ to $r^s_t(x)$ is continuous.
+\end{exer}
+
+\begin{proof}
+  Let $F: X \times I \times I \rightarrow X$ be defined such that
+
+  \begin{align*}
+    F(x, t, s) &= \begin{cases}
+      r_{t(1 - 2s)}^0(x) & (s \in [0, 1/2]) \\
+      r_{t(2s - 1)}^1(x) & (s \in [1/2, 1]).
+    \end{cases}
+  \end{align*}
+
+  We claim that $F$ is well-defined and satisfies the desired properties.
+
+  \begin{itemize}
+    \item
+      Let $s = 1 / 2$.
+      $r_{t(1 - 2s)}^0(x) = r_0^0(x) = x$ because $r^0_t$ is a deformation retraction.
+      Similarly, $r_{t(2s - 1)}^1(x) = r_0^1(x) = x$ because $r^0_t$ is a deformation retraction.
+      Therefore, $F$ is well defined when $s = 1/2$.
+      Moreover, by the pasting lemma, $F$ is continuous.
+      This is because the intersection $X \times I \times [0, 1/2] \cap X \times I \times [1/2, 1] = X \times I \times \{ 1/2 \}$ is closed.
+    \item
+      $F(x, t, 0) = r_t^0(x)$ for any $x \times t \in X \times I$.
+    \item
+      $F(x, t, 1) = r_t^1(x)$ for any $x \times t \in X \times I$.
+  \end{itemize}
+
+  Therefore, $F$ maps $X \times I \times I \rightarrow X$ continuously sending $(x, s, t)$ to $r^s_t(x)$.
+\end{proof}
+
 \begin{exer}{(Exercise 20, Chapter 1.1)}
   Suppose $f_t: X \rightarrow X$ is a homotopy such that $f_0$ and $f_1$ are each the identity map.
   Use Lemma 1.19 to show that for any $x_0 \in X$, the loop $f_t(x_0)$ represents an element of the center of $\pi_1(X, x_0)$.
