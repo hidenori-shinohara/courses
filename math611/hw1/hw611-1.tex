@@ -148,6 +148,73 @@
   \end{itemize}
 \end{proof}
 
+\begin{lem}
+  Let $X$ be a topological space and $A \subset X$.
+  If the inclusion map $A \rightarrow X$ is nullhomotopic, then $A$ must be connected.
+\end{lem}
+
+\begin{proof}
+  TODO
+\end{proof}
+
+\begin{exer}{(Exercise 6(a), Chapter 0)}
+  Let $X$ be the subspace of $\mathbb{R}^2$ consisting of the horizontal segment $[0, 1] \times \{ 0 \}$ together with all the vertical segments $\{ r \} \times [0, 1 - r]$ for $r$ a rational number in $[0, 1]$.
+  Show that $X$ deformation retracts to any point in the segment $[0, 1] \times \{ 0 \}$, but not to any other point.
+\end{exer}
+
+\begin{proof}
+  Let $(a, 0) \in [0, 1] \times \{ 0 \}$ be given.
+  Let $F: X \times I \rightarrow X$ be defined such that
+
+  \begin{align*}
+    F((x, y), t) &= \begin{cases}
+      (x, (1 - 2t)y) & (0 \leq t \leq 1 / 2) \\
+      (x + (a - x)(2t - 1), 0) & (1 / 2 \leq t \leq 1).
+    \end{cases}
+  \end{align*}
+
+  $F$ is well defined because when $t = 1 / 2$:
+  \begin{itemize}
+    \item
+      $(x, (1 - 2t)y) = (x, 0)$.
+    \item
+      $(x + (a - x)(2t - 1), 0) = (x, 0)$.
+  \end{itemize}
+  Moreover, by the pasting lemma, $F$ is continuous.
+
+  Then $F$ is a deformation retract of $X$ onto $(a, 0)$ because
+
+  \begin{itemize}
+    \item
+      \begin{align*}
+        F((a, 0), t) = \begin{cases}
+          (a, 0(1 - 2t)) = (a, 0) & (t \in [0, 1 / 2]) \\
+          (a + (a - a)(2t - 1), 0) = (a, 0) & (t \in [1 / 2, 1]).
+        \end{cases}
+      \end{align*}
+      Therefore, $F((a, 0), t) = (a, 0)$ for any $t \in I$.
+    \item
+      $F((x, y), 0) = (x, y)$ for any $(x, y) \in x$.
+    \item
+      $F((x, y), 1) = (a, 0)$ for any $(x, y) \in x$.
+  \end{itemize}
+
+  Therefore, $F$ is indeed a deformation retract of $X$ onto $(a, 0)$.
+
+  Suppose that there exists a point $(a, b) \in X$ to which $X$ deformation retracts onto such that $b \ne 0$.
+  Let $G: X \times I \rightarrow X$ denote such a deformation retract.
+  Consider the open subset $U = B((a, b), b) \cap X$.
+  Note that $U$ is disjoint from the segment $[0, 1] \times \{ 0 \}$.
+  Then $U$ is a neighborhood of $(a, b)$, a point to which $X$ deformation retracts onto.
+  By Problem 5 (Chapter 0), there must exist a neighborhood $V \subset U$ of $x$ such that the inclusion map $V \rightarrow U$ is nullhomotopic.
+  By the Lemma we showed above, $V$ must be connected.
+  Since $V$ is an open subset of $X$, there must exist an $r > 0$ such that $B((a, b), r) \cap X \subset V$.
+  Let $c$ be an irrational number in $(a, a + r)$.
+  Then $V \cap ((-\infty, c) \times \mathbb{R})$ and $V \cap ((c, \infty) \times \mathbb{R})$ form a separation of $V$.
+  This is a contradiction, so our initial assumption that $X$ deformation retracts onto $(a, b)$ was wrong.
+  Therefore, $X$ deformation retracts to any point in the segment $[0, 1] \times \{ 0 \}$, but not to any other point.
+\end{proof}
+
 \begin{exer}{(Exercise 9, Chapter 0)}
   Show that a retract of a contractible space is contractible.
 \end{exer}
