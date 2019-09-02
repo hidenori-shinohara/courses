@@ -149,12 +149,24 @@
 \end{proof}
 
 \begin{lem}
-  Let $X$ be a topological space and $A \subset X$.
-  If the inclusion map $A \rightarrow X$ is nullhomotopic, then $A$ must be connected.
+  The neighborhood $V$ that we find in Problem 5 is connected.
 \end{lem}
 
 \begin{proof}
-  TODO
+  Suppose otherwise.
+  Let $A, B$ denote a separation of $V$.
+  Without loss of generality, we assume $p \in A$.
+  Let $q \in B$.
+  ($B$ must be nonempty since $A, B$ are a separation.)
+
+  Let $F$ be the homotopy we defined in the solution for Problem 5 from the inclusion map to the constant map at $p$.
+  Let $f: I \rightarrow V$ be defined such that $f(t) = F(q, t)$.
+  Then $f$ is a path from $f(0) = F(q, 0) = q$ to $f(1) = F(q, 1) = p$ in $V$.
+  Since $f$ is continuous, $f^{-1}(A)$ and $f^{-1}(B)$ are open in $I$.
+  Moreover, $I = f^{-1}(V) = f^{-1}(A) \cup f^{-1}(B)$ and $\emptyset = f^{-1}(\emptyset) = f^{-1}(A \cap B) = f^{-1}(A) \cap f^{-1}(B)$.
+  Since $1 \in f^{-1}(p) \subset f^{-1}(A)$ and $0 \in f^{-1}(q) \subset f^{-1}(B)$, $f^{-1}(A)$ and $f^{-1}(B)$ are nonempty.
+  Therefore, $f^{-1}(A)$ and $f^{-1}(B)$ form a separation of $I$.
+  However, this is impossible because $I$ is connected.
 \end{proof}
 
 \begin{exer}{(Exercise 6(a), Chapter 0)}
