@@ -52,6 +52,42 @@
 \maketitle
 
 \begin{exer}
+  Prove that $\delta: V \times \cdots \times V \rightarrow \mathbb{F}$ is independent of choice of basis $\{ e_i \} \subset V$ up to non-zero scalar.
+\end{exer}
+
+\begin{proof}
+  Let $\{ e_i \}, \{ f_i \}$ be two bases of $V$.
+  Let $v_1, \cdots, v_n \in V$ be given.
+  We must show if $\delta(v_1, \cdots, v_n) = 0$ with both of the bases, or nonzero with both of the bases.
+  Suppose that $\delta(v_1, \cdots, v_n) \ne 0$ with one of the bases, and it is $0$ with the other basis.
+  Without loss of generality, we assume that $\{ e_i \}$ gives a nonzero value.
+  Let $n \times n$ matrices $(v^i_j), (w^i_j)$ be given such that
+  \begin{align*}
+    \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}
+      &= \begin{bmatrix} v^1_1 & \cdots & v^n_1 \\ \vdots & \ddots & \vdots \\ v^n_1 & \cdots & v^n_n \end{bmatrix}
+         \begin{bmatrix} e_1 \\ e_2 \\ \vdots \\ e_n \end{bmatrix} \\
+      &= \begin{bmatrix} w^1_1 & \cdots & w^n_1 \\ \vdots & \ddots & \vdots \\ w^n_1 & \cdots & w^n_n \end{bmatrix}
+         \begin{bmatrix} f_1 \\ f_2 \\ \vdots \\ f_n \end{bmatrix}.
+  \end{align*}
+  Since $\delta(v_1, \cdots, v_n) \ne 0$ with $\{ e_i \}$, $\det(v_i^j) \ne 0$.
+  Therefore, the matrix $(v_i^j)$ is invertible.
+
+  \begin{align*}
+    \begin{bmatrix} e_1 \\ e_2 \\ \vdots \\ e_n \end{bmatrix}
+      = \begin{bmatrix} v^1_1 & \cdots & v^n_1 \\ \vdots & \ddots & \vdots \\ v^n_1 & \cdots & v^n_n \end{bmatrix}^{-1}
+         \begin{bmatrix} w^1_1 & \cdots & w^n_1 \\ \vdots & \ddots & \vdots \\ w^n_1 & \cdots & w^n_n \end{bmatrix}
+         \begin{bmatrix} f_1 \\ f_2 \\ \vdots \\ f_n \end{bmatrix}.
+  \end{align*}
+
+  Let $A$ denote the product of the two matrices.
+  Then $\det(A) = \det((v_i^j)^{-1}(w_i^j)) = \det(v_i^j)^{-1}\det(w_i^j) = 0$.
+  This implies that the row space of $A$ has a dimension less than $n$.
+  Therefore, $\{ e_1, \cdots, e_n \}$ cannot span $V$ whose dimension is $n$.
+
+  This is a contradiction, so $\delta$ is independent of choice of basis up to nonzero scaling.
+\end{proof}
+
+\begin{exer}
   Show that $\{ e^{i_1} \otimes \cdots \otimes e^{i_k} \mid 1 \leq i_1, \cdots, i_k \leq n \}$ is a basis of $T^k(V^*)$.
   Find $\dim T^k(V^*)$.
 \end{exer}
