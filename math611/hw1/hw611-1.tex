@@ -391,10 +391,15 @@
       By Proposition 1.17, the homomorphism $i_*: \pi_1(A, x_0) \rightarrow \pi_1(X, x_0)$ induced by the inclusion $i: A \rightarrow X$ is injective.
       By Theorem 1.7, $\pi_1(S^1)$ is isomorphic to $\mathbb{Z}$.
       $\pi_1(D^2) = 0$ because $D^2$ is a convex subset and thus a linear homotopy connects any paths.
-      By Proposition 1.12, $\pi_1(X) = \pi_1(S^1) \times \pi_1(D^2)$ and $\pi_1(A) = \pi_1(S^1) \times \pi_1(S^1)$.
-      This implies the existence of a injective group homomorphism $\phi$ from $\mathbb{Z} \times \mathbb{Z}$ into $\mathbb{Z} \times 0$.
-      This is impossible because $\phi(1) = 0 = \phi(2)$.
-      Therefore, $X$ does not retract onto $A$.
+      By Proposition 1.12, $\pi_1(X) = \pi_1(S^1) \times \pi_1(D^2) = \mathbb{Z} \times 0 = \mathbb{Z}$ and $\pi_1(A) = \pi_1(S^1) \times \pi_1(S^1) = \mathbb{Z} \times \mathbb{Z}$.
+      Let $f: \mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{Z}$ be any homomorphism.
+      Let $a = f(1, 0), b = f(0, 1)$.
+      If $a = 0$ or $b = 0$, $f$ is not injective because $f(0, 0) = 0$.
+      Suppose otherwise.
+      Then $f(b, 0) = ab = f(0, a)$, so $f$ is not injective.
+
+      Therefore, there exists no injection from $\mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{Z}$.
+      Hence, $X$ does not retract onto $A$.
   \end{itemize}
 \end{proof}
 
