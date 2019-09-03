@@ -235,6 +235,52 @@ $ $
   $F$ is indeed a bijection between $\mathbb{P}^n_k$ and the set of all one-dimensional subspaces of $k^{n + 1}$.
 \end{proof}
 
+\begin{exer}{(2.5)}
+  The set $\pm 1$ is a group with group law given by multiplication.
+  This group acts on the unit sphere, $S^n := \{ (x_0, \cdots, x_n) \in \mathbb{R}^{n + 1} : x_0^2 + \cdots + x_n^2 = 1 \}$ by scalar multiplication $\pm 1 * (x_0, \cdots, x_n) = \pm 1 \cdot (x_0, \cdots, x_n)$.
+  Let $\sim$ denote the corresponding equivalence relation on $S^n$.
+  Construct a natural bijective map, $S^n \slash \sim \rightarrow \mathbb{P}^n_{\mathbb{R}}$.
+\end{exer}
+
+\begin{proof}
+  Let $f: S^n \slash \sim \rightarrow \mathbb{P}^n_{\mathbb{R}}$ be defined such that $f([(x_0, \cdots, x_n)]) = (x_0 : \cdots : x_n)$.
+  We claim that $f$ is a bijection.
+  \begin{itemize}
+    \item
+      Well-defined?
+      Let $(x_0, \cdots, x_n) \sim (y_0, \cdots, y_n) \in S^n$ be given.
+      Since $(x_0, \cdots, x_n) \sim (y_0, \cdots, y_n)$, there exists a $t \in \{ -1, 1 \}$ such that $(x_0, \cdots, x_n) = t \cdot (y_0, \cdots, y_n) = (ty_0, \cdots, ty_n)$.
+      Since $t \in \mathbb{R}^*$, $(x_0 : \cdots : x_n) = (y_0 : \cdots : y_n)$.
+      This implies that $f([(x_0, \cdots, x_n)]) = f([(y_0, \cdots, y_n)])$.
+    \item
+      Injective?
+      Let $(x_0, \cdots, x_n), (y_0, \cdots, y_n) \in S^n$ be given.
+      Suppose $f([(x_0, \cdots, x_n)]) = f([(y_0, \cdots, y_n)])$.
+      Then $(x_0 : \cdots : x_n) = (y_0 : \cdots : y_n)$.
+      Therefore, there must exist a $t \in \mathbb{R}^*$ such that $(x_0, \cdots, x_n) = (ty_0, \cdots, ty_n)$.
+      \begin{align*}
+        (ty_0)^2 + \cdots + (ty_n)^2
+          &= t^2(y_0^2 + \cdots y_n^2) \\
+          &= t^2 \cdot 1 \\
+          &= t^2.
+      \end{align*}
+      On the other hand, $x_0^2 + \cdots + x_n^2 = 1$, so $t^2 = 1$.
+      This implies that $t \in \{ -1, 1 \}$.
+      Since $(x_0, \cdots, x_n) = t(y_0, \cdots, y_n)$ for some $t \in \{ \pm 1 \}$, $[(x_0, \cdots, x_n)] = [(y_0, \cdots, y_n)]$ in $S^n \slash \sim$.
+    \item
+      Surjective?
+      Let $(x_0 : \cdots : x_n) \in \mathbb{P}^n_{\mathbb{R}}$.
+      Then $(x_0, \cdots, x_n) \ne 0$, so $x_0^2 + \cdots + x_n^2 \ne 0$.
+      Let $c = x_0^2 + \cdots + x_n^2$.
+      Let $y_i = x_i / \sqrt{c}$ for each $i$.
+      This makes sense because $c$ is a positive real number, so $1 / \sqrt{c}$ exists.
+      Then $y_0^2 + \cdots + y_n^2 = 1$, so $(y_0, \cdots, y_n) \in S^1$.
+      Since $\sqrt{c}(y_0, \cdots, y_n) = (x_0, \cdots, x_n)$, $(y_0 : \cdots : y_n) = (x_0 : \cdots : x_n)$.
+      Therefore, $f(y_0, \cdots, y_n) = (x_0 : \cdots : x_n)$, and thus $f$ is indeed surjective.
+  \end{itemize}
+
+\end{proof}
+
 \end{document}
 
 
