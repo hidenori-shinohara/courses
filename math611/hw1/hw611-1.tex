@@ -332,6 +332,8 @@
       $X = \mathbb{R}^3$ with $A$ any subspace homeomorphic to $S^1$.
     \item
       $X = S^1 \times D^2$ with $A$ its boundary torus $S^1 \times S^1$.
+    \item
+      $X = S^1 \times D^2$ with $A$ the circle shown in the textbook.
   \end{itemize}
 \end{exer}
 
@@ -360,6 +362,18 @@
 
       Therefore, there exists no injection from $\mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{Z}$.
       Hence, $X$ does not retract onto $A$.
+    \item
+      Since $A$ is homeomorphic to $S^1$, let $\phi: A \rightarrow S^1$ be a homeomorphism.
+      Let $p = \phi^{-1}(\omega)$ such that $[\omega]$ is a generator of $\pi_1(S^1)$.
+      Since $p$ is a path in $A \subset S^1 \times D^2$, there exist two paths $f: I \rightarrow S^1$ and $g: I \rightarrow D^2$ such that $p(t) = (f(t), g(t))$.
+      Then $f$ is homotopic to the constant path $e_1$ at $f(0)$, and $g$ is homotopic to the constant path $e_2$ at $g(0)$.
+      Let $F$ be a homotopy from $f$ to $e_1$ and $G$ be a homotopy from $g$ to $e_2$.
+      Define $H : I \times I \rightarrow S^1 \times D^2$ such that $H(s, t) = F(s, t) \times G(s, t)$.
+      Then $H$ is a homotopy between $p$ and the constant map at $p(0)$.
+      
+      If there exists a retraction $r : X \rightarrow A$, then $\phi \circ r \circ H$ is a homotopy between $\omega$ and a constant map in $S^1$.
+      However, this implies that $\pi_1(S^1) = 0$ since $[\omega]$ is a generator.
+      This is a contradiction, so there exists no such retraction.
   \end{itemize}
 \end{proof}
 
