@@ -281,6 +281,33 @@ $ $
 
 \end{proof}
 
+\begin{exer}
+  $ $
+  \begin{itemize}
+    \item
+      Determine the number of elements in the group $GL_2(R)$ when $R$ is the ring $\mathbb{Z} / p\mathbb{Z}$, with $p$ a prime number.
+  \end{itemize}
+\end{exer}
+
+\begin{proof}
+  $ $
+  \begin{itemize}
+    \item
+      From linear algebra, we know that a matrix has a nonzero determinant if and only if the set of the column vectors is linearly independent.
+      Since we are working with $2 \times 2$ matrices here, it is equivalent to checking whether each vector is a scalar multiple of the other.
+      \begin{itemize}
+        \item
+          There are $p^2 - 1$ columns that can be in an invertible matrix.
+          This is because the only column vector that no invertible matrix has is the zero vector.
+        \item
+          Suppose we pick one of the $p^2 - 1$ columns as the left column vector.
+          Then there are exactly $(p^2 - 1) - (p - 1)$ column vectors that we can pick as the right column vector to create an invertible matrix.
+          This is because any nonzero scalar multiple of $p^2 - 1$ cannot be the right column vector, and if the right column vector is not a scalar multiple of the left vector, the matrix will be invertible.
+      \end{itemize}
+      Therefore, there are exactly $(p^2 - 1)((p^2 - 1) - (p - 1)) = p^4 - p^3 - p^2 + p$ matrices in $GL_2(R)$.
+  \end{itemize}
+\end{proof}
+
 \end{document}
 
 
