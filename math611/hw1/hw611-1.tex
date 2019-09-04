@@ -310,6 +310,31 @@
   Therefore, $F$ maps $X \times I \times I \rightarrow X$ continuously sending $(x, s, t)$ to $r^s_t(x)$.
 \end{proof}
 
+\begin{exer}{(Exercise 6, Chapter 1.1)}
+  We can regard $\pi_1(X, x_0)$ as the set of basepoint-preserving homotopy classes of maps $(S^1, s_0) \rightarrow (X, x_0)$.
+  Let $[S^1, X]$ be the set of homotopy classes of maps $S^1 \rightarrow X$, with no conditions on basepoints.
+  Thus there is a natural map $\Phi: \pi_1(X, x_0) \rightarrow [S^1, X]$ obtained by ignoring basepoints.
+  Show that $\Phi$ is onto if $X$ is path-connected, and that $\Phi([f]) = \Phi([g])$ if and only if $[f]$ and $[g]$ are conjugate in $\pi_1(X, x_0)$.
+  Hence $\Phi$ induces a one-to-one correspondence between $[S^1, X]$ and the set of conjugacy classes in $\pi_1(X)$, when $X$ is path-connected.
+\end{exer}
+
+\begin{proof}
+  Let $w: I \rightarrow S^1$ be defined such that $w(t) = (\cos(2\pi t), \sin(2\pi t))$.
+  Then $\Phi$ maps $[f] \in \pi_1(X, x_0)$ to $[\tilde{f}]$ such that $f \simeq \tilde{f} \circ w$.
+
+  Suppose $\Phi$ is surjective.
+  Let $x_1 \in X$ be given.
+  Let $e: S^1 \rightarrow X$ denote the constant map at $x_1$.
+  Since $\Phi$ is assumed to be surjective, there must exist an $[f] \in \pi_1(X, x_0)$ such that $\Phi([f]) = [e]$.
+  Then $f \simeq e \circ w$.
+  Let $F$ be a homotopy between $f$ and $e \circ w$ such that $F(s, 0) = f(s)$ and $F(s, 1) = e(w(s)) = x_1$.
+  Then $t \mapsto F(0, t)$ is a path from $x_0$ to $x_1$.
+  Thus $x_1$ and $x_0$ are path connected.
+  Since $x_1$ was chosen arbitrarily, $X$ is path connected.
+  TODO: This is *WRONG* I proved the wrong direction.
+
+\end{proof}
+
 \begin{exer}{(Exercise 7, Chapter 1.1)}
   Define $f: S^1 \times I \rightarrow S^1 \times I$ by $f(\theta, s) = (\theta + 2\pi s, s)$, so $f$ restricts to the identity on the two boundary circles of $S^1 \times I$.
   Show that $f$ is homotopic to the identity by a homotopy $f_t$ that is stationary on one of the boundary circles, but not by any homotopy $f_t$ that is stationary on both boundary circles.
