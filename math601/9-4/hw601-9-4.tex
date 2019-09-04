@@ -286,6 +286,9 @@ $ $
   \begin{itemize}
     \item
       Determine the number of elements in the group $GL_2(R)$ when $R$ is the ring $\mathbb{Z} / p\mathbb{Z}$, with $p$ a prime number.
+    \item
+      $GL_2(\mathbb{Z} / p)$ acts on $(\mathbb{Z} / p)^2$ by multiplying column vectors on the left by matrices.
+      Determine the distinct orbits of this action.
   \end{itemize}
 \end{exer}
 
@@ -305,6 +308,33 @@ $ $
           This is because any nonzero scalar multiple of $p^2 - 1$ cannot be the right column vector, and if the right column vector is not a scalar multiple of the left vector, the matrix will be invertible.
       \end{itemize}
       Therefore, there are exactly $(p^2 - 1)((p^2 - 1) - (p - 1)) = p^4 - p^3 - p^2 + p$ matrices in $GL_2(R)$.
+    \item
+      We claim that there are two distinct orbits.
+      Let $v = \begin{bmatrix} a \\ b \end{bmatrix} \in (\mathbb{Z}/p)^2$.
+      \begin{itemize}
+        \item
+          If $v = 0$, then the orbit is $\{ v \}$.
+        \item
+          If $v \ne 0$, then we claim that the orbit is the collection of all the nonzero vectors.
+          First, we claim that the column vector $\begin{bmatrix} 1 \\ 1 \end{bmatrix}$ is in the orbit of $v$.
+
+          \begin{itemize}
+            \item
+              If $a \ne 0$ and $b \ne 0$, then $\begin{bmatrix} a^{-1} & 0 \\ 0 & b^{-1} \end{bmatrix}\begin{bmatrix} a \\ b \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$.
+            \item
+              If $a \ne 0$ and $b = 0$, then $\begin{bmatrix} a^{-1} & 0 \\ a^{-1} & 1 \end{bmatrix}\begin{bmatrix} a \\ b \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$.
+            \item
+              If $a = 0$ and $b \ne 0$, then $\begin{bmatrix} 1 & b^{-1} \\ 0 & b^{-1} \end{bmatrix}\begin{bmatrix} a \\ b \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$.
+          \end{itemize}
+          Since this argument can be applied to any nonzero column vector, it implies that the orbit of any nonzero column vector contains $\begin{bmatrix} 1 \\ 1 \end{bmatrix}$.
+          Since the orbits are equivalence classes, they are either disjoint or identical.
+          In other words, this implies that every nonzero column vector has the same orbit.
+
+          Moreover, for any $w \in (\mathbb{Z}/p)^2$, $Iw = w$ where $I$ denote the identity matrix.
+          Thus the orbit of a nonzero vector contains any nonzero vector.
+          
+          Therefore, the orbit of any nonzero vector is the set of all the nonzero vectors.
+      \end{itemize}
   \end{itemize}
 \end{proof}
 
