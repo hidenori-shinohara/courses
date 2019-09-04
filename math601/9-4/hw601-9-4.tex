@@ -289,6 +289,8 @@ $ $
     \item
       $GL_2(\mathbb{Z} / p)$ acts on $(\mathbb{Z} / p)^2$ by multiplying column vectors on the left by matrices.
       Determine the distinct orbits of this action.
+    \item
+      Describe the stabilizer subgroup in $GL_2(\mathbb{Z} / p)$ of the element $\begin{bmatrix} 1 \\ 0 \end{bmatrix} \in (\mathbb{Z} / p)^2$.
   \end{itemize}
 \end{exer}
 
@@ -335,6 +337,17 @@ $ $
           
           Therefore, the orbit of any nonzero vector is the set of all the nonzero vectors.
       \end{itemize}
+    \item
+      \begin{align*}
+        \begin{bmatrix} a & b \\ c & d \end{bmatrix} \begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix} 
+          &\implies \begin{bmatrix} a \\ c \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix} 
+      \end{align*}
+      Therefore, it suffices to determine what the values of $b$ and $d$ are.
+      $\begin{bmatrix} 1 & b \\ 0 & d \end{bmatrix}$ is an upper triangular matrix, so it is invertible if and only if $d \ne 0$.
+      Therefore,
+      \begin{align*}
+        G_{\begin{bmatrix} 1 \\ 0 \end{bmatrix}} = \{ \begin{bmatrix} 1 & b \\ 0 & d \end{bmatrix} \mid b, d \in \mathbb{Z}_p, d \ne 0 \}.
+      \end{align*}
   \end{itemize}
 \end{proof}
 
