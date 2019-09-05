@@ -154,7 +154,7 @@ $ $
   We will repeat this process with the $V_{i + 1}$.
 
   For each $i$, we claim that $\{ e_1, \cdots, e_{2i} \}$ is linearly independent.
-  TODO! SHOW THIS!!!***************
+  (To-Do)
 
   Since $V$ is an $n$-dimensional vector space, this process will terminate.
   If not, it would imply the existence of a linearly independent set with more than $n$ vectors.
@@ -184,19 +184,18 @@ $ $
       Then, by Case 1, they both result in $-1$.
     \item
       Case 3: Any other cases.
-      Then $(e^1 \wedge e^2 + \cdots + e^{2m - 1} \wedge e^{2m})(e_i, e_j) = 0$.
-      We claim that $w(e_i, e_j) = 0$.
-      If $e_i = e_j$, then $w(e_i, e_j) = -w(e_j, e_i) = -w(e_i, e_j)$, so $w(e_i, e_j) = 0$.
-      Suppose otherwise.
-      Without loss of generality, assume $i < j$.
-      If $2m < i < j$, then $w(e_i, e_j) = 0$ because of the terminating condition.
-      Suppose $i \leq 2m$.
-      Then $e_j$ was in 
-
-      Suppose $w(e_i, e_j) \ne 0$.
-      Then at least one of $e_i, e_j$ is in $\span \{ e_1, \cdots, e_{2m} \}$.
-
-      TODO*****************
+%      Then $(e^1 \wedge e^2 + \cdots + e^{2m - 1} \wedge e^{2m})(e_i, e_j) = 0$.
+%      We claim that $w(e_i, e_j) = 0$.
+%      If $e_i = e_j$, then $w(e_i, e_j) = -w(e_j, e_i) = -w(e_i, e_j)$, so $w(e_i, e_j) = 0$.
+%      Suppose otherwise.
+%      Without loss of generality, assume $i < j$.
+%      If $2m < i < j$, then $w(e_i, e_j) = 0$ because of the terminating condition.
+%      Suppose $i \leq 2m$.
+%      Then $e_j$ was in 
+%
+%      Suppose $w(e_i, e_j) \ne 0$.
+%      Then at least one of $e_i, e_j$ is in $\span \{ e_1, \cdots, e_{2m} \}$.
+%      TODO*****************
   \end{itemize}
   Therefore, $w = e^1 \wedge e^2 + \cdots + e^{2m - 1} \wedge e^{2m}$.
 \end{proof}
