@@ -132,6 +132,77 @@ $ $
 \end{proof}
 
 \begin{exer}
+  Let $w \in \wedge^2 V^*$.
+  \begin{itemize}
+    \item
+      Show that there exists a basis $\{ e_1, \cdots, e_n \}$ of $V$ with a dual basis $\{ e^1, \cdots, e^n \}$ of $V^*$ such that $w = e^1 \wedge e^2 + \cdots + e^{2m - 1} \wedge e^{2m}$ for some $m \leq n / 2$.
+    \item
+      $w^l = w \wedge \cdots \wedge w \ne 0$ if and only if $l \leq m$.
+  \end{itemize}
+\end{exer}
+
+\begin{proof}
+  Let $V_1 = V$.
+  We will pick vectors inductively.
+
+  Suppose that we have $V_i$ for some $i \in \mathbb{N}$.
+  If $\forall v, v' \in V_i, w(v, v')  = 0$, then we are done.
+  Suppose otherwise.
+  Then there must exist $v, v' \in V_i$ such that $w(v, v') = 1$.
+  Let $e_{2i - 1} = v, e_{2i} = v'$.
+  Let $V_{i + 1} = \{ v \in V \mid w(v, e_{2i - 1}) = w(v, e_{2i}) = 0 \}$.
+  We will repeat this process with the $V_{i + 1}$.
+
+  For each $i$, we claim that $\{ e_1, \cdots, e_{2i} \}$ is linearly independent.
+  TODO! SHOW THIS!!!***************
+
+  Since $V$ is an $n$-dimensional vector space, this process will terminate.
+  If not, it would imply the existence of a linearly independent set with more than $n$ vectors.
+  Since the set of all the vectors we found is linearly independent, it can be extended to form a basis of $V$.
+
+  Let $\{ e_1, \cdots, e_n \}$ be a basis that we obtain by extending the linearly independent set of vectors we found.
+  Let $m$ be chosen such that $2m$ is the number of vectors we found.
+  Let $\{ e^1, \cdots e^n \}$ denote the dual basis of $\{ e_1, \cdots, e_n \}$.
+  By Proposition 4.1., we know the existence of such a basis and that the dimension of such a basis is $n$.
+  We claim that $w = e^1 \wedge e^2 + \cdots + e^{2m - 1} \wedge e^{2m}$.
+
+  Because $w$ and $e^1 \wedge e^2 + \cdots + e^{2m - 1} \wedge e^{2m}$ are bilinear, it suffices to identify what $(e_i, e_j)$ gets mapped to for each $i, j$.
+  Let $i, j \in \{ 1, \cdots, n \}$ be given.
+  \begin{itemize}
+    \item
+      Case 1: The pair $(i, j)$ equals $(2l - 1, 2l)$ for some $l \in \{1, \cdots, m \}$.
+      Then $w(e_{2l - 1}, e_{2l}) = 1$ because that is how we found $e_{2l - 1}, e_2l}$.
+      On the other hand,
+      \begin{align*}
+        &(e^1 \wedge e^2 + \cdots + e^{2m - 1} \wedge e^{2m})(e_{2l - 1}, e_{2l}) \\
+          &= (e^1 \wedge e^2)(e_{2l - 1}, e_{2l}) + \cdots + (e^{2m - 1} \wedge e^{2m})(e_{2l - 1}, e_{2l}) \\
+          &= e^{2l - 1}(e_{2l - 1})e^{2l}(e_{2l}) - e^{2l}(e_{2l - 1})e^{2l - 1}(e_{2l}) \\
+          &= 1.
+      \end{align*}
+    \item
+      Case 2: The pair $(i, j)$ equals $(2l, 2l - 1)$ for some $l \in \{1, \cdots, m \}$.
+      Since $w$ and $e^1 \wedge e^2 + \cdots + e^{2m - 1} \wedge e^{2m}$ are both alternating, $w(e_i, e_j) = -w(e_j, e_i)$ and $(e^1 \wedge e^2 + \cdots + e^{2m - 1} \wedge e^{2m})(e_i, e_j) = -(e^1 \wedge e^2 + \cdots + e^{2m - 1} \wedge e^{2m})(e_j, e_i)$.
+      Then, by Case 1, they both result in $-1$.
+    \item
+      Case 3: Any other cases.
+      Then $(e^1 \wedge e^2 + \cdots + e^{2m - 1} \wedge e^{2m})(e_i, e_j) = 0$.
+      We claim that $w(e_i, e_j) = 0$.
+      If $e_i = e_j$, then $w(e_i, e_j) = -w(e_j, e_i) = -w(e_i, e_j)$, so $w(e_i, e_j) = 0$.
+      Suppose otherwise.
+      Without loss of generality, assume $i < j$.
+      If $2m < i < j$, then $w(e_i, e_j) = 0$ because of the terminating condition.
+      Suppose $i \leq 2m$.
+      Then $e_j$ was in 
+
+      Suppose $w(e_i, e_j) \ne 0$.
+      Then at least one of $e_i, e_j$ is in $\span \{ e_1, \cdots, e_{2m} \}$.
+
+      TODO*****************
+  \end{itemize}
+  Therefore, $w = e^1 \wedge e^2 + \cdots + e^{2m - 1} \wedge e^{2m}$.
+\end{proof}
+
+\begin{exer}
   Prove that $\{ \partial_1, \cdots, \partial_n \}$ is a basis of $T_p \mathbb{R}^n$.
 \end{exer}
 
