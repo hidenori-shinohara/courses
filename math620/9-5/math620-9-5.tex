@@ -206,7 +206,36 @@ $ $
 \end{exer}
 
 \begin{proof}
-  TODO
+  $ $
+  \begin{itemize}
+    \item
+      Linearly independent?
+      Let $c_1, \cdots, c_n \in \mathbb{R}$ be given.
+      Suppose $c_1\partial_1 + \cdots + c_n\partial_n = 0$.
+      Then $\forall i, 0 = (c_1\partial_1 + \cdots + c_n\partial_n)(x^i) = c_i\partial_i(x^i) = c_i$.
+      Therefore, $c_i = 0$ for each $i$.
+    \item
+      Span?
+      Let $\lambda \in T_p \mathbb{R}^n$ be given.
+      We claim that $\lambda = \sum \lambda(x^i)\partial_i$.
+      Let $f \in \mathscr{C}^{\infty}$.
+      Then $f(x) = f(p) + \sum_i [\frac{\partial f}{\partial x^i}(p)(x^i - p^i) + g^i(x)(x^i - p^i])$ for some smooth functions $g^i$ by Taylor's formula with remainder.
+      For each $i$, $g_i(p) = 0$.
+      \begin{align*}
+        \lambda(f)
+          &= \lambda(f(p)) + \lambda(\sum_i [\frac{\partial f}{\partial x^i}(p)(x^i - p^i) + g^i(x)(x^i - p^i)]) \\
+          &= \lambda(\sum_i [\frac{\partial f}{\partial x^i}(p)(x^i - p^i) + g^i(x)(x^i - p^i)]) \\
+          &= \sum_i \frac{\partial f}{\partial x^i}(p)\lambda(x^i - p^i) + \sum_i \lambda(g^i(x)(x^i - p^i)) \\
+          &= \sum_i \frac{\partial f}{\partial x^i}(p)\lambda(x^i - p^i) + \sum_i [\lambda(g^i(x))(p^i - p^i) + \lambda(x^i - p^i)g^i(p)] \\
+          &= \sum_i \frac{\partial f}{\partial x^i}(p)\lambda(x^i - p^i) + \sum_i \lambda(x^i - p^i)g^i(p) \\
+          &= \sum_i \frac{\partial f}{\partial x^i}(p)\lambda(x^i - p^i) \\
+          &= \sum_i \frac{\partial f}{\partial x^i}(p)(\lambda(x^i) - \lambda(p^i)) \\
+          &= \sum_i \frac{\partial f}{\partial x^i}(p)\lambda(x^i) \\
+          &= \sum_i \partial_i(f)\lambda(x^i) \\
+          &= \sum_i \lambda(x^i)\partial_i(f) \\
+          &= (\sum_i \lambda(x^i)\partial_i)(f) \\
+      \end{align*}
+  \end{itemize}
 \end{proof}
 
 \begin{exer}
