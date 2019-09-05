@@ -1,0 +1,108 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 601 Homework (Due 9/11)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\begin{exer}{(1)}
+  Show that $2 \times 2$ matrices give a functor, $M_2$, from the category of rings to itself, $R \mapsto M_2(R)$.
+\end{exer}
+
+\begin{proof}
+  Let $R, R'$ be rings and $\phi \in \Hom(R, R')$.
+  Let $M_2(\phi): M_2(R) \rightarrow M_2(R')$ be defined such that
+
+  \begin{align*}
+    (M_2(\phi))\begin{pmatrix}\begin{bmatrix} a & b \\ c & d \end{bmatrix} \end{pmatrix} = 
+    \begin{bmatrix} \phi(a) & \phi(b) \\ \phi(c) & \phi(d) \end{bmatrix}.
+  \end{align*}
+
+  We claim that $M_2$ is indeed a functor.
+
+ \begin{itemize}
+   \item
+     Claim 1: For any $\phi \in \Hom(R, R')$, $M_2(\phi) \in \Hom(M_2(R), M_2(R'))$.
+     In other words, we want to show that $M_2(\phi)$ is a ring homomorphism for any $\phi$.
+     \begin{align*}
+       (M_2(\phi))\begin{pmatrix}\begin{bmatrix} a & b \\ c & d \end{bmatrix} + \begin{bmatrix} e & f \\ g & h \end{bmatrix} \end{pmatrix} 
+         &= (M_2(\phi))\begin{pmatrix}\begin{bmatrix} a + e & b + f \\ c + g & d + h \end{bmatrix} \end{pmatrix} \\
+         &= \begin{bmatrix} \phi(a + e) & \phi(b + f) \\ \phi(c + g) & \phi(d + h) \end{bmatrix} \\
+         &= \begin{bmatrix} \phi(a) + \phi(e) & \phi(b) + \phi(f) \\ \phi(c) + \phi(g) & \phi(d) + \phi(h) \end{bmatrix} \\
+         &= \begin{bmatrix} \phi(a) & \phi(b) \\ \phi(c) & \phi(d) \end{bmatrix} + \begin{bmatrix} \phi(e) & \phi(f) \\ \phi(g) & \phi(h) \end{bmatrix} \\
+         &= (M_2(\phi))\begin{bmatrix} a & b \\ c & d \end{bmatrix} + (M_2(\phi))\begin{bmatrix} e & f \\ g & h \end{bmatrix} \\
+     \end{align*}
+     \begin{align*}
+       &(M_2(\phi))\begin{pmatrix}\begin{bmatrix} a & b \\ c & d \end{bmatrix} \begin{bmatrix} e & f \\ g & h \end{bmatrix} \end{pmatrix} \\
+         &= (M_2(\phi))\begin{pmatrix}\begin{bmatrix} ae + bg & af + bh \\ ce + dg & cf + dh \end{bmatrix} \end{pmatrix} \\
+         &= \begin{bmatrix} \phi(ae + bg) & \phi(af + bh) \\ \phi(ce + dg) & \phi(cf + dh) \end{bmatrix} \\
+         &= \begin{bmatrix} \phi(a)\phi(e) + \phi(b)\phi(g) & \phi(a)\phi(f) + \phi(b)\phi(h) \\ \phi(c)\phi(e) + \phi(d)\phi(g) & \phi(c)\phi(f) + \phi(d)\phi(h)) \end{bmatrix} \\
+         &= \begin{bmatrix} \phi(a) & \phi(b) \\ \phi(c) & \phi(d) \end{bmatrix} \begin{bmatrix} \phi(e) & \phi(f) \\ \phi(g) & \phi(h) \end{bmatrix} \\
+         &= (M_2(\phi))\begin{pmatrix}\begin{bmatrix} a & b \\ c & d \end{bmatrix} \end{pmatrix} (M_2(\phi))\begin{pmatrix}\begin{bmatrix} e & f \\ g & h \end{bmatrix} \end{pmatrix}
+     \end{align*}
+     Therefore, $M_2(\phi)$ is indeed a ring homomorphism.
+   \item
+     For any ring $R$ and the identity function $\Id_R$, $M_2(\Id_R)$ is the identity map on $M_2(R)$ because it maps each element in a given matrix to itself.
+   \item
+     Let $f \in \Hom(A, B), g \in \Hom(B, C)$.
+     \begin{align*}
+       (M_2(f \circ g))\begin{pmatrix}\begin{bmatrix} a & b \\ c & d \end{bmatrix}\end{pmatrix}
+        &= \begin{bmatrix} (f \circ g)(a) & (f \circ g)(b) \\ (f \circ g)(c) & (f \circ g)(d) \end{bmatrix} \\
+        &= \begin{bmatrix} f(g(a)) & f(g(b)) \\ f(g(c)) & f(g(d)) \end{bmatrix} \\
+        &= M_2(f)\begin{pmatrix}\begin{bmatrix} g(a) & g(b) \\ g(c) & g(d) \end{bmatrix}\end{pmatrix}\\
+        &= M_2(f)\begin{pmatrix}M_2(g)\begin{pmatrix}\begin{bmatrix} a & b \\ c & d \end{bmatrix}\end{pmatrix}\end{pmatrix} \\
+        &= (M_2(f) \circ M_2(g))\begin{pmatrix}\begin{bmatrix} a & b \\ c & d \end{bmatrix}\end{pmatrix}.
+     \end{align*}
+ \end{itemize}
+ Therefore, $M_2$ is indeed a functor.
+\end{proof}
+
+\end{document}
+
+
