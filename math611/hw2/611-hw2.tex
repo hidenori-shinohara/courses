@@ -85,6 +85,53 @@
       Using the exact same logic as above, we can conclude that $wg \ne gw$.
   \end{itemize}
   Therefore, $w$ is not in the center of $G * H$, so $Z(G * H) = \{ e \}$ where $e$ denotes the empty word.
+
+  Let $x$ be a finite-order element in $G$ or $H$.
+  Let $n$ denote the order.
+  Let $w \in G * H$.
+  Then $(wxw^{-1})^n = wx^nw^{-1} = ww^{-1} = e$, so the conjugate of a finite order element in $G$ or $H$ is has finite order.
+
+  We will show that every element of finite order in $G * H$ is a conjugate of a finite order element in $G$ or $H$.
+  We will consider the length of a finite-order element.
+  \begin{itemize}
+    \item
+      Let $w \in G * H$ be a nonempty word of even length.
+      Since adjacent elements must be elements of different groups, the leftmost element of $w$ and rightmost element of $w$ are in different groups.
+      In other words, $w^k$ has the length $k$ times the length of $w$.
+      This implies that the order of $w$ is not finite.
+    \item
+      We will show that every reduced word of length $2k - 1$ is a conjugate of a finite order element in $G$ or $H$ for every $k \in \mathbb{N}$.
+      Let $k = 1$.
+      Then it is either just $g$ or $h$ where $g \in G$ or $h \in H$.
+      In each case, it is clear that the order $g$ or $h$ itself is finite.
+      Therefore, it is a conjugate of a finite order element by the empty word.
+
+      Suppose that the claim is true for some $k \in \mathbb{N}$.
+      We will consider a finite-order element of length $2k + 1$.
+      Let $w$ denote a reduced word of length $2k + 1$.
+      Suppose $w^n = e$ for some $n \in \mathbb{N}$.
+      \begin{itemize}
+        \item
+          Case 1: The leftmost element of $w$ is in $G$.
+          Then $w = gw'g'$ where $g, g'$ are in $G$ and $w'$ is a reduced word of length $2k - 1$.
+          $g'$ must equal $g^{-1}$.
+          Otherwise, the length of $w^m$ would equal $m \cdot (2k + 1) - m$, and it would never equal 0.
+          Consider $g^{-1}wg = w'$.
+          Since $(g^{-1}wg)^n = g^{-1}w^ng = g^{-1}g = e$, the order of $w'$ is finite.
+          By the inductive hypothesis, $w'$ is a conjugate of a finite order element in $G$ or $H$.
+          Since the length of $w'$ is odd and the end elements are in $H$, $w'$ must be a conjugate of a finite order element in $G$.
+          In other words, $w' = axa^{-1}$ for some $a \in G * H$ and $x \in G$.
+          Then $w = g(axa^{-1})g^{-1} = (ga)x(a^{-1}g^{-1}) = (ga)x(ga)^{-1}$.
+          $ga$ is a reduced word because the leftmost element of $a$ is the same as the leftmost element of $w'$, which is in $H$.
+
+          By induction, every reduced word of finite length whose leftmost element is in $G$ is a conjugate of a finite order element in $G$.
+        \item
+          Case 2: The leftmost element of $w$ is in $H$.
+          By symmetry, every reduced word of finite length whose leftmost element in $H$ is a conjugate of a finite order element in $H$.
+      \end{itemize}
+
+      Therefore, the only elements of $G * H$ of finite order are the conjugates of finite-order elements of $G$ and $H$.
+  \end{itemize}
 \end{proof}
 
 \end{document}
