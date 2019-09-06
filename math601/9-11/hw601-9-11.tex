@@ -4,6 +4,7 @@
 \usepackage{amssymb,amsfonts}
 \usepackage[all,arc]{xy}
 \usepackage{enumerate}
+\usepackage{physics}
 \usepackage{mathrsfs}
 \usepackage{theoremref}
 \usepackage{graphicx}
@@ -110,6 +111,10 @@
       Set $a = (12345)$ and compute $a^{-1}$.
     \item
       Set $b = (14)(23)$ and compute $aba^{-1}$.
+    \item
+      Show that every element in $D_5$ may be written in the form $a^ib^j$ for some $i, j \in \mathbb{Z}$.
+    \item
+      Compute $\abs{D_5}$.
   \end{enumerate}
 \end{exer}
 
@@ -122,7 +127,26 @@
       Thus $a^{-1} = (15432)$.
       Since $(12345)(15432) = (15432)(12345) = (1)$, $(15432)$ is indeed $a^{-1}$.
     \item
-      $(12345)(14)(23)(15432) = (25)(34)$.
+      $aba^{-1} = (a(1)a(4))(a(2)a(3)) = (25)(34)$.
+    \item
+      $ba = (14)(23)(12345) = (13)(45)$, and $a^{-1}b = (15432)(14)(23) = (13)(45)$.
+      Therefore, $ba = a^{-1}b$.
+      We claim that $ba^n = a^{-n}b$ for every $n \in \mathbb{N}$.
+      Suppose $ba^n = a^{-n}b$ for some $n \in \mathbb{N}$.
+      Then $ba^{n + 1} = (ba^n)a = (a^{-n}b)a = a^{-n}(ba) = a^{-n}a^{-1}b = a^{-n-1}b$.
+      By mathematical induction, $ba^n = a^{-n}b$ for every $n \in \mathbb{N}$.
+
+      For any $n \in \mathbb{N}$, $ba^n = a^{-n}b$, so $a^nba^n = b$, and thus $a^nb = ba^{-n}$.
+      Therefore, we have $ba^k = a^{-k}b$ for every $k \in \mathbb{Z}$.
+
+      We claim that for any $i, j \in \mathbb{Z}$, $b^ja^i$ can be written in the desired form.
+      Since $b^2 = e$, we consider two cases based on the parity of $j$.
+      If $j$ is even, then $b^j = e$, so $b^ja^i = a^i$.
+      If $j$ is odd, then $b^j = b$, so $b^ja^i = ba^i = a^{-i}b$, which is in the desired form.
+
+      TODO
+    \item
+      TODO
   \end{enumerate}
 \end{proof}
 
