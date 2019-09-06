@@ -1,0 +1,92 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 611 Homework 2 (Due 9/11)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\begin{exer}{(Problem 1, Section 1.2)}
+  Show that the free product $G * H$ of nontrivial groups $G$ and $H$ has trivial center, and that the only elements of $G * H$ of finite order are the conjugates of finite-order elements of $G$ and $H$.
+\end{exer}
+
+\begin{proof}
+  Let $w \in G * H$ be given.
+  Suppose $w$ is not the empty word.
+  \begin{itemize}
+    \item
+      Suppose the leftmost element of $w$ is in $G$.
+      Let $h \in H$ be given such that $h$ is not the identity element of $H$.
+      \begin{itemize}
+        \item
+          Case 1: The rightmost element of $w$ is an element of $G$.
+          Then $wh$ is just a concatenation, so $wh \ne hw$ because the leftmost element of $wh$ is in $G$ and the leftmost element of $hw$ is in $H$.
+        \item
+          Case 2: The rightmost element of $w$ is an element of $H$, but not $h^{-1}$.
+          Let $h'$ denote the rightmost element of $w$ and $w'$ denote the remaining.
+          Then $w = w'h'$, so $wh = w'(h'h)$.
+          By the definition of a reduced word, the rightmost element of $w'$ is an element of $G$, so the concatenation of $w'$ and $h'h$ is exactly $wh$.
+          The leftmost element of $wh$ is in $G$ and the leftmost element of $hw$ is in $H$, so $wh \ne hw$.
+        \item
+          Case 3: The rightmost element of $w$ is $h^{-1}$.
+          Then the rightmost element of $w$ disappears in $wh$.
+          In this case, the leftmost element of $w$ stays the same.
+          Therefore, the leftmost element of $wh$ is in $G$ and the leftmost element of $hw$ is in $H$, so $wh \ne hw$.
+      \end{itemize}
+      In each case, $wh \ne hw$.
+    \item
+      Suppose that the leftmost element of $w$ is in $H$.
+      Let $g \in G$ be given such that $g$ is not the identity element of $G$.
+      Using the exact same logic as above, we can conclude that $wg \ne gw$.
+  \end{itemize}
+  Therefore, $w$ is not in the center of $G * H$, so $Z(G * H) = \{ e \}$ where $e$ denotes the empty word.
+\end{proof}
+
+\end{document}
+
+
