@@ -1,0 +1,80 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{fullpage}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 620 Homework (Due 9/10)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\begin{exer}
+  Show that $F_*: T_p\mathbb{R}^n \rightarrow T_q\mathbb{R}^m$.
+\end{exer}
+
+\begin{proof}
+  Let $v_1, v_2 \in T_p\mathbb{R}^n, c \in \mathbb{R}$ be given.
+  We will show that $F_*(cv_1 + v_2) = cF_*(v_1) + F_*(V_2)$.
+  Choose $\gamma_1, \gamma_2$ be paths in $U$ defined on a neighborhood of $0$ in $\mathbb{R}$ such that $\gamma_1(0) = \gamma_2(0) = p, \gamma_1'(0) = v_1$ and $\gamma_2'(0) = v_2$.
+  Then $F_*(v_1) = (F(\gamma_1(t)))'\mid_{t = 0} = F'(\gamma_1(0))\gamma_1'(0) = F'(p)v_1$, and $F_*(v_2) = (F(\gamma_2(t)))'\mid_{t = 0} = F'(\gamma_2(0))\gamma_2'(0) = F'(p)v_2$.
+  Let $\gamma_3: \mathbb{R} \rightarrow U$ be the constant path at $p$.
+  Let $\gamma = c(\gamma_1 - \gamma_3) + \gamma_2$.
+  \begin{itemize}
+    \item
+      $\gamma(0) = c\gamma_1(0) - c\gamma(0) + \gamma_2(0) = p$.
+    \item
+      $\gamma'(0) = c\gamma_1'(0) + \gamma_2'(0) = cv_1 + v_2$.
+  \end{itemize}
+  Therefore, $F_*(cv_1 + v_2) = (F \circ (c(\gamma_1 - \gamma_3) + \gamma_2))'(0) = F'(p)(c\gamma_1'(0) + \gamma_2'(0)) = F'(p)(cv_1 + v_2)$.
+
+  Hence, $F_*(cv_1 + v_2) = cF_*(v_1) + F_*(v_2)$, so $F_*$ is indeed linear.
+\end{proof}
+
+\end{document}
+
+
