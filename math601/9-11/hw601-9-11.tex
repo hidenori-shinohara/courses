@@ -119,6 +119,8 @@
       Let $k$ be a field.
       There is a natural right action of $GL_2(k)$ on $\mathbb{P}^1(k)$.
       Write down how an element of $GL_2(k)$ acts on an element of $\mathbb{P}^1(k)$ using homogeneous coordinates.
+    \item
+      Determine the subroup of $GL_2(k)$ which acts as the identity on $\mathbb{P}^1(k)$.
   \end{enumerate}
 \end{exer}
 
@@ -139,6 +141,32 @@ $ $
       \begin{align*}
         (x_0 : x_1) \star \begin{bmatrix} a & b \\ c & d \end{bmatrix} = (ax_0 + cx_1 : bx_0 + dx_1).
       \end{align*}
+    \item
+      We claim that the subgroup $\{ tI \mid t \in k^{\star}\}$ acts as the identity on $\mathbb{P}^{1}(k)$.
+      $(x_0 : x_1) \star tI = (tx_0 : tx_1) = (x_0 : x_1)$.
+      Let $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \in \mathbb{P}^{1}(k)$.
+      Suppose $A$ acts as the identity on $\mathbb{P}^{1}(k)$.
+      \begin{itemize}
+        \item
+          Case 1: $b \ne 0$.
+          Then $(1 : 0) \star \begin{bmatrix} a & b \\ c & d \end{bmatrix} = (a : b)$.
+          Since $b \ne 0$, $(t \cdot 1, t \cdot 0) \ne (a, b)$ for any $t \in k^{\times}$.
+          Therefore, $A$ does not act as the identity on $\mathbb{P}^1(k)$.
+        \item
+          Case 2: $d \ne 0$.
+          Then $(0 : 1) \star \begin{bmatrix} a & b \\ c & d \end{bmatrix} = (c : d)$.
+          Since $d \ne 0$, $(t \cdot 0, t \cdot 1) \ne (c, d)$ for any $t \in k^{\times}$.
+          Therefore, $A$ does not act as the identity on $\mathbb{P}^1(k)$.
+        \item
+          Case 3: $b = d = 0$ and $a \ne d$.
+          Then $(1 : 1) \star \begin{bmatrix} a & b \\ c & d \end{bmatrix} = (a : d)$.
+          Since $a \ne d$, $(t \cdot 1, t \cdot 1) \ne (a, d)$ for any $t \in k^{\times}$.
+          Therefore, $A$ does not act as the identity on $\mathbb{P}^1(k)$.
+      \end{itemize}
+      This means that $b = d = 0$ and $a = d$.
+      Since $A$ is invertible, $a \ne 0$.
+      Thus $A$ is indeed an element of $\{ tI \mid t \in k^{\times} \}$.
+      Therefore, $\{ tI \mid t \in k^{\times} \}$ is exactly the set of elements that act as the identity on $\mathbb{P}^1(k)$.
   \end{enumerate}
 \end{proof}
 
