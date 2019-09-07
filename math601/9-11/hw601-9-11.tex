@@ -109,6 +109,9 @@
   \begin{enumerate}
     \item
       If $F$ is a functor from category $C$ to a category $C'$ and $G$ is a functor from a category $C'$ to a category $C''$, under what conditions is a composite functor, $G \circ F: C \rightarrow C''$ defined?
+    \item
+      For a ring $R$ write $GL_2(R)$ for the set of all invertible $2 \times 2$ matrices with entries in $R$.
+      List the exercises above and the sections of the handouts which combine to give a proof that $GL_2$ is a functor from rings to groups.
   \end{enumerate}
 \end{exer}
 
@@ -118,7 +121,11 @@ $ $
     \item
       A composition of two functors is always a functor.
     \item
-      TODO
+      Exercise 1 from More exercises shows that $M_2$ is a functor from the category of rings to itself.
+      From ``Units as a functor" in the handout from the first lecture, we know that passing from rings to units is a functor from the category of rings to the category of groups.
+      Then by composing $M_2$ with the operation to take units, we get $GL_2$.
+      Exercise 4(a) from More exercises shows that a composition of two functors is a functor.
+      Thus $GL_2$ is a functor.
   \end{enumerate}
 \end{proof}
 
