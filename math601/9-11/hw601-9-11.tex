@@ -169,7 +169,41 @@
           By the inductive hypothesis, $x$ can be represented as a word of length $\leq 2$.
       \end{itemize}
     \item
-      TODO
+      \begin{itemize}
+        \item
+          $a^1 = a \ne (1)$.
+        \item
+          $a^2 = (13524) \ne (1)$.
+        \item
+          $a^3 = (14253) \ne (1)$.
+        \item
+          $a^4 = (15432) \ne (1)$.
+        \item
+          $a^5 = (1)$.
+      \end{itemize}
+      Therefore, the order of $a$ is 5.
+      Since $b \ne (1)$ and $b^2 = (1)$, the order of $b$ is 2.
+      We claim that there are exactly 10 elements in $D_5$.
+      \begin{itemize}
+        \item
+          Claim 1: $\abs{D_5} \leq 10$.
+          Let $x \in D_5$.
+          Then there exist $i, j \in \mathbb{Z}$ such that $x = a^ib^j$.
+          Since the order of $a$ is 5 and the order of $b$ is 2, we can assume that $0 \leq i \leq 4$ and $0 \leq j \leq 1$.
+          Therefore, $D_5 \subset \{ a^ib^j \mid 0 \leq i \leq 4, 0 \leq j \leq 1 \}$.
+          Thus there are at most 10 elements in $D_5$.
+        \item
+          Claim 2: $\abs{D_5} \leq 10$.
+          Let $a^ib^j, a^{i'}b^{j'} \in \{ a^ib^j \mid 0 \leq i \leq 4, 0 \leq j \leq 1 \}$.
+          Suppose $a^ib^j = a^{i'}b^{j'}$.
+          Then $a^{i - i'} = b^{j' - j}$.
+          We have calculated all the powers of $a$ above, and none of them is equal to $b$.
+          Therefore, $i - i' \equiv 0 \pmod 5$ and $j - j' \equiv 0 \pmod 2$.
+          Since $0 \leq i, i' \leq 4, 0 \leq j, j' \leq 1$, $i = i'$ and $j = j'$.
+          This implies that the set $\{ a^ib^j \mid 0 \leq i \leq 4, 0 \leq j \leq 1 \}$ contains exactly 10 elements.
+          Since the set is a subset of $D_5$, $D_5$ contains at least 10 elements.
+      \end{itemize}
+      Therefore, $D_5$ contains exactly 10 elements.
   \end{enumerate}
 \end{proof}
 
