@@ -170,6 +170,33 @@ $ $
   \end{enumerate}
 \end{proof}
 
+\begin{exer}{(Problem 5 from More exercises)}
+  $ $
+  \begin{enumerate}
+    \item
+      Compute $\abs{SL_2(\mathbb{Z}/p)}$, the number of elements in $SL_2(\mathbb{Z}/p)$, when $p$ is an odd prime number.
+  \end{enumerate}
+\end{exer}
+
+\begin{proof}
+  $ $
+  \begin{enumerate}
+    \item
+      From the previous homework, we know that $\abs{GL_2(\mathbb{Z}/p)} = p^4 - p^3 - p^2 + p$.
+      We claim that $\abs{SL_2(\mathbb{Z}/p)} = (p^4 - p^3 - p^2 + p) / (p - 1)$.
+      For each $i = 1, 2, \cdots, p - 1$, let $S_i$ denote the set of all matricies in $GL_2(\mathbb{Z}/p)$ whose determinant is $i$.
+      Then $GL_2(\mathbb{Z}/p) = \bigcup S_i$ and $S_i$'s are disjoint.
+      Let $i \ne j \in \{ 1, \cdots, p - 1 \}$.
+      Let $f: S_i \rightarrow S_j$ be the function that multiplies the first row of a matrix by $j / i$.
+      $f$ is well-defined because multiplying the first row of a matrix by $j / i$ multiplies the determinant by $j /i$.
+      $f$ is injective since $g \circ f$ is the identity map on $S_i$ where $g: S_j \rightarrow S_i$ is the map that multiplies the first row of a matrix by $i / j$.
+
+      This implies that $\abs{S_i} \leq \abs{S_j}$ for each $i \neq j$.
+      This is only possible if $\abs{S_i} = \abs{S_j}$ for each $i \ne j$.
+      Therefore, $\abs{S_i} = \abs{GL_2(\mathbb{Z}/p)} / (p - 1) = p^3 - p$.
+  \end{enumerate}
+\end{proof}
+
 \begin{exer}{(Problem 8 from More exercises)}
   Consider the subgroup, $D_5 = \langle (12345), (14)(23) \rangle \subset S_5$.
   \begin{enumerate}
