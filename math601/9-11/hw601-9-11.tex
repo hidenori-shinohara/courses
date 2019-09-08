@@ -410,6 +410,27 @@ $ $
       Therefore, $B = S$.
       Since we know that $B$ contains at least 20 elements, $S$ is exactly the set of elements in $B$.
       Thus $\abs{B} = 20$.
+    \item
+      Let $C = \{ a^ib^j \mid i \in \{ 0, 1, 2, 3, 4 \}, j \in \{ 0, 2 \} \}$.
+      We claim that $C$ is a subgroup of $B$.
+      Let $a^ib^j \in C$.
+      Then $j = 0$ or $2$.
+      Thus $-j = j \pmod 4$.
+      $(a^ib^j)^{-1} = b^{-j}a^{-i} = b^ja^{-i} = a^{-2^{j}i}b^{j} \in C$.
+      Thus $C$ is closed under multiplication.
+      Since $C$ contains the identity, $C$ is nonempty.
+      Any nonempty subset of a finite group that is closed under multiplication is a subgroup, so $C$ is a subgroup.
+      $C$ contains 10 elements.
+      Thus $C$ is a normal subgroup of $B$ because the index $[B:C]$ is $2$.
+
+      Since $B / C$ is a group with 2 elements, it is isomorphic to $\mathbb{Z}/2\mathbb{Z}$, thus it is abelian.
+
+      Similarly, $\langle a \rangle$ is a subgroup of $C$ and the index $[C:\langle a \rangle]$ is 2, so $\langle a \rangle$ is a normal subgroup of $C$.
+      Again, $C / \langle a \rangle$ is a group with 2 elements, so it is abelian.
+      Finally, $\{ e \}$ is a normal subgroup of $\langle a \rangle$.
+      Since $\langle a \rangle$ is abelian, $\langle a \rangle / \{ e \}$ is abelian.
+
+      Thus $\{ e \} \subset \langle a \rangle \subset C \subset B$ is a filtertation by subgroups, so $B$ is solvable.
   \end{itemize}
 \end{proof}
 
