@@ -370,6 +370,49 @@ $ $
   \end{enumerate}
 \end{proof}
 
+\begin{exer}{(Problem 9 from More exercises)}
+  Consider the subgroup $B = \langle (12345), (1243) \rangle \subset S_5$.
+  \begin{itemize}
+    \item
+      Determine the number of elements in $B$.
+    \item
+      Show that $B$ is a solvable group.
+  \end{itemize}
+\end{exer}
+
+\begin{proof}
+  Let $a = (12345), b = (1243)$.
+  \begin{itemize}
+    \item
+      Since the order of $a$ is 5, $5 \mid \abs{B}$ by Lagrange's Theorem.
+      Similarly, $4 \mid \abs{B}$ since $\abs{b} = 4$.
+      This implies that the order of $B$ is at least 20.
+      Let $S = \{ a^ib^j \mid 0 \leq i \leq 4, 0 \leq j \leq 3 \}$.
+      We claim that $B = S$.
+      \begin{itemize}
+        \item
+          $S \subset B$.
+          This is trivial.
+        \item
+          $B \subset S$?
+          $a^2b = (1452) = ba$, so $ba^n = (ba)a^{n - 1} = a^2(ba^{n-1}) = \cdots = a^{2n}b \in S$ for each $n \in \mathbb{N}$.
+          This is similar to Problem 8(iii) and can be shown more rigorously using mathematical induction.
+          Since the order of $a$ is finite, $\forall n \in \mathbb{N}, a^{-n}$ can be expressed as a positive power of $a$.
+          Therefore, $ba^k \in S$ for each $k \in \mathbb{Z}$.
+
+          For any $n \in \mathbb{N}, k \in \mathbb{Z}$, $b^na^k = b^{n - 1}(ba^k) = b^{n - 1}(a^{2k}b) = b^{n - 2}(ba^{2k})b = \cdots = a^{2^nk}b^n \in S$.
+          This again can be shown more rigorously using mathematical induction.
+          Since the order of $b$ is finite, $\forall n \in \mathbb{N}, b^{-n}$ can be expressed as a positive power of $b$.
+          Therefore, $b^ka^l \in S$ for each $k, l \in \mathbb{Z}$.
+
+          Using the same argument as Problem 8(iii), we can conclude that every element in $B$ can be expressed as $a^ib^j$.
+      \end{itemize}
+      Therefore, $B = S$.
+      Since we know that $B$ contains at least 20 elements, $S$ is exactly the set of elements in $B$.
+      Thus $\abs{B} = 20$.
+  \end{itemize}
+\end{proof}
+
 
 \end{document}
 
