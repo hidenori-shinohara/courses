@@ -58,24 +58,33 @@
 \end{exer}
 
 \begin{proof}
-** TODO **
-This is probably wrong because $F$ is not multi-valued function, so the expression like $F'(p)v_2)$ makes little sense?
-  Let $v_1, v_2 \in T_p\mathbb{R}^n, c \in \mathbb{R}$ be given.
-  We will show that $F_*(cv_1 + v_2) = cF_*(v_1) + F_*(V_2)$.
-  Choose $\gamma_1, \gamma_2$ be paths in $U$ defined on a neighborhood of $0$ in $\mathbb{R}$ such that $\gamma_1(0) = \gamma_2(0) = p, \gamma_1'(0) = v_1$ and $\gamma_2'(0) = v_2$.
-  Then $F_*(v_1) = (F(\gamma_1(t)))'\mid_{t = 0} = F'(\gamma_1(0))\gamma_1'(0) = F'(p)v_1$, and $F_*(v_2) = (F(\gamma_2(t)))'\mid_{t = 0} = F'(\gamma_2(0))\gamma_2'(0) = F'(p)v_2$.
-  Let $\gamma_3: \mathbb{R} \rightarrow U$ be the constant path at $p$.
-  Let $\gamma = c(\gamma_1 - \gamma_3) + \gamma_2$.
+  Let $v_1, v_2 \in T_pU, c \in \mathbb{R}$.
+  Then $v_1 = c_1^j\frac{\partial}{\partial x^j} \mid_p, v_2 = c_2^j\frac{\partial}{\partial x^j} \mid_p$ where $c_i^j \in \mathbb{R}$.
+  Let $\gamma_1(t) = p + t(c_1^1, \cdots, c_1^n), \gamma_2(t) = p + t(c_2^1, \cdots, c_2^n), \gamma = c\gamma_1 + \gamma_2$.
+  Then there exist unique $b_1^1, \cdots, b_1^m, b_2^1, \cdots, b_2^m, b^1, \cdots, b^m \in \mathbb{R}$ such that
   \begin{itemize}
     \item
-      $\gamma(0) = c\gamma_1(0) - c\gamma(0) + \gamma_2(0) = p$.
+      $F_*(v_1) = b_1^s\frac{\partial}{\partial y^s}$.
     \item
-      $\gamma'(0) = c\gamma_1'(0) + \gamma_2'(0) = cv_1 + v_2$.
+      $F_*(v_2) = b_2^s\frac{\partial}{\partial y^s}$.
+    \item
+      $F_*(cv_1 + v_2) = b^s\frac{\partial}{\partial y^s}$.
   \end{itemize}
-  Therefore, $F_*(cv_1 + v_2) = (F \circ (c(\gamma_1 - \gamma_3) + \gamma_2))'(0) = F'(p)(c\gamma_1'(0) + \gamma_2'(0)) = F'(p)(cv_1 + v_2)$.
-
-  Hence, $F_*(cv_1 + v_2) = cF_*(v_1) + F_*(v_2)$, so $F_*$ is indeed linear.
+  For each $s$,
+  \begin{align*}
+    b_s
+      &= (F_*(cv_1 + v_2))(y^s) \\
+      &= \frac{d}{dt} y^s \circ F \circ \gamma(t) \Big\vert_{t = 0} \\
+      &= \frac{d}{dt} F^s \circ \gamma(t) \Big\vert_{t = 0} & \text{(Let $F^s = y^s \circ F$.)} \\
+      &= \frac{\partial F^s}{\partial x^j} \Big\vert_p (cc_1^j + c_2^j) \\
+      &= c\frac{\partial F^s}{\partial x^j} \Big\vert_p c_1^j + \frac{\partial F^s}{\partial x^j} \Big\vert_p c_2^j \\
+      &= c\frac{d}{dt} F^s \circ \gamma_1(t) \Big\vert_p c_1^j + \frac{d}{dt} F^s \circ \gamma_2(t) \Big\vert_p c_2^j \\
+      &= c(F_*v_1)(y^s) + (F_*v_2)(y^s) \\
+      &= cb_1^s+ b_2^s.
+  \end{align*}
+  Therefore, $F_*(cv_1 + v_2) = cF_*(v_1) + F_*(v_2)$.
 \end{proof}
+
 
 \end{document}
 
