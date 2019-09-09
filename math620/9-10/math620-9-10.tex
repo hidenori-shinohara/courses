@@ -85,6 +85,30 @@
   Therefore, $F_*(cv_1 + v_2) = cF_*(v_1) + F_*(v_2)$.
 \end{proof}
 
+\begin{exer}
+  Prove that if $f_i \in \mathscr{C}^{\infty}$, then $f_Idx^I \in \mathcal{A}^k$.
+\end{exer}
+
+\begin{proof}
+  Let $\eta = f_Idx^I$ and let $\zeta = dx^I$.
+  Let $X_1, \cdots, X_k \in \mathfrak{X}(\mathbb{R}^n)$.
+  We must show that $F: \mathbb{R}^n \rightarrow \mathbb{R}$ defined by $F(p) = \eta_p(X_{1, p}, \cdots, X_{k, p})$ is smooth.
+  For any $p \in \mathbb{R}^n$,
+  \begin{align*}
+    F(p)
+      &= \eta_p(X_{1, p}, \cdots, X_{k, p}) \\
+      &= (f_{i_1}(p)dx^{i_1}\vert_p \wedge \cdots \wedge f_{i_k}(p)dx^{i_k}\vert_p)(X_{1, p}, \cdots, X_{k, p}) \\
+      &= \sum_{\sigma \in S_k} (f_{i_{\sigma_1}}(p) dx^{i_{\sigma_1}}\vert_p)(X_{1, p}) \cdots (f_{i_{\sigma_k}}(p) dx^{i_{\sigma_k}}\vert_p)(X_{k, p}) \\
+      &= (f_1(p) \cdots f_k(p))\sum_{\sigma \in S_k} (dx^{i_{\sigma_1}}\vert_p)(X_{1, p}) \cdots (dx^{i_{\sigma_k}}\vert_p)(X_{k, p}) \\
+      &= (f_1(p) \cdots f_k(p))\zeta_p(X_{1, p}, \cdots, X_{k, p}).
+  \end{align*}
+
+  As discussed in the lecture, $\zeta = dx^I \in \mathcal{A}^k(\mathbb{R}^n)$.
+  Thus the mapping $p \mapsto \zeta_p(X_{1, p}, \cdots, X_{k, p})$ must be smooth.
+  Since each $f_i$ is smooth and the product of smooth functions is smooth, $p \mapsto f_1(p) \cdots f_k(p)\zeta_p(X_{1, p}, \cdots, X_{k, p})$ is smooth.
+  Therefore, $F$ is smooth, so $\eta = f_Idx^I \in \mathcal{A}^k$.
+\end{proof}
+
 
 \end{document}
 
