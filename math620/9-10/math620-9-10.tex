@@ -39,6 +39,7 @@
 
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\sgn}{sgn}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -103,6 +104,21 @@
 
   Since products and sums of smooth functions are smooth, it suffices to show $p \mapsto dx^{i}\vert_p(X_{j, p})$ is smooth for each $i, j$.
   Then $dx^i\vert_p(X_{j, p}) = X_{j, p}(x^i)$, which is smooth because $\mathfrak{X}$ is defined to be the collection of all smooth vector fields.
+\end{proof}
+
+\begin{exer}
+  Given $\eta \in \mathscr{A}^k(V), \omega \in \mathscr{A}^l(V)$, prove that $F^*(\eta \wedge \omega) = (F^*\eta) \wedge (F^*\omega)$.
+\end{exer}
+
+\begin{proof}
+  Let $p \in V, v_1, \cdots, v_{k + l} \in V$.
+  \begin{align*}
+    (F^*(\eta \wedge \omega))_p(v_1, \cdots, v_{k + l})
+      &= (\eta \wedge \omega)_p(F_*v_1, \cdots, F_*v_{k + l}) \\
+      &= \frac{1}{k!l!}\sum_{\sigma \in S_{k + l}} \sgn(\sigma) \eta_p(F_*v_{\sigma_1}, \cdots, F_*v_{\sigma_k})\omega_p(F_*v_{\sigma_{k + 1}}, \cdots, F_*v_{\sigma_{k + l}}) \\
+      &= \frac{1}{k!l!}\sum_{\sigma \in S_{k + l}} \sgn(\sigma) (F^*\eta)_p(v_{\sigma_1}, \cdots, v_{\sigma_k})(F^*\omega)_p(v_{\sigma_{k + 1}}, \cdots, v_{\sigma_{k + l}}) \\
+      &= ((F^*\eta) \wedge (F^*\omega))_p(v_1, \cdots, v_{k + l}).
+  \end{align*}
 \end{proof}
 
 
