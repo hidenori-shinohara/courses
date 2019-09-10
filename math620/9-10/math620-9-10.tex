@@ -121,7 +121,60 @@
   \end{align*}
 \end{proof}
 
+\begin{exer}
+  Define $F: \mathbb{R}^2_{(s, t)} \rightarrow \mathbb{R}^3_{(x, y, z)}$ such that $F(s, t) = (s^2, st, t^2)$.
+  Compute the following:
+  \begin{enumerate}
+    \item
+      $F^*(xyz)$.
+    \item
+      $F^*(xydz + yzdx + zxdy)$.
+    \item
+      $F^*(dx \wedge dy - zdx \wedge dz + y^2dy \wedge dz)$.
+    \item
+      $F^*(dx \wedge dy \wedge dz)$.
+  \end{enumerate}
+\end{exer}
+
+\begin{proof}
+  We have
+  \begin{itemize}
+    \item
+      $F^*x = s^2$,
+    \item
+      $F^*y = st$,
+    \item
+      $F^*z = t^2$.
+  \end{itemize}
+
+  Therefore, 
+  \begin{itemize}
+    \item
+      $F^*dx = 2sds$,
+    \item
+      $F^*dy = tds + sdt$,
+    \item
+      $F^*dz = 2tdt$.
+  \end{itemize}
+
+  \begin{enumerate}
+    \item
+      $F^*(xyz) = (s^2)(st)(t^2) = (st)^3$.
+    \item
+      \begin{align*}
+        F^*(xydz + yzdx + zxdy)
+          &= s^2(st)(2tdt) + (st)t^2(2sds) + t^2s^2(tds + sdt) \\
+          &= 3t^2s^3dt + 3s^2t^3ds.
+      \end{align*}
+    \item
+      \begin{align*}
+        &F^*(dx \wedge dy - zdx \wedge dz + y^2dy \wedge dz) \\
+          &= F^*(dx) \wedge F^*(dy) - F^*(zdx) \wedge F^*(dz) + F^*(y^2dy) \wedge F^*(dz) \\
+          &= 2sds \wedge (tds + sdt) - (2st^2ds) \wedge 2tdt + (st)^2(tds + sdt) \wedge 2tdt. \\
+      \end{align*}
+    \item
+      $F^*(dx \wedge dy \wedge dz) = F^*(dx) \wedge F^*(dy) \wedge F^*(dz) = 2sds \wedge (tds + sdt) \wedge 2tdt$.
+  \end{enumerate}
+\end{proof}
 
 \end{document}
-
-
