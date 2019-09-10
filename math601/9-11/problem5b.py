@@ -54,4 +54,3 @@ for l in ls:
         printmat(m)
     print
 
-print ls
