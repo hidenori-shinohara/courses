@@ -171,6 +171,9 @@
         &F^*(dx \wedge dy - zdx \wedge dz + y^2dy \wedge dz) \\
           &= F^*(dx) \wedge F^*(dy) - F^*(zdx) \wedge F^*(dz) + F^*(y^2dy) \wedge F^*(dz) \\
           &= 2sds \wedge (tds + sdt) - (2st^2ds) \wedge 2tdt + (st)^2(tds + sdt) \wedge 2tdt. \\
+          &= 2sds \wedge sdt - (2st^2ds) \wedge 2tdt + s^2t^3ds \wedge 2tdt. \\
+          &= 2s^2(ds \wedge dt) - (4st^3)(ds \wedge dt) + 2s^2t^4(ds \wedge dt). \\
+          &= (2s^2 - 4st^3 + 2s^2t^4)(ds \wedge dt).
       \end{align*}
     \item
       $F^*(dx \wedge dy \wedge dz) = F^*(dx) \wedge F^*(dy) \wedge F^*(dz) = 2sds \wedge (tds + sdt) \wedge 2tdt = 0$ because the dimension of the vector space is 2 and that is smaller than the number of variables, 3.
