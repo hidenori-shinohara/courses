@@ -26,7 +26,7 @@ for a in range(p):
             for d in range(p):
                 if (a * d - b * c) % p == 1:
                     ms += [[[a, b], [c, d]]]
-def remdup(ls):
+def remove_duplicates(ls):
     res = []
     for i in range(len(ls)):
         if i > 0:
@@ -35,7 +35,8 @@ def remdup(ls):
         res += [ls[i]]
     return res
 
-
+def printmat(m):
+    print("\\begin{bmatrix} %d & %d \\\\ %d & %d \\end{bmatrix}," % (m[0][0], m[0][1], m[1][0], m[1][1]))
                     
 conjs = []
 for m in ms:
@@ -43,16 +44,13 @@ for m in ms:
     for n in ms:
         if not n == m:
             conj += [mul(mul(n, m), inv(n))]
-    conj = remdup(sorted(conj))
-    print conj
+    conj = remove_duplicates(sorted(conj))
     conjs += [conj]
 
-ls = remdup(sorted(conjs))
-print "final"
-cnt = 0
-for l in ls:
-    print l
-    cnt += len(l)
+ls = remove_duplicates(sorted(conjs))
 
-print cnt
+for l in ls:
+    for m in l:
+        printmat(m)
+    print
 
