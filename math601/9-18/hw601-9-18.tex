@@ -1,0 +1,87 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{fullpage}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 601 Homework (Due 9/18)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\begin{exer}
+  Let $R$ be a commutative ring with one.
+  Explain why there is a unique ring homomorphism, $\mathbb{Z} \rightarrow R$.
+\end{exer}
+
+\begin{proof}
+  The existence of a ring homomorphism is clear since $\phi(n) = 1_R + \cdots + 1_R$ and $\phi(-n) = -\phi(n)$ define a homomorphism.
+
+  We will show the uniqueness of a ring homomorphism.
+  Let $\phi_1, \phi_2: \mathbb{Z} \rightarrow R$ be ring homomorphisms.
+
+  We claim that $\phi_1(n) = \phi_2(n)$ for each $n \in \mathbb{N}$.
+  \begin{itemize}
+    \item
+      By definition, $\phi_1(1) = \phi_2(1) = 1_R$.
+    \item
+      Suppose $\phi_1(n) = \phi_2(n)$ for some $n \in \mathbb{N}$.
+      Then $\phi_1(n + 1) = \phi_1(n) + \phi_1(1) = \phi_2(n) + \phi_2(1) = \phi_2(n + 1)$.
+  \end{itemize}
+  By mathematical induction, $\phi_1(n) = \phi_2(n)$ for each $n \in \mathbb{N}$.
+
+  For every $n \in \mathbb{N}$, $\phi_1(-n) = -\phi_1(n) = -\phi_2(n) = \phi_2(-n)$.
+  Finally, $\phi_1(0) = \phi_1(0 + 0) = \phi_1(0) + \phi_1(0)$, so $\phi_1(0) = 0_R$.
+  Similarly, $\phi_2(0) = 0_R$.
+  Thus $\phi_1(0) = \phi_2(0)$.
+
+  Hence, we have shown that $\phi_1 = \phi_2$.
+\end{proof}
+
+\end{document}
+
+
