@@ -536,6 +536,37 @@ $ $
   \end{itemize}
 \end{proof}
 
+\begin{exer}{(Exercise 10 from More exercises)}
+  Let $k$ be a field.
+  The smallest subgroup of $\textbf{Bijections}(k^n, k^n)$ which contains $GL_n(k)$ and the group of translations by elements of $k^n$ is called the group of affine transformations of $k^n$ and will be denoted $Aff_n(k)$.
+  \begin{itemize}
+    \item
+      Let $G = \{ \begin{bmatrix} * & v \\ 0 & 1 \end{bmatrix} \in GL_{n + 1}(k): * \in GL_n(k), v \in k^n \}$.
+      Here $v$ is a column vector of length $n$ and $0$ is the row vector of length $n$ in which all entries are 0.
+      Finally 1 is the number 1.
+      Show that $G$ acts on column vectors in $k^{n + 1}$ whose last entry is 1.
+  \end{itemize}
+\end{exer}
+
+\begin{proof}
+  $ $
+  \begin{itemize}
+    \item
+      Let $w \in k^v$ be given.
+      Then 
+      \begin{align*}
+        \begin{bmatrix} * & v \\ 0 & 1 \end{bmatrix}
+          \begin{bmatrix} w \\ 1 \end{bmatrix}
+            = \begin{bmatrix} w' \\ 1 \end{bmatrix}
+      \end{align*}
+      for some $w' \in k^v$, $k^v$ is closed under this action.
+      The associativity of this action is guaranteed from linear algebra.
+      The identity map maps any column vector to itself.
+      Thus this is indeed a group action.
+    \item
+  \end{itemize}
+\end{proof}
+
 
 \end{document}
 
