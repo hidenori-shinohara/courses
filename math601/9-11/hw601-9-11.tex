@@ -545,6 +545,8 @@ $ $
       Here $v$ is a column vector of length $n$ and $0$ is the row vector of length $n$ in which all entries are 0.
       Finally 1 is the number 1.
       Show that $G$ acts on column vectors in $k^{n + 1}$ whose last entry is 1.
+    \item
+      Describe a group isomorphism, $h: G \rightarrow Aff_n(k)$.
   \end{itemize}
 \end{exer}
 
@@ -564,6 +566,18 @@ $ $
       The identity map maps any column vector to itself.
       Thus this is indeed a group action.
     \item
+      Let $M \in G$ be given.
+      Let $h(M)$ denote the function $k^n \rightarrow k^n$ such that
+      \begin{align*}
+        v \mapsto
+        \left[
+        \begin{array}{ccc|c} 
+        &          &     & \\
+        & I_{n, n} &     & 0 \\
+        & & & \end{array} \right]
+          M \begin{bmatrix} v \\ 1 \end{bmatrix}
+      \end{align*}
+
   \end{itemize}
 \end{proof}
 
