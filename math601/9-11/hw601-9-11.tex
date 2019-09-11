@@ -120,7 +120,7 @@
       There is a natural right action of $GL_2(k)$ on $\mathbb{P}^1(k)$.
       Write down how an element of $GL_2(k)$ acts on an element of $\mathbb{P}^1(k)$ using homogeneous coordinates.
     \item
-      Determine the subroup of $GL_2(k)$ which acts as the identity on $\mathbb{P}^1(k)$.
+      Determine the subgroup of $GL_2(k)$ which acts as the identity on $\mathbb{P}^1(k)$.
   \end{enumerate}
 \end{exer}
 
@@ -188,7 +188,7 @@ $ $
     \item
       From the previous homework, we know that $\abs{GL_2(\mathbb{Z}/p)} = p^4 - p^3 - p^2 + p$.
       We claim that $\abs{SL_2(\mathbb{Z}/p)} = (p^4 - p^3 - p^2 + p) / (p - 1)$.
-      For each $i = 1, 2, \cdots, p - 1$, let $S_i$ denote the set of all matricies in $GL_2(\mathbb{Z}/p)$ whose determinant is $i$.
+      For each $i = 1, 2, \cdots, p - 1$, let $S_i$ denote the set of all matrices in $GL_2(\mathbb{Z}/p)$ whose determinant is $i$.
       Then $GL_2(\mathbb{Z}/p) = \bigcup S_i$ and $S_i$'s are disjoint.
       Let $i \ne j \in \{ 1, \cdots, p - 1 \}$.
       Let $f: S_i \rightarrow S_j$ be the function that multiplies the first row of a matrix by $j / i$.
@@ -410,7 +410,7 @@ $ $
       $a$ corresponds to a reflection, and $b$ corresponds to a rotation as in the figure.
        \begin{figure}
          \includegraphics[width=\linewidth]{pentagon.jpg}
-           \caption{Interpretate $D_5$ geometrically}
+           \caption{Interpret $D_5$ geometrically}
          \label{fig:maps}
        \end{figure}
     \item
@@ -532,7 +532,7 @@ $ $
       Finally, $\{ e \}$ is a normal subgroup of $\langle a \rangle$.
       Since $\langle a \rangle$ is abelian, $\langle a \rangle / \{ e \}$ is abelian.
 
-      Thus $\{ e \} \subset \langle a \rangle \subset C \subset B$ is a filtertation by subgroups, so $B$ is solvable.
+      Thus $\{ e \} \subset \langle a \rangle \subset C \subset B$ is a filtration by subgroups, so $B$ is solvable.
   \end{itemize}
 \end{proof}
 
@@ -547,6 +547,8 @@ $ $
       Show that $G$ acts on column vectors in $k^{n + 1}$ whose last entry is 1.
     \item
       Describe a group isomorphism, $h: G \rightarrow Aff_n(k)$.
+    \item
+      Compute the order of $G$ when $k = \mathbb{Z} / p$ and $n = 1$.
   \end{itemize}
 \end{exer}
 
@@ -577,11 +579,12 @@ $ $
         & & & \end{array} \right]
           M \begin{bmatrix} v \\ 1 \end{bmatrix}
       \end{align*}
-
+    \item
+      When $n = 1$, there are exactly $(p - 1)$ $1 \times 1$ matrices in $GL_n(k)$.
+      Also, there are exactly $(p - 1)$ vectors in $k^n$.
+      Thus there are $(p - 1)^2$ elements in $G$.
   \end{itemize}
 \end{proof}
 
 
 \end{document}
-
-
