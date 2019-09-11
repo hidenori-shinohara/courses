@@ -211,6 +211,24 @@
   \end{itemize}
 \end{proof}
 
+\begin{exer}{(Problem 6, Chapter 1.2)}
+  Use Proposition 1.26 to show that the complement of a closed discrete subspace of $\mathbb{R}^n$ is simply-connected if $n \geq 3$.
+\end{exer}
+
+\begin{proof}
+  Let $X$ be a closed discrete subspace of $\mathbb{R}^n$.
+  Let $f: X \rightarrow \mathbb{R}^n$ such that the open ball around $x$ with the radius $f(x)$ contains no other points of $X$.
+  This should be always possible because $X$ is a closed discrete subspace.
+  Consider the set of all open balls around $x \in X$ with the radius $f(x) / 2$, $\{ B(x, f(x) / 2) \mid x \in X \}$.
+  Then $\mathbb{R}^n \setminus X$ is homeomorphic to $\mathbb{R}^n \setminus \{ B(x, f(x) / 2) \mid x \in X \}$.
+  Since the balls are disjoint from each other, $\mathbb{R}^n \setminus \{ B(x, f(x) / 2) \mid x \in X \}$ are path connected.
+  For each hole $B(x, f(x) / 2)$, we will attach an $n$-cell.
+  By doing so, we obtain $\mathbb{R}^n$, whose fundamental group is 0.
+  By Proposition 1.26(b), attaching $n$-cells do not change the fundamental group for $n \geq 3$.
+  Thus the fundamental group of $\mathbb{R}^n \setminus X$ is also 0.
+  Thus $\mathbb{R}^n \setminus X$ is simply-connected.
+\end{proof}
+
 \begin{exer}{(Problem 8, Chapter 1.2)}
   Compute the fundamental group of the space obtained from two tori $S^1 \times S^1$ by identifying a circle $S^1 \times \{ x_0 \}$ in one torus with the corresponding circle $S^1 \times \{ x_0 \}$ in the other torus.
 \end{exer}
