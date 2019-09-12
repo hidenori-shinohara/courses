@@ -127,16 +127,18 @@
 \end{exer}
 
 \begin{proof}
-  \todo[inline]{
-    Tried this for 10 minutes.
-    This problem seems wrong.
-    See Figure \ref{fig:counterexampledelete}.
-  }
-  \begin{figure}
-    \includegraphics[width=.5\linewidth]{problem4_wrong_delete.jpeg}
-    \caption{Problem 4}
-    \label{fig:counterexampledelete}
-  \end{figure}
+  Let $g(x) + J \in R[x] / J$ be given.
+  Since the leading coefficient of $f(x)$ is a unit, we will apply Theorem 9 in the handouts.
+  Then there exists a unique polynomial $q(x), r(x) \in R[x]$ such that $g(x) = f(x)q(x) + r(x)$ with $\deg(r(x)) < \deg(f(x))$ or $r(x) = 0$.
+  Then $g(x) + J = f(x)q(x) + r(x) + J = r(x) + J$ where $r(x)$ can be expressed as $\sum_{i = 0}^{n - 1} r_ix^i$ with $r_0, \cdots, r_{n - 1} \in R$.
+
+  Let $r'(x) = \sum_{i = 0}^{n - 1} r_i'x^i$ with $r_0', \cdots, r_{n - 1}' \in R$.
+  If $g(x) + J = r'(x) + J$, then $g(x) - r'(x) \in J$.
+  Therefore, $g(x) - r'(x) = f(x)q'(x)$ for some $q'(x) \in R[x]$.
+  This implies that $g(x) = f(x)q'(x) + r'(x)$.
+  By the uniqueness of $q(x), r(x)$, we have $q(x) = q'(x)$ and $r(x) = r'(x)$.
+
+  Therefore, $g(x) + J$ can be written in exactly one way in the form $\sum_{i = 0}^{n - 1} r_ix^i + J$ with $r_0, \cdots, r_{n - 1} \in R$.
 \end{proof}
 
 \begin{exer}{(Problem 5)}
