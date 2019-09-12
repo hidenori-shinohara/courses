@@ -155,6 +155,33 @@
   \end{enumerate}
 \end{exer}
 
+\begin{proof}
+  $ $
+  \begin{enumerate}
+    \item 
+      Suppose a generating set is a singleton.
+      Let $x \in S$ be such an element.
+      Then $kx = 1$ for some $k \in \mathbb{Z}$ because we must be able to obtain $1$ by adding or subracting $x$ finitely many times.
+      $k \ne 0$, so this implies that $x = 1 / k$.
+      Then $x \in \mathbb{Q}$.
+      However, $(1 + \sqrt{5}) / 2 \notin \mathbb{Q}$.
+      $(\mathbb{Q}, +)$ is an abelian group, so it is closed under addition and subtraction.
+      Therefore, a generating set cannot be a singleton.
+
+      We claim that $\{ 1, (1 + \sqrt{5}) / 2 \}$ is a generating set.
+      Let $s \in S$ be given.
+      Then $s$ is a real number such that $s = \sum_{i=0}^{\infty} r_i((1 + \sqrt{5}) / 2)^i$.
+      Since this is $\mathbb{R}$, the $\sum$ means limits.
+      Since $\abs{((1 + \sqrt{5}) / 2)^i} > 1$ for each $i > 0$, there must exist an $N \in \mathbb{N}$ such that $\forall i \geq N, r_i = 0$.
+      Then $s = \sum_{i=0}^{N} r_i((1 + \sqrt{5}) / 2)^i$.
+
+      Since $(1 + \sqrt{5}) / 2$ is a root to the equation $x^2 - x - 1 = 0$, we know that it satisfies $x^2 = x + 1$.
+      By applying this repeatedly, $((1 + \sqrt{5}) / 2)^n$ can be expressed as a linear combination of $(1 + \sqrt{5}) / 2$ and $1$ over $\mathbb{Z}$.
+      Therefore, $s$ can be expressed as a linear combination of $(1 + \sqrt{5}) / 2$ and $1$ over $\mathbb{Z}$.
+      A linear combination of two numbers over $\mathbb{Z}$ can be expressed as a finite sequence of addition and subtraction of the two numbers, so $\{ 1, (1 + \sqrt{5}) / 2 \}$ is indeed a generator of $(S, +)$.
+  \end{enumerate}
+\end{proof}
+
 \end{document}
 
 
