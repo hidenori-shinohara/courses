@@ -102,17 +102,26 @@
 \end{exer}
 
 \begin{proof}
-  \todo[inline]{
-    Tried this for 20 minutes.
-      The problem seems complicated, but it seems that we just need some sort of category theoretical approach to solve this problem.
-      I think I can finish it in the next 20 minutes.
-      The universal mapping property of the quotient is proposition 6 in the handouts.
-    }
-  \begin{figure}
-    \includegraphics[width=.5\linewidth]{problem3_partial_delete.jpeg}
-      \caption{deletethis}
-    \label{fig:mydelete}
-  \end{figure}
+  Let $\pi: R \rightarrow R / I$ be the canonical quotient homomorphism.
+  Let $f: R \rightarrow R / (I + J)$ be the canonical quotient homomorphism.
+  Then $\ker(f) = I + J$, so $I \subset \ker(f)$.
+  By Proposition 6 (Universal mapping property of the quotient), there must exist a unique ring homomorphism $\overline{f}: R / I \rightarrow R / (I + J)$ such that $\overline{f} \circ \pi = f$.
+  We claim that $\ker(\overline{f}) = \overline{J}$.
+  \begin{itemize}
+    \item
+      $\ker(\overline{f}) \subset \overline{J}$?
+      Let $r + I \in \ker(\overline{f})$.
+      Then $r + I = \pi(r)$, so $0 = \overline{f}(r + I) = \overline{f}(\pi(r)) = (\overline{f} \circ \pi)(r) = f(r) = r + (I + J)$.
+      Thus $r \in I + J$.
+      This implies that $r = i + j$ for some $i \in I, j \in J$.
+      Then $r + I = (i + j) + I = j + I \in \pi(J) = \overline{J}$.
+    \item
+      $\overline{J} \subset \ker(\overline{f})$?
+      Let $j + I \in \overline{J}$.
+      Then $\overline{f}(j + I) = \overline{f}(\pi(j)) = f(j) = j + (I + J) = 0$.
+  \end{itemize}
+  Therefore, $\ker(\overline{f}) = \overline{J}$.
+  This implies that $\overline{f}$ induces an isomorphism between $(R / I) / \overline{J}$ and $R / (I + J)$.
 \end{proof}
 
 \begin{exer}{(Problem 4)}
