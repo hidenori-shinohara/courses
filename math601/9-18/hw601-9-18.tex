@@ -187,23 +187,24 @@
       Therefore, $s$ can be expressed as a linear combination of $(1 + \sqrt{5}) / 2$ and $1$ over $\mathbb{Z}$.
       A linear combination of two numbers over $\mathbb{Z}$ can be expressed as a finite sequence of addition and subtraction of the two numbers, so $\{ 1, (1 + \sqrt{5}) / 2 \}$ is indeed a generator of $(S, +)$.
     \item
-      Let $I = \langle x^2 - x - 1 \rangle$, and let $\phi: \mathbb{Z}[x] / I \rightarrow S$ by $\phi(ax + b + I) = a \cdot \frac{1 + \sqrt{5}}{2} + b$.
-      We claim that $\phi$ is a well-defined ring isomorphism.
-      \todo[inline]{
-        I think I have the answer, but I'm not sure how to use the mapping property of polynomials.
-        See Figure \ref{fig:iso}.
-      }
-      \begin{figure}
-        \includegraphics[width=.5\linewidth]{isomorphism.jpeg}
-        \caption{mycaption}
-        \label{fig:iso}
-      \end{figure}
-      \begin{itemize}
-        \item
-          Well-defined?
-          By Problem 4, every element in $\mathbb{Z}[x] / I$ can be expressed uniquely as $ax + b + I$ where $a, b \in \mathbb{Z}$.
-          (We explicitly used division with remainder to prove Problem 4.)
-      \end{itemize}
+      By the mapping property of the polynomial ring, there is a unique ring homomorphism $\phi: \mathbb{Z}[x] \rightarrow \mathbb{Z}[(1 + \sqrt{5}) / 2]$ with $x \mapsto (1 + \sqrt{5}) / 2$.
+      We showed in part (1), that every element in $\mathbb{Z}[(1 + \sqrt{5}) / 2]$ is a linear combination of $1$ and $(1 + \sqrt{5}) / 2$ over $\mathbb{Z}$.
+      For any $a + b(1 + \sqrt{5}) / 2 \in \mathbb{Z}[(1 + \sqrt{5}) / 2]$, $\phi(a + bx) = a + b(1 + \sqrt{5}) / 2$.
+      Therefore, $\phi$ is surjective.
+      We clearly have $x^2 - x - 1 \in \ker(\phi)$.
+      Consequently, there is an inclusion of ideals $(x^2 - x - 1) \subset \ker(\phi)$.
+      To show that this inclusion is an equality, we will apply division with remainder:
+      For $g(x) \in \ker(\phi)$, write $g(x) = (x^2 - x - 1)q(x) + r(x)$ with $r(x) = 0$ or $\deg(r(x)) < \deg(x^2 - x - 1) = 2$.
+      If $r(x) \ne 0$, then we may write $r(x) = ax + b$.
+      Since $g(x)$ is in the kernel, $0 = \phi(g(x)) = \phi(r(x)) = a(1 + \sqrt{5})/2 + b$.
+      This implies $a(1 + \sqrt{5}) / 2 = -b \in \mathbb{Z}$.
+      Since $a$ is an integer and $(1 + \sqrt{5}) / 2$ is irrational, this is possible if and only if $a = b = 0$.
+      Thus in fact $r(x)$ must be zero, which implies $g(x) \in (x^2 - x - 1)$.
+      Thus $(x^2 - x - 1) = \ker(\phi)$.
+
+      By the part 3 of the universal mapping property of the quotient, we have a ring isomorphism $\overline{\phi}: \mathbb{Z}[x]/\ker(\phi) \rightarrow \phi(\mathbb{Z}[x])$.
+      In other words, $\overline{\phi}$ is an isomorphism between $\mathbb{Z}[x]/(x^2 - x- 1)$ and $\mathbb{Z}[(1 + \sqrt{5})/2]$.
+
   \end{enumerate}
 \end{proof}
 
