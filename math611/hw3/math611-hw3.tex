@@ -63,16 +63,18 @@
 \end{exer}
 
 \begin{proof}
-  \todo[inline]{
-    Tried for 15 minutes.
-    I'm having a hard time figuring out the fundamental group of the Klein bottle using cell complexes.
-    See Figure \ref{fig:attempt_pi_klein}.
-  }
+  We will construct $X$ from the 1-skeleton in Figure \ref{fig:fund_x_klein}.
   \begin{figure}
-    \includegraphics[width=.5\linewidth]{pi_klein.jpeg}
-      \caption{Attempt}
-    \label{fig:attempt_pi_klein}
+    \includegraphics[width=.5\linewidth]{klein_solution_zz.jpeg}
+      \caption{Fundamental Group of $X$}
+    \label{fig:fund_x_klein}
   \end{figure}
+  The 1-skeleton has three loops $a, b, c$, so the fundamental group is $\langle a, b, c \mid \rangle$.
+  The main difference between $X$ and the ``proper" Klein bottle is that the loop $a$ actually gets glued on the surface.
+  Thus we will glue the first 2-cell to around $a$, and another 2-cell on the loop $c^{-1}acbab^{-1}$.
+  Therefore, we end up with the fundamental group $\langle a, b, c \mid a, c^{-1}acbab^{-1} \rangle$.
+  Then $\langle a, b, c \mid a, c^{-1}acbab^{-1} \rangle \approx \langle b, c \mid \rangle \approx \mathbb{Z} * \mathbb{Z}$ since the relation $c^{-1}acbab^{-1}$ is trivial.
+
 \end{proof}
 
 \begin{exer}{(Problem 14, Chapter 1.2)}
