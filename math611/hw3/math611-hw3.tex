@@ -85,31 +85,37 @@
 
 \begin{exer}{(Problem 14, Chapter 1.2)}
   Consider the quotient space of a cube $I^3$ obtained by identifying each square face with the opposite square face via the right-handed screw motion consisting of a translation by one unit in the direction perpendicular to the face combined with a one-quarter twist of the face about its center point.
-  Show this quotient space $X$ is a cell complex with two 0 cells, four 1 cells, three 2 cells, and one 3 cell.
+  Show this quotient space $X$ is a cell complex with two 0-cells, four 1-cells, three 2-cells, and one 3-cell.
   Using this structure, show that $\pi_1(X)$ is the quaternion group $\{ \pm 1, \pm i, \pm j, \pm k \}$ of order eight.
 \end{exer}
 
 \begin{proof}
+  \begin{figure}
+    \includegraphics[width=.5\linewidth]{cube.jpeg}
+    \caption{Problem 14}
+    \label{fig:cube}
+  \end{figure}
+  The vertices and edges get identified as in Figure \ref{fig:cube}.
+  Thus we have two 0-cells and four 1-cells.
+  Since the opposite faces are identified and the cube has 6 faces, we need to glue three 2-cells to the cube.
+  Lastly, we need a 3-cell glued to the three faces.
+  By Proposition 1.26, the fundamental group of a 2-skeleton is the same as the fundamental group of a space obtained by attaching 3-cells, so it suffices to consider the fundamental group we obtain by attaching the three 2-cells to the graph.
+  As in Figure \ref{fig:cube}, the graph has 4 edges between two vertices.
+  The fundamental group of this is $\langle ab^{-1}, ac, ad \rangle$ because by ``shrinking" $a$ we obtain the graph consisting of one vertex and three loops.
+  By attaching a 2-cell to each of the top-bottom pair, left-right pair, and the front-back pair, we obtain
+
+  \begin{align*}
+    \langle ab^{-1}, ac, ad \mid ab^{-1}d^{-1}c, adc^{-1}b^{-1}, acbd \rangle.
+  \end{align*}
+
+  Thus this is the fundamental group of the given space.
+
   \todo[inline]{
-    Tried for 45 minutes.
-    The hardest part is to attach 2-cells to $X^1$.
-    $X^1$ ends up being two 0-cells with 4 arrows between them.
-    We need to figure out the relation and show that it's the quaternion group.
-    See Figure \ref{fig:quotient_delete}, \ref{fig:fund_cube}.
-    Tried for 30 more minutes after Yupeng's advice.
-    The first thing that I figured out is that if I put $i = ac$ and $j = ab^{-1}$ and $k = ad$, then $i^2 = j^2 = k^2 = ijk$.
-    I think that I also need to show that $i^2 \ne e$ and $i^4 = e$.
+    Prove that $i^2 = j^2 = k^2 = ijk$ where $i = ac$ and $j = ab^{-1}$ and $k = ad$.
+    I have already finished it in the notes.
+    I think I need to show that $i^2 \ne e$ and $i^4 = e$, but I have no idea how.
   }
-  \begin{figure}
-    \includegraphics[width=.5\linewidth]{cube_quotient_delete.jpeg}
-    \caption{Quotient}
-    \label{fig:quotient_delete}
-  \end{figure}
-  \begin{figure}
-    \includegraphics[width=.5\linewidth]{fund_cube.jpeg}
-    \caption{Quotient}
-    \label{fig:fund_cube}
-  \end{figure}
+
 \end{proof}
 
 \end{document}
