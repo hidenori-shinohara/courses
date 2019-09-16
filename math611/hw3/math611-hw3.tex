@@ -102,17 +102,55 @@
   By attaching a 2-cell to each of the top-bottom pair, left-right pair, and the front-back pair, we obtain
 
   \begin{align*}
-    \langle ab^{-1}, ac, ad \mid ab^{-1}d^{-1}c, adc^{-1}b^{-1}, acbd \rangle.
+    \langle ac, ab^{-1}, ad \mid ab^{-1}d^{-1}c, adc^{-1}b^{-1}, acbd \rangle.
   \end{align*}
 
   Thus this is the fundamental group of the given space.
+  We claim that $(ac)^2 = (ab^{-1})^2 = (ad)^2 = (ac)(ab^{-1})(ad)$.
 
-  \todo[inline]{
-    Prove that $i^2 = j^2 = k^2 = ijk$ where $i = ac$ and $j = ab^{-1}$ and $k = ad$.
-    I have already finished it in the notes.
-    I think I need to show that $i^2 \ne e$ and $i^4 = e$, but I have no idea how.
-  }
+  \begin{itemize}
+    \item
+      $(ac)^2 = (ab^{-1})^2$?
+      \begin{align*}
+        ac = d^{-1}b^{-1}
+          &\implies ab^{-1}bc = d^{-1}b^{-1} \\
+          &\implies ab^{-1}ad = d^{-1}b^{-1} \\
+          &\implies ab^{-1}a = d^{-1}b^{-1}d^{-1} \\
+          &\implies ab^{-1}ab^{-1} = d^{-1}b^{-1}d^{-1}b^{-1} \\
+          &\implies (ab^{-1})^2 = (d^{-1}b^{-1})^2 \\
+          &\implies (ab^{-1})^2 = (ac)^2.
+      \end{align*}
+    \item
+      $(ac)^2 = (ad)^2$?
+      \begin{align*}
+        ab^{-1} = c^{-1}d
+          &\implies cab^{-1} = d \\
+          &\implies ca = db \\
+          &\implies cac = dbc \\
+          &\implies cac = dad \\
+          &\implies acac = adad \\
+          &\implies (ac)^2 = (ad)^2.
+      \end{align*}
+    \item
+      $(ad)^2 = (ac)(ab^{-1})(ad)$?
+      $(ac)(ab^{-1}) = acc^{-1}d = ad$, so $(ac)(ab^{-1})(ad) = (ad)^2$.
+  \end{itemize}
 
+  Moreover, we claim that $(ac)^2 \ne e$ and $(ac)^4 = e$.
+
+  \begin{itemize}
+    \item
+      $(ac)^2 \ne e$.
+      \todo[inline]{
+        Prove this!
+      }
+    \item
+      $(ac)^4 = e$.
+      \todo[inline]{
+        Prove this!
+      }
+  \end{itemize}
+  
 \end{proof}
 
 \end{document}
