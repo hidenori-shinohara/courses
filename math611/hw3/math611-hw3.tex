@@ -153,6 +153,66 @@
   
 \end{proof}
 
+\begin{exer}{(Problem 22, Chapter 1.2)}
+  $ $
+  \begin{itemize}
+    \item
+      Show that $\pi_1(\mathbb{R}^3 - K)$ has a presentation with one generator $x_i$ for each strip $R_i$ and one relation of the form $x_ix_jx_i^{-1} = x_k$ for each square $S_l$,
+      where the indices are as in the figures above.
+  \end{itemize}
+\end{exer}
+
+\begin{proof}
+  $ $
+  \begin{itemize}
+    \item
+      We will construct the 2-dimensional complex $X$ by first attaching $R_i$'s.
+      We will attach $R_i$ one by one.
+      We begin with a plane $\mathbb{R}^2$ whose fundamental group is $0$.
+      A rectangular strip $R_i$ has a fundamental group isomorphic to $\mathbb{Z}$ since it is homotopy equivalent to $S^1$.
+      Thus it is a free group with one generator.
+      We will calculate the fundamental group of a space we obtain after attaching $T$ to $R_i$ using Van Kampen.
+      The intersection is a rectangle, so the intersection is simply connected.
+      Thus the fundamental group of the new space is simply the free product of $T$ and $R_i$.
+      Therefore, the fundamental group of the space we obtain by attaching all the $R_i$'s is $\langle x_1, \cdots, x_n \mid \rangle$ where $n$ is the number of $R_i$'s and each $x_i$ corresponds to $R_i$.
+
+      Now, we will attach $S_l$'s and we will do so one by one.
+      The fundamental group of each $S_l$ is $0$ since each $S_l$ is simply connected.
+      Thus attaching $S_l$'s does not add any new generators to the fundamental group.
+      \begin{figure}
+        \includegraphics[width=.5\linewidth]{wirtinger.jpeg}
+        \caption{Wirtinger presentation}
+        \label{fig:wirtinger}
+      \end{figure}
+      Figure \ref{fig:wirtinger} shows the intersection between an $S_l$ and the current space $X$.
+      $a, b, b', c$ denote loops based at $x_0$, and $[b] = [b']$.
+      Moreover, $[a], [b], [c]$ are exactly the generator of the corresponding rectangular strip.
+      We will consider the intersection between $S_l$ and $X$.
+      \begin{itemize}
+        \item
+          The loop that goes through the intersection is path homotopic to $abc^{-1}b^{-1}$ in $X$.
+        \item
+          The loop that goes through the intersection is nulhomotopic in $S_l$ since $S_l$ is simply connected.
+      \end{itemize}
+      By Van Kampen, the new group is $\pi_1(X) * \pi_1(S_l) / (i_{S_l}(g)i_{X}(g))$ where $g$ is any loop in the intersection.
+      Since $\pi_1(S_l) = 0$, $i_{S_l}(g) = e$ for any $g$.
+      Then $(i_X(g)) = ([abc^{-1}b^{-1}])$ since the intersection is homeomorphic to $S^1$ and $[abc^{-1}b^{-1}]$ is a generator.
+      Since $\pi_1(S_l) = 0$, we have $\pi_1(X) / ([a][b][c^{-1}][b^{-1}])$.
+
+      After attaching all the $S_l$'s we will end up with $\langle x_1, \cdots, x_n \mid [a_l][b_l][c_l^{-1}][b_l^{-1}] \rangle$ where
+
+      \begin{itemize}
+        \item
+          For each $S_l$, we add a relation $[a_l][b_l][c_l^{-1}][b_l^{-1}]$.
+          Note that this means $[a_l][b_l][c_l^{-1}][b_l^{-1}] = e$, so $[a_l] = [b_l][c_l][b_l^{-1}]$, and this is exactly the desired relation.
+        \item
+          Each $x_i$ corresponds to a rectangular strip $R_i$.
+          These are the only generators because $S_l$'s are all simply connected.
+      \end{itemize}
+  \end{itemize}
+
+\end{proof}
+
 \end{document}
 
 
