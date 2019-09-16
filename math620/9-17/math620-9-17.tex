@@ -1,0 +1,106 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{fullpage}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Id}{Id}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 620 (9/17)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\begin{exer}
+  Prove that $V \times \Aut(V)$ is a group.
+\end{exer}
+
+\begin{proof}
+  $ $
+  \begin{itemize}
+    \item
+      Associativity.
+      Let $(u, \phi), (v, \psi), (w, \rho)$ be given.
+      \begin{align*}
+        ((u, \phi) \cdot (v, \psi)) \cdot (w, \rho)
+          &= (u + \phi v, \phi \circ \psi) \cdot (w, \rho) \\
+          &= (u + \phi v + (\phi \circ \psi) w, (\phi \circ \psi) \circ \rho) \\
+          &= (u + \phi v + (\phi \circ \psi) w, \phi \circ (\psi \circ \rho)) \\
+          &= (u + \phi v + \phi(\psi w), \phi \circ (\psi \circ \rho)) \\
+          &= (u + \phi(v + \psi w), \phi \circ (\psi \circ \rho)) \\
+          &= (u, \phi) \cdot (v + \psi w, \psi \circ \rho) \\
+          &= (u, \phi) \cdot ((v, \psi) \cdot (w, \rho)).
+      \end{align*}
+    \item
+      Identity.
+      Let $u = 0, \phi = \Id$.
+      Then for any $(v, \psi) \in V \times \Aut(V)$,
+      \begin{itemize}
+        \item
+          $(u, \phi) \cdot (v, \psi) = (u + \phi v, \phi \circ \psi) = (0 + \Id \circ v, \Id \circ \psi) = (v, \psi)$,
+        \item
+          $(v, psi) \cdot (u, \phi) = (v + \psi u, \psi \circ \phi) = (v + \Id \circ u, \psi \circ \Id) = (v, \psi)$.
+      \end{itemize}
+
+      Thus $(u, \phi)$ is the identity.
+    \item
+      Inverse.
+      Let $(u, \phi) \in V \times \Aut(V)$ be given.
+      Then $\phi^{-1} \in \Aut(V)$, and thus $-\phi^{-1}(u) \in V$.
+      \begin{itemize}
+        \item
+          $(-\phi^{-1}(u), \phi^{-1}) \cdot (u, \phi) = (-\phi^{-1}(u) + \phi^{-1}(u), \phi^{-1} \circ \phi) = (0, \Id)$.
+        \item
+          $(u, \phi) \cdot (-\phi^{-1}(u), \phi^{-1}) = (u + \phi(-\phi^{-1}(u)), \phi \circ \phi^{-1}) = (0, \Id)$.
+      \end{itemize}
+  \end{itemize}
+  Therefore, $V \times \Aut(V)$ forms a group.
+\end{proof}
+
+\end{document}
+
+
