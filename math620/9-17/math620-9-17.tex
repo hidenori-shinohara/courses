@@ -56,6 +56,23 @@
 \maketitle
 
 \begin{exer}
+  Prove $\omega = g^{-1}dg$.
+\end{exer}
+
+\begin{proof}
+  \begin{align*}
+    g^{-1}dg
+      &= g^{-1}d\begin{bmatrix} 1 & 0 \\ x & A \end{bmatrix} \\
+      &= g^{-1}\begin{bmatrix} 0 & 0 \\ dx & dA \end{bmatrix} \\
+      &= \begin{bmatrix} 1 & 0 \\ x & A \end{bmatrix}^{-1}\begin{bmatrix} 0 & 0 \\ dx & dA \end{bmatrix} \\
+      &= \begin{bmatrix} 1 & 0 \\ x & A \end{bmatrix}^{-1}\begin{bmatrix} 0 & 0 \\ \omega^iA_i & \omega^j_i A_j \end{bmatrix} \\
+      &= \begin{bmatrix} 1 & 0 \\ -A^{-1}x & A^{-1} \end{bmatrix}\begin{bmatrix} 0 & 0 \\ \omega^iA_i & \omega^j_i A_j \end{bmatrix} \\
+      &= \begin{bmatrix} 0 & 0 \\ \omega^i & \omega^i_j \end{bmatrix} \\
+      &= \omega.
+  \end{align*}
+\end{proof}
+
+\begin{exer}
   Prove that $V \times \Aut(V)$ is a group.
 \end{exer}
 
