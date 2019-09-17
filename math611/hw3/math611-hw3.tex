@@ -264,6 +264,23 @@
   \end{itemize}
   Thus those two relations are identical.
   Therefore, the fundamental group of the trefoil knot is $\langle b, c \mid bcb = cbc \rangle$.
+
+  Let $G = \langle b, c \mid bcb = cbc \rangle, H = \langle x, y \mid x^2 = y^3 \rangle$.
+  Let $\phi: H \rightarrow G$ be defined such that $\phi$ maps $x$ to $cbc$ and $y$ to $bc$ and it preserves the multiplicative operation.
+  For instance, $\phi(x^iy^j) = (cbc)^i(bc)^j$.
+  This function is well-defined because $\phi(x^2) = (\phi(x))^2 = (cbc)^2 = (bcb)^2 = (\phi(y))^3 = \phi(y^3)$.
+  Since this function is well-defined and it preserves the multiplicative operation, it is a group homomorphism.
+  \begin{itemize}
+    \item
+      Injective?
+      \todo[inline]{
+        I'm not sure how to prove this.
+      }
+    \item
+      Surjective?
+      $\phi(xy^{-1}) = c$ and $\phi(yxy^{-1}) = b$, so $\phi$ is surjective.
+  \end{itemize}
+
 \end{proof}
 
 
