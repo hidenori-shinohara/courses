@@ -78,6 +78,19 @@
   In order to calculate the fundamental group of $Y$, it suffices to repeat the following step without attaching a 2-cell to $a$.
   Thus the fundamental group is $G = \langle a, b, c \mid c^{-1}aca^{-1}bab^{-1} \rangle$.
   This is isomorphic to the group given in the textbook, $H = \langle a, b, c \mid aba^{-1}b^{-1}cbc^{-1} \rangle$ by $\phi: G \rightarrow H$ that maps $a$ to $b$, $b$ to $c$, and $c$ to $a^{-1}$.
+
+  We claim that there exists a deformation retract $F$ of $\mathbb{R}^3 - Z$ onto $Y$.
+  Such an $F$ would map $\mathbb{R}^3 - Z \times I$ into $\mathbb{R}^3 - Z$.
+  Since it is hard to draw how $\mathbb{R}^3 - Z$ deformation retracts, Figure \ref{fig:klein_complmenent} shows the complement of $F$ at each $t$.
+  In other words, the drawing shows how $\mathbb{R}^3 \setminus F((\mathbb{R}^3 - Z) \times \{ t \})$ looks at each $t$.
+  It is clear from the figure that $\mathbb{R}^3 \setminus F((\mathbb{R}^3 - Z) \times \{ t \})$ eventually becomes $\mathbb{R}^3 - Y$.
+  In other words, $F((\mathbb{R}^3 - Z) \times \{ 1 \}) = Y$.
+
+  \begin{figure}
+    \includegraphics[width=.5\linewidth]{klein_complement.jpeg}
+    \caption{Deformation retract}
+    \label{fig:klein_complmenent}
+  \end{figure}
 \end{proof}
 
 \begin{exer}{(Problem 14, Chapter 1.2)}
