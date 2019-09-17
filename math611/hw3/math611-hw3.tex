@@ -148,17 +148,31 @@
       $(ad)^2 = (ac)(ab^{-1})(ad)$?
       $(ac)(ab^{-1}) = acc^{-1}d = ad$, so $(ac)(ab^{-1})(ad) = (ad)^2$.
   \end{itemize}
+  We will simplify this by letting $x = ac, y = ab^{-1}$.
 
-  Moreover, we claim that $(ac)^2 \ne e$ and $(ac)^4 = e$.
+  \begin{align*}
+    G &= \langle ac, ab^{-1}, ad \mid ab^{-1}d^{-1}c, adc^{-1}b^{-1}, acbd \rangle
+      &= \langle x, y, xy \mid y((xy)^{-1}x), (xy)(x^{-1}y), x(y^{-1}xy) \rangle \\
+      &= \langle x, y \mid e, xyx^{-1}y, xy^{-1}xy \rangle \\
+      &= \langle x, y \mid xyx^{-1}y, xy^{-1}xy \rangle.
+  \end{align*}
+
+  $Q_8 = \langle \overline{e}, i, j, k \mid (\overline{e})^2 = e, i^2 = j^2 = k^2 = ijk = \overline{e} \langle$ is the quaternion group.
+  Let $\phi: G \rightarrow Q_8$ be defined such that it preserves multiplication and $\phi(x) = i$ and $\phi(y) = j$.
 
   \begin{itemize}
     \item
-      $(ac)^2 \ne e$.
+      Well defined?
       \todo[inline]{
         Prove this!
       }
     \item
-      $(ac)^4 = e$.
+      Injective?
+      \todo[inline]{
+        Prove this!
+      }
+    \item
+      Surjective?
       \todo[inline]{
         Prove this!
       }
