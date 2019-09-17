@@ -270,17 +270,32 @@
   For instance, $\phi(x^iy^j) = (cbc)^i(bc)^j$.
   This function is well-defined because $\phi(x^2) = (\phi(x))^2 = (cbc)^2 = (bcb)^2 = (\phi(y))^3 = \phi(y^3)$.
   Since this function is well-defined and it preserves the multiplicative operation, it is a group homomorphism.
+
+  Similarly, define $\psi: G \rightarrow H$ such that $\phi$ maps $b$ to $y^2x^{-1}$ and $c$ to $xy^{-1}$ and it preserves the operation.
+  For instance, $\psi(bcb) = (yxy^{-1})(xy^{-1})(yxy^{-1})$.
+  This function is well-defined because
   \begin{itemize}
     \item
-      Injective?
-      \todo[inline]{
-        I'm not sure how to prove this.
-      }
+      $\psi(bcb) = (y^2x^{-1})(xy^{-1})(y^2x^{-1}) = y^3x^{-1} = x^2x^{-1} = x$.
     \item
-      Surjective?
-      $\phi(xy^{-1}) = c$ and $\phi(yxy^{-1}) = b$, so $\phi$ is surjective.
+      $\psi(cbc) = (xy^{-1})(y^2x^{-1})(xy^{-1}) = xyy^{-1} = x$.
   \end{itemize}
 
+  Moreover,
+
+  \begin{itemize}
+    \item
+      $\phi(\psi(b)) = \phi(y^2x^{-1}) = (bc)^2(cbc)^{-1} = bcbcc^{-1}b^{-1}c^{-1} = b$.
+    \item
+      $\phi(\psi(c)) = \phi(xy^{-1}) = (cbc)(bc)^{-1} = c$.
+    \item
+      $\psi(\phi(x)) = \psi(cbc) = xy^{-1}y^2x^{-1}xy^{-1} = x$.
+    \item
+      $\psi(\phi(y)) = \psi(bc) = y^2x^{-1}xy^{-1} = y$.
+  \end{itemize}
+
+  Therefore, $\phi$ and $\psi$ are both bijective.
+  In other words, $\phi$ is an isomorphism between $G$ and $H$.
 \end{proof}
 
 
