@@ -170,18 +170,38 @@
           $\phi(xy^{-1}xy) = ij^{-1}ij = ij^{-1}k = i(-j)k = -ijk = e = \phi(e)$.
       \end{itemize}
     \item
-      Injective?
-      \todo[inline]{
-        Prove this!
-      }
-    \item
       Surjective?
       It suffices to show that $\overline{e}, i, j, k \in \phi(G)$.
       We have shown that $\overline{e} = i^2, i, j \in \phi(G)$.
       Moreover, $k = ij = \phi(xy) \in \phi(G)$.
       Therefore, $\phi$ is indeed surjective.
+    \item
+      Injective?
+      Since $\phi$ is surjective and $Q_8$ has exactly 8 elements, it suffices to show that $G$ has at most 8 elements.
+      We claim that every element in $G$ can be expressed as $y^ix^j$ with $0 \leq i \leq 1$ and $0 \leq j \leq 3$.
+      \begin{align*}
+        x^2 = y^2 = (xy)^2
+          &\implies x^2y^2 = (xy)^4 \\
+          &\implies xxyy = xyxyxyxy \\
+          &\implies xy = yxyxyx \\
+          &\implies yx^{-1} = yxyxyx \\
+          &\implies x^{-1} = xyxyx \\
+          &\implies x^{-2} = xyxy \\
+          &\implies x^{-2} = (xy)^2 = x^2 \\
+          &\implies x^4 = 1.
+      \end{align*}
+      Since $x^2 = y^2$, this implies $y^4 = 1$.
+      Then $xy = yx^{-1} = yx^3$.
+      Since $x^4 = y^4 = 1$, we will assume that every power in a non-identity word is a positive number between $1$ and $3$.
+      For instance, $x^5y^{-1}x^4$ can be expressed as $xy^3$.
+      Moreover, every word of the form $x^ay^b$ with $a, b \in \{ 0, 1, 2, 3 \}$ can be reduced to $y^bx^{3^ba}$ by repeatedly applying $xy = yx^3$.
+      Finally, any word of length 3 or above can be expressed as a word of length one less by applying $x^ay^b = y^bx^{3^ba}$ and combining the adjacent letters whenever possible.
+      (This can be shown more rigorously using mathematical induction.)
+      Therefore, every word can be expressed as $y^ax^b$ for some $a, b \in \{ 0, 1, 2, 3 \}$.
+      Since $y^2 = x^2$, this can be further reduced to the form $y^ax^b$ with $a \in \{ 0, 1 \}, b \in \{ 0, 1, 2, 3 \}$.
+      Therefore, $G$ has at most 8 elements, so $\phi$ must be injective.
   \end{itemize}
-  
+  Hence, $\phi$ is an isomorphism between $G$ and $Q_8$.
 \end{proof}
 
 \begin{exer}{(Problem 22, Chapter 1.2)}
