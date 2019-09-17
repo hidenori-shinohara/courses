@@ -211,10 +211,21 @@
       \end{itemize}
     \item
       The abelianization of $\pi_1(\mathbb{R}^3 - K)$ turns a relation $x_ix_jx_i^{-1} = x_k$ into $x_j = x_k$.
-      \todo[inline]{
-        How do I know that all strips are identified?
-      }
+      In other words, this implies that, at each square $S_l$, the generators for the two strips that are ``separated" by the middle strip are identified.
+      Let $x_i, x_j$ be two distinct generators.
+      Since $K$ is a knot, there exists a finite sequence $x_i = x_{i_0}, \cdots, x_{i_k} = x_j$ of generators such that the corresponding strips $R_{i_0}, \cdots, R_{i_k}$ are next to each other.
+      (See Figure \ref{fig:separated_knots})
+      \begin{figure}
+        \includegraphics[width=.5\linewidth]{separated_knots.jpeg}
+        \caption{Problem 22 (b)}
+        \label{fig:separated_knots}
+      \end{figure}
+      Since each intersection has a square, $x_{i_t} = x_{i_{t + 1}}$ for each $t$.
+      (For instance, in Figure \ref{fig:separated_knots}, $x_{i_0} = x_{i_1}$ because of the intersection between $R_{i_0}$ and $R_{i_1}$. Similarly, $x_{i_1} = x_{i_2}$ and $x_{i_2} = x_{i_3}$.)
+      Therefore, $x_i = x_{i_0} = x_{i_1} = \cdots = x_{i_k} = x_j$.
 
+      This implies that any two generators are identified after the abelianization.
+      Hence, $\pi_1(\mathbb{R}^3 - K)$ is a free group with one generator and no relations, so it is isomorphic to $(\mathbb{Z}, +)$.
   \end{itemize}
 
 \end{proof}
