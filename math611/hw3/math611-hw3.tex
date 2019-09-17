@@ -228,8 +228,41 @@
       This implies that any two generators are identified after the abelianization.
       Hence, $\pi_1(\mathbb{R}^3 - K)$ is a free group with one generator and no relations, so it is isomorphic to $(\mathbb{Z}, +)$.
   \end{itemize}
-
 \end{proof}
+
+\begin{exer}
+  Use the Wirtinger presentation to calculate the fundamental group of the complement of the trefoil knot.
+\end{exer}
+
+\begin{proof}
+  We will place rectangular strips as in Figure \ref{fig:trefoil}.
+  \begin{figure}
+    \includegraphics[width=\linewidth]{trefoil.jpeg}
+    \caption{Trefoil}
+    \label{fig:trefoil}
+  \end{figure}
+
+  The first relation we will consider is the upper right intersection.
+  (Magnified in Figure \ref{fig:trefoil}.)
+  This relation is $[x_2]^{-1}[x_1][x_2][x_3]^{-1}$, so $[x_1] = [x_2][x_3][x_2]^{-1}$.
+  The other two relations can be obtained in the same manner, and they are $[x_3] = [x_1][x_2][x_1]^{-1}, [x_2] = [x_3][x_1][x_3]^{-1}$.
+  Let $a, b, c$ denote $[x_1], [x_2], [x_3]$, respectively.
+  \begin{align*}
+    \langle a, b, c \mid a = bcb^{-1}, c = aba^{-1}, b = cac^{-1} \rangle
+      &= \langle b, c \mid c = (bcb^{-1})b(bcb^{-1})^{-1}, b = c(bcb^{-1})c^{-1} \rangle \\
+      &= \langle b, c \mid c = bc(bc^{-1}b^{-1}), b = c(bcb^{-1})c^{-1} \rangle \\
+      &= \langle b, c \mid c = bc(bc^{-1}b^{-1}), b = c(bcb^{-1})c^{-1} \rangle \\
+  \end{align*}
+  \begin{itemize}
+    \item
+      $c = bc(bc^{-1}b^{-1}) \iff cb = bcbc^{-1} \iff cbc = bcb$.
+    \item
+      $b = cbcb^{-1}c^{-1} \iff bc = cbcb^{-1} \iff bcb = cbc$.
+  \end{itemize}
+  Thus those two relations are identical.
+  Therefore, the fundamental group of the trefoil knot is $\langle b, c \mid bcb = cbc \rangle$.
+\end{proof}
+
 
 \end{document}
 
