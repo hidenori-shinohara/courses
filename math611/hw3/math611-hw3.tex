@@ -188,6 +188,9 @@
       The intersection is a rectangle, so the intersection is simply connected.
       Thus the fundamental group of the new space is simply the free product of $T$ and $R_i$.
       Therefore, the fundamental group of the space we obtain by attaching all the $R_i$'s is $\langle x_1, \cdots, x_n \mid \rangle$ where $n$ is the number of $R_i$'s and each $x_i$ corresponds to $R_i$.
+      Although it is not necessary at this stage, the rotation will be important later.
+      Therefore, we will assume that the direction $x_i$ goes around $K$ is consistent with the right-hand rule.
+      It is trivial that this is always possible.
 
       Now, we will attach $S_l$'s and we will do so one by one.
       The fundamental group of each $S_l$ is $0$ since each $S_l$ is simply connected.
@@ -199,7 +202,10 @@
       \end{figure}
       Figure \ref{fig:wirtinger} shows the intersection between an $S_l$ and the current space $X$.
       $a, b, b', c$ denote loops based at $x_0$, and $[b] = [b']$.
-      Moreover, $[a], [b], [c]$ are exactly the generator of the corresponding rectangular strip.
+
+      Note that $x_0$ could have been somewhere else, and it does not matter because $X$ must be path-connected.
+
+      Moreover, $[a], [b], [c]$ are exactly the generator of the corresponding rectangular strip because they follow the right-hand rule.
       We will consider the intersection between $S_l$ and $X$.
       \begin{itemize}
         \item
@@ -208,20 +214,17 @@
           The loop that goes through the intersection is nulhomotopic in $S_l$ since $S_l$ is simply connected.
       \end{itemize}
 
-      Note that the generator $x_i$ associated to $R_i$ always has the rotation consistent with the right-hand rule.
-      This ensures that the intersection is in the form $[a][b][c^{-1}][b^{-1}]$ where each $[a], [b], [c^{-1}], [b^{-1}]$ is the generator associated to each rectangular strip.)
-
       By Van Kampen, the new group is $\pi_1(X) * \pi_1(S_l) / (i_{X}(g)i_{S_l}(g)^{-1})$ where $g$ is any loop in the intersection.
       Since $\pi_1(S_l) = 0$, $i_{S_l}(g) = e$ for any $g$.
-      Then $(i_X(g)) = ([abc^{-1}b^{-1}])$ since the intersection is homeomorphic to $S^1$ and $[abc^{-1}b^{-1}]$ is a generator.
-      Since $\pi_1(S_l) = 0$, we have $\pi_1(X) / ([a][b][c^{-1}][b^{-1}])$.
+      Then $(i_X(g)) = ([abc^{-1}b^{-1}])$ since the intersection is homeomorphic to $S^1$ and $[a][b][c]^{-1}[b]^{-1}$ is a generator.
+      Since $\pi_1(S_l) = 0$, we have $\pi_1(X) / ([a][b][c]^{-1}[b]^{-1})$.
 
-      After attaching all the $S_l$'s we will end up with $\langle x_1, \cdots, x_n \mid [a_l][b_l][c_l^{-1}][b_l^{-1}] \rangle$ where
+      After attaching all the $S_l$'s we will end up with $\langle x_1, \cdots, x_n \mid [a_l][b_l][c_l]^{-1}[b_l]^{-1} \rangle$ where
 
       \begin{itemize}
         \item
-          For each $S_l$, we add a relation $[a_l][b_l][c_l^{-1}][b_l^{-1}]$.
-          Note that this means $[a_l][b_l][c_l^{-1}][b_l^{-1}] = e$, so $[a_l] = [b_l][c_l][b_l^{-1}]$, and this is exactly the desired relation.
+          For each $S_l$, we add a relation $[a_l][b_l][c_l]^{-1}[b_l]^{-1}$.
+          Note that this means $[a_l][b_l][c_l]^{-1}[b_l]^{-1} = e$, so $[a_l] = [b_l][c_l][b_l]^{-1}$, and this is exactly the desired relation.
         \item
           Each $x_i$ corresponds to a rectangular strip $R_i$.
           These are the only generators because $S_l$'s are all simply connected.
