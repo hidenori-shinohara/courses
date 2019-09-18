@@ -83,7 +83,22 @@
   In conclusion, $\gamma$ is an isomorphism and its inverse is itself.
 \end{proof}
 
+\begin{exer}{(Problem 4)}
+  What does finding the units in $\mathbb{Z}[\sqrt{2}]$ have to do with solving the equation $x^2 - 2y^2 = \pm 1$?
+\end{exer}
 
+\begin{proof}
+  Let $(a, b)$ be a solution to the equation.
+  Then $a^2 - 2b^2 = \pm 1$, so $(a + b\sqrt{2})(a - b\sqrt{2}) = \pm 1$.
+  This implies that $a \pm b\sqrt{2}$ is a unit in $\mathbb{Z}[\sqrt{2}]$.
+
+  On the other hand, let $a + b\sqrt{2}$ be a unit in $\mathbb{Z}[\sqrt{2}]$.
+  By Problem 3, $N(a + b\sqrt{2}) = \pm 1$.
+  Thus $\pm 1 = N(a + b\sqrt{2}) = (a + b\sqrt{2})(a - b\sqrt{2}) = a^2 - b^2$.
+  Hence, $(a, b)$ is a solution to $x^2 - 2y^2 = \pm 1$.
+
+  In conclusion, there exists a bijective correspondence between the units in $\mathbb{Z}[\sqrt{2}]$ and the solutions to $x^2 - 2y^2 = \pm 1$.
+\end{proof}
 \end{document}
 
 
