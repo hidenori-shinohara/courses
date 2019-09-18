@@ -164,6 +164,39 @@
   $(\sqrt{2} + 1)(\sqrt{2} - 1) = 2 - 1 = 1$.
   Thus $u = \sqrt{2} + 1$ is a unit such that $u > 1$.
 \end{proof}
+
+\begin{exer}{(Problem 7)}
+  Let $u \in \mathbb{Z}[\sqrt{2}]^*$ with $u > 1$.
+  Write $u = a + b\sqrt{2}$ with $a, b \in \mathbb{Z}$.
+  Show $a > 0$ and $b > 0$.
+\end{exer}
+
+\begin{proof}
+  Since $u$ is a unit, $N(u) = \pm 1$ from Problem 3.
+  In other words, $(a + b\sqrt{2})(a - b\sqrt{2}) = a^2 - 2b^2 = \pm 1$.
+  Then $a^2 = \pm 1 + 2b^2 \equiv 1 \pmod 2$, so $a$ is odd.
+  Specifically, $a \ne 0$.
+  \begin{itemize}
+    \item
+      Case 1: $a < 0$.
+      Since $a$ is an integer, $a \leq -1$.
+      Since $u = a + b\sqrt{2} > 1$, $b > 0$.
+      Since $b$ is an integer, $b \geq 1$.
+      This implies that $a - b\sqrt{2} \leq -1 - \sqrt{2} < -1$.
+
+      This means $(a + b\sqrt{2})(a - b\sqrt{2}) < -1$ because $a + b\sqrt{2} > 1$.
+      However, this is impossible because $(a + b\sqrt{2})(a - b\sqrt{2}) = \pm 1$.
+      This is a contradiction, so $a$ is not negative.
+    \item
+      Case 2: $a > 0$ and $b < 0$.
+      Since $a, b$ are integers, this implies $a \geq 1$ and $b \leq -1$.
+      Then $a - b\sqrt{2} \geq 1 + \sqrt{2} > 2$.
+      Since $a + b\sqrt{2} > 1$, this implies $(a + b\sqrt{2})(a - b\sqrt{2}) > 1 \cdot 2 = 2$.
+      This is a contradiction because we have $(a + b\sqrt{2})(a - b\sqrt{2}) = \pm 1$.
+  \end{itemize}
+  Therefore, both $a$ and $b$ must be positive.
+\end{proof}
+
 \end{document}
 
 
