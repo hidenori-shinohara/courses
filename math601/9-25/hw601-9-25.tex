@@ -101,6 +101,35 @@
   \end{align*}
 \end{proof}
 
+\begin{exer}{(Problem 3)}
+  Write $\mathbb{Z}[\sqrt{2}]^*$ for the group of units in $\mathbb{Z}[\sqrt{2}]$.
+  Show that $\alpha \in \mathbb{Z}[\sqrt{2}]^*$ if and only if $N(\alpha) = \pm 1$.
+\end{exer}
+
+\begin{proof}
+  We have $N(1) = 1\gamma(1) = 1$.
+
+  Let $\alpha$ be a unit and $\beta$ be the inverse.
+  Then $N(\alpha\beta) = N(1) = 1$.
+  Thus $1 = N(\alpha)N(\beta)$.
+  Since $N(\alpha), N(\beta) \in \mathbb{Z}$, $N(\alpha) = \pm 1$.
+
+  On the other hand, suppose that $N(\alpha) = \pm 1$ for some $\alpha$.
+  \begin{itemize}
+    \item
+      Case 1: $N(\alpha) = 1$. 
+      Then $\alpha\gamma(\alpha) = 1$, so $\gamma(\alpha)$ is an inverse of $\alpha$.
+      Therefore, $\alpha$ is a unit.
+    \item
+      Case 2: $N(\alpha) = -1$. 
+      Then $\alpha\gamma(\alpha) = -1$, so $-\gamma(\alpha)$ is an inverse of $\alpha$.
+      Therefore, $\alpha$ is a unit.
+  \end{itemize}
+  In each case, $\alpha$ is a unit.
+
+  Therefore, $N(\alpha) = \pm 1$ if and only if $\alpha$ is a unit.
+\end{proof}
+
 \begin{exer}{(Problem 4)}
   What does finding the units in $\mathbb{Z}[\sqrt{2}]$ have to do with solving the equation $x^2 - 2y^2 = \pm 1$?
 \end{exer}
