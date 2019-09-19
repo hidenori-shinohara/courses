@@ -110,6 +110,26 @@
   \end{itemize}
 \end{proof}
 
+\begin{exer}{(Problem 5, Chapter 1.3)}
+  Let $X$ be the subspace of $\mathbb{R}^2$ consisting of the four sides of the square $[0, 1] \times [0, 1]$ together with the segments of the vertical lines $x = 1/2, 1/3, 1/4, \cdots$ inside the square.
+  Show that for every covering space $X \rightarrow X$ there is some neighborhood of the left edge of $X$ that lifts homeomorphically to $\tilde{X}$.
+  Deduce that $X$ has no simply-connected covering space.
+\end{exer}
+
+\begin{proof}
+  \todo[inline]{
+    Idea:
+    Open cover of the left edge by evenly covered open sets.
+    Find a finite subcover.
+    By the tube lemma, there exists $U \times I$ that covers the left edge and a partition $0 = t_0 < \cdots < t_n = 1$ such that $U \times [t_i, t_{i + 1}]$ is contained in an evenly covered neighborhood.
+    Inductively, show $U \times [0, t_i]$ is in an evenly covered neighborhood.
+    Lift a loop in $X$ with a vertical line $x = 1/n$ for some large $n$.
+    Then the element maps back to itself by $p$.
+    In other words, $p_*(\pi_1(\tilde{X})) \ne 0$.
+  }
+\end{proof}
+
+
 \end{document}
 
 
