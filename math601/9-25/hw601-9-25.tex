@@ -208,6 +208,45 @@
   Therefore, $1 + \sqrt{2}$ is the least element in $\mathbb{Z}[\sqrt{2}]^*$.
 \end{proof}
 
+\begin{exer}{(Problem 9)}
+  Show that every element of $\mathbb{Z}[\sqrt{2}]^*$ is of the form $\pm u_0^n$, $n \in \mathbb{Z}$.
+\end{exer}
+
+\begin{proof}
+  Let $u \in \mathbb{Z}[\sqrt{2}]^*$.
+  \begin{itemize}
+    \item
+      Case 1: $1 < u$.
+      Since $1 + \sqrt{2}$ is the least element among all units greater than 1, there must exist an $n \in \mathbb{N}$ such that $(1 + \sqrt{2})^n \leq u < (1 + \sqrt{2})^{n + 1}$.
+      This implies that $1 \leq \frac{u}{(1 + \sqrt{2})^n} < 1 + \sqrt{2}$.
+      Since $u$ and $1 + \sqrt{2}$ are both units, $\frac{u}{(1 + \sqrt{2})^n}$ is a unit in $\mathbb{Z}[\sqrt{2}]$ as well.
+      Since $1 + \sqrt{2}$ is the least element among all units greater than 1, $u / (1 + \sqrt{2})^n = 1$.
+      Therefore, $u = (1 + \sqrt{2})^n$.
+    \item
+      Case 2: $u = 1$.
+      Then $u = (1 + \sqrt{2})^0$.
+    \item
+      Case 3: $0 < u < 1$.
+      Then $1 / u \in \mathbb{Z}[\sqrt{2}]^*$, and $1 < 1 / u$.
+      By Case 1, $1 / u = (1 + \sqrt{2})^n$ for some $n \in \mathbb{Z}$.
+      Therefore, $u = (1 + \sqrt{2})^{-n}$.
+    \item
+      Case 4: $-1 < u < 0$.
+      Then $-u \in \mathbb{Z}[\sqrt{2}]^*$ and $0 < -u < 1$.
+      By Case 3, $-u = (1 + \sqrt{2})^{n}$ for some $n \in \mathbb{Z}$.
+      Thus $u = -(1 + \sqrt{2})^n$.
+    \item
+      Case 5: $u = -1$.
+      Then $u = -(1 + \sqrt{2})^0$.
+    \item
+      Case 6: $u < -1$.
+      Then $-u \in \mathbb{Z}[\sqrt{2}]^*$ and $1 < -u$.
+      By Case 1, $-u = (1 + \sqrt{2})^n$ for some $n \in \mathbb{Z}$.
+      Therefore, $u = -(1 + \sqrt{2})^n$.
+  \end{itemize}
+  Therefore, $u$ is indeed of the form $\pm(1 + \sqrt{2})^n$ with $n \in \mathbb{Z}$.
+\end{proof}
+
 \end{document}
 
 
