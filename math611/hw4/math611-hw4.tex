@@ -65,49 +65,26 @@
     \caption{Problem 4 (Part 1)}
     \label{fig:prob4_1}
   \end{figure}
-  We claim that $\title{X} = X \setminus \{ 0 \}$ is a simply-connected covering space of $X$.
-  (See Figure \ref{fig:prob4_1}.)
+  We claim that the space described in Figure \ref{fig:prob4_1} is a covering space of $X$.
   \begin{itemize}
     \item
-      Simply-connected?
-      $\tilde{X}$ deformation retracts onto $S^2$.
-      By Proposition 1.17, $\pi_1(\tilde{X}) = \pi_1(S^2)$.
-      Proposition 1.14 shows that $\pi_1(S^2) = 0$.
-      Therefore, $\tilde{X}$ is simply connected.
+      The shape is an infinitely long chain of spheres and lines.
+      The chain goes infinitely both ways (up and down).
+      This space is clearly simply connected.
     \item
-      Covering space?
-      Let $p: \tilde{X} \rightarrow X$ be defined such that
-      \begin{itemize}
-        \item
-          $p\mid_{S^2} = \Id_{S^2}$.
-          In other words, $p$ maps every point on the spherical part of $\tilde{X}$ to the same place on the spherical part of $X$.
-        \item
-          $p$ extends the red line to the diameter (the top half of the diameter, in other words, the radius in the northern hemisphere in Figure \ref{fig:prob4_1}).
-          In other words, $p$ maps $(0, 1)$ on the $Y$ axis into $(-1, 1)$.
-        \item
-          $p$ extends the blue line to the diameter (the bottom half of the diameter, in other words, the radius in the southern hemisphere in Figure \ref{fig:prob4_1}).
-          In other words, $p$ maps $(-1, 0)$ on the $Y$ axis into $(-1, 1)$.
-      \end{itemize}
-      Then $p$ is clearly continuous and surjective.
-      We will show that every point has a neighborhood that is evenly covered.
-      Let $x \in X$ be given.
-      \begin{itemize}
-        \item
-          Case 1: $x$ is on the sphere and is disjoint from the diameter.
-          Then a neighborhood of $x$ that is disjoint from the diameter is clearly evenly covered.
-        \item
-          Case 2: $x$ is on the diameter and is disjoint from the sphere.
-          Let $U$ be a neighborhood of $x$ that is disjoint from the sphere.
-          Then $U$ is contained in both the image of the red line under $p$ and the image of the blue line under $p$.
-          Thus $p^{-1}(U)$ is a union of an open subset of the red line and open subset of the blue line in $\tilde{X}$.
-          Therefore, $U$ is evenly covered.
-        \item
-          Case 3: $x$ is the north pole or south pole.
-          \todo[inline]{
-            I started to feel like this solution doesn't work because of this case...
-          }
-      \end{itemize}
+      We will map each sphere to the sphere of $X$.
+      Each line will be mapped to the diameter up side down.
+      Figure \ref{fig:prob4_1} shows how each part gets mapped.
+    \item
+      We claim that such a mapping is a covering map and thus this infinite chain is indeed a covering space.
+      Let $x \in X$.
+      \todo[inline]{
+        Prove this.
+      }
   \end{itemize}
+  \todo[inline]{
+    Second part.
+  }
 \end{proof}
 
 \begin{exer}{(Problem 5, Chapter 1.3)}
