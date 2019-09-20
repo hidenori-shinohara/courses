@@ -94,16 +94,17 @@
 \end{exer}
 
 \begin{proof}
+  For each $y \in [0, 1]$, the point $(0, y)$ has a basis element $U_y = B_{\mathbb{R}^2}(y, r_y) \cap Y$ that is evenly covered.
+  (This is because any subset of an evenly covered set is evenly covered.)
+  Consider $\{ U_y \mid y \in [0, 1] \}$.
+  Then it is an open cover of the segment $\{ 0 \} \times [0, 1]$.
+  Since the segment is compact, there exists a finite subcover, $U_{y_1}, \cdots, U_{y_n}$.
   \todo[inline]{
-    Idea:
-    Open cover of the left edge by evenly covered open sets.
-    Find a finite subcover.
-    By the tube lemma, there exists $U \times I$ that covers the left edge and a partition $0 = t_0 < \cdots < t_n = 1$ such that $U \times [t_i, t_{i + 1}]$ is contained in an evenly covered neighborhood.
-    Inductively, show $U \times [0, t_i]$ is in an evenly covered neighborhood.
-    Lift a loop in $X$ with a vertical line $x = 1/n$ for some large $n$.
-    Then the element maps back to itself by $p$.
-    In other words, $p_*(\pi_1(\tilde{X})) \ne 0$.
+    Actually I don't think the tube lemma can be applied here because $X$ is not a product space.
+    A similar idea can be applied, for sure though.
   }
+  By the tube lemma, there exists an open $N \subset [0, 1]$ such that $N \times [0, 1] \subset U_{y_1} \cup \cdots \cup U_{y_n}$.
+  Since each $U_{y_1}, \cdots, U_{y_n}$ is a subset of an open ball, there must exist a partition $0 = t_0 < t_1 < \cdots < t_m = 1$ such that for all $i$, $N \times [t_i, t_{i + 1}]$ is contained in $U_{y_j}$ for some $j$.
 \end{proof}
 
 \begin{exer}{(Problem 7, Chapter 1.3)}
