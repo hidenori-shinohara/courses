@@ -325,6 +325,40 @@
   Hence, $\{ (x, y) \in \mathbb{Z}^2 \mid x + \sqrt{2}y \in \{ -u_0^{2n}, u_0^{2n} \mid n \in \mathbb{Z} \} \}$ is the set of all solutions to $x^2 - 2y^2 = 1$.
 \end{proof}
 
+\begin{exer}{(Problem 11)}
+  Construct a group isomorphism $\mathbb{Z}[\sqrt{2}]^* \rightarrow \mathbb{Z} \times \mathbb{Z} / 2\mathbb{Z}$.
+\end{exer}
+
+\begin{proof}
+  By Problem 9, every element in $\mathbb{Z}[\sqrt{2}]^*$ can be represented as $(-1)^a(1 + \sqrt{2})^{2k}$ for some $(k, a) \in \mathbb{Z} \times \mathbb{Z} / 2 \mathbb{Z}$.
+  Let $\phi: \mathbb{Z}[\sqrt{2}]^* \rightarrow \mathbb{Z} \times \mathbb{Z} / 2\mathbb{Z}$ be defined such that $\phi((-1)^a(1 + \sqrt{2})^{2k}) = (k, a)$.
+  \begin{itemize}
+    \item
+      Well-defined?
+      Every element in $\mathbb{Z}[\sqrt{2}]^*$ can be expressed unique as $(-1)^a(1 + \sqrt{2})^{2k}$ for some $(k, a) \in \mathbb{Z} \times \mathbb{Z} / 2 \mathbb{Z}$.
+      Thus $\phi$ is well defined.
+    \item
+      Group homomorphism?
+      \begin{align*}
+        \phi((-1)^a(1 + \sqrt{2})^{2k}(-1)^b(1 + \sqrt{2})^{2l})
+          &= \phi((-1)^{a + b}(1 + \sqrt{2})^{2(k + l)}) \\
+          &= (k + l, a + b) \\
+          &= (k, a) + (l, b) \\
+          &= \phi((-1)^a(1 + \sqrt{2})^{2k})\phi((-1)^b(1 + \sqrt{2})^{2l}).
+      \end{align*}
+    \item
+      Injective?
+      $\phi((-1)^a(1 + \sqrt{2})^k) = (0, 0)$ implies that $k = a = 0$.
+      Therefore, 1 is the only number in the kernel of $\phi$.
+      Since the kernel of $\phi$ only contains the identity element, $\phi$ is injective.
+    \item
+      Surjective?
+      For any $(k, a) \in \mathbb{Z} \times \mathbb{Z} / 2\mathbb{Z}$, $(-1)^a(1 + \sqrt{2})^{2k} \in \mathbb{Z}[\sqrt{2}]^*$.
+  \end{itemize}
+  Therefore, $\phi$ is a group isomorphism.
+\end{proof}
+
+
 
 \begin{exer}{(Problem 12)}
   Show that $\mathbb{Z}[\sqrt{2}]$ is an integral domain.
