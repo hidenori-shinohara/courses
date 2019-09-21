@@ -132,20 +132,36 @@
 \end{exer}
 
 \begin{proof}
-  \todo[inline]{
-    The lifting criterion is Proposition 1.33.
-    The only property that $Y$ is missing is the local path connectedness.
-    I need to understand the proof because I essentially have to find where the proof goes wrong if local path connectedness is missing.
-    I think what happens is that if $\tilde{f}$ existed, it would have to be unique.
-    Thus we could look into the one function that could possibly be $\tilde{f}$.
-    Since the local connectedness is used to prove continuity of $\tilde{f}$ and $Y$ is not locally connected around the $[-1, 1]$ segment, I would guess that that one function is not continuous at a point on the $[-1, 1]$ segment.
-    See Figure \ref{fig:problem7}.
-  }
+  We will use the lifting criterion (Proposition 1.33) and its proof in the textbook.
+  The only missing property among the required ones is that $Y$ is not locally path connected.
+  By the first part of the proof (up to "This shows that $\tilde{f}$ is well-defined"), we know that if there exists $\tilde{f}$, it must be the function that the first part of the proof describes.
+  Note that the first part does not require that $Y$ be locally path connected.
+  We will prove that the defined mapping is not continuous.
+
+  Let $x_0 = 1 \in S^1$.
+  Let $y_0 \in Y$ be the point that gets mapped to $x_0$.
+  Let $y$ be the point on the intersection of the $[-1, 1]$ segment and the circle, and let $\gamma$ denote the path from $y_0$ to $y$.
+  Then $\widetilde{f \circ \gamma}(y)$ is somewhere around $-0.6$ in $\tilde{X}$.
+  (See Figure \ref{fig:problem7}.)
   \begin{figure}
     \includegraphics[width=.5\linewidth]{problem7.jpeg}
-    \caption{Delete this!}
+    \caption{Problem 7}
     \label{fig:problem7}
   \end{figure}
+  Let $V = (\widetilde{f \circ \gamma}(y) - 0.01, \widetilde{f \circ \gamma}(y) + 0.01)$.
+  (A small neighborhood around $\widetilde{f \circ \gamma}(y)$ that does not include $0$.)
+
+  A necessary condition for $\tilde{f}$ to be continuous is that there exists a neighborhood $U \subset Y$ of $y$ such that $\tilde{f}(U) \subset V$.
+  (For instance, Theorem 18.1 on P.104 from Topology by Munkres.)
+
+  Let $U \subset Y$ be a neighborhood of $y$.
+  Then it certainly contains some point of $y = \sin (1/x)$.
+  Let $\gamma'$ denote the path from $y_0$ to such a point in $Y$.
+  Then $\tilde{f}$ maps the point to somewhere around $0.3$ in $\tilde{X}$.
+  In other words, $\widetilde{f \circ \gamma}(1) \notin V$, so $\tilde{f}(U) \not\subset V$.
+
+  Therefore, $\tilde{f}$ is not continuous.
+  By the uniqueness discussed in the first part of the proof for Proposition 1.33, we conclude that there does not exist a lift of $f$.
 \end{proof}
 
 \begin{exer}{(Problem 8, Chapter 1.3)}
