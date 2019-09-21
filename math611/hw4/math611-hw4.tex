@@ -78,10 +78,18 @@
     \item
       We claim that such a mapping is a covering map and thus this infinite chain is indeed a covering space.
       Let $x \in X$.
-      \todo[inline]{
-        Prove this.
-      }
+      \begin{itemize}
+        \item
+          If $x$ is on the diameter and disjoint from the sphere, a neighborhood that is disjoint from the sphere is evenly covered.
+        \item
+          If $x$ is on the sphere and disjoint from the diameter, a neighborhood that is disjoint from the diameter is evenly covered.
+        \item
+          If $x$ is the north pole, a neighborhood that does not contain the south pole is evenly covered.
+        \item
+          If $x$ is the south pole, a neighborhood that does not contain the north pole is evenly covered.
+      \end{itemize}
   \end{itemize}
+  Therefore, the space described in Figure \ref{fig:prob4_1} is a covering space of $X$.
   \todo[inline]{
     Second part.
   }
@@ -95,16 +103,16 @@
 
 \begin{proof}
   For each $y \in [0, 1]$, the point $(0, y)$ has a basis element $U_y = B_{\mathbb{R}^2}(y, r_y) \cap Y$ that is evenly covered.
-  (This is because any subset of an evenly covered set is evenly covered.)
-  Consider $\{ U_y \mid y \in [0, 1] \}$.
-  Then it is an open cover of the segment $\{ 0 \} \times [0, 1]$.
-  Since the segment is compact, there exists a finite subcover, $U_{y_1}, \cdots, U_{y_n}$.
-  \todo[inline]{
-    Actually I don't think the tube lemma can be applied here because $X$ is not a product space.
-    A similar idea can be applied, for sure though.
-  }
-  By the tube lemma, there exists an open $N \subset [0, 1]$ such that $N \times [0, 1] \subset U_{y_1} \cup \cdots \cup U_{y_n}$.
-  Since each $U_{y_1}, \cdots, U_{y_n}$ is a subset of an open ball, there must exist a partition $0 = t_0 < t_1 < \cdots < t_m = 1$ such that for all $i$, $N \times [t_i, t_{i + 1}]$ is contained in $U_{y_j}$ for some $j$.
+  For each $y \in [0, 1]$, the point $(0, y)$ has a neighborhood $U_y$ that is evenly covered.
+  Then there exists an open rectangle $R_y \subset \mathbb{R}^2$ such that $y \in R_y \cap Y \subset U_y$.
+  Since any open subset of an evenly covered set is evenly covered, such $R_y \cap Y$ is evenly covered.
+  Let $V_y$ denote $R_y \cap Y$ for each $y$.
+  $\{ V_y  \mid y \in [0, 1] \}$ is an open cover of the segment $\{ 0 \} \times [0, 1]$.
+  Since the segment is compact, there exists a finite subcover, $V_{y_1}, \cdots, V_{y_k}$.
+
+  Since we found a finite cover where each of them is rectangular shaped, there exists an $N \in \mathbb{N}$ such that $\forall n \geq N, \{ 1/n \} \times [0, 1] \subset \bigcup_{i=1}^{n} V_{y_i}$.
+  Since each $V_{y_1}, \cdots, V_{y_k}$ is a subset of an open rectangle, there must exist a partition $0 = t_0 < t_1 < \cdots < t_m = 1$ such that for all $i$, $[0, 1/N] \times [t_i, t_{i + 1}]$ is contained in an evenly covered open subset.
+  We will inductively show that $[0, 1/N] \times [0, t_i]$ is contained in an evenly covered open subset.
 \end{proof}
 
 \begin{exer}{(Problem 7, Chapter 1.3)}
