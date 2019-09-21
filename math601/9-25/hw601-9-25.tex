@@ -371,4 +371,29 @@
   Therefore, $\mathbb{Z}[\sqrt{2}]$ is an integral domain.
 \end{proof}
 
+\begin{exer}{(Problem 14)}
+  Conclude that $\mathbb{Z}[\sqrt{2}]$ is a principal ideal domain and a unique factorization domain.
+\end{exer}
+
+\begin{proof}
+  In class, we proved that every principal ideal domain is a unique factorization domain.
+  Therefore, it suffices to show that $\mathbb{Z}[\sqrt{2}]$ is a principal ideal domain.
+  Let $I$ be an ideal of $\mathbb{Z}[\sqrt{2}]$.
+  If $I = (0)$, we are done.
+  Suppose otherwise.
+  Let $S = \{ \abs{N(\alpha)} \mid \alpha \in I, \alpha \ne 0 \}$.
+  Since $S$ is a nonempty set of positive integers, there exists a minimum value $m$.
+  Let $\beta \in I$ be an element such that $\abs{N(\beta)} = m$.
+  We claim that $I = (\beta)$.
+
+  Suppose otherwise.
+  Let $\alpha \in I \setminus (\beta)$.
+  By Problem 13, there exist $\delta, \epsilon \in \mathbb{Z}[\sqrt{2}]$ such that $\alpha = \beta\delta + \epsilon$ with $\abs{N(\epsilon)} < \abs{N(\beta)}$.
+  $\epsilon$ cannot be $0$ because $\alpha \notin (\beta)$.
+  Since $I$ is an ideal, $\beta\delta \in I$.
+  This implies that $\epsilon = \alpha - \beta\delta \in I$.
+  However, this is a contradiction because $\beta$ was chosen because $\abs{N(\beta)} \leq \abs{N(\beta')}$ for all $\beta' \in I$.
+  Therefore, $I = (\beta)$, and thus $\mathbb{Z}[\sqrt{2}]$ is a principal ideal domain and a unique factorization domain.
+\end{proof}
+
 \end{document}
