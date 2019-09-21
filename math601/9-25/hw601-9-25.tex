@@ -254,16 +254,77 @@
 \begin{proof}
   We claim that $(x, y) \in \mathbb{Z}^2$ is a solution to $x^2 - 2y^2 = 1$ if and only if $x + y\sqrt{2} = (1 + \sqrt{2})^{2n}$ for some $n \in \mathbb{Z}$.
 
-  \todo[inline]{
-    I think this is believable because:
-  }
+  Let $x, y \in \mathbb{Z}$.
   \begin{itemize}
     \item
-      If $(a, b)$ is a solution, then $(a + b\sqrt{2})(1 + \sqrt{2})$ gives a solution to $x^2 - 2y^2 = -1$.
+      $x^2 - 2y^2 = 1$ if and only if $N(x + \sqrt{2}y) = 1$.
     \item
-      $(1 + \sqrt{2})^2 = 3 + 2\sqrt{2}$, so $(3, 2)$ is a solution.
+      We showed in Problem 3 that $x + \sqrt{2}y \in \mathbb{Z}[\sqrt{2}]^*$ if and only if $N(x + \sqrt{2}y) = \pm 1$.
+    \item
+      We showed in Problem 9 that every element in $\mathbb{Z}[\sqrt{2}]^*$ is of the form $\pm u_0^n$ for some $n \in \mathbb{Z}$.
   \end{itemize}
+
+  Therefore, we will first check which $\pm u_0^n$ satisfies $N(\pm u_0^n) = 1$.
+  We claim that $N(u_0^{2n}) = N(-u_0^{2n}) = 1$ for all $n \in \mathbb{Z}$.
+  \begin{itemize}
+    \item
+      When $n = 0$, this is clearly true.
+    \item
+      Suppose that $N(u_0^{2n}) = 1$ for some $n \in \mathbb{N}$.
+      Let $x + \sqrt{2}y = u_0^{2n}$ where $x, y \in \mathbb{Z}$.
+      Then $u_0^{2n + 2} = (x + \sqrt{2}y)(1 + \sqrt{2})^2 = (x + \sqrt{2}y)(3 + 2\sqrt{2}) = (3x + 4y) + (2x + 3y)\sqrt{2}$.
+      \begin{align*}
+        N(u_0^{2n + 2})
+          &= ((3x + 4y) + (2x + 3y)\sqrt{2})((3x + 4y) - (2x + 3y)\sqrt{2}) \\
+          &= (9x^2 + 24xy + 16y^2) - 2(4x^2 + 12xy + 9y^2) \\
+          &= x^2 - 2y^2 \\
+          &= N(u_0^{2n}) = 1.
+      \end{align*}
+
+      By mathematical induction, $N(u_0^{2n}) = 1$ for all $n \in \mathbb{N}$.
+    \item
+      Let $n \in \mathbb{N}$.
+      Let $x + y\sqrt{2} = u_0^{2n}$ where $x, y \in \mathbb{Z}$.
+      \begin{align*}
+        \frac{1}{u_0^{2n}}
+          &= \frac{1}{x + y\sqrt{2}} \\
+          &= \frac{x - y\sqrt{2}}{x^2 - 2y^2} \\
+          &= \frac{x - y\sqrt{2}}{N(x + y\sqrt{2})} \\
+          &= \frac{x - y\sqrt{2}}{N(u_0^{2n})} \\
+          &= x - y\sqrt{2}.
+      \end{align*}
+      Since $N(x - y\sqrt{2}) = N(x + y\sqrt{2}) = 1$, $N(u_0^{-2n}) = 1$ for all $n \in \mathbb{N}$.
+    \item
+      Let $k \in \mathbb{Z}$.
+      Let $x + y\sqrt{2} = u_0^{2n}$.
+      \begin{align*}
+        N(-u_0^{2n})
+          &= N(-x - y\sqrt{2}) \\
+          &= (-x - y\sqrt{2})(-x + y\sqrt{2}) \\
+          &= (x + y\sqrt{2})(x - y\sqrt{2}) \\
+          &= N(x + y\sqrt{2}) \\
+          &= N(u_0^{2n}) = 1.
+      \end{align*}
+  \end{itemize}
+  Therefore, $N(\pm u_0^{2n}) = 1$ for any sign and $n \in \mathbb{Z}$.
+  We now claim that $N(\pm u_0^{2n + 1}) = -1$ for any sign and $n \in \mathbb{Z}$.
+  Let $x + y\sqrt{2} = \pm u_0^{2n}$ for some sign and $n \in \mathbb{Z}$.
+  Then $(x + y\sqrt{2})(1 + \sqrt{2}) = (x + 2y) + (x + y)\sqrt{2}$.
+  \begin{align*}
+    N((x + y\sqrt{2})(1 + \sqrt{2}))
+      &= N((x + 2y) + (x + y)\sqrt{2}) \\
+      &= ((x + 2y) + (x + y)\sqrt{2})((x + 2y) - (x + y)\sqrt{2}) \\
+      &= (x + 2y)^2 - 2(x + y)^2 \\
+      &= (x^2 + 4xy + 4y^2) - (2x^2 + 4xy + 2y^2) \\
+      &= -x^2 + 2y^2 \\
+      &= -(x^2 - 2y^2) \\
+      &= -N(x + y\sqrt{2}) \\
+      &= -1.
+  \end{align*}
+  Therefore, $N(\pm u_0^{2n + 1})$ for any sign and any $n \in \mathbb{Z}$.
+  Hence, $\{ (x, y) \in \mathbb{Z}^2 \mid x + \sqrt{2}y \in \{ -u_0^{2n}, u_0^{2n} \mid n \in \mathbb{Z} \} \}$ is the set of all solutions to $x^2 - 2y^2 = 1$.
 \end{proof}
+
 
 \begin{exer}{(Problem 12)}
   Show that $\mathbb{Z}[\sqrt{2}]$ is an integral domain.
