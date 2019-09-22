@@ -12,8 +12,7 @@
 \usepackage{graphicx}
 \usepackage[bookmarks]{hyperref}
 
-%--------Theorem Environments--------
-%theoremstyle{plain} --- default
+%--------Theorem Environments-------- %theoremstyle{plain} --- default
 \newtheorem{thm}{Theorem}[section]
 \newtheorem{cor}[thm]{Corollary}
 \newtheorem{prop}[thm]{Proposition}
@@ -369,6 +368,69 @@
   Moreover, $\mathbb{Z}[\sqrt{2}] \subset \mathbb{R}$ where $\mathbb{R}$ is a field.
   Thus $\mathbb{Z}[\sqrt{2}]$ has no zero divisors.
   Therefore, $\mathbb{Z}[\sqrt{2}]$ is an integral domain.
+\end{proof}
+
+\begin{exer}{(Problem 13)}
+  Define $\sigma: \mathbb{Z}[\sqrt{2}] \setminus \{ 0 \} \rightarrow \{ 0, 1, 2, \cdots, \}$ by $\sigma(\alpha) = \abs{N(\alpha)}$.
+  Show that $(\mathbb{Z}[\sqrt{2}], \sigma)$ is a Euclidean domain.
+\end{exer}
+
+\begin{proof}
+  Let $a + b\sqrt{2}, c + d\sqrt{2} \in \mathbb{Z}[\sqrt{2}]$ be given such that $c + d\sqrt{2} \ne 0$.
+  Consider
+
+  \begin{align*}
+    \frac{a + b\sqrt{2}}{c + d\sqrt{2}} = \frac{ac - 2bd}{c^2 - 2d^2} + \frac{bc - ad}{c^2 - 2d^2}\sqrt{2}.
+  \end{align*}
+
+  Let $p, q \in \mathbb{Z}$ be chosen such that
+
+  \begin{align*}
+    \abs{\frac{ac - 2bd}{c^2 - 2d^2} - p} \leq \frac{1}{2}, \abs{\frac{bc - ad}{c^2 - 2d^2} - q} \leq \frac{1}{2}.
+  \end{align*}
+
+  Such $p, q$ are guaranteed to exist.
+  Let $\alpha + \beta\sqrt{2}$ denote $\frac{a + b\sqrt{2}}{c + d\sqrt{2}} - (p + q\sqrt{2})$.
+  Then $\abs{\alpha} \leq 1/2, \abs{\beta} \leq 1/2$.
+
+  Let $\epsilon = (a + b\sqrt{2}) - (c + d\sqrt{2})(p + q\sqrt{2})$.
+  If $\epsilon = 0$, we are done.
+  Suppose otherwise.
+  Then we have $a + b\sqrt{2} = (c + d\sqrt{2})(p + q\sqrt{2}) + \epsilon$.
+
+  \begin{align*}
+    \epsilon
+      &= (a + b\sqrt{2}) - (c + d\sqrt{2})(p + q\sqrt{2}) \\
+      &= (c + d\sqrt{2})(\frac{a + b\sqrt{2}}{c + d\sqrt{2}} - (p + q\sqrt{2})) \\
+      &= (c + d\sqrt{2})(\alpha + \beta\sqrt{2}) \\
+      &= (\alpha c + 2\beta d) + (c\beta + \alpha d)\sqrt{2}.
+  \end{align*}
+
+  This implies that
+
+  \begin{align*}
+    N(\epsilon)
+      &= (\alpha c + 2\beta d)^2 - 2(c\beta + \alpha d)^2 \\
+      &= (\alpha^2 c^2 + 2\alpha\beta cd + 4\beta^2d^2) - 2(c^2\beta^2 + 2\alpha\beta cd + \alpha^2 d^2) \\
+      &= \alpha^2(c^2 - 2d^2) - 2\beta^2(c^2 - 2d^2) \\
+      &= (c^2 - 2d^2)(\alpha^2 - 2\beta^2) \\
+      &= (\alpha^2 - 2\beta^2)N(c + d\sqrt{2}).
+  \end{align*}
+
+  Therefore, $\sigma(\epsilon) = \abs{\alpha^2 - 2\beta^2}\sigma(c + d\sqrt{2})$.
+  Since $\abs{\alpha^2 - 2\beta^2} \leq \abs{\alpha}^2 + 2\abs{\beta}^2 \leq 1/4 + 2 \cdot 1/4 = 3/4$, $\sigma(\epsilon) < \sigma(c + d\sqrt{2})$.
+
+  We have shown the existence of such $p + q\sqrt{2}$ and $\epsilon$.
+  We will show the uniqueness.
+  Suppose both $p + q\sqrt{2}, \epsilon$ and $p' + q'\sqrt{2}, \epsilon'$ satisfy the desired properties.
+  Then $a + b\sqrt{2} = (c + d\sqrt{2})(p + q\sqrt{2}) + \epsilon$, and $a + b\sqrt{2} = (c + d\sqrt{2})(p' + q'\sqrt{2}) + \epsilon'$.
+  By subtracting one from the other, we get $0 = (c + d\sqrt{2})((p - p') + (q - q')\sqrt{2}) + (\epsilon - \epsilon')$.
+
+  \todo[inline]{
+    Finish proving the uniqueness.
+    This might have something to do with $\abs{p - p'} \leq 1$ and $\abs{q - q'} \leq 1$.
+  }
+
 \end{proof}
 
 \begin{exer}{(Problem 14)}
