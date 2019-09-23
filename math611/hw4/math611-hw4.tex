@@ -167,6 +167,24 @@
   By the uniqueness discussed in the first part of the proof for Proposition 1.33, we conclude that there does not exist a lift of $f$.
 \end{proof}
 
+\begin{exer}{(Problem 11, Chapter 0)}
+  Show that $f: X \rightarrow Y$ is a homotopy equivalence if there exist maps $g, h: Y \rightarrow X$ such that $fg \simeq \Id$ and $hf \simeq \Id$.
+  More generally, show that $f$ is a homotopy equivalence if $fg$ and $hf$ are homotopy equivalences.
+\end{exer}
+
+\begin{proof}
+  \todo[inline]{
+    First part:
+    Let $F$ be a homotopy between $f \circ g$ and $\Id$, and let $H$ be a homotopy between $h \circ f$ and $\Id$.
+    Let $G$ be defined such that $G_t = h \circ F_{2t} \circ f$ for $t \in [0, 1/2]$, and $G_t = H_{2t - 1}$ for $t \in [1/2, 1]$.
+
+    Second part:
+    Let $\phi_X: X \rightarrow X, \phi_Y: Y \rightarrow Y$ be given such that $(f \circ g) \circ \phi_Y$ is homotopic to $\Id_Y$ and $\phi_X \circ (h \circ f)$ is homotopic to $\Id_X$.
+    Then $f \circ (g \circ \phi_Y)$ is homotopic to $\Id_Y$ and $(\phi_X \circ h) \circ f$ is homotopic to $\Id_X$.
+    By the first part, $f$ is a homotopy equivalence.
+  }
+\end{proof}
+
 \begin{exer}{(Problem 8, Chapter 1.3)}
   Let $\tilde{X}$ and $\tilde{Y}$ be simply-connected covering spaces of the path-connected, locally path-connected spaces $X$ and $Y$.
   Show that if $X \simeq Y$ then $\tilde{X} \simeq \tilde{Y}$.
@@ -176,16 +194,6 @@
   \todo[inline]{
     By Proposition 1.33, we can lift the two compositions as in Figure \ref{fig:problem8}.
     This works because $\pi_1(\tilde{X}) = \pi_1(\tilde{Y}) = 0$.
-    I'm not sure how Exercise 11 (Chapter 0) helps, but I solved it.
-
-    First part:
-    Let $F$ be a homotopy between $f \circ g$ and $\Id$, and let $H$ be a homotopy between $h \circ f$ and $\Id$.
-    Let $G$ be defined such that $G_t = h \circ F_{2t} \circ f$ for $t \in [0, 1/2]$, and $G_t = H_{2t - 1}$ for $t \in [1/2, 1]$.
-
-    Second part:
-    Let $\phi_X: X \rightarrow X, \phi_Y: Y \rightarrow Y$ be given such that $(f \circ g) \circ \phi_Y$ is homotopic to $\Id_Y$ and $\phi_X \circ (h \circ f)$ is homotopic to $\Id_X$.
-    Then $f \circ (g \circ \phi_Y)$ is homotopic to $\Id_Y$ and $(\phi_X \circ h) \circ f$ is homotopic to $\Id_X$.
-    By the first part, $f$ is a homotopy equivalence.
 
     $f \circ g$ is homotopic to the identity map on $Y$.
     Then $f \circ g \circ p_Y$ is homotopic to $p_Y$.
