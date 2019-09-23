@@ -191,45 +191,83 @@
 \end{exer}
 
 \begin{proof}
+  \begin{figure}
+    \includegraphics[width=.5\linewidth]{problem8_diagram.jpeg}
+    \caption{Problem 8}
+    \label{fig:problem8_diagram}
+  \end{figure}
+  Let $f, g$ be homotopy equivalences as defined in Figure \ref{fig:problem8_diagram}.
+  By Proposition 1.33, we can lift $f \circ p_X$ and $g \circ p_Y$ as defined in Figure \ref{fig:problem8_diagram}.
+  This works because $\pi_1(\tilde{X}) = \pi_1(\tilde{Y}) = 0$.
+  Let $s = \widetilde{f \circ p_X}, t = \widetilde{g \circ p_Y}$.
+
+  Since $f \circ g$ is homotopic to $\Id_Y$, $f \circ g \circ p_Y$ is homotopic to $\Id_Y \circ p_Y = p_Y$.
+  Let $F: \tilde{Y} \times I \rightarrow Y$ be a homotopy between them such that $F_0 = f \circ g \circ p_Y$ and $F_1 = p_Y$ where $F_t$ denotes the function $\tilde{y} \mapsto F(\tilde{y}, t)$.
+  We will apply Proposition 1.30 (the homotopy lifting property) to lift $F$ such that $\tilde{F}_0 = s \circ t$.
+  This is possible because we have:
+  \begin{itemize}
+    \item
+      A covering space $p_Y: \tilde{Y} \rightarrow Y$.
+    \item
+      A homotopy $F_t: \tilde{Y} \times I \rightarrow Y$.
+    \item
+      We have $f \circ g \circ p_Y = p_Y \circ s \circ t$.
+      (See Figure \ref{fig:problem8_diagram}.)
+      Therefore, $s \circ t: \tilde{Y} \rightarrow \tilde{Y}$ lifts $F_0$.
+  \end{itemize}
+
+  If $\tilde{F}_1$ is the identity map on $\tilde{Y}$, then that will imply that $s \circ t$ is homotopic to the identity map.
+  However, this may not be true.
+
+  Let $r: \tilde{Y} \rightarrow \tilde{Y}$ such that $r(\tilde{y}) = \tilde{F}(\tilde{y}, 1)$ for any $\tilde{y} \in \tilde{Y}$.
+  Let $y_0 \in Y$ be given arbitrarily.
+  Choose $\tilde{y_0} \in Y$ such that $p_Y(\tilde{y_0}) = y_0$.
+  Then $\tilde{y_0}, r(\tilde{y_0})$ are both points in $\tilde{Y}$.
+  Let $k: \tilde{Y} \rightarrow \tilde{Y}$ be a lift of $p_Y$ such that $k(r(\tilde{y_0})) = \tilde{y_0}$.
+  This is possible by Proposition 1.33 because we have:
+  \begin{itemize}
+    \item
+      A covering space $p_Y: (\tilde{Y}, \tilde{y_0}) \rightarrow (Y, y_0)$.
+    \item
+      A map $p_Y: (\tilde{Y}, r(\tilde{y_0})) \rightarrow (Y, y_0)$.
+      This makes sense because
+      \begin{align*}
+        p_Y(r(\tilde{y_0}))
+          &= p_Y(\tilde{F}(\tilde{y_0}, 1)) \\
+          &= F(\tilde{y_0}, 1) \\
+          &= p_Y(\tilde{y_0}) \\
+          &= y_0.
+      \end{align*}
+    \item
+      $\tilde{Y}$ is simply connected, so both $\pi_1(\tilde{Y}, \tilde{y_0})$ and $\pi_1(\tilde{Y}, r(\tilde{y_0}))$ are trivial.
+    \item
+      $Y$ is path connected and locally path connected.
+  \end{itemize}
+
+  We claim that $k \circ r = \Id_{\tilde{Y}}$.
+  \begin{itemize}
+    \item
+      Claim 1: $k \circ r$ is a lift of $p_Y$.
+      $p_Y \circ k = p_Y$ because $k$ is a lift of $p_Y$, and $p_Y \circ r = p_Y$ because $r$ is a lift of $p_Y$.
+      Thus $p_Y \circ (k \circ r) = (p_Y \circ k) \circ r = p_Y \circ r = p_Y$, so $k \circ r$ is a lift of $p_Y$.
+    \item
+      Claim 2: $k \circ r = \Id_{\tilde{Y}}$.
+      $k \circ r$ is a lift of $p_Y$ that maps $\tilde{y_0}$ to $(k \circ r)(\tilde{y_0}) = \tilde{y_0}$.
+      On the other hand, $\Id_{\tilde{Y}}$ is clearly a lift of $p_Y$ that maps $\tilde{y_0}$ to $\tilde{y_0}$.
+      By Proposition 1.34(the unique lifting property), the two lifts must be identical.
+      Therefore, $k \circ r = \Id_{\tilde{Y}}$.
+  \end{itemize}
+
+  By the homotopy $\tilde{F}$, $s \circ t$ is homotopic to $r$.
+  Therefore, $k \circ (s \circ t)$ is homotopic to $k \circ r$.
+  Since $k \circ r = \Id_{\tilde{Y}}$, $(k \circ s) \circ t$ is homotopic to $\Id_{\tilde{Y}}$.
+
   \todo[inline]{
-    By Proposition 1.33, we can lift the two compositions as in Figure \ref{fig:problem8}.
-    This works because $\pi_1(\tilde{X}) = \pi_1(\tilde{Y}) = 0$.
-
-    $f \circ g$ is homotopic to the identity map on $Y$.
-    Then $f \circ g \circ p_Y$ is homotopic to $p_Y$.
-    Let $F$ be a homotopy between them such that $F_0 = st$.
-    This is possible because $st$ is clearly a lift of $f \circ g \circ p_Y$ if you look at the diagram.
-    See Figure \ref{fig:problem8_idea}.
-    We will look into what $F_1$ is.
-    In the best case scenario, $F_1 = \Id_{\tilde{Y}}$, and $st$ is homotopic to $\Id_{\tilde{Y}}$.
-
-    However, that might not be the case.
-    Let $r = F_1$.
-    Let $y_0 \in Y$ and $\tilde{y_0} \in Y$ be given such that $p_Y(\tilde{y_0}) = y_0$.
-    Then $\tilde{y_0}, r(\tilde{y_0})$ are both points in $\tilde{Y}$.
-    Let $k$ be a lift of $p_Y$ such that $k(r(\tilde{y_0})) = \tilde{y_0}$.
-    $(p_Y \circ k) \circ r = p_Y \circ r = p_Y$.
-    Therefore, $k \circ r$ is a lift of $p_Y$ such that $(k \circ r)(\tilde{y_0}) = \tilde{y_0}$.
-    $\Id_{\tilde{y_0}}$ is such a lift as well.
-    By the uniqueness of lifts, $k \circ r = \Id$.
-    Then $k \circ s \circ t \simeq k \circ r = \Id$.
-    Therefore, $(k \circ s) \circ t$ is homotopic to $\Id$, so $(k \circ s) \circ t$ is a homotopy equivalence.
-
     Similarly, there exists $k': \tilde{X} \rightarrow \tilde{X}$ such that $t \circ s \circ k' \simeq r' \circ k' = \Id_{\tilde{X}}$.
     Therefore, $t \circ (s \circ k')$ is a homotopy equivalence.
 
-    By Problem 11 in Chapter 0, $t$ is a homotopy equivalence.
+    By the first part of Problem 11 in Chapter 0, $t$ is a homotopy equivalence.
   }
-  \begin{figure}
-    \includegraphics[width=.5\linewidth]{problem8_idea.jpeg}
-    \caption{Problem 8 idea}
-    \label{fig:problem8_idea}
-  \end{figure}
-  \begin{figure}
-    \includegraphics[width=.5\linewidth]{problem8.jpeg}
-    \caption{delete this!}
-    \label{fig:problem8}
-  \end{figure}
 \end{proof}
 
 
