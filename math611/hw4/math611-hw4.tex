@@ -140,7 +140,7 @@
   Since $\tilde{N}_i$ and $\tilde{V}_{i + 1}$ are both open sets, the intersection $\tilde{V} = \tilde{N}_i \cap \tilde{V}_{i + 1}$ is a neighborhood of $\tilde{x}$.
   Then $V = p(\tilde{V})$ is a neighborhood of $x$ that is contained in $N_i$ and $V_{i + 1}$, and $p$ maps $\tilde{V}$ to $V$ homeomorphically.
   Then there exists an $\epsilon > 0$ such that $V$ intersects with vertical lines $x = 1 / N$ for all $1 / N < \epsilon$.
-  Let $N_{i + 1} = V_{i + 1} \cap N_i \cap ([0, \epsilon) \times [0, 1])$.
+  Let $N_{i + 1} = (V_{i + 1} \cup N_i) \cap ([0, \epsilon) \times [0, 1])$.
   Let $\tilde{N}_{i + 1} = p^{-1}(N_{i + 1}) \cap (\tilde{N}_i \cup \tilde{V}_{i + 1})$.
   We claim that $p$ maps $\tilde{N}_{i + 1}$ to $N_{i + 1}$ homeomorphically.
   \begin{itemize}
@@ -174,8 +174,7 @@
       }
     \item
       Continuous?
-      \todo[inline]{
-      }
+      $p$ is defined to be continuous, so the restriction of it must be continuous.
     \item
       Continuous inverse?
       \todo[inline]{
