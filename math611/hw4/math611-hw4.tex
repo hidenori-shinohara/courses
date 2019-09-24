@@ -173,16 +173,42 @@
 \end{exer}
 
 \begin{proof}
-  \todo[inline]{
-    First part:
-    Let $F$ be a homotopy between $f \circ g$ and $\Id$, and let $H$ be a homotopy between $h \circ f$ and $\Id$.
-    Let $G$ be defined such that $G_t = h \circ F_{2t} \circ f$ for $t \in [0, 1/2]$, and $G_t = H_{2t - 1}$ for $t \in [1/2, 1]$.
+  We will only show the first part because we will only use the first part for Problem 8.
 
-    Second part:
-    Let $\phi_X: X \rightarrow X, \phi_Y: Y \rightarrow Y$ be given such that $(f \circ g) \circ \phi_Y$ is homotopic to $\Id_Y$ and $\phi_X \circ (h \circ f)$ is homotopic to $\Id_X$.
-    Then $f \circ (g \circ \phi_Y)$ is homotopic to $\Id_Y$ and $(\phi_X \circ h) \circ f$ is homotopic to $\Id_X$.
-    By the first part, $f$ is a homotopy equivalence.
-  }
+  Let $F$ be a homotopy between $f \circ g$ and $\Id$, and let $H$ be a homotopy between $h \circ f$ and $\Id$.
+  Let $G: X \times I \rightarrow X$ be defined such that 
+
+  \begin{align*}
+    G_t &= \begin{cases}
+      H_{1 - 3t} \circ g \circ f & (t \in [0, 1/3]) \\
+      h \circ F_{3t - 1} \circ f & (t \in [1/3, 2/3]) \\
+      H_{3t - 2} & (t \in [2/3, 1]).
+    \end{cases}
+  \end{align*}
+
+  \begin{itemize}
+    \item
+      $G$ is well-defined and continuous.
+      \begin{itemize}
+        \item
+          $G_{1/3} = H_0 \circ g \circ f = h \circ f \circ g \circ f$.
+        \item
+          $G_{1/3} = h \circ F_0 \circ f = h \circ f \circ g \circ f$.
+        \item
+          $G_{2/3} = h \circ F_1 \circ f = h \circ f$.
+        \item
+          $G_{2/3} = H_0 = h \circ f$.
+      \end{itemize}
+      By the pasting lemma, $G$ is continuous.
+    \item
+      When $t = 0$, $G(x, 0) = H_1 \circ g \circ f = g \circ f$.
+    \item
+      When $t = 1$, $G(x, 1) = H_1 = \Id$.
+  \end{itemize}
+
+  Therefore, $G$ is a homotopy between $g \circ f$ and $\Id_X$.
+  Thus $f \circ g$ is homotopic to $\Id_Y$ and $g \circ f$ is homotopic to $\Id_X$.
+  Hence, $f$ and $g$ are homotopy equivalences.
 \end{proof}
 
 \begin{exer}{(Problem 8, Chapter 1.3)}
