@@ -122,9 +122,30 @@
   $\{ V_y  \mid y \in [0, 1] \}$ is an open cover of the segment $\{ 0 \} \times [0, 1]$.
   Since the segment is compact, there exists a finite subcover, $V_{y_1}, \cdots, V_{y_k}$.
 
-  Since we found a finite cover where each of them is rectangular shaped, there exists an $N \in \mathbb{N}$ such that $\forall n \geq N, \{ 1/n \} \times [0, 1] \subset \bigcup_{i=1}^{n} V_{y_i}$.
-  Since each $V_{y_1}, \cdots, V_{y_k}$ is a subset of an open rectangle, there must exist a partition $0 = t_0 < t_1 < \cdots < t_m = 1$ such that for all $i$, $[0, 1/N] \times [t_i, t_{i + 1}]$ is contained in an evenly covered open subset.
-  We will inductively show that $[0, 1/N] \times [0, t_i]$ is contained in an evenly covered open subset.
+  For simplicity, we will just call the $V_1, \cdots, V_k$ and assume that $V_1$ contains the point $(0, 0)$ and $V_k$ contains the point $(0, 1)$ and $V_i$ and $V_{i + 1}$ have a nonempty intersection.
+  See Figure \ref{fig:problem5}.
+  \begin{figure}
+    \includegraphics[width=.5\linewidth]{problem5.jpeg}
+    \caption{Problem 5}
+    \label{fig:problem5}
+  \end{figure}
+
+  We will construct a neighborhood of the left edge that lifts homeomorphically to $\tilde{X}$ in $k$ steps.
+  $N_1 = V_1$ is a neighborhood that lifts homeomorphically.
+  Let $\tilde{N_1}$ denote some open set in $\tilde{X}$ such that $p$ maps $\tilde{N_1}$ to $N_1$ homeomorphically.
+
+  Suppose that we have constructed open sets $N_i \subset X, \tilde{N_i} \subset \tilde{X}$ for some $1 \leq i < k$.
+  Let $x$ be a point in the left edge such that $x \in N_i \cap V_{i + 1}$.
+  Then there exists $\tilde{x} \in \tilde{X}$ such that $\tilde{x} \in \tilde{N_i} \cap \tilde{V_{i + 1}}$ where $\tilde{V_{i + 1}}$ is some open set in $\tilde{X}$ such that $p$ maps $\tilde{V_{i + 1}}$ to $V_{i + 1}$ homeomorphically.
+  Since $\tilde{N_i}$ and $\tilde{V_{i + 1}}$ are both open sets, the intersection $\tilde{V} = \tilde{N_i} \cap \tilde{V_{i + 1}}$ is a neighborhood of $\tilde{x}$.
+  Then $V = p(\tilde{V})$ is a neighborhood of $x$ that is contained in $N_i$ and $V_{i + 1}$, and $p$ maps $\tilde{V}$ to $V$ homeomorphically.
+  Then there exists an $\epsilon > 0$ such that $V$ intersects with vertical lines $x = 1 / N$ for all $1 / N < \epsilon$.
+  Let $N_{i + 1} = V_{i + 1} \cap N_i \cap ([0, \epsilon) \times [0, 1])$.
+  Then this is an evenly covered neighborhood of the left edge, and let $\tilde{N_{i + 1}}$ be an open set in $\tilde{X}$ such that the restriction of $p$ is a homeomorphic.
+  \todo[inline]{
+    Explain this more.
+    Why does this work?
+  }
 \end{proof}
 
 \begin{exer}{(Problem 7, Chapter 1.3)}
