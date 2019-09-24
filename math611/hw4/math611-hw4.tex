@@ -170,8 +170,19 @@
       This is a contradiction because $p(\tilde{a}) = p(\tilde{b})$.
     \item
       Surjective?
-      \todo[inline]{
-      }
+      Let $x \in N_{i + 1}$.
+      \begin{itemize}
+        \item
+          Case 1: $x \in V_{i + 1}$.
+          Then there exists an $\tilde{x} \in \tilde{V}_{i + 1}$ such that $p(\tilde{x}) = x$.
+          Moreover, $\tilde{x} \in p^{-1}(N_{i + 1})$.
+          Therefore, $\tilde{x} \in \tilde{N}_{i + 1} = p^{-1}(N_{i + 1}) \cap (\tilde{N}_i \cup \tilde{V}_{i + 1})$.
+        \item
+          Case 2: $x \in N_i$.
+          Then there exists an $\tilde{x} \in \tilde{N}_i$ such that $p(\tilde{x}) = x$.
+          Moreover, $\tilde{x} \in p^{-1}(N_{i + 1})$.
+          Therefore, $\tilde{x} \in \tilde{N}_{i + 1} = p^{-1}(N_{i + 1}) \cap (\tilde{N}_i \cup \tilde{V}_{i + 1})$.
+      \end{itemize}
     \item
       Continuous?
       $p$ is defined to be continuous, so the restriction of it must be continuous.
