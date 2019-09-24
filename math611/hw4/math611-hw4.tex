@@ -141,11 +141,32 @@
   Then $V = p(\tilde{V})$ is a neighborhood of $x$ that is contained in $N_i$ and $V_{i + 1}$, and $p$ maps $\tilde{V}$ to $V$ homeomorphically.
   Then there exists an $\epsilon > 0$ such that $V$ intersects with vertical lines $x = 1 / N$ for all $1 / N < \epsilon$.
   Let $N_{i + 1} = V_{i + 1} \cap N_i \cap ([0, \epsilon) \times [0, 1])$.
-  Then this is an evenly covered neighborhood of the left edge, and let $\tilde{N}_{i + 1}$ be an open set in $\tilde{X}$ such that the restriction of $p$ is a homeomorphic.
-  \todo[inline]{
-    Explain this more.
-    Why does this work?
-  }
+  Let $\tilde{N}_{i + 1} = p^{-1}(N_{i + 1}) \cap (\tilde{N}_i \cup \tilde{V}_{i + 1})$.
+  We claim that $p$ maps $\tilde{N}_{i + 1}$ to $N_{i + 1}$ homeomorphically.
+  \begin{itemize}
+    \item
+      Well-defined?
+      \todo[inline]{
+      }
+    \item
+      Injective?
+      \todo[inline]{
+      }
+    \item
+      Surjective?
+      \todo[inline]{
+      }
+    \item
+      Continuous?
+      \todo[inline]{
+      }
+    \item
+      Continuous inverse?
+      \todo[inline]{
+      }
+  \end{itemize}
+
+  Then we will obtain $N_k$ $\tilde{N}_k$ after this process, and $N_k$ is a neighborhood of the left edge such that $p$ maps $\tilde{N}_k$ into $N_k$ homeomorphically.
 \end{proof}
 
 \begin{exer}{(Problem 7, Chapter 1.3)}
