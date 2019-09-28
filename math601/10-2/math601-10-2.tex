@@ -87,4 +87,30 @@
   Therefore, one of $a' + b'\sqrt{2}$ or $c' + d'\sqrt{2}$ is a unit, so $3 - \sqrt{2}$ is irreducible.
 \end{proof}
 
+\begin{exer}{(Problem 17)}
+  Let $p \in \mathbb{Z} \setminus \{ 0 \}$ and suppose $\alpha\beta = p$ in $\mathbb{Z}[\sqrt{2}]$.
+  Show that $\beta = c\gamma(\alpha)$ with $c \in \mathbb{Q}$.
+\end{exer}
+
+\begin{proof}
+  Choose $a, b, c, d \in \mathbb{Z}$ such that $a + b\sqrt{2} = \beta, c + d\sqrt{2} = \alpha$.
+  Since $\alpha\beta = p \ne 0$, $\alpha \ne 0$.
+  This implies at least one of $c$ or $d$ is nonzero.
+  Therefore, $\gamma(\alpha) = c - d\sqrt{2} \ne 0$.
+
+  We have $\alpha\beta = (ac + 2bd) + \sqrt{2}(ad + bc)$.
+  Since $\alpha\beta \in \mathbb{Z}$, $ad + bc = 0$.
+
+  \begin{align*}
+    \frac{\beta}{\gamma(\alpha)}
+      &= \frac{a + b\sqrt{2}}{c - d\sqrt{2}} \\
+      &= \frac{(a + b\sqrt{2})(c + d\sqrt{2})}{c^2 - 2d^2} \\
+      &= \frac{(ac + 2bd) + (ad + bc)\sqrt{2}}{c^2 - 2d^2} \\
+      &= \frac{ac + 2bd}{c^2 - 2d^2}.
+  \end{align*}
+
+  Therefore, $\frac{\beta}{\gamma(\alpha)}  = \frac{ac + 2bd}{c^2 - 2d^2} \in \mathbb{Q}$.
+  In other words, $\beta = \frac{ac + 2bd}{c^2 - 2d^2}\gamma(\alpha)$.
+\end{proof}
+
 \end{document}
