@@ -113,4 +113,40 @@
   In other words, $\beta = \frac{ac + 2bd}{c^2 - 2d^2}\gamma(\alpha)$.
 \end{proof}
 
+\begin{exer}{(Problem 18)}
+  Let $p \in \mathbb{Z}$ be an odd prime.
+  Show that $p = N(\alpha)$ for some $\alpha \in \mathbb{Z}[\sqrt{2}]$ if and only if $p$ is not irreducible as an element of $\mathbb{Z}[\sqrt{2}]$.
+\end{exer}
+
+\begin{proof}
+  By Problem 3 from the previous assignment, we know that $\alpha \in \mathbb{Z}[\sqrt{2}]$ is a unit if and only if $N(\alpha) = \pm 1$.
+  We will use this result in this solution.
+
+  Suppose $p = N(\alpha)$ for some $\alpha \in \mathbb{Z}[\sqrt{2}]$.
+  Since $N(\alpha) = \alpha\gamma(\alpha)$, $p$ can be written as a product of $\alpha$ and $\gamma(\alpha)$.
+  \begin{itemize}
+    \item
+      $N(\alpha) = p \ne \pm 1$, so $\alpha$ is not a unit.
+    \item
+      Since $N(\gamma(\alpha)) = \gamma(\alpha)\gamma(\gamma(\alpha)) = \gamma(\alpha)\alpha = N(\alpha) = p \ne \pm 1$, $\gamma(\alpha)$ is not a unit.
+  \end{itemize}
+  Therefore, $p$ is a product of two non-unit elements $\alpha, \gamma(\alpha)$, so $p$ is not irreducible.
+
+  On the other hand, suppose that $p$ is not irreducible as an element of $\mathbb{Z}[\sqrt{2}]$.
+  Then $p = \alpha\beta$ where $\alpha, \beta \in \mathbb{Z}[\sqrt{2}]$ are non-unit elements.
+  Then $N(p) = N(\alpha)N(\beta)$.
+
+  \begin{itemize}
+    \item
+      $N(p) = p^2$ because $p$ is an integer.
+    \item
+      $N(\alpha) \ne \pm 1$ because $\alpha$ is not a unit.
+    \item
+      $N(\beta) \ne \pm 1$ because $\beta$ is not a unit.
+  \end{itemize}
+  Since $N(\alpha), N(\beta)$ are both integers, $N(\alpha) = N(\beta) = p$ or $N(\alpha) = N(\beta) = -p$.
+  If $N(\alpha) = p$, then we are done.
+  If $N(\alpha) = -p$, then $N(\alpha(1 + \sqrt{2})) = N(\alpha)N(1 + \sqrt{2}) = (-p)(-1) = p$.
+\end{proof}
+
 \end{document}
