@@ -149,4 +149,15 @@
   If $N(\alpha) = -p$, then $N(\alpha(1 + \sqrt{2})) = N(\alpha)N(1 + \sqrt{2}) = (-p)(-1) = p$.
 \end{proof}
 
+\begin{exer}{(Problem 19)}
+  Let $p \in \mathbb{Z}$ be an odd prime.
+  Show that $x^2 - 2y^2 = p$ has a solution if and only if $p$ is not irreducible in $\mathbb{Z}[\sqrt{2}]$.
+\end{exer}
+
+\begin{proof}
+  Let an odd prime $p$ be given.
+  There exists an $\alpha \in \mathbb{Z}[\sqrt{2}]$ such that $p = N(\alpha)$ if and only if there exist $x, y \in \mathbb{Z}$ such that $p = x^2 - 2y^2$ because $N(x + \sqrt{2}y) = x^2 - 2y^2$.
+  By combining this with the results of Problem 18, we have $x^2 - 2y^2 = p$ has a solution if and only if $p$ is not irreducible in $\mathbb{Z}[\sqrt{2}]$.
+\end{proof}
+
 \end{document}
