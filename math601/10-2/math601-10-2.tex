@@ -1,0 +1,69 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{fullpage}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 601 (Due 10/2)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\tableofcontents
+
+\section{The Quadratic Equation $x^2 - 2y^2 = n$}
+\begin{exer}{(Problem 15)}
+  Find a solution to $x^2 - 2y^2 = 7$.
+\end{exer}
+
+\begin{proof}
+  $3^2 - 2 \cdot 1^2 = 9 - 2 = 7$.
+  Thus $(x, y) = (3, 1)$ is a solution to $x^2 - 2y^2 = 7$.
+\end{proof}
+
+\end{document}
