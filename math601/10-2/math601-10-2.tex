@@ -66,4 +66,25 @@
   Thus $(x, y) = (3, 1)$ is a solution to $x^2 - 2y^2 = 7$.
 \end{proof}
 
+\begin{exer}{(Problem 16)}
+  Is 7 irreducible in $\mathbb{Z}[\sqrt{2}]$?
+  If not, find a factorization into irreducible elements.
+\end{exer}
+
+\begin{proof}
+  By Problem 3 from the previous assignment, we know that $\alpha \in \mathbb{Z}[\sqrt{2}]$ is a unit if and only if $N(\alpha) = \pm 1$.
+  We will use this result in this solution.
+
+  By Problem 15, we know that $7 = (3 + \sqrt{2})(3 - \sqrt{2})$.
+  Since $N(3 + \sqrt{2}) = N(3 - \sqrt{2}) = 7 \ne \pm 1$, 7 can be expressed as a product of two non-unit elements, so 7 is not irreducible.
+
+  Suppose $3 + \sqrt{2} = (a + b\sqrt{2})(c + d\sqrt{2})$ for some $a, b, c, d \in \mathbb{Z}$.
+  By Problem 2 from the previous assignment, we know that $N(3 + \sqrt{2}) = N(a + b\sqrt{2})N(c + d\sqrt{2})$.
+  Since $N$ maps $\mathbb{Z}[\sqrt{2}]$ into integers, exactly one of $N(a + b\sqrt{2})$ and $N(c + d\sqrt{2}$ must be 1 or -1, and the other one is 7 or -7.
+  Therefore, one of $a + b\sqrt{2}$ or $c + d\sqrt{2}$ is a unit, so $3 + \sqrt{2}$ is irreducible.
+
+  Similarly, if $3 - \sqrt{2} = (a' + b'\sqrt{2})(c' + d'\sqrt{2})$, then $7 = N(3 - \sqrt{2}) = N(a' + b'\sqrt{2})N(c' + d'\sqrt{2})$.
+  Therefore, one of $a' + b'\sqrt{2}$ or $c' + d'\sqrt{2}$ is a unit, so $3 - \sqrt{2}$ is irreducible.
+\end{proof}
+
 \end{document}
