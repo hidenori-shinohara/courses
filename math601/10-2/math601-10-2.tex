@@ -84,6 +84,54 @@
   Therefore, $i$ is indeed an injective ring homomorphism.
 \end{proof}
 
+\begin{exer}{(Problem 1(iv))}
+  Prove that given a ring homomorphism $h: R \rightarrow T$, such that $h(s) \in T^{\star}$ for every $s \in S$, there exists a unique ring homomorphism $\lambda: S^{-1}R \rightarrow T$, such that $h = \lambda \circ i$.
+\end{exer}
+
+\begin{proof}
+  Suppose such a $\lambda$ exists.
+  Then for all $r \in R$, $h(r) = (\lambda \circ i)(r) = \lambda(r / 1)$.
+  Therefore, $\lambda(r / 1) = h(r)$.
+  Let $s \in S$.
+  Then $1_T = \lambda(1 / 1) = \lambda((s / 1) \cdot (1 / s)) = \lambda(s / 1)\lambda(1 / s)$.
+  Therefore, $\lambda(1 / s) = \lambda(s / 1)^{-1} = h(s)^{-1}$.
+  This implies that $\lambda(r / s) = \lambda(r / 1)\lambda(1 / s) = h(r)h(s)^{-1}$.
+
+  In other words, if such a $\lambda$ exists, it must map $r / s$ to $h(r)h(s)^{-1}$.
+  This proves the uniqueness.
+  We will show that such a function is indeed well defined and it is a ring homomorphism.
+  \begin{itemize}
+    \item
+      Well-defined?
+      Since $h(s) \in T^{\star}$ for each $s \in S$, $h(s)^{-1}$ is well defined.
+      Let $r / s = r' / s' \in S^{-1}R$ be given.
+      Then $rs' = r's$.
+      Since $h$ is a ring homomorphism, $h(r)h(s') = h(r')h(s)$.
+      Therefore, $\lambda(r / s) = h(r)h(s)^{-1} = h(r')h(s')^{-1} = \lambda(r' / s')$.
+    \item
+      Ring homomorphism?
+      Let $r / s, r' / s' \in S^{-1}R$.
+      \begin{align*}
+        \lambda(\frac{r}{s} \cdot \frac{r'}{s'})
+          &= \lambda(\frac{rr'}{ss'}) \\ 
+          &= h(rr')h(ss')^{-1} \\
+          &= h(r)h(r')h(s)^{-1}h(s')^{-1} \\
+          &= h(r)h(s)^{-1}h(r')h(s')^{-1} \\
+          &= \lambda(\frac{r}{s})\lambda(\frac{r'}{s'}). \\
+        \lambda(\frac{r}{s} + \frac{r'}{s'})
+          &= \lambda(\frac{rs' + r's}{ss'}) \\
+          &= h(rs' + r's)h(ss')^{-1} \\
+          &= (h(r)h(s') + h(r')h(s))h(s)^{-1}h(s')^{-1} \\
+          &= h(r)h(s)^{-1} + h(r')h(s')^{-1} \\
+          &= \lambda(\frac{r}{s}) + \lambda(\frac{r'}{s'}).
+      \end{align*}
+    \item
+      Commutes?
+      For any $r \in R$, $\lambda(i(r)) = \lambda(r / 1) = h(r)h(1)^{-1} = h(r)$.
+      Therefore, $\lambda \circ i$ is indeed $h$.
+  \end{itemize}
+\end{proof}
+
 \section{The Quadratic Equation $x^2 - 2y^2 = n$}
 \begin{exer}{(Problem 15)}
   Find a solution to $x^2 - 2y^2 = 7$.
