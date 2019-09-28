@@ -56,6 +56,34 @@
 
 \tableofcontents
 
+\section{Rings of Fractions}
+\begin{exer}{(Problem 1 (iii))}
+  Prove that the natural map $i: R \rightarrow S^{-1}R$, which maps $r$ to $\frac{r}{1}$ is an injective ring homomorphism.
+\end{exer}
+
+\begin{proof}
+  $ $
+  \begin{itemize}
+    \item
+      Ring homomorphism?
+      \begin{itemize}
+        \item
+          For all $r, s \in R$, $i(rs) = \frac{rs}{1} = \frac{r}{1} \cdot \frac{s}{1} = i(r)i(s)$.
+        \item
+          For all $r, s \in R$, $i(r + s) = \frac{r + s}{1} = \frac{r}{1} + \frac{s}{1} = i(r) + i(s)$.
+      \end{itemize}
+      Therefore, $i$ is indeed a ring homomorphism.
+    \item
+      Injective?
+      It suffices to check that $\ker(i) = \{ 1 \}$.
+      Let $r \in R$ such that $\ker(r)$ is the multiplicative identity in $S^{-1}R$.
+      By definition, $\ker(r) = \frac{1}{1}$.
+      Thus $\frac{r}{1} = \frac{1}{1}$, so $r \cdot 1 - 1 \cdot 1 = 0$.
+      This means $r = 1$, so $\ker(i) = \{ 1 \}$.
+  \end{itemize}
+  Therefore, $i$ is indeed an injective ring homomorphism.
+\end{proof}
+
 \section{The Quadratic Equation $x^2 - 2y^2 = n$}
 \begin{exer}{(Problem 15)}
   Find a solution to $x^2 - 2y^2 = 7$.
