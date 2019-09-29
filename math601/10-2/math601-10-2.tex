@@ -132,8 +132,29 @@
       Then $o_{p_j} = \min \{ a_{0, j}, \cdots, a_{n, j} \}$ for each $j$.
       Thus $\cont(f(x)) = \prod p_j^{o_{p_j}} = \prod p_j^{\min \{ a_{0, j}, \cdots, a_{n, j} \}} = \gcd(a_0, \cdots, a_n)$
     \item
-      \todo[inline]{
-      }
+      As discussed below the definition of $\ord_p$ in the handout ``Factorization in Integral Domains," $\ord_p$ is a group homomorphism from a multiplicative group $F^*$ to an additive group $\mathbb{Z}$.
+
+      Let $f(x) = \sum_{i=0}^{n} a_ix^i \in R[x], b \in R$ be given.
+      Choose distinct (not equivalent) irreducible elements $p_1, \cdots, p_m \in R$, non-negative integers $a_{i, j}, b_j$, and units $u_i, w$ such that $a_i = u_ip_1^{a_{i, 1}} \cdots p_m^{a_{i, m}}$ and $b = wp_1^{b_1} \cdots p_m^{b_m}$.
+      Then $b \cdot f(x) = \sum_{i=0}^{n} (ba_i)x_i$, and $ba_i = (u_iw)p_1^{a_{i, 1} + b_1} \cdots p_m^{a_{i, m} + b_m}$.
+      Since $\ord_p$ is a group homomorphism for each $p$, we have that for each $i, j$, $\ord_{p_j}(ba_i) = \ord_{p_j}(b) + \ord_{p_j}(a_i)$.
+      \begin{align*}
+        o_{p_j}(b \cdot f(x))
+          &= \min\{ \ord_{p_j}(ba_i) \mid 0 \leq i \leq n \} \\
+          &= \min\{ \ord_{p_j}(b) + \ord_{p_j}(a_i) \mid 0 \leq i \leq n \} \\
+          &= \ord_{p_j}(b) + \min\{ \ord_{p_j}(a_i) \mid 0 \leq i \leq n \} \\
+          &= \ord_{p_j}(b) + o_{p_j}(f(x)).
+      \end{align*}
+
+      Therefore, 
+      \begin{align*}
+        \cont(f(x))
+          &= \prod_{j} p_j^{o_{p_j}(b \cdot f(x))} \\
+          &= \prod_{j} p_j^{\ord_{p_j}(b) + o_{p_j}(f(x))} \\
+          &= \prod_{j} p_j^{\ord_{p_j}(b)} \prod_j p_j^{o_{p_j}(f(x))} \\
+          &= b\prod_j p_j^{o_{p_j}(f(x))} \\
+          &= b\cont(f(x)).
+      \end{align*}
   \end{itemize}
 \end{proof}
 
