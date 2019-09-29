@@ -61,14 +61,6 @@
 \begin{proof}
   \todo[inline]{
     For the first part, I ended up with the two graphs in Figure \ref{fig:problem10_idea}.
-    \begin{itemize}
-      \item
-        There have to be exactly two points in a covering space with 4 edges.
-      \item
-        Every other point has a neighborhood such that the point has only two edges.
-      \item
-        A covering space has to be path connected.
-    \end{itemize}
     Based on these three things, it's not hard to get to the following two possibilities.
     However, I'm not sure if this is rigorous enough.
     Also, I don't know how this can be applied to the case of 3.
@@ -77,6 +69,14 @@
     I tried to use the universal covering and consider a subset.
     I feel that this would make sure that I'm covering all the cases, although I don't know how to show it rigorously.
   }
+  \begin{itemize}
+    \item
+      There have to be exactly two points in a covering space with 4 edges.
+    \item
+      Every other point has a neighborhood such that the point has only two edges.
+    \item
+      A covering space has to be path connected.
+  \end{itemize}
  \begin{figure}
    \includegraphics[width=.5\linewidth]{problem10_idea.jpeg}
    \caption{Problem 10 Idea}
@@ -95,27 +95,24 @@
 
 \begin{proof}
   \todo[inline]{
-    Since they are finite graphs, we can analyze the degree of each vertex.
-    The degree of each vertex is preserved when lifted, so that's something I'm trying to make use of. 
-    So, something like Figure \ref{fig:problem11_idea} is what I'm trying to do.
-    The idea is that $X_1, X_2$ would have 2 and 3 vertices with degree 4, so $X$ must have exactly one vertex with degree 4.
-    However, in this case, $S \vee S$ has both $X_1$ and $X_2$ as covering spaces.
-    I've also tried graphs with vertices of different degrees like 3.
-    I think this is the right approach. I just need some more time.
-
-    I think Figure \ref{fig:problem11_idea_2} is a correct solution, but I'm not certain.
-    There exists no graph consisting of one vertex of degree 3, so if this example doesn't work, there has to be a covering map between them.
-    But I don't think they are homeomophic to each other, so there should be a way to show that they are like pretty different or something.
+    Figure \ref{fig:problem11_idea_3} seems very promising.
+    It won't be too rigorous, but I can show that there is no space that has these two spaces as covering spaces.
   }
+  \begin{itemize}
+    \item
+      The degree of each vertex must be 3.
+    \item
+      The number of vertices must be at most 2.
+    \item
+      The number of vertices must be 2.
+    \item
+      Consider a path from one point to the other.
+      You can't lift all of them given that the map must be locally homeomorphic around each vertex.
+  \end{itemize}
  \begin{figure}
-   \includegraphics[width=.5\linewidth]{problem11_idea.jpeg}
-   \caption{Problem 11 Idea}
-   \label{fig:problem11_idea}
- \end{figure}
- \begin{figure}
-   \includegraphics[width=.5\linewidth]{problem11_idea_2.jpeg}
-   \caption{Problem 11 Idea 2(Probably correct?)}
-   \label{fig:problem11_idea_2}
+   \includegraphics[width=.5\linewidth]{problem11_idea_3.jpeg}
+   \caption{Problem 11 Idea 3}
+   \label{fig:problem11_idea_3}
  \end{figure}
 \end{proof}
 
