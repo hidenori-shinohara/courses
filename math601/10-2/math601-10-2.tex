@@ -124,8 +124,13 @@
   $ $
   \begin{itemize}
     \item
-      \todo[inline]{
-      }
+      By Proposition 13 of P.287 (Dummit and Foote), $\gcd(up_1^{a_1} \cdots p_n^{a_n}, vp_1^{b_1} \cdots p_n^{b_n}) = p_1^{\min \{ a_1, b_1 \}} \cdots p_n^{\min \{ a_n, b_n \}}$.
+      By mathematical induction, this property holds for greatest common divisors of $n + 1$ elements of $R$.
+      Let $f(x) = \sum_{i=0}^{n} a_ix^i \in R[x]$ be given.
+      Choose distinct (not equivalent) irreducible elements $p_1, \cdots, p_m \in R$, non-negative integers $a_{i, j}$, and units $u_i$ such that $a_i = u_ip_1^{a_{i, 1}} \cdots p_m^{a_{i, m}}$.
+      Since $R$ is a UFD, it is possible to pick such $p_i, a_{i, j}, u_i$.
+      Then $o_{p_j} = \min \{ a_{0, j}, \cdots, a_{n, j} \}$ for each $j$.
+      Thus $\cont(f(x)) = \prod p_j^{o_{p_j}} = \prod p_j^{\min \{ a_{0, j}, \cdots, a_{n, j} \}} = \gcd(a_0, \cdots, a_n)$
     \item
       \todo[inline]{
       }
