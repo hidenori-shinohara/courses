@@ -158,6 +158,47 @@
   \end{itemize}
 \end{proof}
 
+\begin{exer}{(Problem 3)}
+  Determine if the given polynomial is an irreducible element of the given integral domain.
+  \begin{itemize}
+    \item
+      $3x^3 - 15x^2 - 21 \in \mathbb{Z}[x]$.
+    \item
+      $3x^3 - 15x^2 - 21 \in \mathbb{Q}[x]$.
+  \end{itemize}
+\end{exer}
+
+\begin{proof}
+  $ $
+  \begin{itemize}
+    \item
+      $3x^3 - 15x^2 - 21 = 3(x^3 - 5x^2 - 7)$.
+      Since neither 3 nor $x^3 - 5x^2 - 7$ is a unit, $3x^3 - 15x^2 - 21$ is not irreducible.
+    \item
+      We claim that $f(x) = 3x^3 - 15x^2 - 21 \in \mathbb{Q}[x]$ is irreducible.
+      The content is $\gcd(3, -15, -21) = 3$, so let $f_0(x) = f(x) / 3 = x^3 - 5x^2 - 7$.
+      Then $f_0(x)$ is primitive in $\mathbb{Z}[x]$.
+      As discussed in class on 9/27, $f_0(x)$ is irreducible if and only if it has no linear factors.
+      If $mx + n$ is a factor of $f_0(x)$, then $m \mid 1$ and $n \mid -7$.
+      Thus $m \in \{ -1, 1 \}$ and $n \in \{ -1, 1, -7, 7 \}$.
+      This implies that it is sufficient to check $x + 1, x + 7, x - 1, x - 7$ because the other possibilities can be obtained by multiplying -1.
+
+      \begin{itemize}
+        \item
+          $f(x) = (3 x^{2} - 18 x + 18) * (x + 1) + (-39)$.
+        \item
+          $f(x) = (3 x^{2} - 12 x - 12) * (x - 1) + (-33)$.
+        \item
+          $f(x) = (3 x^{2} - 36 x + 252) * (x + 7) + (-1785)$.
+        \item
+          $f(x) = (3 x^{2} + 6 x + 42) * (x - 7) + (273)$.
+      \end{itemize}
+
+      Since none of them is a factor of $f(x)$, $f_0(x)$ is irreducible.
+      Since $3$ is a unit in $\mathbb{Q}[x]$, $f(x) = 3f_0(x)$ is irreducible in $\mathbb{Q}[x]$.
+  \end{itemize}
+\end{proof}
+
 \section{Rings of Fractions}
 \begin{exer}{(Problem 1 (iii))}
   Prove that the natural map $i: R \rightarrow S^{-1}R$, which maps $r$ to $\frac{r}{1}$ is an injective ring homomorphism.
