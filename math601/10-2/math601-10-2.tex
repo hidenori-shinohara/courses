@@ -39,6 +39,8 @@
 \newtheorem{sch}[thm]{Scholium}
 
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\cont}{cont}
+\DeclareMathOperator{\ord}{ord}
 \DeclareMathOperator{\Id}{Id}
 
 \makeatletter
@@ -55,6 +57,58 @@
 \maketitle
 
 \tableofcontents
+
+\section{Factorization in Integral Domains}
+
+\begin{exer}{(Problem 1)}
+  Let $R = \mathbb{Z}$.
+  Compute the content of the following polynomials in $\mathbb{Q}[x]$.
+  The content is an element of the quotient group, $\mathbb{Q}^* / \mathbb{Z}^* \simeq \mathbb{Q}^* / \{ \pm 1 \}$.
+  \begin{itemize}
+    \item
+      $f(x) = 2x^2 - 6x + 28$.
+    \item
+      $g(x) = \frac{2}{3}x^2 - \frac{3}{5}x + \frac{7}{11}$.
+  \end{itemize}
+\end{exer}
+
+\begin{proof}
+  $ $
+  \begin{itemize}
+    \item
+      By property (i) of the content, $\cont(f(x)) = \gcd(2, -6, 28) = 2$.
+    \item
+      $\cont(g(x)) = 2^{o_2(g(x))}3^{o_3(g(x))}5^{o_5(g(x))}\cdots$.
+      \begin{align*}
+        o_2(f(x))
+          &= \min \{ \ord_2(2/3), \ord_2(-3/5), \ord_2(7/11) \} \\
+          &= \min \{ \ord_2(2) - \ord_2(3), \ord_2(-3) - \ord_2(5), \ord_2(7) - \ord_2(11) \} \\
+          &= \min \{ 1 - 0, 0 - 0, 0 - 0 \} \\
+          &= 0. \\
+        o_3(f(x))
+          &= \min \{ \ord_3(2/3), \ord_3(-3/5), \ord_3(7/11) \} \\
+          &= \min \{ \ord_3(2) - \ord_3(3), \ord_3(-3) - \ord_3(5), \ord_3(7) - \ord_3(11) \} \\
+          &= \min \{ 0 - 1, 1 - 0, 0 - 0 \} \\
+          &= -1. \\
+        o_5(f(x))
+          &= \min \{ \ord_5(2/3), \ord_5(-3/5), \ord_5(7/11) \} \\
+          &= \min \{ \ord_5(2) - \ord_5(3), \ord_5(-3) - \ord_5(5), \ord_5(7) - \ord_5(11) \} \\
+          &= \min \{ 0 - 0, 0 - 1, 0 - 0 \} \\
+          &= -1. \\
+        o_7(f(x))
+          &= \min \{ \ord_7(2/3), \ord_7(-3/5), \ord_7(7/11) \} \\
+          &= \min \{ \ord_7(2) - \ord_7(3), \ord_7(-3) - \ord_7(5), \ord_7(7) - \ord_7(11) \} \\
+          &= \min \{ 0 - 0, 0 - 0, 1 - 0 \} \\
+          &= 0. \\
+        o_{11}(f(x))
+          &= \min \{ \ord_{11}(2/3), \ord_{11}(-3/5), \ord_{11}(7/11) \} \\
+          &= \min \{ \ord_{11}(2) - \ord_{11}(3), \ord_{11}(-3) - \ord_{11}(5), \ord_{11}(7) - \ord_{11}(11) \} \\
+          &= \min \{ 0 - 0, 0 - 0, 0 - 1 \} \\
+          &= -1.
+      \end{align*}
+      Therefore, $\cont(g(x)) = 2^03^{-1}5^{-1}7^{0}11^{-1} = \frac{1}{165}$.
+  \end{itemize}
+\end{proof}
 
 \section{Rings of Fractions}
 \begin{exer}{(Problem 1 (iii))}
