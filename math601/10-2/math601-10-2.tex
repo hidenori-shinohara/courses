@@ -285,6 +285,25 @@
   Therefore, when $i = 2 \cdot 11 = 22$ and $j = -3 \cdot 7 = -21$, $i + j = 1$.
 \end{proof}
 
+\begin{exer}{(Problem 4(iii))}
+  Find $n \in \mathbb{Z}$ with $0 \leq n < 77$ such that $n \equiv 1 \pmod 7$ and $n \equiv 5 \pmod{11}$.
+\end{exer}
+
+\begin{proof}
+  Since $0 \leq n < 77$ and $n \equiv 5 \pmod{11}$, we know that $n \in \{ 5, 16, 27, 38, 49, 60, 71 \}$.
+  Since $n \equiv 1 \pmod 7$, $7 \mid (n - 1)$.
+  \begin{itemize}
+    \item $7 \nmid (5 - 1) = 4$.
+    \item $7 \nmid (16 - 1) = 15$.
+    \item $7 \nmid (27 - 1) = 26$.
+    \item $7 \nmid (38 - 1) = 37$.
+    \item $7 \nmid (49 - 1) = 48$.
+    \item $7 \nmid (60 - 1) = 59$.
+    \item $7 \mid (71 - 1) = 70$.
+  \end{itemize}
+  Therefore, $n = 70$.
+\end{proof}
+
 
 \section{Rings of Fractions}
 \begin{exer}{(Problem 1 (iii))}
