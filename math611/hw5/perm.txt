@@ -1,0 +1,82 @@
+  \begin{itemize}
+    \item Case 1: $\phi_{1}: a \mapsto (1), b \mapsto (1)$
+      The following maps are conjugates of $\phi_{1}$
+      \begin{itemize}
+        \item $a \mapsto (1), b \mapsto (1)$
+      \end{itemize}
+    \item Case 2: $\phi_{2}: a \mapsto (12), b \mapsto (1)$
+      The following maps are conjugates of $\phi_{2}$
+      \begin{itemize}
+        \item $a \mapsto (23), b \mapsto (1)$
+        \item $a \mapsto (13), b \mapsto (1)$
+        \item $a \mapsto (12), b \mapsto (1)$
+      \end{itemize}
+    \item Case 3: $\phi_{3}: a \mapsto (1), b \mapsto (12)$
+      The following maps are conjugates of $\phi_{3}$
+      \begin{itemize}
+        \item $a \mapsto (1), b \mapsto (12)$
+        \item $a \mapsto (1), b \mapsto (23)$
+        \item $a \mapsto (1), b \mapsto (13)$
+      \end{itemize}
+    \item Case 4: $\phi_{4}: a \mapsto (12), b \mapsto (13)$
+      The following maps are conjugates of $\phi_{4}$
+      \begin{itemize}
+        \item $a \mapsto (13), b \mapsto (12)$
+        \item $a \mapsto (12), b \mapsto (23)$
+        \item $a \mapsto (12), b \mapsto (13)$
+        \item $a \mapsto (13), b \mapsto (23)$
+        \item $a \mapsto (23), b \mapsto (12)$
+        \item $a \mapsto (23), b \mapsto (13)$
+      \end{itemize}
+    \item Case 5: $\phi_{5}: a \mapsto (12), b \mapsto (123)$
+      The following maps are conjugates of $\phi_{5}$
+      \begin{itemize}
+        \item $a \mapsto (23), b \mapsto (123)$
+        \item $a \mapsto (12), b \mapsto (123)$
+        \item $a \mapsto (12), b \mapsto (132)$
+        \item $a \mapsto (13), b \mapsto (132)$
+        \item $a \mapsto (13), b \mapsto (123)$
+        \item $a \mapsto (23), b \mapsto (132)$
+      \end{itemize}
+    \item Case 6: $\phi_{6}: a \mapsto (123), b \mapsto (12)$
+      The following maps are conjugates of $\phi_{6}$
+      \begin{itemize}
+        \item $a \mapsto (123), b \mapsto (13)$
+        \item $a \mapsto (132), b \mapsto (12)$
+        \item $a \mapsto (132), b \mapsto (23)$
+        \item $a \mapsto (132), b \mapsto (13)$
+        \item $a \mapsto (123), b \mapsto (12)$
+        \item $a \mapsto (123), b \mapsto (23)$
+      \end{itemize}
+    \item Case 7: $\phi_{7}: a \mapsto (1), b \mapsto (123)$
+      The following maps are conjugates of $\phi_{7}$
+      \begin{itemize}
+        \item $a \mapsto (1), b \mapsto (132)$
+        \item $a \mapsto (1), b \mapsto (123)$
+      \end{itemize}
+    \item Case 8: $\phi_{8}: a \mapsto (123), b \mapsto (1)$
+      The following maps are conjugates of $\phi_{8}$
+      \begin{itemize}
+        \item $a \mapsto (132), b \mapsto (1)$
+        \item $a \mapsto (123), b \mapsto (1)$
+      \end{itemize}
+    \item Case 9: $\phi_{9}: a \mapsto (123), b \mapsto (132)$
+      The following maps are conjugates of $\phi_{9}$
+      \begin{itemize}
+        \item $a \mapsto (123), b \mapsto (132)$
+        \item $a \mapsto (132), b \mapsto (123)$
+      \end{itemize}
+    \item Case 10: $\phi_{10}: a \mapsto (23), b \mapsto (23)$
+      The following maps are conjugates of $\phi_{10}$
+      \begin{itemize}
+        \item $a \mapsto (12), b \mapsto (12)$
+        \item $a \mapsto (23), b \mapsto (23)$
+        \item $a \mapsto (13), b \mapsto (13)$
+      \end{itemize}
+    \item Case 11: $\phi_{11}: a \mapsto (123), b \mapsto (123)$
+      The following maps are conjugates of $\phi_{11}$
+      \begin{itemize}
+        \item $a \mapsto (132), b \mapsto (132)$
+        \item $a \mapsto (123), b \mapsto (123)$
+      \end{itemize}
+  \end{itemize}

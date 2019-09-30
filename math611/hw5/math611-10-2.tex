@@ -96,11 +96,110 @@
     \label{fig:problem10_2_sheeted}
   \end{figure}
 
-  \todo[inline]{
-    Do the case of 3.
-  }
-
-
+  We will take the exact same approach for the case of 3.
+  If a certain vertex is fixed in both $\phi(a)$ and $\phi(b)$, then such a vertex is disjoint from the rest of the graph.
+  We will use that property to reduce the possibilities.
+  \begin{figure}
+    \includegraphics[width=.5\linewidth]{problem10_3_sheeted.jpeg}
+    \caption{Problem 10 (3-sheeted)}
+    \label{fig:problem10_3_sheeted}
+  \end{figure}
+  \begin{itemize}
+    \item Case 1: $\phi_{1}: a \mapsto (1), b \mapsto (1)$
+      The following maps are conjugates of $\phi_{1}$
+      \begin{itemize}
+        \item $a \mapsto (1), b \mapsto (1)$
+      \end{itemize}
+      This graph is not connected because every vertex is fixed.
+    \item Case 2: $\phi_{2}: a \mapsto (12), b \mapsto (1)$
+      The following maps are conjugates of $\phi_{2}$
+      \begin{itemize}
+        \item $a \mapsto (23), b \mapsto (1)$
+        \item $a \mapsto (13), b \mapsto (1)$
+        \item $a \mapsto (12), b \mapsto (1)$
+      \end{itemize}
+      This graph is not connected because vertex 3 is fixed.
+    \item Case 3: $\phi_{3}: a \mapsto (1), b \mapsto (12)$
+      The following maps are conjugates of $\phi_{3}$
+      \begin{itemize}
+        \item $a \mapsto (1), b \mapsto (12)$
+        \item $a \mapsto (1), b \mapsto (23)$
+        \item $a \mapsto (1), b \mapsto (13)$
+      \end{itemize}
+      This is the same as Case 2.
+    \item Case 4: $\phi_{4}: a \mapsto (12), b \mapsto (13)$
+      The following maps are conjugates of $\phi_{4}$
+      \begin{itemize}
+        \item $a \mapsto (13), b \mapsto (12)$
+        \item $a \mapsto (12), b \mapsto (23)$
+        \item $a \mapsto (12), b \mapsto (13)$
+        \item $a \mapsto (13), b \mapsto (23)$
+        \item $a \mapsto (23), b \mapsto (12)$
+        \item $a \mapsto (23), b \mapsto (13)$
+      \end{itemize}
+      See Figure \ref{fig:problem10_3_sheeted}.
+    \item Case 5: $\phi_{5}: a \mapsto (12), b \mapsto (123)$
+      The following maps are conjugates of $\phi_{5}$
+      \begin{itemize}
+        \item $a \mapsto (23), b \mapsto (123)$
+        \item $a \mapsto (12), b \mapsto (123)$
+        \item $a \mapsto (12), b \mapsto (132)$
+        \item $a \mapsto (13), b \mapsto (132)$
+        \item $a \mapsto (13), b \mapsto (123)$
+        \item $a \mapsto (23), b \mapsto (132)$
+      \end{itemize}
+      See Figure \ref{fig:problem10_3_sheeted}.
+    \item Case 6: $\phi_{6}: a \mapsto (123), b \mapsto (12)$
+      The following maps are conjugates of $\phi_{6}$
+      \begin{itemize}
+        \item $a \mapsto (123), b \mapsto (13)$
+        \item $a \mapsto (132), b \mapsto (12)$
+        \item $a \mapsto (132), b \mapsto (23)$
+        \item $a \mapsto (132), b \mapsto (13)$
+        \item $a \mapsto (123), b \mapsto (12)$
+        \item $a \mapsto (123), b \mapsto (23)$
+      \end{itemize}
+      See Figure \ref{fig:problem10_3_sheeted}.
+    \item Case 7: $\phi_{7}: a \mapsto (1), b \mapsto (123)$
+      The following maps are conjugates of $\phi_{7}$
+      \begin{itemize}
+        \item $a \mapsto (1), b \mapsto (132)$
+        \item $a \mapsto (1), b \mapsto (123)$
+      \end{itemize}
+      See Figure \ref{fig:problem10_3_sheeted}.
+    \item Case 8: $\phi_{8}: a \mapsto (123), b \mapsto (1)$
+      The following maps are conjugates of $\phi_{8}$
+      \begin{itemize}
+        \item $a \mapsto (132), b \mapsto (1)$
+        \item $a \mapsto (123), b \mapsto (1)$
+      \end{itemize}
+      See Figure \ref{fig:problem10_3_sheeted}.
+    \item Case 9: $\phi_{9}: a \mapsto (123), b \mapsto (132)$
+      The following maps are conjugates of $\phi_{9}$
+      \begin{itemize}
+        \item $a \mapsto (123), b \mapsto (132)$
+        \item $a \mapsto (132), b \mapsto (123)$
+      \end{itemize}
+      See Figure \ref{fig:problem10_3_sheeted}.
+    \item Case 10: $\phi_{10}: a \mapsto (23), b \mapsto (23)$
+      The following maps are conjugates of $\phi_{10}$
+      \begin{itemize}
+        \item $a \mapsto (12), b \mapsto (12)$
+        \item $a \mapsto (23), b \mapsto (23)$
+        \item $a \mapsto (13), b \mapsto (13)$
+      \end{itemize}
+      Vertex 1 is disconnected from the rest of the graph since it is fixed.
+    \item Case 11: $\phi_{11}: a \mapsto (123), b \mapsto (123)$
+      The following maps are conjugates of $\phi_{11}$
+      \begin{itemize}
+        \item $a \mapsto (132), b \mapsto (132)$
+        \item $a \mapsto (123), b \mapsto (123)$
+      \end{itemize}
+      See Figure \ref{fig:problem10_3_sheeted}.
+  \end{itemize}
+  Since there are 6 elements in $S_3$, there are 36 possible homomorphisms.
+  The list above contains all of them.
+  Therefore, Figure \ref{fig:problem10_3_sheeted} lists all the possible 3-sheeted covers.
 \end{proof}
 
 \begin{exer}{(Problem 11, Chapter 1.3)}
