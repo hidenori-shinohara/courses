@@ -94,26 +94,59 @@
 \end{exer}
 
 \begin{proof}
-  \todo[inline]{
-    Figure \ref{fig:problem11_idea_3} seems very promising.
-    It won't be too rigorous, but I can show that there is no space that has these two spaces as covering spaces.
-  }
-  \begin{itemize}
-    \item
-      The degree of each vertex must be 3.
-    \item
-      The number of vertices must be at most 2.
-    \item
-      The number of vertices must be 2.
-    \item
-      Consider a path from one point to the other.
-      You can't lift all of them given that the map must be locally homeomorphic around each vertex.
-  \end{itemize}
- \begin{figure}
-   \includegraphics[width=.5\linewidth]{problem11_idea_3.jpeg}
-   \caption{Problem 11 Idea 3}
-   \label{fig:problem11_idea_3}
- \end{figure}
+  Figure \ref{fig:problem11} shows $X_1, X_2$ and $\tilde{X}_1 = \tilde{X}_2$.
+  \begin{figure}
+    \includegraphics[width=.5\linewidth]{problem11.jpeg}
+    \caption{Problem 11}
+    \label{fig:problem11}
+  \end{figure}
+  
+  We claim that there exists no space having both $X_1$ and $X_2$ as covering spaces.
+  On the contrary, suppose there exists such a space $X$ with covering maps $p_1: X_1 \rightarrow X, p_2: X_2 \rightarrow X$.
+  Then every point in $X$ must have a neighborhood that homeomorphic to an open subset of $X_1$.
+  Since $X_1$ is a graph, that means $X$ is locally a line and a vertex with edges.
+  In other words, $X$ must be a graph.
+
+  There must exist a neighborhood of $p_1(p)$ and a neighborhood of $p$ such that they are homeomorphic.
+  Since $p$ is a vertex of degree 3, $p_1(p)$ must be a vertex of degree 3 as well.
+  Similarly, $p_1(q)$ must be a vertex of degree 3 as well.
+
+  Since $p, q$ are the only vertices of $X_1$, $X$ contains at most two vertices and their degrees must be 3.
+  Since the sum of degrees of all vertices must be even from elementary graph theory, $X$ must contain two vertices of degree 3.
+
+  If $X$ only consists of loops, then the degree of each vertex will be even.
+  Thus the two vertices must be joined by at least one edge.
+  Then if one vertex has a loop, the other must have a loop as well in order to have degree 3.
+  If there exists another edge joining the two vertices, there must be a third one in order for the two vertices to have degree 3.
+  Therefore, $X_1, X_2$ are the only graphs with two vertices of degree 3.
+
+  Suppose that $X_1$ is a covering space of $X_2$ with a covering map $f: X_1 \rightarrow X_2$.
+  Without loss of generality, $f(p) = r, f(q) = s$.
+  Consider the path $a'$ in $X_2$.
+  Lifting $a'$ to $X_1$ will result in a path from $p$ to $q$.
+  This implies that $f$ maps points on the path $b$ into points on a path $a'$.
+  
+  Now consider the path $b'$ in $X_2$.
+  Lifting $b'$ to $X_1$ will again result in a path from $p$ to $q$.
+  This implies that $f$ maps points on the path $b$ into points on a path $b'$.
+
+  This implies that every point on the path $b$ must be mapped to $r$ or $s$.
+  This is a contradiction because $f$ is continuous and $\{ b(t) \mid t \in [0, 1] \}$ is connected, but $\{ r, s \}$ is disconnected.
+
+  Thus $X_1$ is not a covering space of $X_2$.
+
+  Similarly, suppose that $X_2$ is a covering space of $X_1$ with a covering map $g: X_2 \rightarrow X_1$.
+  Without loss of generality, $g(r) = p, g(s) = q$.
+  This implies $g^{-1}(p) = \{ r \}$, so the number of sheets is 1.
+  In other words, $g$ is injective.
+  Consider the path $a$ in $X_1$.
+  Lifting $a$ to $X_2$ results into a loop based at $r$.
+  Since $a: I \rightarrow X_1$ is injective, $\tilde{a}: I \rightarrow X_2$ is injective since $g \circ \tilde{a} = a$.
+  Then $\tilde{a}(t) = s$ for some $t \in [0, 1]$, so $a(t) = g(\tilde{a}(t)) = g(s) = q$.
+  However, $q$ is not a point on $a$.
+  This is a contradiction, so $X_2$ is not a covering space of $X_1$.
+
+  Hence, there exists no space that has both $X_1$ and $X_2$ as covering spaces.
 \end{proof}
 
 \begin{exer}{(Problem 14, Chapter 1.3)}
