@@ -260,6 +260,32 @@
   Hence, $f(x)$ is a product of an irreducible polynomial of degree 2 and one of degree 3.
 \end{proof}
 
+\begin{exer}{(Problem 4(ii))}
+  Find $i \in 7\mathbb{Z}$ and $j \in 11\mathbb{Z}$ such that $i + j = 1$.
+\end{exer}
+
+\begin{proof}
+  We will use the Euclid algorithm.
+  \begin{align*}
+    11 &= 1 \cdot 7 + 4 \\
+    7 &= 1 \cdot 4 + 3 \\
+    4 &= 1 \cdot 3 + 1.
+  \end{align*}
+  Therefore,
+  \begin{align*}
+    1 &= 4 - 1 \cdot 3 \\
+      &= 4 - 1 \cdot (7 - 1 \cdot 4) \\
+      &= 4 - 1 \cdot 7 + 1 \cdot 4 \\
+      &= 2 \cdot 4 - 1 \cdot 7 \\
+      &= 2 \cdot (11 - 1 \cdot 7) - 1 \cdot 7 \\
+      &= 2 \cdot 11 - 2 \cdot 7 - 1 \cdot 7 \\
+      &= 2 \cdot 11 - 3 \cdot 7.
+  \end{align*}
+
+  Therefore, when $i = 2 \cdot 11 = 22$ and $j = -3 \cdot 7 = -21$, $i + j = 1$.
+\end{proof}
+
+
 \section{Rings of Fractions}
 \begin{exer}{(Problem 1 (iii))}
   Prove that the natural map $i: R \rightarrow S^{-1}R$, which maps $r$ to $\frac{r}{1}$ is an injective ring homomorphism.
