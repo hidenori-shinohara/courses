@@ -199,6 +199,42 @@
   \end{itemize}
 \end{proof}
 
+\begin{exer}{(Problem 4(i))}
+  The polynomial $f(x) = x^5 + 8x^4 + 7x^3 - 30x^2 + 42x - 36 \in \mathbb{Z}[x]$, reduced modulo 7 and 11 factors as a product of irreducible polynomials as follows:
+  \begin{itemize}
+    \item
+      $x^5 + 8x^4 + 7x^3 - 30x^2 + 42x - 36 = (x^2 - 3x + 1)(x^3 + 4x^2 + 4x - 1) \in \mathbb{Z} / 7\mathbb{Z}[x]$.
+    \item
+      $x^5 + 8x^4 + 7x^3 - 30x^2 + 42x - 36 = (x^2 + 4x + 5)(x^3 + 4x^2 + 8x + 6) \in \mathbb{Z} / 11\mathbb{Z}[x]$.
+  \end{itemize}
+\end{exer}
+
+\begin{proof}
+  Suppose $f(x) = (x^2 + ax + b)(x^3 + cx^2 + dx + e)$ for some $a, b, c, d, e \in \mathbb{Z}$.
+  Since the leading coefficient of $f(x)$ is 1, if $f(x)$ is a product of two polynomials, we can assume that their leading coefficients are 1 without loss of generality.
+  If $f(x)$ factors as above, then we can obtain a factorization of $f(x)$ in $\mathbb{Z} / 7\mathbb{Z}[x]$ and $\mathbb{Z} / 11\mathbb{Z}[x]$ by taking modulo 7 and 11 of each coefficient.
+  We will try to reverse engineer that.
+  \begin{itemize}
+    \item
+      $a \equiv -3 \pmod 7$ and $a \equiv 4 \pmod {11}$ are satisfied by $a = 4$.
+    \item
+      $b \equiv 1 \pmod 7$ and $b \equiv 5 \pmod {11}$ are satisfied by $b = -6$.
+    \item
+      $c \equiv 4 \pmod 7$ and $c \equiv 4 \pmod {11}$ are satisfied by $c = 4$.
+    \item
+      $d \equiv 4 \pmod 7$ and $d \equiv 8 \pmod {11}$ are satisfied by $d = -3$.
+    \item
+      $c \equiv -1 \pmod 7$ and $c \equiv 6 \pmod {11}$ are satisfied by $c = 6$.
+  \end{itemize}
+  There are other values that satisfy such equations (e.g., $a = 4 + 77 = 81$), but it seems reasonable to start with numbers with small absolute values since each coefficient of $f(x)$ has a relatively small absolute value.
+  It turns out that this set of coefficients indeed gives a factorization of $f(x)$.
+  In other words, $f(x) = (x^2 + 4x - 6)(x^3 + 4x^2 - 3x + 6)$.
+
+  \todo[inline]{
+    Show each of them is irreducible.
+  }
+\end{proof}
+
 \section{Rings of Fractions}
 \begin{exer}{(Problem 1 (iii))}
   Prove that the natural map $i: R \rightarrow S^{-1}R$, which maps $r$ to $\frac{r}{1}$ is an injective ring homomorphism.
