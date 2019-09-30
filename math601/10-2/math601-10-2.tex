@@ -230,9 +230,34 @@
   It turns out that this set of coefficients indeed gives a factorization of $f(x)$.
   In other words, $f(x) = (x^2 + 4x - 6)(x^3 + 4x^2 - 3x + 6)$.
 
-  \todo[inline]{
-    Show each of them is irreducible.
-  }
+  We will check if $x^2 + 4x - 6$ and $x^3 + 4x^2 - 3x + 6$ are irreducible.
+  \begin{itemize}
+    \item
+      $x^2 + 4x - 6$ is irreducible by the Eisenstein irreducibility criterion.
+      Let $P = (2)$.
+      $4 \in P = (2)$ and $6 \in P = (2)$, but $6 \notin P^2$.
+      Thus $x^2 + 4x - 6$ is irreducible.
+    \item
+      Is $x^3 + 4x^2 - 3x + 6$ irreducible?
+      Since the content is $1$, this polynomial cannot be factored as a product of a non-unit integer and a polynomial of degree 3.
+      Thus if this polynomial is not irreducible, it must factor as a product of a polynomial of degree 1 and one of degree 2.
+      In other words, $x^3 + 4x^2 - 3x + 6 = (x + a)(x^2 + bx + c)$ for some $a, b, c \in \mathbb{Z}$.
+      We can assume that the leading coefficient of each factor is 1 because the leading coefficient of $x^3 + 4x^2 - 3x + 6$ is 1.
+      Then $ac = 6$, so $a \mid 6$.
+      Thus $a \in \{ -1, 1, -2, 2, 3, -3, 6, -6 \}$.
+      \begin{align*}
+        x^3 + 4x^2 - 3x + 6 &= (x^{2} + 10 x + 57)(x - 6) + 348, \\
+        x^3 + 4x^2 - 3x + 6 &= (x^{2} + 7 x + 18)(x - 3) + 60, \\
+        x^3 + 4x^2 - 3x + 6 &= (x^{2} + 6 x + 9)(x - 2) + 24, \\
+        x^3 + 4x^2 - 3x + 6 &= (x^{2} + 5 x + 2)(x - 1) + 8, \\
+        x^3 + 4x^2 - 3x + 6 &= (x^{2} + 3 x - 6)(x + 1) + 12, \\
+        x^3 + 4x^2 - 3x + 6 &= (x^{2} + 2 x - 7)(x + 2) + 20, \\
+        x^3 + 4x^2 - 3x + 6 &= (x^{2} + x - 6)(x + 3) + 24, \\
+        x^3 + 4x^2 - 3x + 6 &= (x^{2} - 2 x + 9)(x + 6) + -48.
+      \end{align*}
+      Therefore, $x^3 + 4x^2 - 3x + 6$ is irreducible.
+  \end{itemize}
+  Hence, $f(x)$ is a product of an irreducible polynomial of degree 2 and one of degree 3.
 \end{proof}
 
 \section{Rings of Fractions}
