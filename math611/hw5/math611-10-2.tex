@@ -288,10 +288,9 @@
       Conjugacy class represented by $\ev{b}$.
       This conjugacy class contains $\ev{aba}, \ev{babab}, \ev{abababa}, \cdots$.
     \item
-      Conjugacy class represented by $\ev{(ab)^k}$ for each $k \in \mathbb{N}$.
-      There are no other elements in these conjugacy classes.
+      For each $k \in \mathbb{N}$, there exists a conjugacy class that only consists of $\ev{(ab)^k}$.
     \item
-      Conjugacy class represented by $\ev{a, w}$ for each word $w$ that starts and ends with $b$,
+      For each word $w$ that starts and ends with $b$, there exists a conjugacy class represented by $\ev{a, w}$ 
       For each $w$, $\ev{bab, bwb}, \ev{ababa, abwba}, \cdots$ are the elements in the conjugacy class of $\ev{a, w}$.
       Each conjugacy class of this type contains finitely many elements.
       For instance, when $w = bababab$, $\ev{a, bababab}, \ev{bab, ababa}, \ev{ababa, bab}, \ev{bababab, a}$ are the only elements in this class.
@@ -304,16 +303,37 @@
     \label{fig:problem14}
   \end{figure}
 
-  We will prove that we have listed all the conjugacy classes, and that there are exactly 5 classes.
+  We will prove that we have listed all the conjugacy classes, and that the classes we listed are indeed disjoint from each other.
   \begin{itemize}
     \item
       \todo[inline]{
         All classes?
       }
     \item
+      First, it is easy to see that conjugacy class 1 is indeed disjoint from the other classes.
+
+      We will check that the other classes are disjoint.
+      The parity of the number of $a$ in a word is independent of a representation of a word.
+      For instance, $aaa = a$, and each of them contains an odd number of $a$.
       \todo[inline]{
-        Different?
+        Prove this?
       }
+      Moreover, the parity of the number of $a$ in a word is invariant under conjugation because conjugation appends an even number of $a$.
+
+      Similarly, the parity of the number of $b$ in a word is invariant under conjugation.
+      Using this property, we can see that conjugacy class 2 is indeed disjoint from conjugacy class 3.
+      Similarly, this implies that $2 \ne 4, 3 \ne 4, 4 \ne 5$.
+      Thus it remains to show that conjugacy class 2 is disjoint from any conjugacy class 5, and any conjugacy classes 4 are disjoint for different $k$ values.
+      \begin{itemize}
+        \item
+          $2 \ne 5$?
+          \todo[inline]{
+          }
+        \item
+          $4$?
+          \todo[inline]{
+          }
+      \end{itemize}
   \end{itemize}
 \end{proof}
 
