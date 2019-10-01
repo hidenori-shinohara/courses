@@ -40,6 +40,7 @@
 
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\RP}{\mathbb{R}\mathbf{P}^2}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -266,18 +267,45 @@
 \end{proof}
 
 \begin{exer}{(Problem 14, Chapter 1.3)}
-  Find all the connected covering spaces of $\mathbb{R}P^2 \vee \mathbb{R}P^2$.
+  Find all the connected covering spaces of $\RP \vee \RP$.
 \end{exer}
 
 \begin{proof}
-  \todo[inline]{
-    I think Figure \ref{fig:problem14_idea_2} is the universal covering of $\mathbb{P}_2 \wedge \mathbb{P}_2$, but I'm not certain.
-  }
+  Let $X = \RP \vee \RP$.
+  By Theorem 1.38 of the textbook, it suffices to check all the conjugacy classes of subgroups of $\pi_1(X, x_0)$.
+
+  Since $\pi_1(\RP) = \langle a \mid a^2 \rangle$, $\pi_1(X, x_0) = \langle a, b \mid a^2 = b^2 = e \rangle$ by Van Kampen.
+  Since $a^2 = b^2 = e$, we can express each element in $\pi_1(X, x_0)$ uniquely as a word which alternates $a, b$.
+
+  Here are all the conjugacy classes of subgroups:
+  \begin{enumerate}
+    \item
+      Conjugacy class represented by $\ev{e}$.
+    \item
+      Conjugacy class represented by $\ev{a}$.
+      This conjugacy class contains $\ev{bab}, \ev{ababa}, \ev{bababab}, \cdots$.
+    \item
+      Conjugacy class represented by $\ev{b}$.
+      This conjugacy class contains $\ev{aba}, \ev{babab}, \ev{abababa}, \cdots$.
+    \item
+      Conjugacy class represented by $\ev{(ab)^k}$ for each $k \in \mathbb{N}$.
+      There are no other elements in these conjugacy classes.
+    \item
+      Conjugacy class represented by $\ev{a, w}$ for each word $w$ that starts and ends with $b$,
+      For each $w$, $\ev{bab, bwb}, \ev{ababa, abwba}, \cdots$ are the elements in the conjugacy class of $\ev{a, w}$.
+      Each conjugacy class of this type contains finitely many elements.
+      For instance, when $w = bababab$, $\ev{a, bababab}, \ev{bab, ababa}, \ev{ababa, bab}, \ev{bababab, a}$ are the only elements in this class.
+  \end{enumerate}
+
+  See Figure \ref{fig:problem14}.
   \begin{figure}
-    \includegraphics[width=.5\linewidth]{problem14_idea_2.jpeg}
-    \caption{Problem 14 Idea 2}
-    \label{fig:problem14_idea_2}
+    \includegraphics[width=.5\linewidth]{problem14_rp2.jpeg}
+    \caption{Problem 14}
+    \label{fig:problem14}
   \end{figure}
+  \todo[inline]{
+    Prove that they are indeed all the conjugacy classes.
+  }
 \end{proof}
 
 \end{document}
