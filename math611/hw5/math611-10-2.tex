@@ -272,82 +272,100 @@
 
 \begin{proof}
   Let $X = \RP \vee \RP$.
-  By Theorem 1.38 of the textbook, it suffices to check all the conjugacy classes of subgroups of $\pi_1(X, x_0)$.
+  By Theorem 1.38 of the textbook, it suffices to check all the conjugacy classes of subgroups of $\pi_1(X, x_0)$ and corresponding covering spaces.
 
   Since $\pi_1(\RP) = \langle a \mid a^2 \rangle$, $\pi_1(X, x_0) = \langle a, b \mid a^2 = b^2 = e \rangle$ by Van Kampen.
   Since $a^2 = b^2 = e$, we can express each element in $\pi_1(X, x_0)$ uniquely as a word which alternates $a, b$.
 
-  Here are all the conjugacy classes of subgroups:
-  \begin{enumerate}
-    \item
-      Conjugacy class represented by $\ev{e}$.
-    \item
-      Conjugacy class represented by $\ev{a}$.
-      This conjugacy class contains $\ev{bab}, \ev{ababa}, \ev{bababab}, \cdots$.
-    \item
-      Conjugacy class represented by $\ev{b}$.
-      This conjugacy class contains $\ev{aba}, \ev{babab}, \ev{abababa}, \cdots$.
-    \item
-      For each $k \in \mathbb{N}$, there exists a conjugacy class that only consists of $\ev{(ab)^k}$.
-    \item
-      For each word $w$ that starts and ends with $b$, there exists a conjugacy class represented by $\ev{a, w}$ 
-      For each $w$, $\ev{bab, bwb}, \ev{ababa, abwba}, \cdots$ are the elements in the conjugacy class of $\ev{a, w}$.
-      Each conjugacy class of this type contains finitely many elements.
-      For instance, when $w = bababab$, $\ev{a, bababab}, \ev{bab, ababa}, \ev{ababa, bab}, \ev{bababab, a}$ are the only elements in this class.
-    \item
-      Conjugacy class that only consists of $\pi_1(X, x_0)$.
-      The covering space that corresponds to this is $X$ itself.
-      Since this is a trivial case, Figure \ref{fig:problem14} does not contain this case.
-  \end{enumerate}
+  We will use three properties of elements in $\pi_1(X, x_0)$:
 
-  Figure \ref{fig:problem14} shows covering spaces corresponding to each conjugacy class.
-  \begin{figure}
-    \includegraphics[width=.5\linewidth]{problem14_rp2.jpeg}
-    \caption{Problem 14}
-    \label{fig:problem14}
-  \end{figure}
-
-  We will prove that we have listed all the conjugacy classes, and that the classes we listed are indeed disjoint from each other.
   \begin{itemize}
     \item
+      Every word can be expressed as a finite alternating sequence of $a$ and $b$.
       \todo[inline]{
-        All classes?
+        Maybe explain more.
       }
     \item
-      First, it is easy to see that conjugacy class 1 is indeed disjoint from the other classes.
-
-      We will check that the other classes are disjoint.
-      The parity of the number of $a$ in a word is independent of a representation of a word.
-      For instance, $aaa = a$, and each of them contains an odd number of $a$.
+      The parity of the length of a word does not depend on its representation because $a^2 = b^2 = 1$.
       \todo[inline]{
-        Prove this?
+        Maybe explain more.
       }
-      Moreover, the parity of the number of $a$ in a word is invariant under conjugation because conjugation appends an even number of $a$.
+    \item
+      The parity of the length of a word is invariant under conjugation because conjugating a word appends an even number of letters.
+    \item
+      The parity of the number of $a$ in a word is invariant under conjugation because conjugating a word appends an even number of $a$.
+      \todo[inline]{
+        Maybe explain more.
+      }
+    \item
+      Similarly, the parity of the number of $b$ in a word is invariant under conjugation because conjugating a word appends an even number of $b$.
+  \end{itemize}
 
-      Similarly, the parity of the number of $b$ in a word is invariant under conjugation.
-      Using this property, we can see that conjugacy class 2 is indeed disjoint from conjugacy class 3.
-      Similarly, this implies that $2 \ne 4, 3 \ne 4, 4 \ne 5$.
-      Thus it remains to show that conjugacy class 2 is disjoint from any conjugacy class 5, and any conjugacy classes 4 are disjoint for different $k$ values.
+  We will call a subgroup even if the length of each element in it is even, and we will call a subgroup odd otherwise.
+  Since the parity of the length of a word is invariant under conjugation, even subgroups and odd subgroups are not conjugates of each other.
+  Therefore, we will classify even subgroups and odd subgroups separately.
+
+  \begin{itemize}
+    \item
+      Let $H \subset G$ be an even subgroup.
+      Every even length word can be expressed as $(ab)^k$ for some $k \in \mathbb{Z}$.
+      Since $(ab)^k = e$ if and only if $k = 0$, this number $k$ is unique to each word of odd length.
+      Let $\phi: H \rightarrow \mathbb{Z}$ be defined such that $\phi((ab)^k) = k$.
+      Then $\phi(H)$ is a subgroup of $(\mathbb{Z}, +)$.
+      Since $\mathbb{Z}$ is an infinite cyclic group, $\phi(H) = (n)$ for some non-negative integer $n$.
+      Thus $H = \ev{(ab)^n}$.
+      For each $n$, \todo[inline]{Figure} shows the covering space corresponding to $\ev{(ab)^n}$.
+      Since the number of sheets is the same as the index of the subset by Proposition 1.32 of the textbook, $[\pi_1(X, x_0):\ev{(ab)^n}]$ is infinity when $n = 0$ and the index is $2n$ when $n \geq 1$.
+      Since the index of a subgroup is invariant under conjugation, $\ev{(ab)^n} \not\sim \ev{(ab)^m}$ whenever $n \ne m$.
+    \item
+      Let $H \subset G$ be an odd subgroup.
+      Every odd element is an alternating sequence of $a$ and $b$ which starts and ends with the same letter.
+      Thus, every odd element is conjugate to $a$ or $b$.
+      Let $w \in H$ be a word of odd length.
+      Then $w$ is $xax^{-1}$ or $xbx^{-1}$ for some $x$.
+      Then $x^{-1}Hx$ contains $a$ or $b$.
+      This implies that every odd subgroup is conjugate to an odd subgroup containing either $a$ or $b$. (possibly both)
+      Since we are classifying subgroups up to conjugation, we can assume that $H$ contains $a$ or $b$ without loss of generality.
+
+      We will first assume that $a \in H$ since the argument for the case $b \in H$ will be the same.
+      Let $H'$ be a subset of $H$ containing only words of even length.
+      Since $e \in H'$ and $xy^{-1}$ is another word of even length for each $x, y \in H'$, $H'$ is a subgroup of $H$.
+      Then $H'$ is an even subgroup of $G$, so by the argument above, $H' = \ev{(ab)^n}$ for some $n \geq 0$.
+
+      Let $w \in H$.
       \begin{itemize}
         \item
-          $2 \ne 5$?
-          For any word $w$, $w\ev{a}w^{-1} = \ev{waw^{-1}}$.
-          \begin{itemize}
-            \item
-              If $waw^{-1}$ starts and ends with $a$, then $\ev{waw^{-1}}$ does not contain any element that starts and ends with $b$.
-            \item
-              If $waw^{-1}$ starts with $a$ and ends with $b$, then $\ev{waw^{-1}}$ does not contain $a$.
-            \item
-              If $waw^{-1}$ starts with $b$ and ends with $a$, then $\ev{waw^{-1}}$ does not contain $a$.
-            \item
-              If $waw^{-1}$ starts with $b$ and ends with $b$, then $\ev{waw^{-1}}$ does not contain $a$.
-          \end{itemize}
+          If the length of $w$ is even, $w \in H' = \ev{(ab)^n} = \ev{a, (ab)^n}$.
         \item
-          $4$?
-          \todo[inline]{
-          }
+          If the length of $w$ is odd, $aw \in H' = \ev{(ab)^n} = \ev{a, (ab)^n}$.
+          Since $aw \in \ev{a, (ab)^n}$, $w \in \ev{a, (ab)^n}$.
       \end{itemize}
+      Therefore, $H = \ev{a, (ab)^n}$.
+      
+      \begin{itemize}
+        \item
+          When $n = 0$, $H = \ev{a}$.
+        \item
+          When $n = 1$, $H = \ev{a, ab} = \ev{a, b} = G$.
+        \item
+          When $n \geq 2$, $H = \ev{a, (ab)^n}$.
+      \end{itemize}
+
+      Using the same argument, if $b \in H$, we can conclude that $H$ is one of the following:
+      \begin{itemize}
+        \item
+          When $n = 0$, $H = \ev{b}$.
+        \item
+          When $n = 1$, $H = \ev{b, ab} = \ev{a, b} = G$.
+        \item
+          When $n \geq 2$, $H = \ev{b, (ab)^n}$.
+      \end{itemize}
+
+      By putting these together, if $H$ is an odd subgroup, w
+
+
   \end{itemize}
+
 \end{proof}
 
 \end{document}
