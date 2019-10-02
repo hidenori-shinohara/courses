@@ -281,29 +281,27 @@
 
   \begin{itemize}
     \item
-      Every word can be expressed as a finite alternating sequence of $a$ and $b$.
-      \todo[inline]{
-        Maybe explain more.
-      }
+      Every word can be uniquely expressed as a finite alternating sequence of $a$ and $b$ because $a^2 = b^2 = e$.
     \item
       The parity of the length of a word does not depend on its representation because $a^2 = b^2 = 1$.
-      \todo[inline]{
-        Maybe explain more.
-      }
+      Given two words $x_1 \cdots x_n = y_1 \cdots y_m$ where $x_i, y_j \in \{ a, b \}$, $x_1 \cdots x_n y_m \cdots y_1 = e$.
+      Since the order of $a$ and $b$ are both 2, $x_1 \cdots x_n y_m \cdots y_1$ must consist of even numbers of $a$ and $b$.
+      Thus $n + m$ is even, so $n \equiv m \pmod 2$.
+      This also implies that the parity of the number of $a$ or $b$ in a word is independent of its representation.
     \item
       The parity of the length of a word is invariant under conjugation because conjugating a word appends an even number of letters.
     \item
-      The parity of the number of $a$ in a word is invariant under conjugation because conjugating a word appends an even number of $a$.
-      \todo[inline]{
-        Maybe explain more.
-      }
-    \item
-      Similarly, the parity of the number of $b$ in a word is invariant under conjugation because conjugating a word appends an even number of $b$.
+      The parity of the number of $a$ or $b$ is invariant under conjugation because conjugating a word appends even numbers of $a$ and $b$.
   \end{itemize}
 
   We will call a subgroup even if the length of each element in it is even, and we will call a subgroup odd otherwise.
   Since the parity of the length of a word is invariant under conjugation, even subgroups and odd subgroups are not conjugates of each other.
   Therefore, we will classify even subgroups and odd subgroups separately.
+  \begin{figure}
+    \includegraphics[width=.7\linewidth]{problem14_classification.jpeg}
+      \caption{Problem 14}
+    \label{fig:problem14}
+  \end{figure}
 
   \begin{itemize}
     \item
@@ -314,7 +312,7 @@
       Then $\phi(H)$ is a subgroup of $(\mathbb{Z}, +)$.
       Since $\mathbb{Z}$ is an infinite cyclic group, $\phi(H) = (n)$ for some non-negative integer $n$.
       Thus $H = \ev{(ab)^n}$.
-      For each $n$, \todo[inline]{Figure} shows the covering space corresponding to $\ev{(ab)^n}$.
+      For each $n$, Figure \ref{fig:problem14} shows the covering space corresponding to $\ev{(ab)^n}$.
       Since the number of sheets is the same as the index of the subset by Proposition 1.32 of the textbook, $[\pi_1(X, x_0):\ev{(ab)^n}]$ is infinity when $n = 0$ and the index is $2n$ when $n \geq 1$.
       Since the index of a subgroup is invariant under conjugation, $\ev{(ab)^n} \not\sim \ev{(ab)^m}$ whenever $n \ne m$.
     \item
@@ -378,7 +376,7 @@
 
       First, we will use the index of each subgroup to classify them.
       If two subgroups have different indices, they cannot be conjugate to each other.
-      By \todo[inline]{figure}, $[\pi_1(X, x_0): \ev{a}] = [\pi_1(X, x_0): \ev{b}] = \infty$ and $[\pi_1(X, x_0): \ev{a, (ab)^k}] = [\pi_1(X, x_0): \ev{b, (ab)^k}] = k$ for each $k \geq 2$.
+      By Figure \ref{fig:problem14}, $[\pi_1(X, x_0): \ev{a}] = [\pi_1(X, x_0): \ev{b}] = \infty$ and $[\pi_1(X, x_0): \ev{a, (ab)^k}] = [\pi_1(X, x_0): \ev{b, (ab)^k}] = k$ for each $k \geq 2$.
       Moreover, the parity of the number of $b$ in each word of $\ev{a}$ is even since it is always 0.
       On the other hand, the parity of the number of $b$ in $b \in \ev{b}$ is 1.
       Thus $\ev{a}$ and $\ev{b}$ cannot be conjugate to each other.
@@ -412,7 +410,7 @@
           Therefore, $\ev{a, (ab)^k}$ is not conjugate to $\ev{b, (ab)^k}$.
       \end{itemize}
     \end{itemize}
-  Hence, the following is the complete list of all the distinct subgroups of $\pi_1(X)$ up to conjugation and \todo[inline]{Figure} has the covering spaces corresponding to each class:
+  Hence, the following is the complete list of all the distinct subgroups of $\pi_1(X)$ up to conjugation and Figure \ref{fig:problem14} has the covering spaces corresponding to each class:
   \begin{itemize}
     \item
       Even subgroups.
@@ -430,7 +428,7 @@
         \item
           $\ev{a}$.
         \item
-          $\ev{a}$.
+          $\ev{b}$.
         \item
           $\ev{a, (ab)^k}$ for each $k \geq 2$.
         \item
