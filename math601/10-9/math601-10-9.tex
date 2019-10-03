@@ -1,0 +1,120 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{fullpage}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{math 601 (Due 10/9)}
+\author{Hidenori Shinohara}
+\maketitle
+\tableofcontents
+
+\section{Modules}
+
+\begin{exer}{(Problem 1)}
+  For each of the $\mathbb{Z}$-modules listed in the handout, answer the questions in the handout.
+\end{exer}
+
+\begin{proof}
+$ $
+  \begin{enumerate}[label=(\alph*)]
+    \item 
+      $M = \mathbb{Z}^3 \times \mathbb{Z} / 86\mathbb{Z}$.
+      \todo[inline]{
+        Solve this problem!
+      }
+    \item 
+      $M = \prod_{n \geq 1} \mathbb{Z} / n\mathbb{Z}$.
+      \todo[inline]{
+        Solve this problem!
+      }
+    \item 
+      $M = \mathbb{Z}[1/p] \subset \mathbb{Q}$.
+      \todo[inline]{
+        Solve this problem!
+      }
+    \item 
+      $M = \mathbb{Q} / \mathbb{Z}_{(p)}$.
+      \todo[inline]{
+        Solve this problem!
+      }
+  \end{enumerate}
+\end{proof}
+
+\section{Rings of Fractions}
+
+\begin{exer}{(Problem 3)}
+  Let $T \subset R$ be the subset consisting of all nonzero divisors.
+  \begin{itemize}
+    \item
+      Show that $T$ is a multiplicative set.
+    \item
+      Let $s \in T$ and let $S = \{ 1, s, s^2, s^3, \cdots \} \subset T$.
+      Show that the following rings are isomorphic: $S^{-1}R$, the subring $R[1/s] \subset T^{-1}R$, and the quotient ring $R[x]/(sx - 1)$.
+  \end{itemize}
+\end{exer}
+
+\begin{proof}
+$ $
+  \begin{itemize}
+    \item
+     \todo[inline]{
+       Prove this!
+     }
+    \item
+     \todo[inline]{
+       Prove this!
+     }
+  \end{itemize}
+\end{proof}
+
+\end{document}
+
+
