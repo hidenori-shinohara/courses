@@ -132,6 +132,60 @@ $ $
   }
 \end{exer}
 
-\end{document}
+\section{Factorization in Integral Domains}
 
+\begin{exer}{(Problem 5)}
+  $ $
+  \begin{itemize}
+    \item
+      Let $k$ be a field and let $a \in k$.
+      Construct a $k$-algebra isomorphism, $k[x, y] / (x - a) \rightarrow k[y]$.
+      Justify your answer.
+    \item
+      Let $f(x, y) \in k[x, y]$.
+      What is the image of $f(x, y)$ under the above isomorphism?
+  \end{itemize}
+\end{exer}
+
+\begin{proof}
+  $ $
+  \begin{itemize}
+    \item
+      Let $\phi$ be defined such that $\phi(f(x, y) + (x - a)) = f(a, y)$.
+      \begin{itemize}
+        \item
+          Well-defined?
+          Let $f(x, y) + (x - a) = g(x, y) + (x - a)$.
+          Then $g(x, y) = f(x, y) + h(x, y)(x - a)$.
+          \begin{align*}
+            \phi(g(x, y) + (x - a))
+              &= \phi((f(x, y) + h(x, y)(x - a)) + (x - a)) \\
+              &= f(a, y) + h(a, y)(a - a) \\
+              &= f(a, y) \\
+              &= \phi(f(x, y)).
+          \end{align*}
+        \item
+          $k$-algebra homomorphism?
+          Let $c \in k, f, g \in k[x, y]$ be given.
+          \begin{align*}
+            \phi(c(f + (x - a))
+              &= \phi(cf + (x - a)) \\
+              &= cf(a, y) \\
+              &= c\phi(f + (x - a)). \\
+            \phi((f + g) + (x - a))
+              &= (f + g)(a, y) \\
+              &= f(a, y) + g(a, y) \\
+              &= \phi(f + (x - a)) + \phi(g + (x - a)). \\
+            \phi((fg) + (x - a))
+              &= (fg)(a, y) \\
+              &= f(a, y)g(a, y) \\
+              &= \phi(f + (x - a))\phi(g + (x - a)).
+          \end{align*}
+      \end{itemize}
+    \item
+      $\phi(f(x, y) + (x - a)) = f(a, y)$.
+  \end{itemize}
+\end{proof}
+
+\end{document}
 
