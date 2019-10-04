@@ -42,6 +42,7 @@
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Id}{Id}
 \DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\cont}{cont}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -213,29 +214,36 @@ $ $
     \item
       Choose $f_1, \cdots, f_n \in k[x]$ such that $f(x, y) = f_n(x)y^n + \cdots + f_1(x)y^1 + f_0(x)$.
       Then $f(a, y) = f_n(a)y^n + \cdots + f_1(a)y^1 + f_0(a)$.
-      We are given that $f(a, y)$ has degree $n$ in $y$, so $f_n(a) \ne 0$.
       Let $h_1(x, y), h_2(x, y) \in k[x]$ be given such that $f(x, y) = h_1(x, y)h_2(x, y)$.
       Then $f(a, y) = h_1(a, y)h_2(a, y)$.
       Then $h_1(a, y)$ or $h_2(a, y)$ is a unit in $k[y]$ since $f(a, y)$ is irreducible in $k[y]$.
       Without loss of generality, we will assume $h_1(a, y)$ is a unit in $k[y]$.
-      Then $h_1(a, y)$ is a unit in $k$.
 
-      $\deg_y(f(a, y))$, the degree of $f(a, y)$ in $y$, is $n$.
+      It is given that $\deg_y(f(a, y))$, the degree of $f(a, y)$ in $y$, is $n$.
       Thus $\deg_y(h_1(a, y)) + \deg_y(h_2(a, y)) = n$.
+      Since $\deg_y(h_1(a, y)) = 0$, $\deg_y(h_2(a, y)) = n$.
       Therefore, $\deg_y(h_2(x, y)) \geq n$.
 
       On the other hand, $\deg_y(f(x, y)) = \deg_y(h_1(x, y)) + \deg_y(h_2(x, y))$, so $\deg_y(h_2(x, y)) \leq n$.
-      Thus $\deg_y(h_2(x, y)) = n$ and this implies that $\deg_y(h_1(x, y)) = 0$.
-      Let $g_1(x0, \cdots, g_n(x) \in k[x]$ such that $h_2(x, y) = g_n(x)y^n + \cdots + g_1(x)y^1 + g_0(x)$.
+      Thus $\deg_y(h_2(x, y)) = n$.
+      Let $g_1(x), \cdots, g_n(x) \in k[x]$ such that $h_2(x, y) = g_n(x)y^n + \cdots + g_1(x)y^1 + g_0(x)$.
       Then $f(x, y) = h_1(x, y)h_2(x, y) = (h_1(x, y)g_n(x))y^n + \cdots + (h_1(x, y)g_1(x))y^1 + h_1(x, y)g_0(x)$.
 
-      Since $\deg_y(h_1(x, y)) = 0$, $h_1(x, y) \in k[x]$, so $h_1(x, y)g_i(x) \in k[x]$ for each $i$.
+      Since $\deg_y(h_2(x, y)) = n$, $\deg_y(h_1(x, y)) = 0$.
+      Thus, $h_1(x, y) \in k[x]$, so $h_1(x, y)g_i(x) \in k[x]$ for each $i$.
       Therefore, $h_1(x, y)g_i(x) = f_i(x)$ for each $i$.
-      \todo[inline]{
-        I know that the idea is that $h_1(x, y)$ divides each coefficient $f_i(x)$ and the content of $f$ is 1, $h_1(x, y) \mid 1$, so $h_1(x, y)$ is a unit in $k$.
-        However, I noticed that this problem simply says ``field $k$" but we defined $\cont$ on $S^{-1}R$ where $R$ is a UFD and $S = R \setminus \{ 0 \}$.
-        What's $R$ in this case?
-      }
+
+      Let $p \in k[x]$ be an irreducible.
+      If $p \mid h_1(x, y)$, then $p \mid f_i(x) = h_1(x, y)g_i(x)$ for each $i$, so $\ord_p(f_i) \geq 1$ for each $i$.
+      Therefore, $o_p(f(x, y)) \geq 1$, and thus $p \mid \cont(f(x, y))$.
+      However, since $\cont(f(x, y)) = 1$, $p \nmid h_1(x, y)$.
+      Thus $h_1(x, y)$ is a unit in $k[x]$ since it cannot be divided by any irreducibles.
+      Since $h_1(x, y)$ is a unit in $k[x]$ and $k[y]$, it must consist only of a constant term, which is a unit in $k$.
+      Hence, $h_1(x, y)$ is a unit in $k[x, y]$.
+      
+      We have shown that for any $h_1(x, y), h_2(x, y) \in k[x, y]$, $h_1h_2 = f$ implies one of $h_1$ or $h_2$ is a unit.
+      Therefore, $f(x, y)$ is an irreducible in $k[x, y]$.
+
     \item
       Let $k = \mathbb{Q}, a = 1, f(x, y) = (x - 1)y^2 + y$.
       Then $f(x, y)$, which when viewed as an element of $k(x)[y]$ has degree 1.
