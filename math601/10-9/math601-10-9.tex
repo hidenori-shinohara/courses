@@ -247,17 +247,18 @@ $ $
     \item
       Let $k = \mathbb{Q}, a = 1, f(x, y) = (x - 1)y^2 + y$.
       Then $f(x, y)$, which when viewed as an element of $k(x)[y]$ has degree 1.
-      The content is 1 since
       \begin{itemize}
         \item
-          The coefficient of $y$ is 1, and $\ord_p(1) = 0$ for any $p$.
+          The coefficient of $y$ is 1, and $\ord_p(1) = 0$ for any $p$ because $1 \in k[x]^*$.
         \item
-          $x - 1$ is a prime in $k(x)[y]$ since
-          \todo[inline]{
-          }
+          The coefficient of $y^2$, when $f(x, y)$ is viewed as an element of $k(x)[y]$ is $x - 1$.
+          Thus for any irreducible element $p \in k[x]$, $\ord_p(x - 1) \geq 0$.
       \end{itemize}
-      \todo[inline]{
-      }
+      Therefore, $o_p(f(x)) = 0$ for any irreducible element $p \in k[x]$.
+      Thus $\cont(f(x, y)) = 1$.
+      
+      $f(a, y) = y \in k[y]$.
+      This is irreducible because if $f_1f_2 = y$ for some $f_1, f_2 \in k[y]$, then $\deg(f_1) + \deg(f_2) = 1$ implies that one of $f_1$ or $f_2$ is a unit in $k$.
   \end{itemize}
 \end{proof}
 
