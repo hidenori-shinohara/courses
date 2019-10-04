@@ -194,8 +194,9 @@ $ $
     \item
       Give an example of a field $k$, an element $a \in k$ and a reducible polynomial $f(x, y) \in k[x, y]$ of degree $n$ in $y$ such that $f(a, y) \in k[y]$ is irreducible and has degree $n$.
     \item
-      \todo[inline]{
-      }
+      Suppose given a polynomial $f \in k[x, y]$ which when viewed as an element of $k(x)[y]$ has degree $n$ (in $y$) and content 1.
+      Suppose there is some $a \in k$ such that $f(a, y) \in k[y]$ is irreducible and has degree $n$.
+      Show that $f(x, y) \in k[x, y]$ is irreducible.
     \item
       Give an example of a field $k$, an element, $a \in k$, and a reducible polynomial $f(x, y) \in k[x, y]$, which when viewed as an element of $k(x)[y]$ has degree $n$ and content 1 such that $f(a, y) \in k[y]$ is irreducible.
   \end{itemize}
@@ -210,7 +211,30 @@ $ $
       $f(x, y) = xy \in k[x, y]$ is reducible since $x$ and $y$ are not units in $k[x, y]$.
       However, $f(a, y) = 1y = y$ is irreducible in $k[y]$.
     \item
+      Choose $f_1, \cdots, f_n \in k[x]$ such that $f(x, y) = f_n(x)y^n + \cdots + f_1(x)y^1 + f_0(x)$.
+      Then $f(a, y) = f_n(a)y^n + \cdots + f_1(a)y^1 + f_0(a)$.
+      We are given that $f(a, y)$ has degree $n$ in $y$, so $f_n(a) \ne 0$.
+      Let $h_1(x, y), h_2(x, y) \in k[x]$ be given such that $f(x, y) = h_1(x, y)h_2(x, y)$.
+      Then $f(a, y) = h_1(a, y)h_2(a, y)$.
+      Then $h_1(a, y)$ or $h_2(a, y)$ is a unit in $k[y]$ since $f(a, y)$ is irreducible in $k[y]$.
+      Without loss of generality, we will assume $h_1(a, y)$ is a unit in $k[y]$.
+      Then $h_1(a, y)$ is a unit in $k$.
+
+      $\deg_y(f(a, y))$, the degree of $f(a, y)$ in $y$, is $n$.
+      Thus $\deg_y(h_1(a, y)) + \deg_y(h_2(a, y)) = n$.
+      Therefore, $\deg_y(h_2(x, y)) \geq n$.
+
+      On the other hand, $\deg_y(f(x, y)) = \deg_y(h_1(x, y)) + \deg_y(h_2(x, y))$, so $\deg_y(h_2(x, y)) \leq n$.
+      Thus $\deg_y(h_2(x, y)) = n$ and this implies that $\deg_y(h_1(x, y)) = 0$.
+      Let $g_1(x0, \cdots, g_n(x) \in k[x]$ such that $h_2(x, y) = g_n(x)y^n + \cdots + g_1(x)y^1 + g_0(x)$.
+      Then $f(x, y) = h_1(x, y)h_2(x, y) = (h_1(x, y)g_n(x))y^n + \cdots + (h_1(x, y)g_1(x))y^1 + h_1(x, y)g_0(x)$.
+
+      Since $\deg_y(h_1(x, y)) = 0$, $h_1(x, y) \in k[x]$, so $h_1(x, y)g_i(x) \in k[x]$ for each $i$.
+      Therefore, $h_1(x, y)g_i(x) = f_i(x)$ for each $i$.
       \todo[inline]{
+        I know that the idea is that $h_1(x, y)$ divides each coefficient $f_i(x)$ and the content of $f$ is 1, $h_1(x, y) \mid 1$, so $h_1(x, y)$ is a unit in $k$.
+        However, I noticed that this problem simply says ``field $k$" but we defined $\cont$ on $S^{-1}R$ where $R$ is a UFD and $S = R \setminus \{ 0 \}$.
+        What's $R$ in this case?
       }
     \item
       Let $k = \mathbb{Q}, a = 1, f(x, y) = (x - 1)y^2 + y$.
