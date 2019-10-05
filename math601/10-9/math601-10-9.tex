@@ -58,6 +58,40 @@
 \maketitle
 \tableofcontents
 
+\section{Rings of Fractions}
+
+\begin{exer}{(Problem 3)}
+  Let $T \subset R$ be the subset consisting of all non zero divisors.
+  \begin{itemize}
+    \item
+      Show that $T$ is a multiplicative set.
+    \item
+     \todo[inline]{
+     }
+  \end{itemize}
+\end{exer}
+
+\begin{proof}
+  $ $
+  \begin{itemize}
+    \item
+      \begin{itemize}
+        \item
+          Let $a, b \in T$.
+          Let $c \in R$ be given.
+          If $(ab)c = 0$, then $a(bc) = 0$.
+          Since $a$ is a non zero divisor, $bc = 0$.
+          Since $b$ is a non zero divisor, $c = 0$.
+          Since $R$ is a commutative ring throughout this handout, there is no need to check the case that $c(ab) = 0$.
+          Thus $ab$ is a non zero divisor, so $T$ is closed under multiplication.
+        \item
+          $1 \in T$ since $\forall c \in R, c \cdot 1 = 0 \implies c = 0$.
+      \end{itemize}
+
+      Therefore, $T$ is indeed a multiplicative set.
+  \end{itemize}
+\end{proof}
+
 \section{Modules}
 
 \begin{exer}{(Problem 1)}
