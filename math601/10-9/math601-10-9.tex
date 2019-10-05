@@ -193,8 +193,15 @@ $ $
   We will first assume that $p$ is an odd prime because Problem 20 does not specify wht $p$ is, but the previous and next problem says $p$ is an odd prime.
   Consider the inclusion $\mathbb{Z}/(p) \xhookrightarrow{} \mathbb{Z}[\sqrt{2}]/(p)$ and the element $\sqrt{2} + (p) \in \mathbb{Z}[\sqrt{2}]/(p)$.
   Let $\Phi: \mathbb{Z}/(p)[x] \rightarrow \mathbb{Z}[\sqrt{2}]/(p)$ be a ring homomorphism associated to the inclusion and element.
-  In other words, $\Phi(f(x)) = f(\sqrt{2})$.
+  We will examine how $\Phi$ behaves.
+  \begin{align*}
+    \Phi(\sum_{i=0}^{n}(a_i + (p))x^i)
+      &= \sum_{i=0}^{n}(a_i + (p))(\sqrt{2} + (p))^i \\
+      &= \sum_{i=0}^{n}(a_i + (p))(\sqrt{2}^i + (p)) \\
+      &= \sum_{i=0}^{n}(a_i 2^{i/2} + (p)).
+  \end{align*}
   We claim that $\ker(\Phi) = (x^2 - 2)$.
+  Here, by $x^2 - 2$, we mean $(1 + (p))x^2 - (2 + (p))$.
   \begin{itemize}
     \item
       Since $\sqrt{2}^2 - 2 = 0$, $(x^2 - 2) \in \ker(\Phi)$.
@@ -202,17 +209,15 @@ $ $
       Let $f(x) \in \ker(\Phi) \subset \mathbb{Z}/(p)[x]$.
       Since $p$ is a prime, $\mathbb{Z}/(p)$ is a field.
       Thus $\mathbb{Z}/(p)[x]$ is a Euclidean domain.
-      Choose $q(x) \in \mathbb{Z}/(p)[x]$ and $a, b \in \mathbb{Z}/(p)$ such that $f(x) = (x^2 - 2)q(x) + (ax + b)$.
-      Then $a\sqrt{2} + b = f(\sqrt{2}) - (\sqrt{2}^2 - 2)q(\sqrt{2}) = 0$.
-      If $a \ne 0$, $\sqrt{2} = b/a \in \mathbb{Z}/(p)$.
-      \todo[inline]{
-        Actually, this doesn't seem to work because $\sqrt{2} \in \mathbb{Z}/(p)$ for some $p$.
-        For instance, when $p = 7$, $x^2 - 2 = (x + 3)(x - 3)$.
-        Thus $x - 3 + (x^2 - 2) \mapsto \sqrt{2} - 3 + (x^2 - 2) = 0 + (x^2 - 2) = 0$ since $3^2 \equiv 2 \pmod 7$.
-        This implies that the kernel contains $(x - 3)$ which is strictly larger than $(x^2 - 2)$.
-        Umm... How can I make this work?
-      }
+      Choose $q(x) \in \mathbb{Z}/(p)[x]$ and $a + (p), b + (p) \in \mathbb{Z}/(p)$ such that $f(x) = (x^2 - 2)q(x) + ((a + (p))x + (b + (p))$.
+      Then $0 = \Phi(f(x)) = \Phi(x^2 - 2)\Phi(q(x)) + \Phi((a + (p))x + (b + (p))) = 0 + \Phi((a + (p))x + (b + (p)))$.
+      Thus $\Phi((a + (p))x + (b + (p))) = (a + (p))(\sqrt{2} + (p)) + (b + (p)) = (a\sqrt{2} + b) + (p)$.
+      Therefore, $a\sqrt{2} + b \in (p)$.
+      Since $a, b \in \mathbb{Z}$, this is possible only if $a = 0$ and $b \in (p)$.
+      In other words, this is possible only if $a + (p) = b + (p) = 0$.
+      Therefore, $f(x) = (x^2 - 2)q(x) \in (x^2 - 2)$.
   \end{itemize}
+  Therefore, $\ker(\Phi) = (x^2 - 2)$, so the homomorphism $\tilde{\Phi}$ induced by $\Phi$ is an isomorphism from $\mathbb{Z}/(p)[x]/(x^2 - 2) \rigtharrow \mathbb{Z}[\sqrt{2}]/(p)$ by the first isomorphism theorem.
 \end{proof}
 
 \begin{exer}{(Problem 21)}
