@@ -66,8 +66,8 @@
     \item
       Show that $T$ is a multiplicative set.
     \item
-     \todo[inline]{
-     }
+      Let $s \in T$ and let $S = \{ 1, s, s^2, s^3, \cdots \} \subset T$.
+      Show that the following rings are isomorphic: $S^{-1}R$, the subring $R[1/s] \subset T^{-1}R$, and the quotient ring $R[x]/(sx - 1)$.
   \end{itemize}
 \end{exer}
 
@@ -89,6 +89,25 @@
       \end{itemize}
 
       Therefore, $T$ is indeed a multiplicative set.
+    \item
+      \todo[inline]{
+        I have some idea, but I don't know how to solve this.
+        There are a few mapping properties that we've covered:
+      }
+      \begin{itemize}
+        \item
+          The universal mapping property of the quotient.
+          (Proposition 6 on Commutative Rings)
+          Given $\pi: R \rightarrow R / I$ and $f: R \rightarrow S$ with some nice properties, there exists $\overline{f}: R / I \rightarrow S$ such that $\overline{f} \circ \pi = f$.
+        \item
+          The mapping property of polynomials.
+          (Proposition 1 on Commutative Rings)
+          Given $\phi_0:R \rightarrow S$ and $s \in S$, there exists $\phi:R[x] \rightarrow S$.
+        \item
+          The universal property of rings of fractions.
+          (Proposition (iv) of the Ring of Fractions.)
+          Given $i: R \rightarrow S^{-1}R$ and $h: R \rightarrow T$ with some nice properties, there exists $\lambda: S^{-1}R \rightarrow T$ such that $h = \lambda \circ i$.
+      \end{itemize}
   \end{itemize}
 \end{proof}
 
