@@ -166,9 +166,49 @@ $ $
 \section{The Quadratic Equation}
 
 \begin{exer}{(Problem 20)}
-  \todo[inline]{
-  }
+  Construct ring isomorphisms $\mathbb{Z}[x]/(x^2 - 2) \rightarrow \mathbb{Z}[\sqrt{2}]$ and $\mathbb{Z}/(p)[x]/(x^2 - 2) \rightarrow \mathbb{Z}[\sqrt{2}](p)$.
 \end{exer}
+
+\begin{proof}
+  Let $f: \mathbb{Z}[x]/(x^2 - 2) \rightarrow \mathbb{Z}[\sqrt{2}]$ be defined by $f(p(x) + (x^2 - 2)) = p(\sqrt{2})$.
+  \begin{itemize}
+    \item
+      Well defined?
+      $p(\sqrt{2}) \in \mathbb{Q}[\sqrt{2}]$, and if $p(x) + (x^2 - 2) = q(x) + (x^2 - 2)$, then $p(x) - q(x) \in (x^2 - 2)$, so $p(\sqrt{2}) - q(\sqrt{2}) = 0$.
+      Thus $f(p(x) + (x^2 - 2)) = p(\sqrt{2}) = q(\sqrt{2}) = f(q(x) + (x^2 - 2))$.
+    \item
+      Ring homomorphism?
+      Let $p(x) + (x^2 - 2), q(x) + (x^2 - 2) \in \mathbb{Z}[x]/(x^2 - 2)$ be given.
+      \begin{align*}
+        f(p(x) + (x^2 - 2) + q(x) + (x^2 - 2))
+          &= f((p(x) + q(x)) + (x^2 - 2)) \\
+          &= p(\sqrt{2}) + q(\sqrt{2}) \\
+          &= f(p(x) + (x^2 - 2)) + f(q(x) + (x^2 - 2)). \\
+        f((p(x) + (x^2 - 2))(q(x) + (x^2 - 2)))
+          &= f((p(x)q(x)) + (x^2 - 2)) \\
+          &= p(\sqrt{2})q(\sqrt{2}) \\
+          &= f(p(x) + (x^2 - 2))f(q(x) + (x^2 - 2)).
+      \end{align*}
+    \item
+      Injective?
+      Let $p(x) + (x^2 - 2)$ be given.
+      Suppose $f(p(x) + (x^2 - 2)) = 0$.
+      Then $p(\sqrt{2}) = 0$.
+      Since $\mathbb{Z}[x]$ is a Euclidean domain, $p(x) = (x^2 - 2)q(x) + r(x)$ for some $q(x)$ and $r(x)$ such that $r(x) = ax + b$.
+      Since $r(x) = p(x) - (x^2 - 2)q(x)$, $r(\sqrt{2}) = 0$.
+      This implies $a\sqrt{2} + b = 0$.
+      Since $a, b \in \mathbb{Z}$, $a = b = 0$.
+      Thus $p(x) \in (x^2 - 2)$, so $p(x) + (x^2 - 2) = 0$.
+    \item
+      Surjective?
+      For any $a + b\sqrt{2} \in \mathbb{Z}[\sqrt{2}]$, $f(a + bx + (x^2 - 2)) = a + b\sqrt{2}$.
+  \end{itemize}
+  Thus $f$ is a ring isomorphism.
+
+  \todo[inline]{
+    Do the second part.
+  }
+\end{proof}
 
 \begin{exer}{(Problem 21)}
   \todo[inline]{
