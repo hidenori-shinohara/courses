@@ -7,6 +7,7 @@
 \usepackage{todonotes}
 \usepackage{physics}
 \usepackage[all,arc]{xy}
+\usepackage{mathtools}
 \usepackage{enumerate}
 \usepackage{enumitem}
 \usepackage{mathrsfs}
@@ -166,7 +167,7 @@ $ $
 \section{The Quadratic Equation}
 
 \begin{exer}{(Problem 20)}
-  Construct ring isomorphisms $\mathbb{Z}[x]/(x^2 - 2) \rightarrow \mathbb{Z}[\sqrt{2}]$ and $\mathbb{Z}/(p)[x]/(x^2 - 2) \rightarrow \mathbb{Z}[\sqrt{2}](p)$.
+  Construct ring isomorphisms $\mathbb{Z}[x]/(x^2 - 2) \rightarrow \mathbb{Z}[\sqrt{2}]$ and $\mathbb{Z}/(p)[x]/(x^2 - 2) \rightarrow \mathbb{Z}[\sqrt{2}]/(p)$.
 \end{exer}
 
 \begin{proof}
@@ -188,9 +189,30 @@ $ $
   Therefore, $\ker(\phi) = (x^2 - 2)$.
   By the first isomorphism theorem, $\tilde{\phi} : \mathbb{Z}[x]/(x^2 - 2) \rightarrow \mathbb{Z}[\sqrt{2}]$ induced by $\phi$ is an isomorphism.
 
-  \todo[inline]{
-    The second part
-  }
+  We will solve the second part using the same approach.
+  We will first assume that $p$ is an odd prime because Problem 20 does not specify wht $p$ is, but the previous and next problem says $p$ is an odd prime.
+  Consider the inclusion $\mathbb{Z}/(p) \xhookrightarrow{} \mathbb{Z}[\sqrt{2}]/(p)$ and the element $\sqrt{2} + (p) \in \mathbb{Z}[\sqrt{2}]/(p)$.
+  Let $\Phi: \mathbb{Z}/(p)[x] \rightarrow \mathbb{Z}[\sqrt{2}]/(p)$ be a ring homomorphism associated to the inclusion and element.
+  In other words, $\Phi(f(x)) = f(\sqrt{2})$.
+  We claim that $\ker(\Phi) = (x^2 - 2)$.
+  \begin{itemize}
+    \item
+      Since $\sqrt{2}^2 - 2 = 0$, $(x^2 - 2) \in \ker(\Phi)$.
+    \item
+      Let $f(x) \in \ker(\Phi) \subset \mathbb{Z}/(p)[x]$.
+      Since $p$ is a prime, $\mathbb{Z}/(p)$ is a field.
+      Thus $\mathbb{Z}/(p)[x]$ is a Euclidean domain.
+      Choose $q(x) \in \mathbb{Z}/(p)[x]$ and $a, b \in \mathbb{Z}/(p)$ such that $f(x) = (x^2 - 2)q(x) + (ax + b)$.
+      Then $a\sqrt{2} + b = f(\sqrt{2}) - (\sqrt{2}^2 - 2)q(\sqrt{2}) = 0$.
+      If $a \ne 0$, $\sqrt{2} = b/a \in \mathbb{Z}/(p)$.
+      \todo[inline]{
+        Actually, this doesn't seem to work because $\sqrt{2} \in \mathbb{Z}/(p)$ for some $p$.
+        For instance, when $p = 7$, $x^2 - 2 = (x + 3)(x - 3)$.
+        Thus $x - 3 + (x^2 - 2) \mapsto \sqrt{2} - 3 + (x^2 - 2) = 0 + (x^2 - 2) = 0$ since $3^2 \equiv 2 \pmod 7$.
+        This implies that the kernel contains $(x - 3)$ which is strictly larger than $(x^2 - 2)$.
+        Umm... How can I make this work?
+      }
+  \end{itemize}
 \end{proof}
 
 \begin{exer}{(Problem 21)}
