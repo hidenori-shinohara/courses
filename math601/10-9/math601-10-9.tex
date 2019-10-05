@@ -170,43 +170,26 @@ $ $
 \end{exer}
 
 \begin{proof}
-  Let $f: \mathbb{Z}[x]/(x^2 - 2) \rightarrow \mathbb{Z}[\sqrt{2}]$ be defined by $f(p(x) + (x^2 - 2)) = p(\sqrt{2})$.
+  Let $i: \mathbb{Z} \rightarrow \mathbb{Z}[\sqrt{2}]$ be the inclusion and $s = \sqrt{2} \in \mathbb{Z}[\sqrt{2}]$.
+  By the mapping property of polynomials, there exists a ring homomorphism $\phi: \mathbb{Z}[x] \rightarrow \mathbb{Z}[\sqrt{2}]$ such that $\phi(\sum_{i=0}^{n} r_ix^i) = \sum_{i=0}^{n} i(r_i)s^i$.
+  In other words, $\phi$ maps $f(x)$ into $f(\sqrt{2})$.
+  We claim that $\ker(\phi) = (x^2 - 2)$.
   \begin{itemize}
     \item
-      Well defined?
-      $p(\sqrt{2}) \in \mathbb{Q}[\sqrt{2}]$, and if $p(x) + (x^2 - 2) = q(x) + (x^2 - 2)$, then $p(x) - q(x) \in (x^2 - 2)$, so $p(\sqrt{2}) - q(\sqrt{2}) = 0$.
-      Thus $f(p(x) + (x^2 - 2)) = p(\sqrt{2}) = q(\sqrt{2}) = f(q(x) + (x^2 - 2))$.
+      Since $\sqrt{2}^2 - 2 = 2 - 2 = 0$, $x^2 - 2 \in \ker(\phi)$.
+      Moreover, $(x^2 - 2) \subset \ker(\phi)$.
     \item
-      Ring homomorphism?
-      Let $p(x) + (x^2 - 2), q(x) + (x^2 - 2) \in \mathbb{Z}[x]/(x^2 - 2)$ be given.
-      \begin{align*}
-        f(p(x) + (x^2 - 2) + q(x) + (x^2 - 2))
-          &= f((p(x) + q(x)) + (x^2 - 2)) \\
-          &= p(\sqrt{2}) + q(\sqrt{2}) \\
-          &= f(p(x) + (x^2 - 2)) + f(q(x) + (x^2 - 2)). \\
-        f((p(x) + (x^2 - 2))(q(x) + (x^2 - 2)))
-          &= f((p(x)q(x)) + (x^2 - 2)) \\
-          &= p(\sqrt{2})q(\sqrt{2}) \\
-          &= f(p(x) + (x^2 - 2))f(q(x) + (x^2 - 2)).
-      \end{align*}
-    \item
-      Injective?
-      Let $p(x) + (x^2 - 2)$ be given.
-      Suppose $f(p(x) + (x^2 - 2)) = 0$.
-      Then $p(\sqrt{2}) = 0$.
-      Since $\mathbb{Z}[x]$ is a Euclidean domain, $p(x) = (x^2 - 2)q(x) + r(x)$ for some $q(x)$ and $r(x)$ such that $r(x) = ax + b$.
-      Since $r(x) = p(x) - (x^2 - 2)q(x)$, $r(\sqrt{2}) = 0$.
-      This implies $a\sqrt{2} + b = 0$.
-      Since $a, b \in \mathbb{Z}$, $a = b = 0$.
-      Thus $p(x) \in (x^2 - 2)$, so $p(x) + (x^2 - 2) = 0$.
-    \item
-      Surjective?
-      For any $a + b\sqrt{2} \in \mathbb{Z}[\sqrt{2}]$, $f(a + bx + (x^2 - 2)) = a + b\sqrt{2}$.
+      Let $f(x) \in \ker(\phi)$.
+      Since $\mathbb{Z}[x]$ is a Euclidean domain, $f(x) = q(x)(x^2 - 2) + ax + b$ for some $q(x) \in \mathbb{Z}[x], a, b \in \mathbb{Z}$.
+      Since $ax + b = f(x) - q(x)(x^2 - 2)$, $a\sqrt{2} + b = 0$.
+      Since $a, b$ are integers, $a = b = 0$.
+      This implies $f(x) \in (x^2 - 2)$.
   \end{itemize}
-  Thus $f$ is a ring isomorphism.
+  Therefore, $\ker(\phi) = (x^2 - 2)$.
+  By the first isomorphism theorem, $\tilde{\phi} : \mathbb{Z}[x]/(x^2 - 2) \rightarrow \mathbb{Z}[\sqrt{2}]$ induced by $\phi$ is an isomorphism.
 
   \todo[inline]{
-    Do the second part.
+    The second part
   }
 \end{proof}
 
