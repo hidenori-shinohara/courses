@@ -2,6 +2,7 @@
 
 %-------Packages---------
 \usepackage{amssymb,amsfonts}
+\usepackage{tikz-cd}
 \usepackage{fullpage}
 \usepackage{todonotes}
 \usepackage{physics}
@@ -108,6 +109,25 @@
           (Proposition (iv) of the Ring of Fractions.)
           Given $i: R \rightarrow S^{-1}R$ and $h: R \rightarrow T$ with some nice properties, there exists $\lambda: S^{-1}R \rightarrow T$ such that $h = \lambda \circ i$.
       \end{itemize}
+      Let $\pi$ be the canonical map from $R[x]$ into $R[x] / (sx - 1)$.
+      Let $f: R[x] \rightarrow S^{-1}R$ be the homomorphism associated to the inclusion map $R \rightarrow S^{-1}R$ and the element $1 / s \in S^{-1}R$.
+      By the mapping property of polynomials, the existence of $f$ is guaranteed.
+
+      By the universal property of the quotient, universal mapping property of the ring of fractions, there exist homomorphisms $\overline{f}, \overline{\pi}$, respectively, such that the following diagram commutes:
+      \begin{center}
+        \begin{tikzcd}
+          R[x] \arrow[r, "\pi"] \arrow[dr, "f"] & R[x]/(sx - 1) \arrow[d, "\overline{f}"] \\
+                                                & S^{-1}R \arrow[u, shift left, "\overline{\pi}"]
+        \end{tikzcd}
+      \end{center}
+      Since $\pi$ and $f$ are both surjective, $\overline{f}$ and $\overline{\pi}$ must be surjective in order for the diagram to commute.
+      Then $\overline{f} \circ \overline{\pi} \circ f = \overline{f} \circ \pi = f$.
+      Since $f$ is surjective, this implies that $\overline{f} \circ \overline{\pi} = \Id_{S^{-1}R}$.
+      Similarly, $\overline{\pi} \circ \overline{f} = \Id_{R[x]/(sx - 1)}$.
+      Therefore, $\overline{\pi}$ and $\overline{f}$ are the inverse homomorphism of each other, so they are isomorphisms.
+      \todo[inline]{
+        What about $R[1/s]$?
+      }
   \end{itemize}
 \end{proof}
 
