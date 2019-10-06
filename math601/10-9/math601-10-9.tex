@@ -231,7 +231,7 @@ $ $
   Show that this occurs if and only if 2 is not a square in $\mathbb{Z}/(p)$.
 \end{exer}
 
-\begin{exer}{(Problem 22)}
+\begin{proof}
   By Problem 20, $\mathbb{Z}[\sqrt{2}]/(p)$ is isomorphic to $\mathbb{Z}/(p)[x]/(x^2 - 2)$.
   Thus it suffices to show that $\mathbb{Z}/(p)[x]/(x^2 - 2)$ is an integral domain if and only if $x^2 - 2$ is an irreducible element of $\mathbb{Z}/(p)[x]$.
   By Corollary 4 on P.300 (Dummit and Foote), since $\mathbb{Z}/(p)$ is a field, $\mathbb{Z}/(p)[x]$ is a UFD.
@@ -248,7 +248,37 @@ $ $
   \todo[inline]{
     Show the other direction.
   }
+\end{proof}
+
+\begin{exer}{(Problem 22)}
+  Use your answers to 21 and 19 to determine for which of the following values of $p$, $x^2 - 2y^2 = p$ has a solution: $p = 3, 5, 7, 11, 13, 17$.
 \end{exer}
+
+\begin{proof}
+  By Problem 19, $x^2 - 2y^2 = p$ has a solution if and only if $p$ is irreducible in $\mathbb{Z}[\sqrt{2}]$.
+  Since $\mathbb{Z}[\sqrt{2}]$ is a UFD by Problem 14, by Proposition 12 on P.286, $p$ generates a prime ideal if and only if $p$ is irreducible.
+  By Proposition 13 on P.255, $(p)$ is a prime ideal if and only if $\mathbb{Z}[\sqrt{2}]/(p)$ is an integral domain.
+  By Problem 21, 2 is not a square in $\mathbb{Z}/(p)$ if and only if $\mathbb{Z}[\sqrt{2}]/(p)$ is an integral domain.
+
+  Therefore, $x^2 - 2y^2 = p$ has a solution if and only if 2 is not a square in $\mathbb{Z}/(p)$.
+
+  \begin{itemize}
+    \item (Modulo 3)
+      $2^2 \equiv 1$.
+    \item (Modulo 5)
+      $2^2 \equiv 4, 3^2 \equiv 4, 4^2 \equiv 1$.
+    \item (Modulo 7)
+      $2^2 \equiv 4, 3^2 \equiv 2$.
+    \item (Modulo 11)
+      $2^2 \equiv 4, 3^2 \equiv 9, 4^2 \equiv 5, 5^2 \equiv 3, 6^2 \equiv 3, 7^2 \equiv 5, 8^2 \equiv 9, 9^2 \equiv 4, 10^2 \equiv 1$.
+    \item (Modulo 13)
+      $2^2 \equiv 4, 3^2 \equiv 9, 4^2 \equiv 3, 5^2 \equiv 12, 6^2 \equiv 10, 7^2 \equiv 10, 8^2 \equiv 12, 9^2 \equiv 3, 10^2 \equiv 9, 11^2 \equiv 4, 12^2 \equiv 1$.
+    \item (Modulo 17)
+      $2^2 \equiv 4, 3^2 \equiv 9, 4^2 \equiv 16, 5^2 \equiv 8, 6^2 \equiv 2$.
+  \end{itemize}
+
+  Therefore, $x^2 - 2y^2 = p$ has a solution if $p = 7, 17$ and it doesn't if $p = 3, 5, 11, 13$.
+\end{proof}
 
 \section{Factorization in Integral Domains}
 

@@ -1,0 +1,12 @@
+  \item (Modulo 3)
+    2^2 \equiv 1, 
+  \item (Modulo 5)
+    2^2 \equiv 4, 3^2 \equiv 4, 4^2 \equiv 1, 
+  \item (Modulo 7)
+    2^2 \equiv 4, 3^2 \equiv 2, 
+  \item (Modulo 11)
+    2^2 \equiv 4, 3^2 \equiv 9, 4^2 \equiv 5, 5^2 \equiv 3, 6^2 \equiv 3, 7^2 \equiv 5, 8^2 \equiv 9, 9^2 \equiv 4, 10^2 \equiv 1, 
+  \item (Modulo 13)
+    2^2 \equiv 4, 3^2 \equiv 9, 4^2 \equiv 3, 5^2 \equiv 12, 6^2 \equiv 10, 7^2 \equiv 10, 8^2 \equiv 12, 9^2 \equiv 3, 10^2 \equiv 9, 11^2 \equiv 4, 12^2 \equiv 1, 
+  \item (Modulo 17)
+    2^2 \equiv 4, 3^2 \equiv 9, 4^2 \equiv 16, 5^2 \equiv 8, 6^2 \equiv 2, 

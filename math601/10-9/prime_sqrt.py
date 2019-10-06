@@ -6,9 +6,13 @@ def isPrime(n):
     return True
 
 
-for prime in range(2, 100):
+for prime in range(3, 18):
     if isPrime(prime):
+        print("  \item (Modulo %d)" % prime)
+        print("   ", end = " ")
         for i in range(2, prime):
-            if (i * i) % prime == 2:
-                print("%d^2 = 2 (mod %d)" % (i, prime))
+            result = (i * i) % prime
+            print("%d^2 \equiv %d," % (i, result), end = " ")
+            if result == 2:
                 break
+        print("")
