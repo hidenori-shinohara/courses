@@ -223,12 +223,21 @@ $ $
 \end{proof}
 
 \begin{exer}{(Problem 21)}
-  \todo[inline]{
-  }
+  Let $p \in \mathbb{Z}$ be an odd prime.
+  Show that $\mathbb{Z}[\sqrt{2}]/(p)$ is an integral domain if and only if $(x^2 - 2)$ is an irreducible element of $\mathbb{Z}/(p)[x]$.
+  Show that this occurs if and only if 2 is not a square in $\mathbb{Z}/(p)$.
 \end{exer}
 
 \begin{exer}{(Problem 22)}
+  By Problem 20, $\mathbb{Z}[\sqrt{2}]/(p)$ is isomorphic to $\mathbb{Z}/(p)[x]/(x^2 - 2)$.
+  Thus it suffices to show that $\mathbb{Z}/(p)[x]/(x^2 - 2)$ is an integral domain if and only if $x^2 - 2$ is an irreducible element of $\mathbb{Z}/(p)[x]$.
+  By Corollary 4 on P.300 (Dummit and Foote), since $\mathbb{Z}/(p)$ is a field, $\mathbb{Z}/(p)[x]$ is a UFD.
+  By Proposition 12 on P.286, a nonzero element generates a prime ideal if and only if it is irreducible.
+  By Proposition 13 on P.255, $(x^2 - 2)$ is a prime ideal if and only if $\mathbb{Z}/(p)[x]/(x^2 - 2)$ is an integral domain.
+  Therefore, $\mathbb{Z}/(p)[x]/(x^2 - 2)$ is an integral domain if and only if $x^2 - 2$ is an irreducible element.
+
   \todo[inline]{
+    Show the second part.
   }
 \end{exer}
 
