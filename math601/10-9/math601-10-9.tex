@@ -174,9 +174,7 @@ $ $
   Let $i: \mathbb{Z} \rightarrow \mathbb{Z}[\sqrt{2}]$ be the inclusion and $s = \sqrt{2} \in \mathbb{Z}[\sqrt{2}]$.
   By the mapping property of polynomials, there exists a ring homomorphism $\phi: \mathbb{Z}[x] \rightarrow \mathbb{Z}[\sqrt{2}]$ such that $\phi(\sum_{i=0}^{n} r_ix^i) = \sum_{i=0}^{n} i(r_i)s^i$.
   In other words, $\phi$ maps $f(x)$ into $f(\sqrt{2})$.
-  \todo[inline]{
-    Show surjectivity.
-  }
+  For each $a + b\sqrt{2} \in \mathbb{Z}[\sqrt{2}]$, $\phi(a + bx) = a + b\sqrt{2}$, so $\phi$ is surjective.
   We claim that $\ker(\phi) = (x^2 - 2)$.
   \begin{itemize}
     \item
@@ -190,7 +188,7 @@ $ $
       This implies $f(x) \in (x^2 - 2)$.
   \end{itemize}
   Therefore, $\ker(\phi) = (x^2 - 2)$.
-  By the first isomorphism theorem, $\tilde{\phi} : \mathbb{Z}[x]/(x^2 - 2) \rightarrow \mathbb{Z}[\sqrt{2}]$ induced by $\phi$ is an isomorphism.
+  By the first isomorphism theorem(Theorem 16 on P.97, Dummit and Foote), $\tilde{\phi} : \mathbb{Z}[x]/(x^2 - 2) \rightarrow \mathbb{Z}[\sqrt{2}]$ induced by $\phi$ is an isomorphism.
 
   We will solve the second part using the same approach.
   We will first assume that $p$ is an odd prime because Problem 20 does not specify wht $p$ is, but the previous and next problem says $p$ is an odd prime.
@@ -223,7 +221,7 @@ $ $
       In other words, this is possible only if $a + (p) = b + (p) = 0$.
       Therefore, $f(x) = (x^2 - 2)q(x) \in (x^2 - 2)$.
   \end{itemize}
-  Therefore, $\ker(\Phi) = (x^2 - 2)$, so the homomorphism $\tilde{\Phi}$ induced by $\Phi$ is an isomorphism from $\mathbb{Z}/(p)[x]/(x^2 - 2) \rigtharrow \mathbb{Z}[\sqrt{2}]/(p)$ by the first isomorphism theorem.
+  Therefore, $\ker(\Phi) = (x^2 - 2)$, so the homomorphism $\tilde{\Phi}$ induced by $\Phi$ is an isomorphism from $\mathbb{Z}/(p)[x]/(x^2 - 2) \rightarrow \mathbb{Z}[\sqrt{2}]/(p)$ by the first isomorphism theorem.
 \end{proof}
 
 \begin{exer}{(Problem 21)}
