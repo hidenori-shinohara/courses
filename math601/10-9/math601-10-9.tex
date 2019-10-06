@@ -237,8 +237,15 @@ $ $
   By Proposition 13 on P.255, $(x^2 - 2)$ is a prime ideal if and only if $\mathbb{Z}/(p)[x]/(x^2 - 2)$ is an integral domain.
   Therefore, $\mathbb{Z}/(p)[x]/(x^2 - 2)$ is an integral domain if and only if $x^2 - 2$ is an irreducible element.
 
-  $(1 + (p))x^2 - (2 + (p))$ is not irreducible if and only if $(\overline{a}x + \overline{b}) \mid ((1 + (p))x^2 - (2 + (p)))$ for some $\overline{a} \ne 0, \overline{b} \in \mathbb{Z}/(p)$ because of the degree.
-\end{exer}
+
+  We will show that $\mathbb{Z}[\sqrt{2}]/(p)$ is an integral domain if and only if 2 is not a square in $\mathbb{Z}/(p)$.
+  For any $a + (p) \in \mathbb{Z}/(p)$, $(a + \sqrt{2} + (p))(a - \sqrt{2} + (p)) = (a^2 - 2) + (p)$ in $\mathbb{Z}[\sqrt{2}]/(p)$.
+  If $(a + (p))^2 = 2 + (p)$ for some $a + (p) \in \mathbb{Z}/(p)$, then $(a + \sqrt{2} + (p))(a - \sqrt{2} + (p)) = (2 - 2) + (p) = 0$.
+  Thus $\mathbb{Z}[\sqrt{2}]/(p)$ is not an integral domain.
+
+  \todo[inline]{
+    Show the other direction.
+  }
 
 \section{Factorization in Integral Domains}
 
