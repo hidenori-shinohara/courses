@@ -199,9 +199,10 @@ $ $
     \Phi(\sum_{i=0}^{n}(a_i + (p))x^i)
       &= \sum_{i=0}^{n}(a_i + (p))(\sqrt{2} + (p))^i \\
       &= \sum_{i=0}^{n}(a_i + (p))(\sqrt{2}^i + (p)) \\
-      &= \sum_{i=0}^{n}(a_i 2^{i/2} + (p)).
+      &= \sum_{i=0}^{n}(a_i \sqrt{2}^i + (p)) \\
+      &= (\sum_{i=0}^{n} a_i\sqrt{2}^i) + (p).
   \end{align*}
-  For any $a + b\sqrt{2} + (p) \in \mathbb{Z}[\sqrt{2}]/(p)$, $\Phi(a + bx) = a + b\sqrt{2} + (p)$, so $\Phi$ is surjective.
+  For any $a + b\sqrt{2} + (p) \in \mathbb{Z}[\sqrt{2}]/(p)$, $\Phi((a + (p)) + (b + (p))x) = a + b\sqrt{2} + (p)$, so $\Phi$ is surjective.
   We claim that $\ker(\Phi) = (x^2 - 2)$.
   Here, by $x^2 - 2$, we mean $(1 + (p))x^2 - (2 + (p))$.
   \begin{itemize}
@@ -236,9 +237,7 @@ $ $
   By Proposition 13 on P.255, $(x^2 - 2)$ is a prime ideal if and only if $\mathbb{Z}/(p)[x]/(x^2 - 2)$ is an integral domain.
   Therefore, $\mathbb{Z}/(p)[x]/(x^2 - 2)$ is an integral domain if and only if $x^2 - 2$ is an irreducible element.
 
-  \todo[inline]{
-    Show the second part.
-  }
+  $(1 + (p))x^2 - (2 + (p))$ is not irreducible if and only if $(\overline{a}x + \overline{b}) \mid ((1 + (p))x^2 - (2 + (p)))$ for some $\overline{a} \ne 0, \overline{b} \in \mathbb{Z}/(p)$ because of the degree.
 \end{exer}
 
 \section{Factorization in Integral Domains}
