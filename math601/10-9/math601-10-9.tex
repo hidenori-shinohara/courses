@@ -101,22 +101,20 @@
           They have the same addition and multiplication.
       \end{itemize}
 
-      Let $\pi$ be the canonical map from $R[x]$ into $R[x] / (sx - 1)$.
-      Let $f: R[x] \rightarrow S^{-1}R$ be the homomorphism associated to the inclusion map $R \rightarrow S^{-1}R$ and the element $1 / s \in S^{-1}R$.
-      By the mapping property of polynomials, the existence of $f$ is guaranteed.
-
-      By the universal property of the quotient, universal mapping property of the ring of fractions, there exist homomorphisms $\overline{f}, \overline{\pi}$, respectively, such that the following diagram commutes:
-      \begin{center}
-        \begin{tikzcd}
-          R[x] \arrow[r, "\pi"] \arrow[dr, "f"] & R[x]/(sx - 1) \arrow[d, "\overline{f}"] \\
-                                                & S^{-1}R \arrow[u, shift left, "\overline{\pi}"]
-        \end{tikzcd}
-      \end{center}
-      Since $\pi$ and $f$ are both surjective, $\overline{f}$ and $\overline{\pi}$ must be surjective in order for the diagram to commute.
-      Then $\overline{f} \circ \overline{\pi} \circ f = \overline{f} \circ \pi = f$.
-      Since $f$ is surjective, this implies that $\overline{f} \circ \overline{\pi} = \Id_{S^{-1}R}$.
-      Similarly, $\overline{\pi} \circ \overline{f} = \Id_{R[x]/(sx - 1)}$.
-      Therefore, $\overline{\pi}$ and $\overline{f}$ are the inverse homomorphism of each other, so they are isomorphisms.
+      Let $i: R \rightarrow S^{-1}R$ be the inclusion map, and choose $1/s \in S^{-1}R$.
+      Consider the homomorphism $\phi: R[x] \rightarrow S^{-1}R$ associated to $i$ and $1/s$ by the mapping property of polynomials.
+      Then $\phi(\sum_{i=0}^n r_ix^i) = \sum_{i=0}^n \frac{r_i}{s_i^i}$.
+      We claim that $\ker(\phi) = (sx - 1)$.
+      \begin{itemize}
+        \item
+          $\phi(sx - 1) = \frac{s}{s} - 1 = 0$.
+          Thus $(sx - 1) \subset \ker(\phi)$.
+        \item
+          Let $f(x) \in \ker(\phi)$.
+      \end{itemize}
+      \todo[inline]{
+        How can I solve this?
+      }
   \end{itemize}
 \end{proof}
 
@@ -175,7 +173,7 @@ $ $
         \item
           No.
         \item
-          No.
+          Yes.
       \end{enumerate}
     \item 
       $M = \mathbb{Q} / \mathbb{Z}_{(p)}$.
@@ -220,12 +218,12 @@ $ $
       This implies $f(x) \in (x^2 - 2)$.
   \end{itemize}
   Therefore, $\ker(\phi) = (x^2 - 2)$.
-  By the first isomorphism theorem(Theorem 16 on P.97, Dummit and Foote), $\tilde{\phi} : \mathbb{Z}[x]/(x^2 - 2) \rightarrow \mathbb{Z}[\sqrt{2}]$ induced by $\phi$ is an isomorphism.
+  By Lemma 8 of the Commutative Ring handout, $\tilde{\phi} : \mathbb{Z}[x]/(x^2 - 2) \rightarrow \mathbb{Z}[\sqrt{2}]$ induced by $\phi$ is an isomorphism.
 
   We will solve the second part using the same approach.
   We will assume that $p$ is a prime.
   Consider the inclusion $\mathbb{Z}/(p) \xhookrightarrow{} \mathbb{Z}[\sqrt{2}]/(p)$ and the element $\sqrt{2} + (p) \in \mathbb{Z}[\sqrt{2}]/(p)$.
-  Let $\Phi: \mathbb{Z}/(p)[x] \rightarrow \mathbb{Z}[\sqrt{2}]/(p)$ be a ring homomorphism associated to the inclusion and element.
+  Let $\Phi: \mathbb{Z}/(p)[x] \rightarrow \mathbb{Z}[\sqrt{2}]/(p)$ be a ring homomorphism associated to the inclusion $\mathbb{Z}/(p) \rightarrow \mathbb{Z}[\sqrt{2}]/(p)$ and element $\sqrt{2} + (p)$.
   We will examine how $\Phi$ behaves.
   \begin{align*}
     \Phi(\sum_{i=0}^{n}(a_i + (p))x^i)
@@ -244,15 +242,15 @@ $ $
       Let $f(x) \in \ker(\Phi) \subset \mathbb{Z}/(p)[x]$.
       Since $p$ is a prime, $\mathbb{Z}/(p)$ is a field.
       Thus $\mathbb{Z}/(p)[x]$ is a Euclidean domain.
-      Choose $q(x) \in \mathbb{Z}/(p)[x]$ and $a + (p), b + (p) \in \mathbb{Z}/(p)$ such that $f(x) = (x^2 - 2)q(x) + ((a + (p))x + (b + (p))$.
-      Then $0 = \Phi(f(x)) = \Phi(x^2 - 2)\Phi(q(x)) + \Phi((a + (p))x + (b + (p))) = 0 + \Phi((a + (p))x + (b + (p)))$.
-      Thus $\Phi((a + (p))x + (b + (p))) = (a + (p))(\sqrt{2} + (p)) + (b + (p)) = (a\sqrt{2} + b) + (p)$.
+      Choose $q(x) \in \mathbb{Z}/(p)[x]$ and $\overline{a} = a + (p), \overline{b} = b + (p) \in \mathbb{Z}/(p)$ such that $f(x) = (x^2 - 2)q(x) + (\overline{a}x + \overline{b})$.
+      Then $0 = \Phi(f(x)) = \Phi(x^2 - 2)\Phi(q(x)) + \Phi(\overline{a}x + \overline{b}) = 0 + \Phi(\overline{a}x + \overline{b})$.
+      Thus $0 = \Phi(\overline{a}x + \overline{b}) = (a\sqrt{2} + b) + (p)$.
       Therefore, $a\sqrt{2} + b \in (p)$.
       Since $a, b \in \mathbb{Z}$, this is possible only if $a = 0$ and $b \in (p)$.
-      In other words, this is possible only if $a + (p) = b + (p) = 0$.
+      In other words, this is possible only if $\overline{a} = \overline{b} = 0$.
       Therefore, $f(x) = (x^2 - 2)q(x) \in (x^2 - 2)$.
   \end{itemize}
-  Therefore, $\ker(\Phi) = (x^2 - 2)$, so the homomorphism $\tilde{\Phi}$ induced by $\Phi$ is an isomorphism from $\mathbb{Z}/(p)[x]/(x^2 - 2) \rightarrow \mathbb{Z}[\sqrt{2}]/(p)$ by the first isomorphism theorem.
+  Therefore, $\ker(\Phi) = (x^2 - 2)$, so the homomorphism $\tilde{\Phi}$ induced by $\Phi$ is an isomorphism from $\mathbb{Z}/(p)[x]/(x^2 - 2) \rightarrow \mathbb{Z}[\sqrt{2}]/(p)$ by Lemma 8 of the Commutative Ring handout.
 \end{proof}
 
 \begin{exer}{(Problem 21)}
@@ -282,9 +280,8 @@ $ $
       Choose $a, b \in \mathbb{Z}/(p)$ such that $(x + a)(x + b) = x^2 - 2$.
       We can assume that the leading coefficients of the factors are 1 because $\mathbb{Z}/(p)$ is a field.
       This implies $x^2 + (a + b)x + ab = x^2 - 2$.
-      Thus $a + b = 0$, so $b = -a$.
-      This implies $x^2 - 2 = (x + a)(x - a)$, so $-2 = -a^2$.
-      Thus $a^2 = 2$, so 2 is a square in $\mathbb{Z}/(p)$.
+      Thus $a + b = 0$, so $b = -a$, and thus $-2 = -a^2$.
+      2 is a square in $\mathbb{Z}/(p)$.
   \end{itemize}
 
   Therefore, $\mathbb{Z}[\sqrt{2}]/(p)$ is an integral domain if and only if 2 is not a square in $\mathbb{Z}/(p)$.
@@ -317,7 +314,7 @@ $ $
       $2^2 \equiv 4, 3^2 \equiv 9, 4^2 \equiv 16, 5^2 \equiv 8, 6^2 \equiv 2$.
   \end{itemize}
 
-  Therefore, $x^2 - 2y^2 = p$ has a solution if $p = 7, 17$ and it doesn't if $p = 3, 5, 11, 13$.
+  Therefore, $x^2 - 2y^2 = p$ has a solution if $p = 7, 17$ and it does not if $p = 3, 5, 11, 13$.
 \end{proof}
 
 \section{Factorization in Integral Domains}
@@ -419,16 +416,16 @@ $ $
       Thus, $h_1(x, y) \in k[x]$, so $h_1(x, y)g_i(x) \in k[x]$ for each $i$.
       Therefore, $h_1(x, y)g_i(x) = f_i(x)$ for each $i$.
 
-      Let $p \in k[x]$ be an irreducible.
+      Let $p \in k[x]$ be an irreducible element.
       If $p \mid h_1(x, y)$, then $p \mid f_i(x) = h_1(x, y)g_i(x)$ for each $i$, so $\ord_p(f_i) \geq 1$ for each $i$.
       Therefore, $o_p(f(x, y)) \geq 1$, and thus $p \mid \cont(f(x, y))$.
       However, since $\cont(f(x, y)) = 1$, $p \nmid h_1(x, y)$.
-      Thus $h_1(x, y)$ is a unit in $k[x]$ since it cannot be divided by any irreducibles.
+      Thus $h_1(x, y)$ is a unit in $k[x]$ since it cannot be divided by any irreducible elements.
       Since $h_1(x, y)$ is a unit in $k[x]$ and $k[y]$, it must consist only of a constant term, which is a unit in $k$.
       Hence, $h_1(x, y)$ is a unit in $k[x, y]$.
       
       We have shown that for any $h_1(x, y), h_2(x, y) \in k[x, y]$, $h_1h_2 = f$ implies one of $h_1$ or $h_2$ is a unit.
-      Therefore, $f(x, y)$ is an irreducible in $k[x, y]$.
+      Therefore, $f(x, y)$ is an irreducible element in $k[x, y]$.
 
     \item
       Let $k = \mathbb{Q}, a = 1, f(x, y) = (x - 1)y^2 + y$.
@@ -443,8 +440,7 @@ $ $
       Therefore, $o_p(f(x)) = 0$ for any irreducible element $p \in k[x]$.
       Thus $\cont(f(x, y)) = 1$.
       
-      $f(a, y) = y \in k[y]$.
-      This is irreducible because if $f_1f_2 = y$ for some $f_1, f_2 \in k[y]$, then $\deg(f_1) + \deg(f_2) = 1$ implies that one of $f_1$ or $f_2$ is a unit in $k$.
+      $f(a, y) = y \in k[y]$, and this is irreducible.
   \end{itemize}
 \end{proof}
 
