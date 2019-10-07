@@ -92,24 +92,15 @@
 
       Therefore, $T$ is indeed a multiplicative set.
     \item
-      \todo[inline]{
-        I have some idea, but I don't know how to solve this.
-        There are a few mapping properties that we've covered:
-      }
+      $S^{-1}R$ and $R[1/s]$ are isomorphic because:
       \begin{itemize}
         \item
-          The universal mapping property of the quotient.
-          (Proposition 6 on Commutative Rings)
-          Given $\pi: R \rightarrow R / I$ and $f: R \rightarrow S$ with some nice properties, there exists $\overline{f}: R / I \rightarrow S$ such that $\overline{f} \circ \pi = f$.
+          They are the same set.
+          They both contain all equivalence classes $[(r, s)]$ for $r \in R$ and $s \in S$ with the same equivalence relation.
         \item
-          The mapping property of polynomials.
-          (Proposition 1 on Commutative Rings)
-          Given $\phi_0:R \rightarrow S$ and $s \in S$, there exists $\phi:R[x] \rightarrow S$.
-        \item
-          The universal property of rings of fractions.
-          (Proposition (iv) of the Ring of Fractions.)
-          Given $i: R \rightarrow S^{-1}R$ and $h: R \rightarrow T$ with some nice properties, there exists $\lambda: S^{-1}R \rightarrow T$ such that $h = \lambda \circ i$.
+          They have the same addition and multiplication.
       \end{itemize}
+
       Let $\pi$ be the canonical map from $R[x]$ into $R[x] / (sx - 1)$.
       Let $f: R[x] \rightarrow S^{-1}R$ be the homomorphism associated to the inclusion map $R \rightarrow S^{-1}R$ and the element $1 / s \in S^{-1}R$.
       By the mapping property of polynomials, the existence of $f$ is guaranteed.
@@ -126,11 +117,6 @@
       Since $f$ is surjective, this implies that $\overline{f} \circ \overline{\pi} = \Id_{S^{-1}R}$.
       Similarly, $\overline{\pi} \circ \overline{f} = \Id_{R[x]/(sx - 1)}$.
       Therefore, $\overline{\pi}$ and $\overline{f}$ are the inverse homomorphism of each other, so they are isomorphisms.
-      \todo[inline]{
-        What about $R[1/s]$?
-        Ask classmates.
-        It seems trivial that $R[1/s] = S^{-1}R$ especially we see $R[1/s]$ as a subset of $T^{-1}R$.
-      }
   \end{itemize}
 \end{proof}
 
@@ -185,7 +171,7 @@ $ $
         \item
           1.
         \item
-          Yes.
+          No.
         \item
           No.
         \item
@@ -201,7 +187,7 @@ $ $
         \item
           1.
         \item
-          Yes.
+          No.
         \item
           No.
         \item
