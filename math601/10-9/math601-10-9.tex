@@ -269,15 +269,25 @@ $ $
   By Proposition 13 on P.255, $(x^2 - 2)$ is a prime ideal if and only if $\mathbb{Z}/(p)[x]/(x^2 - 2)$ is an integral domain.
   Therefore, $\mathbb{Z}/(p)[x]/(x^2 - 2)$ is an integral domain if and only if $x^2 - 2$ is an irreducible element.
 
+  We will show that $\mathbb{Z}[\sqrt{2}]/(p)$ is not an integral domain if and only if 2 is a square in $\mathbb{Z}/(p)$.
+  \begin{itemize}
+    \item
+      For any $a + (p) \in \mathbb{Z}/(p)$, $(a + \sqrt{2} + (p))(a - \sqrt{2} + (p)) = (a^2 - 2) + (p)$ in $\mathbb{Z}[\sqrt{2}]/(p)$.
+      If $(a + (p))^2 = 2 + (p)$ for some $a + (p) \in \mathbb{Z}/(p)$, then $(a + \sqrt{2} + (p))(a - \sqrt{2} + (p)) = (2 - 2) + (p) = 0$.
+      Thus $\mathbb{Z}[\sqrt{2}]/(p)$ is not an integral domain.
+    \item
+      Suppose that $\mathbb{Z}[\sqrt{2}]/(p)$ is not an integral domain.
+      Then $x^2 - 2$ is not irreducible.
+      Since the degree of $x^2 - 2$ is 2 and every nonzero constant polynomial in $\mathbb{Z}/(p)[x]$ is a unit, $x^2 - 2$ must have a factor of degree 1.
+      Choose $a, b \in \mathbb{Z}/(p)$ such that $(x + a)(x + b) = x^2 - 2$.
+      We can assume that the leading coefficients of the factors are 1 because $\mathbb{Z}/(p)$ is a field.
+      This implies $x^2 + (a + b)x + ab = x^2 - 2$.
+      Thus $a + b = 0$, so $b = -a$.
+      This implies $x^2 - 2 = (x + a)(x - a)$, so $-2 = -a^2$.
+      Thus $a^2 = 2$, so 2 is a square in $\mathbb{Z}/(p)$.
+  \end{itemize}
 
-  We will show that $\mathbb{Z}[\sqrt{2}]/(p)$ is an integral domain if and only if 2 is not a square in $\mathbb{Z}/(p)$.
-  For any $a + (p) \in \mathbb{Z}/(p)$, $(a + \sqrt{2} + (p))(a - \sqrt{2} + (p)) = (a^2 - 2) + (p)$ in $\mathbb{Z}[\sqrt{2}]/(p)$.
-  If $(a + (p))^2 = 2 + (p)$ for some $a + (p) \in \mathbb{Z}/(p)$, then $(a + \sqrt{2} + (p))(a - \sqrt{2} + (p)) = (2 - 2) + (p) = 0$.
-  Thus $\mathbb{Z}[\sqrt{2}]/(p)$ is not an integral domain.
-
-  \todo[inline]{
-    Show the other direction.
-  }
+  Therefore, $\mathbb{Z}[\sqrt{2}]/(p)$ is an integral domain if and only if 2 is not a square in $\mathbb{Z}/(p)$.
 \end{proof}
 
 \begin{exer}{(Problem 22)}
