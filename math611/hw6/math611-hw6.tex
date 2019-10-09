@@ -1,0 +1,83 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 611 Homework (Due 10/16)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\begin{exer}{(Problem 18)}
+  For a path-connected, locally path-connected, and semilocally simply-connected space $X$, call a path-connected covering space $X \rightarrow X$ abelian if it is normal and has abelian deck transformation group.
+  Show that $X$ has an abelian covering space that is a covering space of every other abelian covering space of $X$, and that such a 'universal' abelian covering space is unique up to isomorphism.
+  Describe this covering space explicitly for $X = S^1 \vee S^1$ and $X = S^1 \vee S^1 \vee S^1$.
+\end{exer}
+
+\begin{proof}
+$ $
+\begin{itemize}
+  \item What is the hypothesis?
+  \item What is the conclusion?
+  \item Separate the various parts of the hypothesis.
+  \item Find the connection between the hypothesis and the conclusion.
+  \item Look at the conclusion! And try to think of a familiar theorem having the same or a similar conclusion.
+  \item Keep only a part of the hypothesis, drop the other part; is the conclusion still valid?
+  \item Could you derive something useful from the hypothesis?
+  \item Could you think of another hypothesis from which you could easily derive the conclusion?
+  \item Could you change the hypothesis, or the conclusion, or both if necessary, so that the new hypothesis and the new conclusion are nearer to each other?
+  \item Did you use the whole hypothesis?
+\end{itemize}
+\end{proof}
+
+\end{document}
+
+
