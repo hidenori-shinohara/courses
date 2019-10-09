@@ -65,14 +65,48 @@
 \begin{proof}
 $ $
 \begin{itemize}
-  \item What is the hypothesis?
+  \item
+    What is the hypothesis?
+    \begin{itemize}
+      \item $X$ is a path-connected, locally path-connected, semilocally simply-connected space.
+    \end{itemize}
   \item What is the conclusion?
-  \item Is it possible to satisfy the condition?
-  \item Draw a figure.
+    \begin{itemize}
+      \item There exists a normal covering space of $X$ $p: \tilde{X} \rightarrow X$ such that $G(\tilde{X})$ is abelian.
+      \item $X$ has an abelian covering space that is a covering space of every other abelian covering space of $X$.
+      \item A universal abelian covering space is unique up to isomorphism.
+      \item Find the universal covering space of $S^1 \vee S^1$ and $S^1 \vee S^1 \vee S^1$.
+    \end{itemize}
+  \item
+    Introduce suitable notations.
+    \begin{itemize}
+      \item $H = p_*(\pi_1(X, x_0))$.
+    \end{itemize}
   \item Separate the various parts of the hypothesis.
   \item Find the connection between the hypothesis and the conclusion.
+    \begin{itemize}
+      \item
+        ``$X$ is a path-connected, locally path-connected, semilocally simply-connected space."
+        This condition sounds a lot like Theorem 1.38 on P.67.
+        By using theorem 1.38, we can associate some group to each covering map.
+      \item
+        ``$\tilde{X}$ is a normal covering space of $X$."
+        By Proposition 1.39 on P.71, $\tilde{X}$ is normal if and only if $H$ is a normal subgroup of $\pi_1(X, x_0)$.
+      \item
+        $G(\tilde{X})$ is abelian.
+        By Proposition 1.39 on P.71, $G(\tilde{X})$ is isomorphic to the quotient $\pi_1(X, x_0) / H$ because $\tilde{X}$ is normal.
+        Thus $\pi_1(X, x_0) / H$ is abelian.
+    \end{itemize}
   \item Have you seen it before?
+    \begin{itemize}
+      \item
+        This might be similar to constructing the universal covering space.
+    \end{itemize}
   \item Look at the conclusion! And try to think of a familiar theorem having the same or a similar conclusion.
+    \begin{itemize}
+      \item
+        Showing uniqueness up to isomorphism sounds like the universal covering space theorem.
+    \end{itemize}
   \item Keep only a part of the hypothesis, drop the other part; is the conclusion still valid?
   \item Could you derive something useful from the hypothesis?
   \item Could you think of another hypothesis from which you could easily derive the conclusion?
