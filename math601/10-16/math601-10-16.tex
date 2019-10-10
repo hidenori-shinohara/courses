@@ -1,0 +1,97 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Id}{Id}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 601 Homework (Due 10/16)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\tableofcontents
+
+\section{Jordan Canonical Form}
+
+Let $k$ be a field, $V$ a finite dimensional $k$-vector space, and $T \in \End_k(V)$ a linear transformation.
+
+\begin{exer}{(Problem 1)}
+  Show that the set $\{ p(x) \in k[x] \mid p(T) = 0 \in \End_k(V) \}$ is an ideal, $I \subset k[x]$.
+  Also, show that $I \ne 0$.
+\end{exer}
+
+\begin{proof}
+$ $
+ \begin{itemize}
+   \item
+    Claim 1: $I$ is nonempty.
+    \todo[inline]{
+      Use Cayley-Hamilton to find a non-trivial element.
+      I'm still trying to understand C-H.
+      One thing I learned today is that the determinant function is independent of the choice of the basis.
+    }
+   \item
+    Claim 2: $I$ is closed under subtraction.
+    Let $p(x), q(x) \in I$.
+    Then $p(x) - q(x) \in I$ because $p(T) - q(T) = 0 - 0 = 0$.
+   \item
+    Claim 3: $I$ is closed under multiplication by elements in $k[x]$.
+    Let $p(x) \in I, r(x) \in k[x]$.
+    Then $p(T)r(T) = 0r(T) = 0$, so $r(x)p(x) \in I$.
+ \end{itemize}
+ By Claim 1 and 2, $I$ is a subgroup of $k[x]$ under addition.
+ Then Claim 3 implies that $I$ is an ideal.
+ By Claim 1, $I \ne 0$.
+\end{proof}
+
+\end{document}
+
+
