@@ -116,8 +116,27 @@ Let $k$ be a field, $V$ a finite dimensional $k$-vector space, and $T \in \End_k
 
 \begin{proof}
   \todo[inline,caption={}]{
-    Since $k$ is a field, I can't assume that $k$ is algebraically closed.
-    I think I'm supposed to do something similar to Step 3 and 4 in the handout.
+    Since $k$ is just a field, I can't assume that $k$ is algebraically closed.
+    \begin{itemize}
+      \item
+        $p(x) = (x - a_1)^{m_1} \cdots (x - a_n)^{m_n}$.
+      \item
+        Let $N = \dim(V)$.
+      \item
+        Let $q(\lambda) = \det(T - \lambda \Id)$ be the characteristic polynomial of $T$.
+      \item
+        Let $v_1, \cdots, v_N$ be a basis of $V$.
+    \end{itemize}
+    For each $i$, $(p(T))(v_i) = 0$.
+    In other words, there exists a $j$ such that $(T - a_j\Id)(v) = 0$ for some nonzero $v$.
+    This can be found by applying each linear factor to $v_i$ and figure out the point where it turns into 0.
+    In other words, $\det(T - a_j\Id) = 0$.
+    This implies that $a_j$ is a root of the characteristic polynomial $q(\lambda)$ of $T$.
+    Thus $\lambda - a_j$ divides $q(\lambda)$.
+
+    But I'm not sure what to do next.
+    We want to find the largest number $r_j$ such that $(\lambda - a_j)^{r_j}$ divides $q(\lambda)$.
+    What happens next?
   }
 \end{proof}
 
