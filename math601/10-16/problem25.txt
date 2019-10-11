@@ -1,0 +1,8 @@
+0 \mapsto 0,
+1 \mapsto 1,
+2 \mapsto 4,
+3 \mapsto 1,
+4 \mapsto 0,
+5 \mapsto 1,
+6 \mapsto 4,
+7 \mapsto 1,

@@ -1,0 +1,9 @@
+0 - 2 \cdot 0 \equiv 0
+0 - 2 \cdot 1 \equiv 6
+0 - 2 \cdot 4 \equiv 0
+1 - 2 \cdot 0 \equiv 1
+1 - 2 \cdot 1 \equiv 7
+1 - 2 \cdot 4 \equiv 1
+4 - 2 \cdot 0 \equiv 4
+4 - 2 \cdot 1 \equiv 2
+4 - 2 \cdot 4 \equiv 4
