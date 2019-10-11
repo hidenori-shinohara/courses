@@ -133,6 +133,26 @@
   \end{itemize}
 \end{proof}
 
+\begin{exer}{(Problem 4)}
+  How many isomorphism classes of abelian groups with $27783 = 3^47^3$ elements are there?
+\end{exer}
+
+\begin{proof}
+  Let $M$ be an abelian group with 27783 elements.
+  Then $M$ is a $\mathbb{Z}$-module with 27783 elements.
+  By the theorem on PP.8-9 of the Module handout, $M \simeq \mathbb{Z}/(d_1) \times \cdots \times \mathbb{Z}/(d_n) \times \mathbb{Z}^{m - s}$.
+  Since $M$ only contains finitely many elements and $\mathbb{Z}$ contains infinitely many elements, $M \simeq \mathbb{Z}/(d_1) \times \cdots \times \mathbb{Z}/(d_n)$.
+  $\gcd(a, b) = 1$ if and only if $\mathbb{Z}/(a)$ is isomorphic to $\mathbb{Z}/(b)$.
+  \begin{itemize}
+    \item
+      $\mathbb{Z}_3 \times \mathbb{Z}_3 \times \mathbb{Z}_3 \times \mathbb{Z}_3$, $\mathbb{Z}_9 \times \mathbb{Z}_3 \times \mathbb{Z}_3$,
+      $\mathbb{Z}_9 \times \mathbb{Z}_9$, $\mathbb{Z}_{27} \times \mathbb{Z}_3$, $\mathbb{Z}_{81}$.
+    \item
+      $\mathbb{Z}_7 \times \mathbb{Z}_7 \times \mathbb{Z}_7$, $\mathbb{Z}_{49} \times \mathbb{Z}_7$, $\mathbb{Z}_{343}$.
+  \end{itemize}
+  Thus the combinations of the above are exactly all the distinct classes of abelian groups with 27783 elements, so there are exactly $3 \times 5 = 15$ classes.
+\end{proof}
+
 \section{Jordan Canonical Form}
 
 Let $k$ be a field, $V$ a finite dimensional $k$-vector space, and $T \in \End_k(V)$ a linear transformation.
