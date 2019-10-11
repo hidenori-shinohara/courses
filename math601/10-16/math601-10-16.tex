@@ -242,6 +242,26 @@
   \end{itemize}
 \end{proof}
 
+\begin{exer}{(Problem 26)}
+  Let $p \in \mathbb{Z}$ be an odd prime.
+  Quadratic reciprocity says that 2 is a square mod $p$ if and only if $p \equiv \pm 1 \pmod 8$.
+  Conclude that $x^2 - 2y^2 = p$ has a solution if and only if $p \equiv \pm 1 \pmod 8$.
+\end{exer}
+
+
+\begin{proof}
+  \todo[inline,caption={}]{
+    By Problem 19, $x^2 - 2y^2 = p$ has a solution if and only if $p$ is not irreducible in $\mathbb{Z}[\sqrt{2}]$.
+
+    By Problem 21, 2 is not a square in $\mathbb{Z}/(p)$ if and only if $\mathbb{Z}[\sqrt{2}]/(p)$ is an integral domain.
+
+    Therefore, $x^2 - 2y^2 = p$ has a solution if and only if 2 is a square in $\mathbb{Z}/(p)$.
+    By Quadratic reciprocity, 2 is a square in $\mathbb{Z}/(p)$ if and only if $p \equiv \pm 1 \pmod 8$.
+
+    Thus $x^2 - 2y^2 = p$ has a solution if and only if $p \equiv \pm 1 \pmod 8$.
+  }
+\end{proof}
+
 \section{Jordan Canonical Form}
 
 Let $k$ be a field, $V$ a finite dimensional $k$-vector space, and $T \in \End_k(V)$ a linear transformation.
