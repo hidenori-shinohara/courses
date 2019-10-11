@@ -150,21 +150,20 @@ Let $k$ be a field, $V$ a finite dimensional $k$-vector space, and $T \in \End_k
 \begin{proof}
   $ $
   \todo[inline,caption={}]{
-    Some ideas...
     \begin{itemize}
       \item
-        Assume $k = \mathbb{C}$.
+        Let $r_i, \cdots, r_m$ denote the $m$ distinct $m$th roots of 1.
       \item
-        Let $r_l = \exp(\frac{2\pi il}{m})$ for each $l = 1, \cdots, m$.
-      \item
-        $x^m - 1 = (x - r_1) \cdots (x - r_m)$.
-        Thus $T^m - \Id_V = (T - r_1\Id_V) \cdots (T - r_m\Id_V)$.
+        Then each $x - r_i$ divides $x^m - 1$.
+        Thus $x^m - 1 = (x - r_1) \cdots (x - r_m)$.
+        This means that $p(x) = x^m - 1$ is a polynomial such that $p(T) = 0$ and it is a product of linear polynomials.
+        Then I think that we can use an approach similar to the previous problem.
       \item
         Let $M$ denote the diagonal matrix for $T$.
         Then $M^m$ must be the identity matrix.
-        Moreover, each entry of $M^m$ is simply the $m$-th power of the corresponding entry of $M$.
+        Moreover, the $i$th diagonal entry of $M^m$ is simply the $m$-th power of the $i$th diagonal entry of $M$.
         Thus each of the diagonal entries in $M$ must be an $m$-th root of 1.
-        On the other hand, any diagonal matrix where each entry is an $m$-th root of 1 has this property that when raised to the $m$-th power, it becomes the identity.
+        On the other hand, any diagonal matrix where each entry is an $m$-th root of 1 becomes the identity when raised to the $m$th power.
     \end{itemize}
   }
 \end{proof}
