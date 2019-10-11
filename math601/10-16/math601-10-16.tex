@@ -153,6 +153,40 @@
   Thus the combinations of the above are exactly all the distinct classes of abelian groups with 27783 elements, so there are exactly $3 \times 5 = 15$ classes.
 \end{proof}
 
+\section{The Quadratic Equation}
+
+\begin{exer}{(Problem 23)}
+  Show that if $x^2 - 2y^2 = n$, $n \ne 0$ has one solution, then it has infinitely many.
+  If $n$ is prime in $\mathbb{Z}$, describe all the solutions.
+\end{exer}
+
+\begin{proof}
+  Let $n \in \mathbb{Z}$ be given.
+  Suppose $x^2 - 2y^2 = n$ for some $x, y \in \mathbb{Z}$.
+  For each $k \in \mathbb{N}$, pick $a_k, b_k \in \mathbb{Z}$ such that $a_k + b_k\sqrt{2} = u_0^{2k}$ where $u_0 = 1 + \sqrt{2}$.
+  We showed that $u_0^{2k}$ is a unit element for each $k \in \mathbb{N}$.
+  Since $(a_k + b_k\sqrt{2})(a_k - b_k\sqrt{2}) = N(a_k + b_k\sqrt{2}) = N(u_0)^{2k} = 1$ by Problem 2 and 3.
+  Moreover, $u_0^k \ne u_0^{k'}$ whenever $k \ne k'$ since $u_0 \ne 0$ and $\abs{u_0} \ne 1$.
+
+  $n = x^2 - 2y^2 = (x + \sqrt{2}y)(x - \sqrt{2}y)$.
+  Then $(x + \sqrt{2}y)(a_k - b_k\sqrt{2}) = (a_kx - 2b_ky) + (b_kx - a_ky)\sqrt{2}$, and $(x - \sqrt{2}y)(a_k + b_k\sqrt{2}) = (a_kx - 2b_ky) - (b_kx - a_ky)\sqrt{2}$.
+  \begin{align*}
+    (a_kx - 2b_ky)^2 - 2(xb_k - a_ky)^2
+      &= N((a_kx - 2b_ky) + (xb_k - a_ky)\sqrt{2}) \\
+      &= N(x + \sqrt{2}y)N(a_k - b_k\sqrt{2}) \\
+      &= N(x + \sqrt{2}y)(a_k - b_k\sqrt{2})\gamma(a_k + b_k\sqrt{2}) \\
+      &= N(x + \sqrt{2}y)(a_k + b_k\sqrt{2})\gamma(a_k - b_k\sqrt{2}) \\
+      &= N(x + \sqrt{2}y)N(a_k + b_k\sqrt{2}) \\
+      &= N(x + \sqrt{2}y) \cdot 1 \\
+      &= N(x + \sqrt{2}y) \\
+      &= x^2 - 2y^2 = n.
+  \end{align*}
+
+  \todo[inline,caption={}]{
+    Prime?
+  }
+\end{proof}
+
 \section{Jordan Canonical Form}
 
 Let $k$ be a field, $V$ a finite dimensional $k$-vector space, and $T \in \End_k(V)$ a linear transformation.
