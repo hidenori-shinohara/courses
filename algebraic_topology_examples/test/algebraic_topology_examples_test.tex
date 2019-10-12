@@ -1,0 +1,132 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ord}{ord}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Algebraic Topology Examples 1}
+\author{Hidenori Shinohara}
+\maketitle
+
+\section{Covering spaces}
+
+\begin{exmps}
+  $S^1$ can be seen as a 2-sheeted covering space of $S^1$.
+  \begin{itemize}
+    \item
+      Define a 2-sheeted covering map $p: S^1 \rightarrow S^1$.
+    \item
+      Let $X = S^1, \tilde{X} = S^1$.
+      Compute $\pi_1(X)$ and $\pi_1(\tilde{X})$.
+    \item
+      Compute the deck transformation group of $\tilde{X}$.
+    \item
+      Is $\tilde{X}$ normal?
+    \item
+      Is $\tilde{X}$ abelian?
+    \item
+      Confirm that the groups calculated above are indeed correct by using Proposition 1.39(b). 
+    \item
+      Is there a group $G$ such that $p$ can be expressed as $S^1 \mapsto S^1 / G$?
+      Is the action properly discontinuous?
+  \end{itemize}
+\end{exmps}
+
+\begin{exmps}
+  Given a covering map $p: (\tilde{X}, \tilde{x_0}) \rightarrow (X, x_0)$ with $\tilde{X}$ path connected, any deck transformation $\tau$ is uniquely determined by $\tau(\tilde{x_0})$.
+  (This is from 10/2)
+
+  Check that this is indeed true by looking at the universal covering of $S^1 \vee S^1$.
+
+  Find $(X, x_0), (\tilde{X}, \tilde{x_0})$ such that
+  \begin{itemize}
+    \item
+      $\tilde{X}$ is a covering space of $X$.
+    \item
+      $\tilde{X}$ is not path connected.
+    \item
+      A deck transformation $\tau$ cannot be uniquely determined by $\tau(\tilde{x_0})$.
+  \end{itemize}
+\end{exmps}
+
+
+\begin{exmps}
+  Consider the following covering spaces:
+  
+  \begin{itemize}
+    \item
+      $p: S^1 \vee S^1 \vee S^1 \vee S^1 \vee S^1 \rightarrow S^1 \vee S^1$.
+    \item
+      $p: S^1 \vee S^1 \vee S^1 \vee S^1 \rightarrow S^1 \vee S^1$.
+    \item
+      $p: S^1 \vee S^1 \vee S^1 \rightarrow S^1 \vee S^1$.
+    \item
+      $p: S^1 \vee S^1 \rightarrow S^1 \vee S^1$.
+  \end{itemize}
+
+  For each of the above,
+
+  \begin{itemize}
+    \item
+      Determine if it is normal by using the definition, and come up with a proof by picture.
+    \item
+      Calculate the deck transformation group.
+    \item
+      Calculate $H = p_*(\pi_1(\tilde{X})) \subset \pi_1(X)$.
+      Is there any connection between the deck transformation group and $H$?
+    \item
+      Apply Proposition 1.39(a) to confirm that we get the same answer.
+  \end{itemize}
+\end{exmps}
+
+\end{document}
