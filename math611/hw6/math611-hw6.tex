@@ -61,9 +61,55 @@
 \end{exer}
 
 \begin{proof}
+  Let $p: X \rightarrow Y, q: Y \rightarrow Z$ be given such that $q$ and $q \circ p$ are both covering maps.
+  Let $y_0 \in Y$ be given.
+  It suffices to show that there exists a neighborhood of $y_0$ that is evenly covered by $p$.
+  (Hatcher does not require a covering map be surjective.)
+
+  Let $z_0 = q(y_0)$.
+  Let $U_{z_0}$ be a locally path-connected neighborhood of $z_0$ contained in the intersection of the following two neighborhoods:
+  \begin{itemize}
+    \item
+      A neighborhood of $z_0$ that is evenly covered by $q$.
+    \item
+      A neighborhood of $z_0$ that is evenly covered by $q \circ p$.
+  \end{itemize}
+
+  Those two neighborhoods of $z_0$ must exist because $q$ and $q \circ p$ are covering maps.
+  Since $Z$ is locally path-connected, any neighborhood of $z_0$ contains a path-connected neighborhood of $z_0$.
+  Therefore, such $U_{z_0}$ must exist.
+  Moreover, any neighborhood contained in an evenly covered neighborhood is evenly covered.
+  Therefore, $U_{z_0}$ is a path-connected neighborhood of $z_0$ that is evenly covered by both $q$ and $q \circ p$.
+
+  Since $U_{z_0}$ is evenly covered by $q$ and $q \circ p$,
+  \begin{itemize}
+    \item
+      Let $\coprod_{\alpha} U_{x_{\alpha}} = (q \circ p)^{-1}(U_{z_0})$ where $q \circ p$ maps each $U_{x_{\alpha}}$ into $U_{z_0}$ homeomorphically.
+    \item
+      Let $\coprod_{\beta} U_{y_{\beta}} = q^{-1}(U_{z_0})$ where $q$ maps each $U_{y_{\beta}}$ into $U_{z_0}$ homeomorphically.
+  \end{itemize}
+
   \todo[inline]{
-    Solve this!
+    Draw a figure.
   }
+
+  Since $z_0 = q(y_0)$ and $q$ is an covering map, there exists $U_{y_{\beta}}$ such that $y_0 \in U_{y_{\beta}}$.
+  For simplicity, we will call it $U_{y_0}$.
+  In other words, $U_{y_0}$ is a neighborhood of $y_0$ such that $q$ is a homeomorphism between $U_{y_0}$ and $U_{z_0}$.
+
+  We claim that $U_{y_0}$ is a neighborhood of $y_0$ that is evenly covered by $p$ by showing that there exists a subset $I$ of the index set such that $p^{-1}(U_{y_0}) = \coprod_{\alpha \in I} U_{x_{\alpha}}$.
+
+  \todo[inline]{
+    Show this!
+  }
+
+  \todo[inline]{
+    Show that $p$ is a homeomorphism between $U_{x_{\alpha}}$ and $U_{y_0}$.
+    Let $\alpha \in I$.
+    Then $U_{x_{\alpha}} \subset p^{-1}(U_{y_0})$.
+    Then $p(U_{x_{\alpha}}) \subset U_{y_0}$.
+  }
+
 \end{proof}
 
 \begin{exer}{(Problem 18)}
