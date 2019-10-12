@@ -119,7 +119,33 @@
 \end{exer}
 
 \begin{proof}
-$ $
+  We will consider the commutator subgroup $H = [\pi_1(X, x_0), \pi_1(X, x_0)] = \{ [a, b] \mid a, b \in \pi_1(X, x_0) \}$ of $\pi_1(X, x_0)$.
+  Since $H$ is a subgroup of $\pi_1(X, x_0)$ and $X$ is path-connected, locally path connected, and semilocally simply connected, there exists a path-connected covering space $p: (\tilde{X}, \tilde{x_0}) \rightarrow (X, x_0)$ such that $p_*(\pi_1(\tilde{X}, \tilde{x_0})) = H$ by Theorem 1.38.
+
+  By Proposition 1.39(b), $G(\tilde{X})$ is isomorphic to the quotient $N(H) / H$.
+  \begin{itemize}
+    \item
+      Since $H$ is the commutator subgroup, $H$ is a normal subgroup of $\pi_1(X, x_0)$.
+      Thus $N(H) = \pi_1(X, x_0)$.
+      Moreover, Proposition 1.39(a) asserts that $\tilde{X}$ is normal because $H = p_*(\pi_1(\tilde{X}, \tilde{x_0}))$ is normal.
+    \item
+      Since $H$ is the commutator subgroup of $\pi_1(X, x_0) = N(H)$, $N(H) / H$ is abelian.
+  \end{itemize}
+  Therefore, $\tilde{X}$ is an abelian covering space of $X$.
+
+  \todo[inline]{
+    \begin{itemize}
+      \item
+        Show that $\tilde{X}$ is the `universal' abelian covering space.
+      \item
+        Show uniqueness.
+    \end{itemize}
+  }
+
+
+  
+
+
 \begin{itemize}
   \item
     What is the hypothesis?
