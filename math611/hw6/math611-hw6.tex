@@ -99,17 +99,50 @@
 
   We claim that $U_{y_0}$ is a neighborhood of $y_0$ that is evenly covered by $p$ by showing that there exists a subset $I$ of the index set such that $p^{-1}(U_{y_0}) = \coprod_{\alpha \in I} U_{x_{\alpha}}$.
 
-  \todo[inline]{
-    Show this!
-  }
 
-  \todo[inline]{
-    Show that $p$ is a homeomorphism between $U_{x_{\alpha}}$ and $U_{y_0}$.
-    Let $\alpha \in I$.
-    Then $U_{x_{\alpha}} \subset p^{-1}(U_{y_0})$.
-    Then $p(U_{x_{\alpha}}) \subset U_{y_0}$.
-  }
+  We claim that for all $\alpha$, $U_{x_{\alpha}} \subset p^{-1}(U_{y_0})$ or $U_{x_{\alpha}} \cap p^{-1}(U_{y_0}) = \emptyset$.
+  Let $\alpha$ be given.
+  Suppose $U_{x_{\alpha}} \cap p^{-1}(U_{y_0}) \ne \emptyset$.
+  Let $x \in U_{x_{\alpha}} \cap p^{-1}(U_{y_0})$.
+  Let $x' \in U_{x_{\alpha}}$.
+  We will show that $x' \in p^{-1}(U_{y_0})$.
 
+  Since $U_{z_0}$ is path connected and $U_{x_{\alpha}}$ is homeomorphic to $U_{z_0}$, $U_{x_{\alpha}}$ is path connected.
+  Let $\gamma$ be a path from $x$ to $x'$.
+  In other words, $\gamma(0) = x$ and $\gamma(1) = x'$.
+  Then $q \circ p \circ \gamma$ is a path in $U_{z_0}$.
+  Let $z = (q \circ p \circ \gamma)(0), z' = (q \circ p \circ \gamma)(1)$.
+  Then $q \circ p \circ \gamma$ is a path from $z$ to $z'$ in $U_{z_0}$.
+  Since $U_{z_0}$ and $U_{y_0}$ are homeomorphic by $q$, there exists a unique point $y \in U_{y_0}$ such that $q(y) = z$.
+  Since $q$ is a covering map, there exists a unique lift $\widetilde{q \circ p \circ \gamma}$ based at $y$.
+  Let $y' = \widetilde{q \circ p \circ \gamma}(1)$.
+  Then $y' \in U_{y_0}$ because the lift must entirely lie in $U_{y_0}$ because $q$ is a homeomorphism between $U_{y_0}$ and $U_{z_0}$.
+
+  Consider the path $p \circ \gamma$ in $Y$.
+  Since $(p \circ \gamma)(0) = p(x)$ and $x \in p^{-1}(U_{y_0})$, the initial point of $p \circ \gamma$ is in $U_{y_0}$.
+  Moreover, $q(p(x)) = z$ and $y$ is the unique point in $U_{y_0}$ such that $q(y) = z$, $y = p(x)$.
+  Since $q \circ (p \circ \gamma) = (q \circ p) \circ \gamma$, $p \circ \gamma$ is also a lift of $q \circ p \circ \gamma$ based at $y$.
+  By the uniqueness of a lift, $\widetilde{q \circ p \circ \gamma} = p \circ \gamma$.
+  Specifically, this implies that $p(x') = (p \circ \gamma)(1) = \widetilde{q \circ p \circ \gamma}(1) = y' \in U_{y_0}$.
+  Since $p(x') \in U_{y_0}$, $x' \in p^{-1}(U_{y_0})$.
+
+  Let $I = \{ \alpha \mid U_{x_{\alpha}} \subset p^{-1}(U_{y_0}) \}$.
+  Then we have $\coprod_{\alpha \in I} U_{x_{\alpha}} \subset p^{-1}(U_{y_0})$.
+
+  Since $p^{-1}(U_{y_0}) \subset p^{-1}(q^{-1}(U_{z_0})) = \coprod_{\alpha} U_{x_{\alpha}}$, every point in $p^{-1}(U_{y_0})$ is in $U_{x_{\alpha}}$ for some $\alpha$.
+  $I$ includes all $\alpha$ such that $U_{x_{\alpha}}$ intersects with $p^{-1}(U_{y_0})$.
+  Thus $p^{-1}(U_{y_0}) \subset \coprod_{\alpha \in I} U_{x_{\alpha}}$.
+
+  Therefore, $\coprod_{\alpha \in I} U_{x_{\alpha}} = p^{-1}(U_{y_0})$.
+
+
+  Finally, we will show that $p$ is a homeomorphism between $U_{x_{\alpha}}$ and $U_{y_0}$.
+  Let $\alpha \in I$.
+  $q \circ p$ maps $U_{x_{\alpha}}$ to $U_{z_0}$ homeomorphically, and $q$ maps $U_{y_0}$ to $U_{z_0}$ homeomorphically.
+  In other words, $(q \circ p) \mid_{U_{x_{\alpha}}}$ and $q \mid_{U_{y_0}}$ are both homeomorphisms.
+  \todo[inline,caption={}]{
+    Finish this!
+  }
 \end{proof}
 
 \begin{exer}{(Problem 18)}
