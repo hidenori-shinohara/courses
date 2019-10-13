@@ -200,16 +200,21 @@
   Since $\pi_1(X) / H'$ is abelian, $H'$ must contain commutators $[a, b]$ for all $a, b \in \pi_1(X)$.
   Thus $p_*(\pi_1(\tilde{X})) = [\pi_1(X), \pi_1(X)] \subset H' = p_*'(\pi_1(\tilde{X}'))$.
   By Proposition 1.33, there exists a lift $\tilde{p}$ such that $p = p' \circ \tilde{p}$.
-
   By Problem 16 from above, $p': \tilde{X} \rightarrow \tilde{X}'$ is a covering.
-
   Therefore, $\tilde{X}$ is a universal abelian covering.
 
+  Let $q: Y \rightarrow Y$ be a universal abelian covering space of $X$.
+  Using the same arguments as the previous paragraph, $q_*(\pi_1(Y))$ must contain all commutators.
+  Since $q$ is a universal abelian covering space of $X$, there exists a covering map $q': Y \rightarrow \tilde{X}$ such that $p \circ q' = q$.
+  Then $q'$ is a lift of $q$ with respect to $p$.
+  By Proposition 1.33, this implies that $q_*(\pi_1(Y)) \subset p_*(\pi_1(\tilde{X})) = [\pi_1(X), \pi_1(X)]$.
+  Thus $q_*(\pi_1(Y))$ is exactly the commutator subgroup.
+  $p_*(\pi_1(\tilde{X})) = q_*(\pi_1(Y))$, so $\tilde{X}$ and $Y$ are isomorphic by Theorem 1.38.
+
+  Therefore, $\tilde{X}$ is the `universal' abelian covering space that is unique up to isomorphism.
+
   \todo[inline,caption={}]{
-    \begin{itemize}
-      \item
-        Show uniqueness.
-    \end{itemize}
+    $S^1 \vee S^1$ and $S^1 \vee S^1 \vee S^1$.
   }
 \end{proof}
 
