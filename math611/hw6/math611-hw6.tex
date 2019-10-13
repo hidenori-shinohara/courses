@@ -162,6 +162,14 @@
 
   In conclusion, $U_{y_0}$ is a neighborhood of $y_0$ such that $p^{-1}(U_{y_0})$ is the disjoint union $\coprod_{\alpha \in I} U_{x_{\alpha}}$ such that $p$ is a homeomorphism between each $U_{x_{\alpha}}$ and $U_{y_0}$.
   Therefore, $p$ is a covering map.
+
+  Suppose that $q \circ p$ is normal.
+  By Proposition 1.39(a), it suffices to show that $p_*\pi_1(X)$ is a normal subgroup of $\pi_1(Y)$.
+  Let $p_*([h]) \in \pi_1(X)$ and $[g] \in \pi_1(Y)$.
+  By Proposition 1.39(a), $(q \circ p)_*(\pi_1(X)) = q_*(p_*(\pi_1(X)))$ is a normal subgroup of $\pi_1(Z)$.
+  Therefore, $q_*([g] p_*([h]) [g]^{-1}) = q_*([g])q_*(p_*([h]))q_*([g])^{-1} = q_*(p_*([h']))$ for some $[h'] \in \pi_1(X)$.
+  Since $q_*$ is injective by Proposition 1.31, $[g]p_*([h])[g]^{-1} = p_*([h]') \in p_*(\pi_1(X))$.
+  Thus $p_*(\pi_1(X))$ is a normal subgroup of $\pi_1(Y)$.
 \end{proof}
 
 \begin{exer}{(Problem 18)}
