@@ -89,10 +89,6 @@
       Let $\coprod_{\beta} U_{y_{\beta}} = q^{-1}(U_{z_0})$ where $q$ maps each $U_{y_{\beta}}$ into $U_{z_0}$ homeomorphically.
   \end{itemize}
 
-  \todo[inline]{
-    Draw a figure.
-  }
-
   Since $z_0 = q(y_0)$ and $q$ is an covering map, there exists $U_{y_{\beta}}$ such that $y_0 \in U_{y_{\beta}}$.
   For simplicity, we will call it $U_{y_0}$.
   In other words, $U_{y_0}$ is a neighborhood of $y_0$ such that $q$ is a homeomorphism between $U_{y_0}$ and $U_{z_0}$.
@@ -135,14 +131,37 @@
 
   Therefore, $\coprod_{\alpha \in I} U_{x_{\alpha}} = p^{-1}(U_{y_0})$.
 
-
   Finally, we will show that $p$ is a homeomorphism between $U_{x_{\alpha}}$ and $U_{y_0}$.
   Let $\alpha \in I$.
-  $q \circ p$ maps $U_{x_{\alpha}}$ to $U_{z_0}$ homeomorphically, and $q$ maps $U_{y_0}$ to $U_{z_0}$ homeomorphically.
-  In other words, $(q \circ p) \mid_{U_{x_{\alpha}}}$ and $q \mid_{U_{y_0}}$ are both homeomorphisms.
-  \todo[inline,caption={}]{
-    Finish this!
-  }
+  We claim that $p(U_{x_{\alpha}}) = U_{y_0}$.
+  \begin{itemize}
+    \item
+      $p(U_{x_{\alpha}}) \subset U_{y_0}$ because of how we defined $I$.
+    \item
+      Let $y \in U_{y_0}$.
+      Since $U_{y_0}$ is path connected, there exists a path $\gamma$ from $y_0$ to $y$ in $U_{y_0}$.
+      Then $q \circ \gamma$ is a path in $U_{z_0}$.
+      Since $q \circ p$ maps $U_{x_{\alpha}}$ into $U_{z_0}$ homeomorphically, there exists a unique $x_0 \in U_{x_{\alpha}}$ such that $(q \circ p)(x_0) = z_0$.
+      By the unique lifting property, there exists a unique lift $\widetilde{q \circ \gamma}$ of $q \circ \gamma$ based at $x_0$.
+      Again, since $q \circ p$ maps $U_{x_{\alpha}}$ into $U_{z_0}$ homeomorphically, $\widetilde{q \circ \gamma}$ is in $U_{x_{\alpha}}$.
+
+      Then $p \circ (\widetilde{q \circ \gamma})$ is a path in $U_{y_0}$.
+      Since $q \circ (p \circ (\widetilde{q \circ \gamma})) = (q \circ p) \circ (\widetilde{q \circ \gamma}) = q \circ \gamma$ and $q$ is a homeomorphism between $U_{y_0}$ and $U_{z_0}$, $\gamma = p \circ (\widetilde{q \circ \gamma})$.
+      Then $p(\widetilde{q \circ \gamma}(1)) = (p \circ (\widetilde{q \circ \gamma}))(1) = \gamma(1) = y$.
+      Thus $y \in p(U_{x_{\alpha}})$.
+  \end{itemize}
+
+  We know that $(q \circ p) \mid_{U_{x_{\alpha}}}$ and $q \mid_{U_{y_0}}$ are homeomorphisms.
+  \begin{align*}
+    (q \mid_{U_{y_0}})^{-1} \circ (q \circ p) \mid_{U_{x_{\alpha}}}
+      &= (q \mid_{U_{y_0}})^{-1} \circ q \mid_{p(U_{x_{\alpha}})} \circ p \mid_{U_{x_{\alpha}}} \\
+      &= (q \mid_{U_{y_0}})^{-1} \circ q \mid_{U_{y_0}} \circ p \mid_{U_{x_{\alpha}}} \\
+      &= p \mid_{U_{x_{\alpha}}}
+  \end{align*}
+  Thus $p \mid_{U_{x_{\alpha}}}$ is a homeomorphism between $U_{x_{\alpha}}$ and $U_{y_0}$.
+
+  In conclusion, $U_{y_0}$ is a neighborhood of $y_0$ such that $p^{-1}(U_{y_0})$ is the disjoint union $\coprod_{\alpha \in I} U_{x_{\alpha}}$ such that $p$ is a homeomorphism between each $U_{x_{\alpha}}$ and $U_{y_0}$.
+  Therefore, $p$ is a covering map.
 \end{proof}
 
 \begin{exer}{(Problem 18)}
