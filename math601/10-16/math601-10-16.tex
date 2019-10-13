@@ -190,7 +190,7 @@
   Let $n \in \mathbb{Z}$ be given.
   Suppose $x^2 - 2y^2 = n$ for some $x, y \in \mathbb{Z}$.
   For each $k \in \mathbb{N}$, pick $a_k, b_k \in \mathbb{Z}$ such that $a_k + b_k\sqrt{2} = u_0^{2k}$ where $u_0 = 1 + \sqrt{2}$.
-  We showed that $u_0^{2k}$ is a unit element for each $k \in \mathbb{N}$.
+  We showed that $u_0^{2k}$ is a unit element for each $k \in \mathbb{Z}$.
   Since $(a_k + b_k\sqrt{2})(a_k - b_k\sqrt{2}) = N(a_k + b_k\sqrt{2}) = N(u_0)^{2k} = 1$ by Problem 2 and 3.
   Moreover, $u_0^k \ne u_0^{k'}$ whenever $k \ne k'$ since $u_0 \ne 0$ and $\abs{u_0} \ne 1$.
 
@@ -276,16 +276,16 @@
 
 
 \begin{proof}
-  \todo[inline,caption={}]{
-    By Problem 19, $x^2 - 2y^2 = p$ has a solution if and only if $p$ is not irreducible in $\mathbb{Z}[\sqrt{2}]$.
+  We are given that that $p \equiv \pm 1 \pmod 8$ if and only if 2 is a square mod $p$.
+  By Problem 21, 2 is a square in $\mathbb{Z}/(p)$ if and only if $\mathbb{Z}[\sqrt{2}]/(p)$ is not an integral domain.
+  $\mathbb{Z}[\sqrt{2}]/(p)$ is not an integral domain if and only if $(p)$ is not a prime ideal.
+  (Proposition 13, P.255)
 
-    By Problem 21, 2 is not a square in $\mathbb{Z}/(p)$ if and only if $\mathbb{Z}[\sqrt{2}]/(p)$ is an integral domain.
+  By Problem 14, $\mathbb{Z}[\sqrt{2}]$ is a principal ideal domain.
+  By Proposition 11 on P.284, $(p)$ is not a prime ideal if and only if $p$ is not irreducible.
+  By Problem 19, $p$ is not irreducible in $\mathbb{Z}[\sqrt{2}]$ if and only if $x^2 - 2y^2 = p$ has a solution.
 
-    Therefore, $x^2 - 2y^2 = p$ has a solution if and only if 2 is a square in $\mathbb{Z}/(p)$.
-    By Quadratic reciprocity, 2 is a square in $\mathbb{Z}/(p)$ if and only if $p \equiv \pm 1 \pmod 8$.
-
-    Thus $x^2 - 2y^2 = p$ has a solution if and only if $p \equiv \pm 1 \pmod 8$.
-  }
+  Thus $x^2 - 2y^2 = p$ has a solution if and only if $p \equiv \pm 1 \pmod 8$.
 \end{proof}
 
 \section{Jordan Canonical Form}
