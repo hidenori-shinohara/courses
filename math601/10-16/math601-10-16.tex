@@ -112,6 +112,27 @@
       \end{align*}
       Thus $H$ represents $\mathbb{Z}/\mathbb{Z} \cong 0$.
     \item
+      This $H$ generates the exact sequence
+
+      \begin{center}
+        \begin{tikzcd} \mathbb{Z}^2 \arrow[r, "H"] &\mathbb{Z}^2 \arrow[r, "p"] & \mathbb{Z}^1/\Im(H) \arrow[r, "0"] & 0 \end{tikzcd}
+      \end{center}
+
+      where $p$ is the map $k \mapsto k + \Im(H)$.
+      The Smith normal form of $H$ is $\begin{bmatrix} 1 & 0 \\ 0 & 2 \end{bmatrix}$ since
+      \begin{align*}
+        \begin{bmatrix} 2 & 3 \\ 4 & 5 \end{bmatrix}
+          &\sim \begin{bmatrix} 3 & 2 \\ 5 & 4 \end{bmatrix} \\
+          &\sim \begin{bmatrix} 1 & 2 \\ 1 & 4 \end{bmatrix} \\
+          &\sim \begin{bmatrix} 1 & 2 \\ 0 & 2 \end{bmatrix} \\
+          &\sim \begin{bmatrix} 1 & 0 \\ 0 & 2 \end{bmatrix}.
+      \end{align*}
+      Consider the basis $\{ (1, 0), (0, 1) \}$.
+      Then for any $k$, $k(1, 0) = 0$ in $\Coker{H}$ and $k(0, 1) = 0$ in $\Coker{H}$ if and only if $k \equiv 0 \pmod 2$.
+
+      Thus $H$ represents $\mathbb{Z}^2/\ev{(1, 0), (0, 2)} \cong \mathbb{Z}/\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z} \cong \mathbb{Z}/2\mathbb{Z}$.
+
+    \item
       \todo[inline,caption={}]{
       }
   \end{itemize}
