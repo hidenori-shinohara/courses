@@ -338,65 +338,6 @@ Let $k$ be a field, $V$ a finite dimensional $k$-vector space, and $T \in \End_k
   By Claim 1, $I \ne 0$.
 \end{proof}
 
-\begin{exer}{(Problem 2)}
-  Let $p(x) \in k[x]$ be a nonzero polynomial such that $p(T) = 0 \in \End_k(V)$.
-  Show that if $p(x) \in k[x]$ is a product of linear polynomials, then there is a $k$-basis for $V$ with respect to which the matrix for $T$ is in Jordan normal form.
-\end{exer}
-
-\begin{proof}
-  \todo[inline,caption={}]{
-    Since $k$ is just a field, I can't assume that $k$ is algebraically closed.
-    \begin{itemize}
-      \item
-        $p(x) = (x - a_1)^{m_1} \cdots (x - a_n)^{m_n}$.
-      \item
-        Let $N = \dim(V)$.
-      \item
-        Let $q(\lambda) = \det(T - \lambda \Id)$ be the characteristic polynomial of $T$.
-      \item
-        Let $v_1, \cdots, v_N$ be a basis of $V$.
-    \end{itemize}
-    For each $i$, $(p(T))(v_i) = 0$.
-    In other words, there exists a $j$ such that $(T - a_j\Id)(v) = 0$ for some nonzero $v$.
-    This can be found by applying each linear factor to $v_i$ and figure out the point where it turns into 0.
-    In other words, $\det(T - a_j\Id) = 0$.
-    This implies that $a_j$ is a root of the characteristic polynomial $q(\lambda)$ of $T$.
-    Thus $\lambda - a_j$ divides $q(\lambda)$.
-
-    But I'm not sure what to do next.
-    We want to find the largest number $r_j$ such that $(\lambda - a_j)^{r_j}$ divides $q(\lambda)$.
-    What happens next?
-  }
-\end{proof}
-
-\begin{exer}{(Problem 3)}
-  Suppose that the field $k$ contains $m$ distinct $m$-th roots of 1.
-  Suppose that $T^m = \Id_V \in \End_k(V)$.
-  Show that there is a basis of $V$ with respect to which, the matrix for $T$ is diagonal.
-  What can you say about the diagonal entries?
-\end{exer}
-
-\begin{proof}
-  $ $
-  \todo[inline,caption={}]{
-    \begin{itemize}
-      \item
-        Let $r_i, \cdots, r_m$ denote the $m$ distinct $m$th roots of 1.
-      \item
-        Then each $x - r_i$ divides $x^m - 1$.
-        Thus $x^m - 1 = (x - r_1) \cdots (x - r_m)$.
-        This means that $p(x) = x^m - 1$ is a polynomial such that $p(T) = 0$ and it is a product of linear polynomials.
-        Then I think that we can use an approach similar to the previous problem.
-      \item
-        Let $M$ denote the diagonal matrix for $T$.
-        Then $M^m$ must be the identity matrix.
-        Moreover, the $i$th diagonal entry of $M^m$ is simply the $m$-th power of the $i$th diagonal entry of $M$.
-        Thus each of the diagonal entries in $M$ must be an $m$-th root of 1.
-        On the other hand, any diagonal matrix where each entry is an $m$-th root of 1 becomes the identity when raised to the $m$th power.
-    \end{itemize}
-  }
-\end{proof}
-
 \begin{exer}{(Problem 4)}
   Let $V$ be a 9 dimensional $k$-vector space.
   Let $T \in \End_k(V)$ have minimal polynomial, $x^2(x - 1)^3$.
