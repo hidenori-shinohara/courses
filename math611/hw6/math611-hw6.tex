@@ -213,9 +213,34 @@
 
   Therefore, $\tilde{X}$ is the `universal' abelian covering space that is unique up to isomorphism.
 
-  \todo[inline,caption={}]{
-    $S^1 \vee S^1$ and $S^1 \vee S^1 \vee S^1$.
-  }
+  Figure \ref{fig:problem18_s1_s1} shows the universal abelian covering spaces of $S^1 \vee S^1$ and $S^1 \vee S^1 \vee S61$.
+  \begin{itemize}
+    \item
+      As shown in Figure \ref{fig:problem18_s1_s1}, we claim that the universal abelian covering space $\tilde{X}$ of $S^1 \vee S^1$ is $\{ (x, y) \in \mathbb{R}^2 \mid \{ x, y \} \cap \mathbb{Z} \ne \emptyset \}$.
+      Each segment of length 1 between grid points corresponds to one of the circles as described in Figure \ref{fig:problem18_s1_s1}.
+      $\tilde{X}$ is a normal covering because, for any grid point $(m, n)$, shifting $\tilde{X}$ by $m$ in the $x$ direction and $y$ in the $y$ direction gives a deck transformation mapping $(0, 0)$ to $(m, n)$.
+      Since this is a bijective correspondence between translations of the space and deck transformations, $G(\tilde{X}) = \mathbb{Z}^2$.
+      Since $\tilde{X}$ is normal, $G(\tilde{X}) = \pi_1(S^1 \vee S^1) / H$ where $H = p_*(\pi_1(\tilde{X}))$.
+      Then $\ev{a, b} / H \cong \mathbb{Z}^2$, so $H$ must be the commutator subgroup of $\ev{a, b} = \pi_1(X)$.
+
+      On the other hand, from the argument above, for a universal abelian covering space $q: Y \rightarrow S^1 \vee S^1$, $q_*(\pi_1(Y))$ is the commutator subgroup of $\pi_1(X)$.
+      Thus $H = q_*(\pi_1(Y))$, so $\tilde{X}$ and $Y$ are isomorphism by Theorem 1.38.
+    \item
+       As shown in Figure \ref{fig:problem18_s1_s1}, we claim that the universal abelian covering space of $S^1 \vee S^1 \vee S^1$ is $\{ (x, y, z) \in \mathbb{R}^3 \mid \{ x, y, z \} \cap \mathbb{Z} \ne \emptyset \}$.
+      Each segment of length 1 between grid points corresponds to one of the circles as described in Figure \ref{fig:problem18_s1_s1}.
+      (In order to avoid drawing too many lines, I did not write the $xy$ plane for $z = -1, -2, \cdots$ in Figure \ref{fig:problem18_s1_s1}.)
+
+      Using the exact same argument as above, we conclude that this is the universal abelian cover of $S^1 \vee S^1 \vee S^1$.
+      (The deck transformation group is $\mathbb{Z}^3$.
+      Since $\pi_1(S^1 \vee S^1 \vee S^1) = \ev{a, b, c}$, $p_*(\pi_1(\tilde{X}))$ is the commutator subgroup of $\ev{a, b, c}$.
+      Thus $\tilde{X}$ is the universal abelian cover.)
+  \end{itemize}
+
+  \begin{figure}
+    \includegraphics[width=.5\linewidth]{problem18_s1_s1.jpeg}
+    \caption{Universal abelian coverings of $S^1 \vee S^1$ and $S^1 \vee S^1 \vee S^1$}
+    \label{fig:problem18_s1_s1}
+  \end{figure}
 \end{proof}
 
 \begin{lem}
