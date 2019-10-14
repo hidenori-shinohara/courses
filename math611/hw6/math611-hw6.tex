@@ -317,20 +317,26 @@
 \end{exer}
 
 \begin{proof}
-  Figure \ref{fig:non_normal_covering_klein} is the idea that I have for the first part.
-  But I don't know how to show that there exists no deck transformation with that permutation.
-  \begin{figure}
-    \includegraphics[width=.5\linewidth]{non_normal_covering_klein.jpeg}
-    \caption{Problem 20 (Klein)}
-    \label{fig:non_normal_covering_klein}
-  \end{figure}
+  Let $p(x, y) = (3x - \lfloor 3x \rfloor, y)$ be a covering map from a Klein bottle to a Klein bottle as in Figure \ref{fig:problem20_klein_by_klein}.
 
   \begin{figure}
-    \includegraphics[width=.5\linewidth]{non_normal_covering_torus.jpeg}
-    \caption{Problem 20 (Torus)}
-    \label{fig:non_normal_covering_torus}
+    \includegraphics[width=.5\linewidth]{problem20_klein_by_klein.jpeg}
+    \caption{Klein bottle covered by a Klein bottle}
+    \label{fig:problem20_klein_by_klein}
   \end{figure}
-  
+
+  Let $H = p_*(\pi_1(\tilde{X}))$.
+  Then $H = \ev{a^3, b} \leq \pi_1(X) = \ev{ a, b \mid abab^{-1} }$.
+  $aHa^{-1} = \ev{a^3, aba^{-1}}$.
+  Since $aba = b^{-1}$, $\ev{a^3, aba^{-1}} = \ev{a^3, a^2b}$.
+
+  If $H \trianglelefteq \pi_1(X)$, then $H = aHa^{-1}$.
+  Thus $a^2b \in H$.
+  Since $H$ contains $a^3$ and $b$, $(a^3)^{-1}(a^2b)b^{-1} = a^{-1} \in H$.
+  In other words, $a, b \in H$, so $H = \pi_1(X)$.
+  This implies that $[\pi_1(X):H] = 1$, but this is a contradiction because the number of sheets is 3.
+  Therefore, $H$ is not a normal subgroup of $\pi_1(X)$.
+  By Proposition 1.39(a), $\tilde{X}$ is not normal.
 \end{proof}
 
 \end{document}
