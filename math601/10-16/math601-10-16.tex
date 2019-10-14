@@ -235,7 +235,37 @@
   Thus we get different solutions for different values of $k$.
 
   \todo[inline,caption={}]{
-    Prime?
+    Sketch:
+    (Prove each step!)
+    \begin{itemize}
+      \item
+        $N(u_0^k) = 1$ if and only if it is even.
+      \item
+        Let $x, y$ be a solution.
+      \item
+        Claim: $(x + \sqrt{2}y)u_0^{2k}$ for $k \in \mathbb{Z}$ are all the solutions.
+      \item
+        If there's a solution, there exists $\alpha$ such that $\alpha^2 \equiv 2 \pmod p$.
+      \item
+        Since $x^2 - 2y^2 = p$, $x \equiv \pm \alpha y$.
+      \item
+        Guess: If $(x, y)$ is a solution, then $(x + \sqrt{2}y)/(3 + \sqrt{2})$ gives another solution with the sign of $x$ flipped.
+      \item
+        Without loss of generality, $x \equiv \alpha y$.
+      \item
+        Let $(a, b)$ be another solution.
+        Assume $a = -\alpha b$.
+      \item
+        Then $N(x + \sqrt{2}y), N(a + b\sqrt{2}y)$ are $p$ or $-p$.
+      \item
+        Claim: $f = (x + \sqrt{2}y) / (a + \sqrt{2}b) \in \mathbb{Z}[\sqrt{2}]$.
+      \item
+        This is possible because $ax + 2by \equiv 0 \pmod p$.
+      \item
+        Since $N(x + \sqrt{2}y) = N(f)N(a + \sqrt{2}b)$, $N(f) = 1$.
+      \item
+        Thus $f = u_0^{2k}$ for some $k$.
+    \end{itemize}
   }
 \end{proof}
 
