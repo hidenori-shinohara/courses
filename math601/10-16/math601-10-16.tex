@@ -238,39 +238,45 @@
   Thus $(x + \sqrt{2}y)(a_k - b_k\sqrt{2}) \ne (x + \sqrt{2}y)(a_k - b_k\sqrt{2})$, so $(a_kx - 2b_ky, xb_k - a_ky) \ne (a_{k'}x - 2b_{k'}y, xb_{k'} - a_{k'}y)$.
   Thus we get different solutions for different values of $k$.
 
-  \todo[inline,caption={}]{
-    Sketch:
-    (Prove each step!)
-    \begin{itemize}
-      \item
-        $N(u_0^k) = 1$ if and only if it is even.
-      \item
-        Let $x, y$ be a solution.
-      \item
-        Claim: $(x + \sqrt{2}y)u_0^{2k}$ for $k \in \mathbb{Z}$ are all the solutions.
-      \item
-        If there's a solution, there exists $\alpha$ such that $\alpha^2 \equiv 2 \pmod p$.
-      \item
-        Since $x^2 - 2y^2 = p$, $x \equiv \pm \alpha y$.
-      \item
-        Guess: If $(x, y)$ is a solution, then $(x + \sqrt{2}y)/(3 + \sqrt{2})$ gives another solution with the sign of $x$ flipped.
-      \item
-        Without loss of generality, $x \equiv \alpha y$.
-      \item
-        Let $(a, b)$ be another solution.
-        Assume $a = -\alpha b$.
-      \item
-        Then $N(x + \sqrt{2}y), N(a + b\sqrt{2}y)$ are $p$ or $-p$.
-      \item
-        Claim: $f = (x + \sqrt{2}y) / (a + \sqrt{2}b) \in \mathbb{Z}[\sqrt{2}]$.
-      \item
-        This is possible because $ax + 2by \equiv 0 \pmod p$.
-      \item
-        Since $N(x + \sqrt{2}y) = N(f)N(a + \sqrt{2}b)$, $N(f) = 1$.
-      \item
-        Thus $f = u_0^{2k}$ for some $k$.
-    \end{itemize}
-  }
+  We will consider the case when $n = p$ where $p$ is a prime.
+  By Problem 26(also discussed in Problem 22), 2 is a square in $\mathbb{Z} / (p)$ if and only if $x^2 - 2y^2 = p$ has a solution.
+  Suppose that we have a solution $(x, y)$.
+  Then this implies the existence of $\alpha \in \mathbb{Z}$ such that $\alpha^2 \equiv 2 \pmod p$.
+
+  We claim that 
+
+  \begin{align*}
+    S = \{ (\pm a, \pm b) \mid (a, b) \in \mathbb{Z}^2, \exists k \in \mathbb{Z}, a + b\sqrt{2} = (\pm x \pm \sqrt{2}y)u_0^{2k} \}
+  \end{align*}
+
+  is the set of all solutions.
+  Since $(x, y)$ is a solution, $(\pm x, \pm y)$ are all solutions.
+  (In this solution, we consider all 4 possibilities $(x, y), (-x, y), (x, -y), (-x, -y)$ when we write $(\pm x, \pm y)$.)
+  By the argument from the first part of this solution, any $(a, b)$ must be a solution.
+  Thus any $(\pm a, \pm b)$ must be a solution.
+  Thus every pair in $S$ is indeed a solution.
+
+  Let $(a, b) \in \mathbb{Z}^2$ be given such that $a^2 - 2b^2 = p$.
+  We claim that $(a, b) \in S$.
+  Since $x^2 - 2y^2 = a^2 - 2b^2 = p$, $x \equiv \pm \alpha y \pmod p$ and $a \equiv \pm \alpha b \pmod p$.
+  Since we consider $(\pm x, \pm y)$ and $(\pm a, \pm b)$, we can assume an arbitrary sign for each of $x, y, a, b$.
+  In other words, we will assume that $x \equiv \alpha y \pmod p$ and $a \equiv \alpha b \pmod p$.
+  Let $f = (x + \sqrt{2}y) / (a + \sqrt{2}b)$.
+  \begin{align*}
+    f &= \frac{x + \sqrt{2}y}{a + \sqrt{2}b} \\
+      &= \frac{(xa - 2yb) + \sqrt{2}(ay - xb)}{a^2 - 2b^2} \\
+      &= \frac{xa - 2yb}{p} + \frac{ay - xb}{p}\sqrt{2}.
+  \end{align*}
+  \begin{itemize}
+    \item
+      $xa - 2yb \equiv (\alpha y)(\alpha b) - 2yb \equiv 0 \pmod p$.
+    \item
+      $ay - xb \equiv (\alpha b)y - (\alpha y)b \equiv 0 \pmod p$.
+  \end{itemize}
+  Therefore, $f \in \mathbb{Z}[\sqrt{2}]$.
+  Since $N(x + \sqrt{2}y) = N(a + \sqrt{2}b) = p$, $N(f) = 1$.
+  In problem 10, we proved that $N(f) = 1$ if and only if $f = u_0^{2k}$ for some integer $k \in \mathbb{Z}$.
+  Therefore, $(a, b) \in S$, so $S$ is indeed the set of all solutions to $x^2 - 2y^2 = p$.
 \end{proof}
 
 \begin{exer}{(Problem 24)}
