@@ -116,4 +116,27 @@
   }
 \end{proof}
 
+\begin{exer}{(Problem 3)}
+  Let $F$ be a field.
+  Let $f(x) \in F[x]$ be an irreducible polynomial which is not separable.
+  Show that $f'(x) = 0 \in F[x]$.
+\end{exer}
+
+\begin{proof}
+  Suppose $f(x)$ is irreducible.
+  Then $f(x) \ne 0$ and $f(x)$ is not a unit by definition.
+  Thus $\deg(f(x)) \geq 1$.
+
+  Since $f(x)$ is not separable, there exists a non-unit $g(x) \in F[x]$ such that $g(x) \mid f(x)$ and $g(x) \mid f'(x)$ by Lemma 3.2 from the Field Extension handout.
+  Since $f(x)$ is irreducible and $g(x)$ is not a unit, $f(x)$ is the product of $g(x)$ and a unit.
+  This implies that $\deg(f(x)) = \deg(g(x))$.
+
+  Since $g(x) \mid f'(x)$, $f'(x) = h(x)g(x)$.
+  If $f'(x) = 0$, we are done.
+  Suppose otherwise.
+  Then $\deg(f'(x)) = \deg(h(x)) + \deg(g(x)) = \deg(h(x)) + \deg(f(x)) \geq \deg(f(x))$.
+  However, by the definition of the $'$ operator, $\deg(f'(x)) < \deg(f(x))$.
+  This is a contradiction, so $f'(x) = 0$.
+\end{proof}
+
 \end{document}
