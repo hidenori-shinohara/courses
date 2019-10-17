@@ -78,13 +78,26 @@
     \item
       Prove that $f(x)$ is not a separable polynomial.
     \item
-      Construct an explicit field extension $K \subset L$ such that $f(x) \in L[x]$ has a factor of positive degree < $p$.
+      Construct an explicit field extension $K \subset L$ such that $f(x) \in L[x]$ has a factor of positive degree $< p$.
     \item
       With $f$ and $L$ above find all the roots of $f(x)$ in $L$ and determine their multiplicities.
   \end{enumerate}
 \end{exer}
 
+\begin{proof}
+  $ $
+  \begin{enumerate}[label=(\roman*)]
+    \item
+      We will write $k \cdot 1$ to denote $1 + 1 + \cdots + 1$ ($k$ times).
+      Since $p \cdot 1 = 0$ in $K$, the characteristic of $K$ is at most $p$.
+      Let $k$ denote the characteristic of $K$.
+      Let $i: \mathbb{Z}/p\mathbb{Z} \rightarrow (\mathbb{Z}/p\mathbb{Z})[t], i': \mathbb{Z}/p\mathbb{Z}[t] \rightarrow K$ be inclusions.
+      Then $i' \circ i: \mathbb{Z} / p\mathbb{Z} \rightarrow K$ is an injective ring homomorphism.
+      $k \cdot 1 \ne 0$ in $\mathbb{Z}/p\mathbb{Z}$.
+      Thus $(i' \circ i)(k \cdot 1) = k \cdot (i' \circ i)(1) = k' \cdot 1 = 0$.
+      Since $i' \circ i$ is injective, this implies $k \cdot 1 = 0$.
+      Therefore, $k \geq p$, so $k$ must be equal to $p$.
+  \end{enumerate}
+\end{proof}
 
 \end{document}
-
-
