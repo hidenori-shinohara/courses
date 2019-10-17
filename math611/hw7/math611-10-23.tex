@@ -129,9 +129,16 @@
     \end{cases}
   \end{align*}
   $\partial_n = 0$ for $n \geq 3$ and $n = 0$.
-  \todo[inline,caption={}]{
-    Compute $\partial_n$ for $n = 1, 2$.
-  }
+  \begin{align*}
+    \partial_2(U)
+      &= \sum_{i = 0}^2 (-1)^i \sigma \mid [0, 1, 2] \\
+      &= \sigma \mid [1, 2] - \sigma \mid [0, 2] + \sigma \mid [0, 1] \\
+      &= b - c + a. \\
+    \partial_2(L)
+      &= \sum_{i = 0}^2 (-1)^i \sigma \mid [0, 1, 2] \\
+      &= \sigma \mid [1, 2] - \sigma \mid [0, 2] + \sigma \mid [0, 1] \\
+      &= a - b + c.
+  \end{align*}
 \end{proof}
 
 \end{document}
