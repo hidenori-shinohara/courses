@@ -82,8 +82,24 @@
 \end{exer}
 
 \begin{proof}
+  Let $v_0$ denote the only vertex, $e_1, e_2, e_3$ denote the three edges of the parachute, and $\sigma$ denote the face of the parachute.
+  $C_k = 0$ for $k \geq 3$ because $\Delta^2$ with the vertices identified does not contain any $k$-dimensional simplicies.
+  $C_2 = \ev{ \sigma}, C_1 = \ev{ e_1, e_2, e_3 }, C_0 = \ev{ v_0 }$.
+  Let $n \in \mathbb{N}$.
+  $\partial_n$ is defined such that $\partial_n(\sigma_{\alpha}) = \sum_{i}(-1)^i\simga_{\alpha}\mid[v_0, \cdots, \hat{v_i}, \cdots, v_n]$.
+  Since there is only one vertex, $\partial_n$ is the zero map.
+  Therefore, $H_n = \ker(\partial_n) / \Im(\partial_{n + 1}) = C_n / \ev{ 0 } = C_n$.
+  Thus
+  \begin{align*}
+    H_n &= \begin{cases}
+      \{ 0 \} & (n \geq 3) \\
+      \ev{ \sigma } \cong \mathbb{Z} & (n = 2) \\
+      \ev{ e_1, e_2, e_3 } \cong \mathbb{Z}^3 & (n = 1) \\
+      \ev{ v_0 } \cong \mathbb{Z} & (n = 0).
+    \end{cases}
+  \end{align*}
   \todo[inline,caption={}]{
-    Do I need to do the ``no-edge-can-have-the-same-vertices" thing?
+    I'm not sure if this is correct.
   }
 \end{proof}
 
