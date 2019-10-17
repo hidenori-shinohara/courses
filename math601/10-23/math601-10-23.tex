@@ -1,0 +1,90 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ord}{ord}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 601 (Due 10/23)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\tableofcontents
+
+\section{Field Extension}
+
+\begin{exer}{(Problem 1)}
+  Let $p$ be a prime number.
+  Let $K = \mathbb{Z} / p\mathbb{Z}(t)$ be the fraction field of $\mathbb{Z} / p\mathbb{Z}[t]$.
+  \begin{enumerate}[label=(\roman*)]
+    \item
+      What is the characteristic of $K$?
+    \item
+      What is the characteristic of any extension field of $K$?
+    \item
+      Show that the Frobenius endormophism, $F: K \rightarrow K$ is not a ring isomorphism.
+    \item
+      Let $f(x) = x^p - t \in K[x]$.
+      Prove that $f(x)$ is irreducible.
+    \item
+      Prove that $f(x)$ is not a separable polynomial.
+    \item
+      Construct an explicit field extension $K \subset L$ such that $f(x) \in L[x]$ has a factor of positive degree < $p$.
+    \item
+      With $f$ and $L$ above find all the roots of $f(x)$ in $L$ and determine their multiplicities.
+  \end{enumerate}
+\end{exer}
+
+
+\end{document}
+
+
