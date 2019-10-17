@@ -108,10 +108,25 @@
 \end{exer}
 
 \begin{proof}
+  We will use the notations in Figure \ref{fig:problem5_klein}.
+  \begin{figure}
+    \includegraphics[width=.3\linewidth]{problem5_klein.jpeg}
+    \caption{Problem 5}
+    \label{fig:problem5_klein}
+  \end{figure}
+
+  \begin{align*}
+    C_n &= \begin{cases}
+      0 & (n \geq 3) \\
+      \ev{ U, L } & (n = 2) \\
+      \ev{ a, b, c} & (n = 1) \\
+      \ev{ v } & (n = 0).
+    \end{cases}
+  \end{align*}
+  $\partial_n = 0$ for $n \geq 3$ and $n = 0$.
   \todo[inline,caption={}]{
+    Compute $\partial_n$ for $n = 1, 2$.
   }
 \end{proof}
 
 \end{document}
-
-
