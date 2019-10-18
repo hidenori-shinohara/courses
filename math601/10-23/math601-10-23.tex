@@ -139,6 +139,28 @@
   This is a contradiction, so $f'(x) = 0$.
 \end{proof}
 
+\begin{exer}{(Problem 4)}
+  Let $F$ be a field of prime characteristic $p$.
+  Let $f(x) = \sum_{i=0}^n a_ix^i \in F[x]$ be an irreducible polynomial.
+  Give a necessary and sufficient criterion for $f(x)$ to be inseparable in terms of the coefficients $a_i$.
+\end{exer}
+
+\begin{proof}
+  We claim that $\forall i, (i \notin p\mathbb{Z} \implies a_i = 0)$ is a necessary and sufficient criterion.
+  \begin{itemize}
+    \item
+      Suppose $f(x)$ is inseparable.
+      By Lemma 5.5 from the Field Extension handout, $f'(x) = 0$.
+      If $f'(x) = 0$, then $ia_i = 0$ for each $i$.
+      Since $p$ is a prime, $a_i$ must be $0$ if $i \notin p\mathbb{Z}$.
+    \item
+      Suppose $\forall i, (i \notin p\mathbb{Z} \implies a_i = 0)$.
+      Then $f'(x) = 0$, so $f(x) \mid f(x), f(x) \mid f'(x)$ and $f(x)$ is not a unit since $f(x)$ is irreducible.
+      Therefore, $GCD(f(x), f'(x)) \ne F^{\times}$, so $f$ is inseparable by Lemma 3.2.
+  \end{itemize}
+  Hence, $\forall i, (i \notin p\mathbb{Z} \implies a_i = 0)$ is a necessary and sufficient criterion.
+\end{proof}
+
 \begin{exer}{(Problem 5)}
   What is the characteristic of the ring $\mathbb{Z} \times \mathbb{Z} / 2\mathbb{Z} \times \mathbb{Z} / 10\mathbb{Z}$?
 \end{exer}
