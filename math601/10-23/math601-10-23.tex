@@ -44,6 +44,7 @@
 \DeclareMathOperator{\Id}{Id}
 \DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\GCD}{GCD}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -107,13 +108,29 @@
 \end{exer}
 
 \begin{proof}
-  Since $f(x)$ is irreducible, $f(x)$ is not a unit.
+  Let $f(x) = \sum_{i=0}^{n} a_ix^i \in F[x]$ be an irreducible polynomial with $a_n \ne 0$.
+  Since $f(x)$ is irreducible, $f(x)$ is neither a unit nor 0.
   Since $F$ is a field, all polynomials of degree 0 are units.
-  Thus $\deg(f(x)) \geq 1$.
-  \todo[inline,caption={}]{
-    Finish the proof.
-    Check Notability for a sketch.
-  }
+  Thus $\deg(f(x)) = n \geq 1$.
+  It suffices to show that $\GCD(f(x), f'(x)) = F^*$ by Lemma 3.2.
+  Let $g(x) \in F[x]$ be given such that $g(x) \mid f(x), g(x) \mid f'(x)$.
+  Since $f(x)$ is irreducible, either $g(x)$ is a unit or there exists a unit $u \in F^*$ such that $g(x) = uf(x)$.
+  Suppose $g(x)$ is not a unit.
+  Since $g(x) \mid f'(x)$, $f'(x) = h(x)g(x) = uh(x)f(x)$ for some $h(x) \in F[x]$.
+  Thus $\deg(f'(x)) = \deg(uh(x)) + \deg(f(x))$.
+  \begin{itemize}
+    \item
+      $f'(x) = \sum_{i = 1}^{n} ia_ix^{i - 1}, n \geq 1$ and $a_n \ne 0$.
+      Since $F$ is a field of characteristic 0, $na_n \ne 0$.
+      Therefore, $\deg(f'(x)) = n - 1$.
+    \item
+      $\deg(uh(x)) \geq 0$.
+    \item
+      $\deg(f(x)) = n$.
+  \end{itemize}
+  However, this implies that $n - 1 \geq 0 + n = n$.
+  This is a contradiction, so $g(x)$ must be a unit.
+  Therefore, $\GCD(f(x), f'(x)) = F^*$.
 \end{proof}
 
 \begin{exer}{(Problem 3)}
