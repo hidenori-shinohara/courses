@@ -89,15 +89,23 @@
   $ $
   \begin{enumerate}[label=(\roman*)]
     \item
-      We will write $k \cdot 1$ to denote $1 + 1 + \cdots + 1$ ($k$ times).
-      Since $p \cdot 1 = 0$ in $K$, the characteristic of $K$ is at most $p$.
-      Let $k$ denote the characteristic of $K$.
-      Let $i: \mathbb{Z}/p\mathbb{Z} \rightarrow (\mathbb{Z}/p\mathbb{Z})[t], i': \mathbb{Z}/p\mathbb{Z}[t] \rightarrow K$ be inclusions.
-      Then $i' \circ i: \mathbb{Z} / p\mathbb{Z} \rightarrow K$ is an injective ring homomorphism.
-      $k \cdot 1 \ne 0$ in $\mathbb{Z}/p\mathbb{Z}$.
-      Thus $(i' \circ i)(k \cdot 1) = k \cdot (i' \circ i)(1) = k' \cdot 1 = 0$.
-      Since $i' \circ i$ is injective, this implies $k \cdot 1 = 0$.
-      Therefore, $k \geq p$, so $k$ must be equal to $p$.
+      We will prove in general that if $R \subset S$ are both commutative rings with 1, they have the same characteristic.
+      Let $i: R \rightarrow S$ be the inclusion map.
+      Let $\phi: \mathbb{Z} \rightarrow R$ be the unique ring homomorphism.
+
+      Then $i \circ \phi: \mathbb{Z} \rightarrow S$ is a ring homomorphism, and this is the only homomorphism from $\mathbb{Z}$ to $S$ by the uniqueness.
+      \begin{align*}
+        a \in \ker(\phi)
+          &\iff \phi(a) = 0 \\
+          &\iff i(\phi(a)) = 0 & \text{($i$ is injective)} \\
+          &\iff a \in \ker(i \circ \phi).
+      \end{align*}
+      Thus $\ker(\phi) = \ker(i \circ \phi)$, so $R$ and $S$ have the same characteristic.
+
+      Therefore, $\mathbb{Z}/p\mathbb{Z}$ has the same characteristic as $K$.
+      The kernel of $\psi: \mathbb{Z} \rightarrow \mathbb{Z}/p\mathbb{Z}$ is $(p)$, so the characteristic of $K$ is $p$.
+    \item
+      Using the result that we proved in (i), we conclude that the characteristic of any extension field of $K$ is $p$.
   \end{enumerate}
 \end{proof}
 
