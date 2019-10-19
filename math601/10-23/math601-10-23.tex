@@ -106,6 +106,17 @@
       The kernel of $\psi: \mathbb{Z} \rightarrow \mathbb{Z}/p\mathbb{Z}$ is $(p)$, so the characteristic of $K$ is $p$.
     \item
       Using the result that we proved in (i), we conclude that the characteristic of any extension field of $K$ is $p$.
+    \item
+      Suppose that it is a ring isomorphism.
+      Let $a / b \in K$ be chosen such that $F(a / b) = t$.
+      \begin{align*}
+        \big(\frac{a}{b}\big)^p = t
+          &\implies a^p = tb^p \\
+          &\implies p\deg(a) = \deg(t) + p\deg(b) \\
+          &\implies p(\deg(a) - \deg(b)) = 1.
+      \end{align*}
+      However, $p \geq 2$, so this is impossible.
+      Therefore, $F$ is not a ring isomorphism.
   \end{enumerate}
 \end{proof}
 
