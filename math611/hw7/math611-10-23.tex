@@ -94,30 +94,33 @@
 \end{exer}
 
 \begin{proof}
-  Let $v_0$ denote the only vertex, $e_1, e_2, e_3$ denote the three edges of the parachute, and $\sigma$ denote the face of the parachute.
-  $C_k = 0$ for $k \geq 3$ because $\Delta^2$ with the vertices identified does not contain any $k$-dimensional simplicies.
+  \begin{figure}
+    \includegraphics[width=.5\linewidth]{problem4.jpeg}
+    \caption{Problem 4}
+    \label{fig:problem4}
+  \end{figure}
+  Let $v_0$ denote the only vertex, $e_1, e_2, e_3$ denote the three edges of the parachute, and $\sigma$ denote the face of the parachute as in Figure \ref{fig:problem4}.
+  $C_k = 0$ for $k \geq 3$ because $\Delta^2$ with the vertices identified does not contain any $k$-dimensional simplicies for $k \geq 3$.
   $C_2 = \ev{ \sigma}, C_1 = \ev{ e_1, e_2, e_3 }, C_0 = \ev{ v_0 }$.
-  Let $n \in \mathbb{N}$.
-  $\partial_n$ is defined such that $\partial_n(\sigma_{\alpha}) = \sum_{i}(-1)^i\sigma_{\alpha}\vert[v_0, \cdots, \hat{v_i}, \cdots, v_n]$.
-  Since there is only one vertex, $\partial_n$ is the zero map.
-  \todo[inline,caption={}]{
-    This argument doesn't work.
-    Check the torus example from class.
-    It only has one vertex, but $\partial_n$ is not the zero map for some $n$.
-  }
-  Therefore, $H_n = \ker(\partial_n) / \Im(\partial_{n + 1}) = C_n / \ev{ 0 } = C_n$.
+  For each $n$, $\partial_n$ is defined such that $\partial_n(\sigma_{\alpha}) = \sum_{i}(-1)^i\sigma_{\alpha}\vert[v_0, \cdots, \hat{v_i}, \cdots, v_n]$.
+  \begin{itemize}
+    \item
+      $\partial_2(\sigma) = e_3 - e_2 + e_1$.
+    \item
+      $\partial_1(e_1) = v - v = 0$.
+      Similarly, $\partial_1(e_2) = \partial_1(e_3) = 0$.
+    \item
+      $\partial_0$ and $\partial_3$ are both the zero map.
+  \end{itemize}
   Thus
   \begin{align*}
     H_n &= \begin{cases}
       \{ 0 \} & (n \geq 3) \\
-      \ev{ \sigma } \cong \mathbb{Z} & (n = 2) \\
-      \ev{ e_1, e_2, e_3 } \cong \mathbb{Z}^3 & (n = 1) \\
-      \ev{ v_0 } \cong \mathbb{Z} & (n = 0).
+      \ker(\partial_2) / \Im(\partial_3) = 0 / 0 \cong 0 & (n = 2) \\
+      \ker(\partial_1) / \Im(\partial_2) = \ev{ e_1, e_2, e_3} / \ev{ e_3 - e_2 + e_1} \cong \ev{ e_1, e_2, -e_2 + e_1} \cong \mathbb{Z}^2 & (n = 1) \\
+      \ker(\partial_0) / \Im(\partial_1) = \ev{ v } / 0 \cong \mathbb{Z} & (n = 0).
     \end{cases}
   \end{align*}
-  \todo[inline,caption={}]{
-    I'm not sure if this is correct.
-  }
 \end{proof}
 
 \begin{exer}{(Problem 5)}
