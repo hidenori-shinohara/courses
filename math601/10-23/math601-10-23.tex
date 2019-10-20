@@ -118,12 +118,10 @@
       However, $p \geq 2$, so this is impossible.
       Therefore, $F$ is not a ring isomorphism.
     \item
-      \todo[inline,caption={}]{
-        I don't know how to solve this.
-        I tried using the ideas in the proof of Lemma 6.5(i), but I got stuck.
-        If $f = \prod_i f_i^{n_i}$, then $K[x]/(f) \simeq \prod K[x] / (f_i)^{n_i}$.
-        Then $\prod K \subset \ker(F - \Id)$.
-      }
+      $t$ is an irreducible element in $\mathbb{Z}/p\mathbb{Z}[t]$ because $t = ab$ implies that the degree of $a$ or $b$ must be 0, which implies that one of them is a unit.
+      By Corollary 4 on P.300 (Dummit and Foote), $\mathbb{Z}/p\mathbb{Z}[t]$ is a principal ideal domain and unique factorization domain.
+      By Proposition 2 on P.284 (Dummit and Foote), $t$ is a prime element in $\mathbb{Z}/p\mathbb{Z}[t]$.
+      By the Eisenstein irreducibility criterion from the Factorization in Integral Domain handout, $x^p - t$ is irreducible in $K[x]$ because $-t \in (t)$ but $-t \notin (t^2)$.
     \item
       $f'(x) = px^{p - 1} = 0$.
       Thus $f(x) \in \GCD(f(x), f'(x))$ and $f(x) = x^p - t$ is not a unit.
