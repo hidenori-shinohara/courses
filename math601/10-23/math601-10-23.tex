@@ -239,4 +239,50 @@
   }
 \end{proof}
 
+\section{Factorization in Integral Domain}
+
+\begin{exer}{(Problem 7)}
+  Define $\mathbb{Z}_{(p)} = \{ a / b \in \mathbb{Q} : p \nmid p \}$.
+  Now $\mathbb{Z}_{(p)}$ is a subring of $\mathbb{Q}$ and $p\mathbb{Z}_{(p)}$ is a maximal ideal.
+  \begin{enumerate}[label=(\roman*)]
+    \item
+      Prove that there is a ring isomorphism, $\mathbb{Z}/p\mathbb{Z} \simeq \mathbb{Z}_{(p)} / p\mathbb{Z}_{(p)}$.
+    \item
+      \todo[inline,caption={}]{
+        Do this!
+      }
+  \end{enumerate}
+\end{exer}
+
+\begin{proof}
+  $ $
+  \begin{enumerate}[label=(\roman*)]
+    \item
+      Define $\phi: \mathbb{Z}_{(p)} \rightarrow \mathbb{Z}/p\mathbb{Z}$ such that $a / b \mapsto ab^{-1}$.
+      \begin{itemize}
+        \item
+          Claim: $\phi$ is well-defined.
+          If $p \nmid b$, then $b \notin \mathbb{Z}/p\mathbb{Z}$, so $b^{-1}$ exists.
+          Moreover, if $a / b = c / d \in \mathbb{Z}(p)$, then $ad = bc$, so $ab^{-1} = cd^{-1}$.
+        \item
+          Claim: $\phi$ is surjective.
+          For all $a \in \mathbb{Z}/p\mathbb{Z}$, $\phi(a / 1) = a$.
+        \item
+          Claim: $\ker(\phi) = p\mathbb{Z}_{(p)}$.
+          \begin{align*}
+            \frac{a}{b} \in \ker(\phi)
+              &\iff ab^{-1} = 0 \\
+              &\iff p \mid a \\
+              &\iff \frac{a}{b} \in p\mathbb{Z}_{(p)}.
+          \end{align*}
+      \end{itemize}
+      By the first isomorphism theorem for rings (Theorem 7, P.243, Dummit and Foote), $\mathbb{Z}_{(p)} / p\mathbb{Z}_{(p)} \simeq \mathbb{Z}/p\mathbb{Z} $.
+    \item
+      \todo[inline,caption={}]{
+        Do this!
+      }
+  \end{enumerate}
+
+\end{proof}
+
 \end{document}
