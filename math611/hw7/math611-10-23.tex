@@ -157,18 +157,17 @@
 
   $\partial_1(a) = 0$ since $\partial_1(a) = \sigma \vert [1] - \sigma \vert [0] = v - v = 0$.
   Similarly, $\partial_1(b) = \partial_1(c) = 0$.
-  Thus
+  Thus $H_n = \{ 0 \} & (n \geq 3)$.
+  $H_2 = \ker(\partial_2) / \Im(\partial_3) = 0 / 0 \cong 0$.
   \begin{align*}
-    H_n &= \begin{cases}
-      \{ 0 \} & (n \geq 3) \\
-      \ev{ \sigma } \cong \mathbb{Z} & (n = 2) \\
-      \ev{ e_1, e_2, e_3 } \cong \mathbb{Z}^3 & (n = 1) \\
-      \ev{ v_0 } \cong \mathbb{Z} & (n = 0).
+    H_1 &= \ker(\partial_1) / \Im(\partial_2) \\
+        &= \ev{ a, b, c } / \ev{ b - c + a, a - b + c} \\
+        &\cong \ev{ a, b, a + b \mid a - b + (a + b) } \\
+        &\cong \ev{ a, b \mid 2a } \\
+        &\cong \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}.
     \end{cases}
   \end{align*}
-  \todo[inline,caption={}]{
-    Finish the rest.
-  }
+  $H_0 = \ker(\partial_0) / \Im(\partial_1) = \ev{ v } / 0 \cong \mathbb{Z}$.
 \end{proof}
 
 \begin{exer}{(Problem 7)}
