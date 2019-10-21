@@ -281,9 +281,8 @@
     \item
       Prove that there is a ring isomorphism, $\mathbb{Z}/p\mathbb{Z} \simeq \mathbb{Z}_{(p)} / p\mathbb{Z}_{(p)}$.
     \item
-      \todo[inline,caption={}]{
-        Do this!
-      }
+      Suppose given $f \in \mathbb{Z}_{(p)}[x, y]$ such that when viewed as an element of $\mathbb{Q}(x)[y]$, $f$ has content 1 and degree $n$ in $y$.
+      Prove that if the reduction mod $p$ of $f$, $f_0 \in \mathbb{Z}/p[x, y]$ is irreducible and of degree $n$ in $y$, then $f$ is irreducible in $\mathbb{Q}[x, y]$.
   \end{enumerate}
 \end{exer}
 
@@ -312,7 +311,17 @@
       By the first isomorphism theorem for rings (Theorem 7, P.243, Dummit and Foote), $\mathbb{Z}_{(p)} / p\mathbb{Z}_{(p)} \simeq \mathbb{Z}/p\mathbb{Z} $.
     \item
       \todo[inline,caption={}]{
-        Do this!
+        \begin{itemize}
+          \item
+            Suppose $f(x, y) = f_1(x, y)f_2(x, y)$ in $\mathbb{Q}[x, y]$ where $f_1, f_2$ are not units.
+            Since the content of $f$ is 1, $\deg_y(f_1(x, y)) \geq 1$ and $\deg_y(f_2(x, y)) \geq 1$.
+            Let $f_{1, 0}, f_{2, 0}$ be the reduction of $f_1, f_2$.
+            Since $f_0 = f_{1, 0}f_{2, 0}$, $f_{1, 0} \in \mathbb{Z}/p[x, y]$ is a unit without loss of generality.
+            Therefore, the leading coefficient of $f_1 \in \mathbb{Q}(x)[y]$ is in $p\mathbb{Z}[x]$.
+            This means the leading coefficient of $f$ is in $p\mathbb{Z}[x]$.
+            However, this means the degree of $f_0$ is less than $n$.
+            This is a contradiction.
+        \end{itemize}
       }
   \end{enumerate}
 \end{proof}
