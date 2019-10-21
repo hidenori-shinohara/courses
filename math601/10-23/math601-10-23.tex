@@ -240,6 +240,38 @@
   }
 \end{proof}
 
+\begin{exer}{(Problem 7)}
+  Let $K$ be a field with 81 elements.
+  List all positive integers $n$ which are orders of elements in the group, $K^*$.
+  Now compute the function $d(n) = [\mathbb{Z}/3[a]:\mathbb{Z}/3]$, where $a \in K^*$ is any element of order $n$.
+  Present your results in the form of a table with entries $n$ and $d(n)$.
+\end{exer}
+
+\begin{proof}
+  $ $
+  \todo[inline,caption={}]{
+    \begin{itemize}
+      \item
+        Problem 6 shows that $d(n)$ is well defined.
+      \item
+        $K$ is considered to be an extension field of $\mathbb{Z} / 3$.
+      \item
+        Let $K^* = \ev{ \alpha \mid \alpha^{80} = 1 }$.
+      \item
+        $\alpha^{40}$ is the only element of order 2, and $2 \in \mathbb{Z} / 3$ is an element of order 2.
+        Thus $\alpha^{40} = 2$.
+      \item
+        Let $a$ be given.
+        Then $(\mathbb{Z}/3\mathbb{Z}[a])^* \leq K^*$.
+        Let $\alpha^k$ be a generator of $(\mathbb{Z}/3\mathbb{Z}[a])^*$.
+      \item
+        This $k$ can't be anything because $\alpha^{40}$ is always in $\mathbb{Z} / 3[a]$.
+      \item
+        For instance, $\mathbb{Z}/3\mathbb{Z}[\alpha^{20}]  = \{ 0, 1, 2, \alpha^{20}, 2\alpha^{20} \}$, so the degree of extension is 2 because $\{ 1, \alpha^{20} \}$ is a $\mathbb{Z}/3\mathbb{Z}$-basis.
+    \end{itemize}
+  }
+\end{proof}
+
 \section{Factorization in Integral Domain}
 
 \begin{exer}{(Problem 7)}
