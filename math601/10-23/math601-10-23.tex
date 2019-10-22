@@ -275,9 +275,11 @@
       If $n = 2$, then $a = 2 = \alpha^{40}$, so $\mathbb{Z}/3[a] = \mathbb{Z}/3$.
       Thus $d(n) = 1$.
     \item
-      \todo[inline,caption={}]{
-        $n = 4$
-      }
+      If $n = 4$, then $\mathbb{Z}/3[a]$ must contain at least 4 elements.
+      Thus $\abs{\mathbb{Z}/3[a]} \in \{ 9, 81 \}$.
+      Since $(\alpha^{10})^2 = \alpha^{20} = a$, $\mathbb{Z}/3[a] \subset \mathbb{Z}/3[\alpha^{10}]$.
+      We will show below that if $n = 8$, then $\abs{\mathbb{Z}/3[\alpha{10}]} = 9$.
+      Thus $\abs{\mathbb{Z}/3[a]} = 9$, so $d(n) = 2$.
     \item
       Since $a = \alpha^{16}, 2 = \alpha^{40} \in \mathbb{Z}/3[a]$, $\alpha^8 \in \mathbb{Z}/3[a]$.
       Therefore, $\mathbb{Z}/3[a]$ must contain at least 10 elements, so $\mathbb{Z}/3[a] = K$.
@@ -301,11 +303,11 @@
       \hline
         2 & 1 \\
       \hline
-        4 & ? \\
+        4 & 2 \\
       \hline
         5 & 4 \\
       \hline
-        8 & ? \\
+        8 & 2 \\
       \hline
         10 & 4 \\
       \hline
