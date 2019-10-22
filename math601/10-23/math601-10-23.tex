@@ -234,10 +234,14 @@
 \end{exer}
 
 \begin{proof}
-  \todo[inline,caption={}]{
-    This is $=$, not an isomorphism.
-    Consider the cyclic subgroups.
-  }
+  We will consider the subgroups $\ev{ a }, \ev{ b } \leq K^*$.
+  $\ev{ a }, \ev{ b }$ contain all powers of $a, b$, respectively.
+  Since $a, b$ have the same order, $\ev{ a }, \ev{ b }$ must have the same number of elements.
+  Since $K^*$ is a cyclic group, $\ev{ a } = \ev{ b }$.
+  (Theorem 7(3), P.58, Dummit and Foote)
+  $\mathbb{Z}/p[a] = \{ \sum_{i=0}^{n} a_ia^i \mid n \geq 0, a_i \in \mathbb{Z}/p \}$, so it is the collection of all linear combinations of $\ev{ a }$ over $\mathbb{Z}/p$.
+  Similarly, $\mathbb{Z}/p[b]$ is the collection of all linear combinations of $\ev{ b }$ over $\mathbb{Z}/p$.
+  Since $\ev{ a } = \ev{ b }$, $\mathbb{Z}/p[a] = \mathbb{Z}/p[b]$.
 \end{proof}
 
 \begin{exer}{(Problem 7)}
