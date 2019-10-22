@@ -173,6 +173,41 @@
   Find a way of identifying pairs of faces of $\Delta^3$ to produce a $\Delta$-complex structure on $S^3$ having a single 3-simplex, and compute the simplicial homology groups of this $\Delta$-complex.
 \end{exer}
 
+\begin{proof}
+  \begin{figure}
+    \includegraphics[width=.5\linewidth]{problem7.jpeg}
+    \caption{Problem 7}
+    \label{fig:problem7}
+  \end{figure}
+  We will identify $[0, 2, 3] \sim [1, 2, 3]$ and $[0, 1, 2] \sim [0, 1, 3]$ of the tetrahedra $T$ in Figure \ref{problem7}.
+  Then we have
+  \begin{align*}
+    C_3 &= \{ T \} \\
+    C_2 &= \{ f_1, f_2 \} \\
+    C_1 &= \{ e_1, e_2, e_3 \} \\
+    C_0 &= \{ v_1, v_2 \}.
+  \end{align*}
+  We will examine $\partial$.
+  \begin{align*}
+    \partial_3(T) &= [1, 2, 3] - [0, 2, 3] + [0, 1, 3] - [0, 1, 2] = f_1 - f_1 + f_2 - f_2 = 0. \\
+    \partial_2(f_1) &= [2, 3] - [0, 3] + [0, 2] = e_3 - e_1 + e_1 = e_3. \\
+    \partial_2(f_2) &= [1, 2] - [0, 2] + [0, 1] = e_1 - e_1 + e_2 = e_2. \\
+    \partial_1(e_1) &= [3] - [0] = v_1 - v_2. \\
+    \partial_1(e_2) &= [1] - [0] = v_2 - v_2 = 0. \\
+    \partial_1(e_3) &= [3] - [2] = v_1 - v_1 = 0. \\
+  \end{align*}
+
+  Therefore,
+  \begin{align*}
+    H_3 &= \ev{ T } / 0 = \mathbb{Z}. \\
+    H_2 &= 0 / 0 = 0. \\
+    H_1 &= \ev{ e_1, e_3 }  / \ev{ e_2, e_3 } = 0. \\
+    H_1 &= \ev{ v_1, v_2 }  / \ev{ v_1 - v_2 } = \mathbb{Z}.
+  \end{align*}
+
+
+\end{proof}
+
 \begin{exer}{(Problem 8)}
   Construct a 3 dimensional $\Delta$-complex $X$ from $n$ tetrahedra $T_1, \cdots, T_n$ by the following two steps.
   First arrange the tetrahedra in a cyclic pattern as in the figure, so that each $T_i$ shares a common vertical face with its two neighbors $T_{i - 1}$ and $T_{i + 1}$, subscripts being taken mod $n$.
