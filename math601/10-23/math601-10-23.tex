@@ -326,19 +326,24 @@
       \end{itemize}
       By the first isomorphism theorem for rings (Theorem 7, P.243, Dummit and Foote), $\mathbb{Z}_{(p)} / p\mathbb{Z}_{(p)} \simeq \mathbb{Z}/p\mathbb{Z} $.
     \item
-      \todo[inline,caption={}]{
-        \begin{itemize}
-          \item
-            Suppose $f(x, y) = f_1(x, y)f_2(x, y)$ in $\mathbb{Q}[x, y]$ where $f_1, f_2$ are not units.
-            Since the content of $f$ is 1, $\deg_y(f_1(x, y)) \geq 1$ and $\deg_y(f_2(x, y)) \geq 1$.
-            Let $f_{1, 0}, f_{2, 0}$ be the reduction of $f_1, f_2$.
-            Since $f_0 = f_{1, 0}f_{2, 0}$, $f_{1, 0} \in \mathbb{Z}/p[x, y]$ is a unit without loss of generality.
-            Therefore, the leading coefficient of $f_1 \in \mathbb{Q}(x)[y]$ is in $p\mathbb{Z}[x]$.
-            This means the leading coefficient of $f$ is in $p\mathbb{Z}[x]$.
-            However, this means the degree of $f_0$ is less than $n$.
-            This is a contradiction.
-        \end{itemize}
-      }
+      Suppose, on the contrary, that $f(x, y)$ is not irreducible in $\mathbb{Q}[x, y]$.
+      This implies the existence of non-unit polynomials $f_1(x, y), f_2(x, y) \in \mathbb{Q}[x, y]$ such that $f = f_1f_2$. 
+      Since $f_1$ is not a unit, if $\deg_y(f_1) = 0$, then $\deg_x(f_1) \geq 1$.
+      This implies that $f(x, y)$ has a factor that is a non-constant polynomial in $x$.
+      However, this is not possible because the content of $f$ when viewed as an element of $\mathbb{Q}(x)[y]$ is 1.
+      Therefore, $\deg_y(f_1) \geq 1$.
+      Similarly, $\deg_y(f_2) \geq 1$.
+
+      Let $f_{1, 0}, f_{2, 0}$ be the reduction mod $p$ of $f_1, f_2$, respectively.
+      Then $f_0 = f_{1, 0}f_{2, 0}$.
+      This is because the reduction map $a/b \mapsto ab^{-1}$ is a ring homomorphism as shown in Part (i).
+      Since $f_0 \in \mathbb{Z}/p[x, y]$ is irreducible, one of $f_{1, 0}$ or $f_{2, 0}$ must be a unit.
+      Without loss of generality, suppose that $f_{1, 0}$ is a unit.
+      Then $\deg_y(f_{1, 0}) = 0$.
+      $\deg_y(f_{2, 0}) \leq \deg_y(f_2)$ because the reduction map maps 0 to 0.
+      This implies that $\deg_y(f_0) = \deg_y(f_{1, 0}) + \deg_y(f_{2, 0}) < \deg_y(f_1) + \deg_y(f_2) = \deg(f)$.
+      However, this is a contradiction because $f_0$ must have the same degree in $y$ as $f$.
+      Therefore, $f(x, y)$ must be irreducible in $\mathbb{Q}[x, y]$.
   \end{enumerate}
 \end{proof}
 
