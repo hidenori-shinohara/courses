@@ -252,7 +252,67 @@
 \end{exer}
 
 \begin{proof}
-  $ $
+  Problem 6 shows that $d(n)$ is well defined.
+  $K^*$ is a cyclic group with 80 elements.
+  Let $\alpha$ be a generator.
+  Since $\alpha^{40}$ is the only element of order 2 in $\ev{ \alpha }$, $2 = \alpha^{40}$.
+
+  Let $a \in K^*$ be given.
+  Let $n$ be the order of $a$.
+  By Problem 6, we will assume that $a = \alpha^k$ where $k = 80 / n$.
+  This is because $(\mathbb{Z}/3)[a] = (\mathbb{Z}/3)[\alpha^k]$.
+  $\mathbb{Z}/3[a] \leq K$ as additive groups.
+  $(\mathbb{Z}/3[a])^* \leq K^*$ as multiplicative groups.
+  Thus $\mathbb{Z}/3[a]$ must contain 3, 9, or 81 elements.
+  By Lagrange's theorem, $\abs{\mathbb{Z}/3[a]} \mid 81$ and $(\abs{\mathbb{Z}/3[a]} - 1) \mid 81$.
+  Thus $\abs{\mathbb{Z}/3[a]} \in \{ 3, 9, 81 \}$.
+
+  \begin{itemize}
+    \item
+      If $n = 1$, then $a = 1$, so $\mathbb{Z}/3[a] = \mathbb{Z}/3$.
+      Thus $d(n) = 1$.
+    \item
+      If $n = 2$, then $a = 2 = \alpha^{40}$, so $\mathbb{Z}/3[a] = \mathbb{Z}/3$.
+      Thus $d(n) = 1$.
+    \item
+      \todo[inline,caption={}]{
+        Finish the case when $n = 4, 5, 8$.
+      }
+    \item
+      If $n \geq 10$, then $\ev{ \mathbb{Z}/3[a] } \geq 10$, so $\mathbb{Z}/3[a] = K$.
+
+      Since $[\mathbb{Z}/3[a] : \mathbb{Z}/3]$ is the dimension of $\mathbb{Z}/3[a]$ as a $\mathbb{Z}/3$-vector space and $\abs{ \mathbb{Z}/3[a] } = \abs{ \mathbb{Z}/3 }^4$, $d(n) = 4$.
+  \end{itemize}
+
+  \begin{center}
+    \begin{tabular}{ |c|c| }
+      \hline
+        $n$ & $d(n)$ \\
+      \hline
+        1 & 1 \\
+      \hline
+        2 & 1 \\
+      \hline
+        4 & ? \\
+      \hline
+        5 & ? \\
+      \hline
+        8 & ? \\
+      \hline
+        10 & 4 \\
+      \hline
+        16 & 4 \\
+      \hline
+        20 & 4 \\
+      \hline
+        40 & 4 \\
+      \hline
+        80 & 4 \\
+      \hline
+    \end{tabular}
+  \end{center}
+
+
   \todo[inline,caption={}]{
     \begin{itemize}
       \item
