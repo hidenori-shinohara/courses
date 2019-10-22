@@ -393,10 +393,37 @@
 \end{exer}
 
 \begin{proof}
-  $ $
-  \todo[inline,caption={}]{
-    Finish this!
-  }
+  First, we will show the uniqueness.
+  Suppose $\sum_{i=0}^{n-1} b_i(x^i + I) = \sum_{i=0}^{n-1} c_i(x^i + I)$.
+  \begin{align*}
+    \sum_{i=0}^{n-1} b_i(x^i + I) = \sum_{i=0}^{n-1} c_i(x^i + I)
+      &\implies (\sum_{i=0}^{n-1} (b_i - c_i)x^i) + I = 0 \\
+      &\implies \sum_{i=0}^{n-1} (b_i - c_i)x^i \in (f(x)) \\
+      &\implies \exists g(x) \in R[x], \sum_{i=0}^{n-1} (b_i - c_i)x^i = g(x)f(x).
+  \end{align*}
+  If $g(x) = 0$, then $b_i - c_i = 0$ for each $i$, so we are done.
+  Suppose $g(x) \ne 0$.
+  Since the leading coefficient of $f(x)$ is a unit, $\deg(g(x)f(x)) \geq \deg(f(x)) = n$.
+  However, this is a contradiction because the left hand side is either 0 or a polynomial of degree $\leq n - 1$.
+
+  Next, we will show the existence by induction.
+  Let $P(m)$ be the statement ``$\sum_{i=0}^{m} b_ix^i + I \in R/I$ may be written as an $R$-linear combination of $1 + I, \cdots, x^{n - 1} + I$."
+  $P(m)$ is clearly true when $m \leq n - 1$.
+  Suppose that $P(m)$ is true for some $m \geq n - 1$.
+  We will show that $P(m + 1)$ is true.
+  Let $h(x) = \sum_{i=0}^{m+1} b_ix^i + I$.
+  Let $h'(x) = h(x) - \frac{b_{m + 1}}{a_n}f(x)x^{m + 1 - n}$.
+  \begin{itemize}
+    \item
+      This is possible because $a_n$ is a unit and $m + 1 - n \geq (n - 1) + 1 - n = 0$.
+    \item
+      $h'(x)$ can be written now as $\sum_{i=0}^{m} c_ix^i + I$ for some $c_i \in R$.
+    \item
+      $h(x) + I = h'(x) + I$ because $h(x) - h'(x) \in I = (f(x))$.
+  \end{itemize}
+  By the inductive hypothesis, $h(x) + I$ can be written as an $R$-linear combination of $1 + I, \cdots, x^{n - 1} + I$.
+
+  By induction, $P(m)$ is true for any non-negative integer $m$.
 \end{proof}
 
 \end{document}
