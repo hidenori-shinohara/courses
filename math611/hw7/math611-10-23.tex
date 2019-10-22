@@ -181,6 +181,54 @@
 \end{exer}
 
 \begin{proof}
+  Let $T_0, \cdots, T_{n - 1}$ denote the $n$ tetrahedra.
+  Let $v_0, v_1, e_0, \cdots, e_{n + 1}, f_{0}, \cdots, f_{2n - 1}$ denote the vertices and edges as in Figure \ref{fig:lens}.
+  (It has 4 tetrahedra, but they all represent $T_i$.)
+
+  \begin{figure}
+    \includegraphics[width=.5\linewidth]{lens.jpeg}
+    \caption{Problem 8}
+    \label{fig:lens}
+  \end{figure}
+
+  Then we have
+  \begin{itemize}
+    \item
+      $C_3 = \{ T_0, \cdots, T_{n - 1} \}$.
+    \item
+      $C_2 = \{ f_0, \cdots, f_{2n - 1} \}$.
+    \item
+      $C_1 = \{ e_0, \cdots, e_{n + 1} \}$.
+    \item
+      $C_0 = \{ v_0, v_1 \}$.
+  \end{itemize}
+
+  Now we will examine $\partial$.
+
+  \begin{align*}
+    \partial_3(T_i)
+      &= [i + 1, n, n + 1] - [i, n, n + 1] + [i, i + 1, n + 1] - [i, i + 1, n] \\
+      &= f_{i + 1} - f_i + f_{n + i - 1} - f_{n + i}. \\
+    \partial_2(f_i)
+      &= [n, n + 1] - [i, n + 1] + [i, n] \\
+      &= e_{n + 1} - e_{i - 1} + e_i. \\
+    \partial_2(f_{n + i})
+      &= [i + 1, n] - [i, n] + [i, i + 1] \\
+      &= e_{i + 1} - e_{i - 1} + e_n. \\
+    \partial_1(e_i) &= \begin{cases}
+      v_0 - v_1 & (0 \leq i \leq n - 1) \\
+      0 & (i = n, n + 1).
+    \end{cases} 
+  \end{align*}
+
+  Therefore,
+
+  \begin{align*}
+    H_3 &= \ev{ T_0 + \cdots + T_{n - 1} } / 0 = \mathbb{Z}. \\
+    H_2 &= ? / \ev{ f_{i + 1} - f_i + f_{n + i - 1} - f_{n + i} } = 0 \\
+    H_1 &= \ev{ e_n, e_{n + 1}, e_i - e_j } / \ev{ e_{n + 1} + e_i - e_{i - 1}, e_n + e_{i + 1} - e_i } ? \mathbb{Z}^n \\
+    H_0 &= \ev{ v_0, v_1 } / \ev{ v_0 - v_1 } = \mathbb{Z}.
+  \end{align*}
 \end{proof}
 
 \end{document}
