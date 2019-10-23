@@ -297,9 +297,15 @@
       It is clear that $\ker(\partial_2) = \Im(\partial_3)$.
       Thus $H_2 = 0$.
     \item
-      \todo[inline,caption={}]{
-        $H_1$.
-      }
+      $\ker(\partial_1) = \ev{ e_n, e_{n + 1}, e_i - e_{i + 1} \mid_{i=0}^{n-2} } = \ev{e_n, e_{n + 1}, e_{n + 1} - e_{i} + e_{i + 1} \mid_{i=0}^{n-2}}$.
+
+      And $\Im(\partial_2) = \ev{ e_{n + 1} - e_{i - 1} + e_i, e_i - e_{i - 1} + e_n } = \ev{ e_{n + 1} - e_{i - 1} + e_i, e_n - e_{n + 1} }$ where $i = 0, \cdots, n - 1$.
+      Moreover, $(e_{n + 1} - e_0 + e_1) + \cdots + (e_{n + 1} - e_{n} + e_0) = ne_{n + 1}$, $\Im(\partial_2) = \ev{ ne_{n + 1}, e_{n} - e_{n + 1}, e_{n + 1} - e_{i - 1} + e_i \mid_{i=1}^{n - 1} }$.
+      Therefore, 
+      \begin{align*}
+      H_1 = \ev{e_n, e_{n + 1}, e_{n + 1} - e_{i} + e_{i + 1} \mid_{i=0}^{n-2}} / \ev{ ne_{n + 1}, e_{n} - e_{n + 1}, e_{n + 1} - e_{i - 1} + e_i \mid_{i=1}^{n - 1} }.
+      \end{align*}
+      Thus $H_1 = \mathbb{Z}/n$.
     \item
       $H_0 = \ev{ v_0, v_1 } / \ev{ v_0 - v_1 } = \mathbb{Z}.$
   \end{itemize}
