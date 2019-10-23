@@ -131,11 +131,11 @@
       Since $y^p - t$ is irreducible in $K[y]$, $(y^p - t)$ is a maximal ideal in $K[y]$.
       Thus $L$ is a field.
       Then $x^p - t$ has a root in $L$ because $y^p - t = 0$.
-      This implies the existence of a linear factor of $x^p - t$.
+      This implies that $L[x]$ contains a linear factor of $x^p - t$.
     \item
       In $L[x]$, $(x - y)^p = \sum_{i=0}^{p} \binom{p}{i} x^i(-y)^{p - i} = x^p - y^p$ because $p \mid \binom{p}{i}$ for $1 \leq i \leq p - 1$.
       Since $y^p = t$, $x^p - y^p = x^p - t$.
-      Therefore, the only root is $y$ and the multiplicity is $p$.
+      Therefore, $x^p - t = (x - y)^p$, so the only root is $y$ and the multiplicity is $p$.
   \end{enumerate}
 \end{proof}
 
@@ -155,7 +155,6 @@
   Since $f(x)$ is irreducible, either $g(x)$ is a unit or there exists a unit $u \in F^*$ such that $g(x) = uf(x)$.
   Suppose $g(x)$ is not a unit.
   Since $g(x) \mid f'(x)$, $f'(x) = h(x)g(x) = uh(x)f(x)$ for some $h(x) \in F[x]$.
-  Thus $\deg(f'(x)) = \deg(uh(x)) + \deg(f(x))$.
   \begin{itemize}
     \item
       $f'(x) = \sum_{i = 1}^{n} ia_ix^{i - 1}, n \geq 1$ and $a_n \ne 0$.
@@ -166,7 +165,7 @@
     \item
       $\deg(f(x)) = n$.
   \end{itemize}
-  However, this implies that $n - 1 \geq 0 + n = n$.
+  However, this implies that $n - 1 = \deg(f'(x)) = \deg(uh(x)) + \deg(f(x)) \geq n$.
   This is a contradiction, so $g(x)$ must be a unit.
   Therefore, $\GCD(f(x), f'(x)) = F^*$.
 \end{proof}
@@ -210,7 +209,7 @@
       Since $p$ is a prime, $a_i$ must be $0$ if $i \notin p\mathbb{Z}$.
     \item
       Suppose $\forall i, (i \notin p\mathbb{Z} \implies a_i = 0)$.
-      Then $f'(x) = 0$, so $f(x) \mid f(x), f(x) \mid f'(x)$ and $f(x)$ is not a unit since $f(x)$ is irreducible.
+      Then $f'(x) = 0$, so $f(x) \mid f(x), f(x) \mid f'(x)$ and $f(x)$ is not a unit.
       Therefore, $GCD(f(x), f'(x)) \ne F^{\times}$, so $f$ is inseparable by Lemma 3.2.
   \end{itemize}
   Hence, $\forall i, (i \notin p\mathbb{Z} \implies a_i = 0)$ is a necessary and sufficient criterion.
@@ -262,7 +261,6 @@
   This is because $(\mathbb{Z}/3)[a] = (\mathbb{Z}/3)[\alpha^k]$.
   $\mathbb{Z}/3[a] \leq K$ as additive groups.
   $(\mathbb{Z}/3[a])^* \leq K^*$ as multiplicative groups.
-  Thus $\mathbb{Z}/3[a]$ must contain 3, 9, or 81 elements.
   By Lagrange's theorem, $\abs{\mathbb{Z}/3[a]} \mid 81$ and $(\abs{\mathbb{Z}/3[a]} - 1) \mid 81$.
   Thus $\abs{\mathbb{Z}/3[a]} \in \{ 3, 9, 81 \}$.
 
@@ -277,7 +275,7 @@
       If $n = 4$, then $\mathbb{Z}/3[a]$ must contain at least 4 elements.
       Thus $\abs{\mathbb{Z}/3[a]} \in \{ 9, 81 \}$.
       Since $(\alpha^{10})^2 = \alpha^{20} = a$, $\mathbb{Z}/3[a] \subset \mathbb{Z}/3[\alpha^{10}]$.
-      We will show below that if $n = 8$, then $\abs{\mathbb{Z}/3[\alpha{10}]} = 9$.
+      We will show below that if $n = 8$, then $\abs{\mathbb{Z}/3[\alpha^{10}]} = 9$.
       Thus $\abs{\mathbb{Z}/3[a]} = 9$, so $d(n) = 2$.
     \item
       Since $a = \alpha^{16}, 2 = \alpha^{40} \in \mathbb{Z}/3[a]$, $\alpha^8 \in \mathbb{Z}/3[a]$.
@@ -296,7 +294,7 @@
           Claim: $S$ is closed under subtraction.
           Every element in $S$ satisfies $x^9 - x = 0$, and $S$ contains 9 elements.
           Thus $x^9 - x$ can be expressed as the product of 9 linear factors in $S[x]$.
-          Since $\mathbb{Z}/3[x]$ is a UFD(Corollary 4, P.300, Dummit and Foote), $S$ contains all the roots of $x^9 - x = 0$.
+          Therefore, $S$ contains all the nine roots of $x^9 - x = 0$.
 
           Let $r, r' \in S$.
           \begin{align*}
@@ -312,7 +310,7 @@
           Since $S$ contains all the roots of $x^9 - x = 0$, $r - r' \in S$.
         \item
           Claim: $S$ is closed under multiplication.
-          $\alpha^{k}\alpha^{l} = \alpha^{kl} \in S$.
+          $\alpha^{k}\alpha^{l} = \alpha^{k + l} \in S$.
       \end{itemize}
       Therefore, $S$ is a subring of $K$.
       Since $S$ is a finite integral domain, it must be a field.
