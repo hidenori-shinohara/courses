@@ -261,7 +261,7 @@
       &= e_{n + 1} - e_{i - 1} + e_i. \\
     \partial_2(f_{n + i})
       &= [i + 1, n] - [i, n] + [i, i + 1] \\
-      &= e_{i + 1} - e_{i - 1} + e_n. \\
+      &= e_{i + 1} - e_{i} + e_n. \\
     \partial_1(e_i) &= \begin{cases}
       v_0 - v_1 & (0 \leq i \leq n - 1) \\
       0 & (i = n, n + 1).
@@ -271,15 +271,40 @@
   Therefore,
 
   \begin{align*}
-    H_3 &= \ev{ T_0 + \cdots + T_{n - 1} } / 0 = \mathbb{Z}. \\
-    H_2 &= ? / \ev{ f_{i + 1} - f_i + f_{n + i - 1} - f_{n + i} } = 0 \\
-    H_1 &= \ev{ e_n, e_{n + 1}, e_i - e_j } / \ev{ e_{n + 1} + e_i - e_{i - 1}, e_n + e_{i + 1} - e_i } ? \mathbb{Z}^n \\
-    H_0 &= \ev{ v_0, v_1 } / \ev{ v_0 - v_1 } = \mathbb{Z}.
+    \partial_3(\sum a_iT_i) &= \sum (a_{i - 1} - a_i)f_i + \sum (a_{i + 1} - a_i) f_{n + i}. \\
+    \partial_2(\sum a_if_i + \sum b_if_{n + i}) &= e_{n + 1}\sum a_i + e_n\sum b_i + \sum (a_i - a_{i + 1} + b_{i - 1} - b_i) e_i.\\
+    \partial_1(\sum a_i e_i) &= \sum_{i=0}^{n-1} a_i v_0 - \sum_{i=0}^{n-1} v_1.
   \end{align*}
 
-  \todo[inline,caption={}]{
-    Calculate the homology groups above!
-  }
+  Hence,
+
+  \begin{itemize}
+    \item
+      $H_3 = \ev{ T_0 + \cdots + T_{n - 1} } / 0 = \mathbb{Z}$.
+    \item
+      Let $\sum a_if_i + \sum b_if_{n + i} \in \ker(\partial_2)$.
+      Then $\sum a_i = \sum b_i = 0$, and $b_{i - 1} + a_i = b_i + a_{i + 1}$ for each $i$.
+      By induction, $b_{i - 1} + a_i = b_{i + j} + a_{i + j}$ for each $i, j$.
+      $\sum a_i = \sum b_i$ implies that $\sum (a_i + b_{i - 1}) = 0$.
+      Thus for each $i$, $n(a_i + b_{i - 1}) = 0$.
+      This implies that $a_i + b_{i - 1} = 0$ for each $i$.
+      In other words, $b_i = -a_{i + 1}$ for each $i$.
+      Moreover, if $\sum a_i = \sum b_i = 0$ and $b_i = -a_{i + 1}$ for each $i$, then $\partial(\sum a_if_i + \sum b_if_{n + i}) = 0$.
+      Therefore, $\ker(\partial_2) = \{ \sum a_if_i + \sum -a{i + 1}f_{n + i} \mid \sum a_i = 0 \}$.
+
+      On the other hand, $\Im(\partial_3) = \{ \sum (a_{i - 1} - a_i) f_i + \sum (a_{i + 1} - a_i) f_{n + i} \}$.
+      Let $A_i = a_{i - 1} - a_i$ for each $i$.
+      Then $\Im(\partial_3) = \{ \sum A_if_i + \sum (-A_{i + 1})f_{n + i} \mid \sum A_i = 0 \}$.
+
+      It is clear that $\ker(\partial_2) = \Im(\partial_3)$.
+      Thus $H_2 = 0$.
+    \item
+      \todo[inline,caption={}]{
+        $H_1$.
+      }
+    \item
+      $H_0 = \ev{ v_0, v_1 } / \ev{ v_0 - v_1 } = \mathbb{Z}.$
+  \end{itemize}
 \end{proof}
 
 \end{document}
