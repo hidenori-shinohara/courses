@@ -1,0 +1,86 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage{listings}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ord}{ord}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{MyTitle}
+\author{Hidenori Shinohara}
+\maketitle
+
+\tableofcontents
+
+\section{Modules}
+
+\begin{exer}{(Problem 6)}
+  Take four $4 \times 4$ matrices with integer entries and check if the abelian group presented by the matrix is cyclic.
+\end{exer}
+
+\begin{proof}
+  \begin{align*}
+    \begin{bmatrix} -166 & -74 & 254 & 347\\ 140 & -93 & 246 & 425\\ -196 & 57 & -363 & 202\\ 325 & 257 & 314 & -389 \end{bmatrix}
+      &\rightarrow \begin{bmatrix} 18444530375 & 1 & 1 & 1 \end{bmatrix} \\
+    \begin{bmatrix} 237 & -81 & 332 & -132\\ 95 & 268 & 229 & 498\\ 387 & 213 & 46 & 55\\ 88 & -126 & -380 & -447 \end{bmatrix}
+      &\rightarrow \begin{bmatrix} 2610768268 & 1 & 1 & 1 \end{bmatrix} \\
+    \begin{bmatrix} -275 & -22 & -207 & -276\\ -469 & -342 & 240 & -101\\ -41 & 455 & 51 & -151\\ 267 & -450 & 98 & -40 \end{bmatrix}
+      &\rightarrow \begin{bmatrix} 33644517767 & 1 & 1 & 1 \end{bmatrix} \\
+    \begin{bmatrix} 48 & 29 & 22 & -481\\ 388 & -468 & -137 & -491\\ 84 & -352 & 85 & -384\\ -226 & -486 & 102 & -156 \end{bmatrix}
+       &= \begin{bmatrix} 13267264454 & 1 & 1 & 1 \end{bmatrix} \\
+  \end{align*}
+  Each of the groups contains 4 generators, so none of them are cyclic.
+\end{proof}
+
+\end{document}
+
+
