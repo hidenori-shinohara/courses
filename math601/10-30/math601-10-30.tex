@@ -44,6 +44,7 @@
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Id}{Id}
 \DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\ord}{ord}
 
 \makeatletter
@@ -79,6 +80,25 @@
        &= \begin{bmatrix} 13267264454 & 1 & 1 & 1 \end{bmatrix} \\
   \end{align*}
   Each of the groups contains 4 generators, so none of them are cyclic.
+\end{proof}
+
+\section{Galois Theory}
+
+\begin{exer}{(Problem 1)}
+  Let $F = \mathbb{Q}$.
+  Let $L = \mathbb{Q}(\sqrt{7}, \sqrt{-11})$.
+  To what familiar group is $\Aut(L/F)$ is isomorphic?
+\end{exer}
+
+\begin{proof}
+  $[K:\mathbb{Q}(\sqrt{7})] = [K:\mathbb{Q}(\sqrt{-11})] = 2$.
+  Since the characteristic of $K$ is not 2, by the argument presented on P.3 of the Galous Theory handout, $\Aut(K/\mathbb{Q}(\sqrt{7}))$ and $\Aut(K/\mathbb{Q}(\sqrt{-11}))$ have 2 elements.
+  For instance, $\alpha = \sqrt{7}$ and the minimal monic polynomial is $x^2 - 7$.
+  This gives $D = 28$ and two automorphisms in $\Aut(K/\mathbb{Q}(\sqrt{7}))$, the identity map, and $\sigma: \sqrt{D} \mapsto -\sqrt{D}$ as discussed in the handout.
+  Similarly, $\Aut(K/\mathbb{Q}(\sqrt{-11}))$ contains the identity map and $\sigma: \sqrt{D} \mapsto -\sqrt{D}$ where $D = -44$.
+  \todo[inline,caption={}]{
+    Finish this proof.
+  }
 \end{proof}
 
 \end{document}
