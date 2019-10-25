@@ -109,6 +109,17 @@
   Otherwise, $f$ has a factor of degree between 1 and $\deg(f') = \deg(f) - 1$, so $f$ is not irreducible.
 \end{proof}
 
+\begin{exer}{(Problem 5)}
+  Suppose that $f(x) \in \mathbb{F}_q[x]$ and $\gcd(f, f') = f$.
+  How can you reduce the problem of factoring $f$ to a simpler problem?
+\end{exer}
+
+\begin{proof}
+  If $f' \ne 0$, $f \nmid f'$ because $\deg(f') < \deg(f)$.
+  Thus $\gcd(f, f') = f$ implies $f' = 0$.
+  By Problem 3, $f = g^p$ for some $g \in \mathbb{F}_q[x]$, and thus it suffices to factor $g$, whose degree is exactly $\deg(f) / p$.
+\end{proof}
+
 \section{Modules}
 
 \begin{exer}{(Problem 6)}
