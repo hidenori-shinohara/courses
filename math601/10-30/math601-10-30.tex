@@ -157,6 +157,26 @@
   Therefore, $f$ is square free if and only if $\gcd(f, f') = 1$.
 \end{proof}
 
+\begin{exer}{(Problem 8)}
+  Describe how to use repeated computation of $\gcd$'s to find a factorization of a given polynomial, $f(x) \in \mathbb{F}_q[x]$, $f = f_1 \cdots f_r$, where each $f_i \in \mathbb{F}_q[x]$ is square free.
+\end{exer}
+
+\begin{proof}
+  $ $
+  \begin{enumerate}
+    \item 
+      Calculate $d = \gcd(f, f')$.
+    \item
+      If $d = 1$, $f$ is square free by Problem 7, and we are done.
+    \item
+      If $d = f$, then $f' = 0$, so $f = g^p$ for some $g$ by Problem 2.
+      Let $f = g$, and go back to Step 1.
+    \item
+      Otherwise, we can factor $d$ and $f / d$ further by going back to Step 1.
+  \end{enumerate}
+  This process must terminate finitely because the degree of a polynomial continues to decrease.
+\end{proof}
+
 \section{Modules}
 
 \begin{exer}{(Problem 6)}
