@@ -93,9 +93,10 @@
 \end{exer}
 
 \begin{proof}
-  \todo[inline,caption={}]{
-    Solve this!
-  }
+  By Problem 2, $f(x)$ with $f'(x) = 0$ can be always written as $\sum_{i=0}^{n} a_ix^{pi}$.
+  We will use induction on the degree of polynomials.
+  The base case, $n = 0$, is clear because $F_p$ is bijective.
+  If $f(x) = \sum_{i=0}^{n+1} a_ix^{pi}$, $(F_p^{-1}(a_{n+1})x^{n+1} + g(x))^p = a_{n+1}x^{p(n+1)} + (\sum_{i=0}^{n} a_ix^{pi})$ where $g(x)$ is the $p$th root of $\sum_{i=0}^{n} a_ix^{pi}$, whose existence is given by the inductive hypothesis.
 \end{proof}
 
 \section{Modules}
