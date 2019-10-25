@@ -120,6 +120,17 @@
   By Problem 3, $f = g^p$ for some $g \in \mathbb{F}_q[x]$, and thus it suffices to factor $g$, whose degree is exactly $\deg(f) / p$.
 \end{proof}
 
+\begin{exer}{(Problem 6)}
+  Let $L$ be a field and $f(x) = \prod_{i=1}^{n} (x - a_i)^{m_i} \in L[x]$, where the $a_i$'s are pairwise distinct.
+  Compute $d(x) = \gcd(f(x), f'(x))$.
+\end{exer}
+
+\begin{proof}
+  Since $L[x]$ is a UFD, every divisor of $f(x)$ is associate to a product of $(x - a_i)$'s, and so is $d(x)$.
+  $b_j = m_j - 1$ is the largest integer such that $(x - a_j)^{b_j}$ divides both $f$ and $f'$ since the product rule gives us $f' = m_j(x - a_j)^{m_j - 1}g(x) + (x - a_j)^{m_j}g(x)'$ where $g(x) = \prod_{i \ne j}(x - a_i^{m_i})$.
+  Therefore, $d(x) = \prod_{i=1}^{n}(x - a_i)^{m_i - 1}$.
+\end{proof}
+
 \section{Modules}
 
 \begin{exer}{(Problem 6)}
