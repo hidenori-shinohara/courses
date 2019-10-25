@@ -135,6 +135,28 @@
   Therefore, $d(x) = \prod_{i=1}^{n}(x - a_i)^{m_i - c_i}$ where $c_i = 0$ if $p \mid m_i$ and $c_i = 1$ otherwise.
 \end{proof}
 
+\begin{exer}{(Problem 7)}
+  A polynomial, $f(x)$, is said to be square free if it can be written as a product of irreducible factors, no two of which are associate.
+  For $f(x) \in \mathbb{F}_q[x]$, find a criterion in terms of $gcd(f(x), f'(x))$ for $f(x)$ to be square free.
+\end{exer}
+
+\begin{proof}
+  Let $f = \prod f_i$ be square free.
+  Let $j$ be given.
+  $f' = f_j'g + f_jg'$ where $g = \prod_{i\nej} f_i$.
+  Since $f_j$ is irreducible, $f_j$ is separable by Problem 4.
+  Thus $\gcd(f_j, f_j') = F^{\times}$, so $f_j \nmid f_j'$.
+  Thus $f_j \nmid f'$.
+
+  Since all divisors of $f$ are associate to some product of $f_i$'s, $\gcd(f, f') = 1$.
+
+  On the other hand, suppose $f$ is not square free.
+  Then $f = g^2h$ for some irreducible $g$ and some $h$.
+  $f' = g(2g'h + gh')$, so $g \mid \gcd(f, f')$.
+
+  Therefore, $f$ is square free if and only if $\gcd(f, f') = 1$.
+\end{proof}
+
 \section{Modules}
 
 \begin{exer}{(Problem 6)}
