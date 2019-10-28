@@ -168,7 +168,7 @@
 \begin{proof}
   $ $
   \begin{enumerate}
-    \item 
+    \item
       Calculate $d = \gcd(f, f')$.
     \item
       If $d = 1$, $f$ is square free by Problem 7, and we are done.
@@ -223,7 +223,7 @@
 \begin{exer}{(Problem 2)}
   Let $F \subset K$ be a field extension.
   \begin{enumerate}
-    \item 
+    \item
       Prove in at most two sentences that each $\sigma \in \Aut(K / F)$ is an $F$-linear transformation of the $F$-vector space, $K$.
     \item
       Does the same condition hold in general for $\sigma \in \Aut(K)$?
@@ -234,7 +234,7 @@
 \begin{proof}
   $ $
   \begin{enumerate}
-    \item 
+    \item
       For any $a \in F$ and $v, w \in K$, $\sigma(av + w) = \sigma(a)\sigma(v) + \sigma(w) = a\sigma(v) + \sigma(w)$, so $\sigma$ is indeed an $F$-linear transformation.
     \item
       Let $F = \mathbb{Q}(\sqrt{7})$ and $K = \mathbb{Q}(\sqrt{7}, \sqrt{-11})$.
@@ -256,7 +256,7 @@
 \begin{proof}
   $ $
   \begin{enumerate}
-    \item 
+    \item
       $[F:\mathbb{Q}] = 2$ since $\zeta^2 + \zeta + 1 = 0$.
     \item
       $\Aut(F/\mathbb{Q})$ permutes the roots of $x^2 + x + 1 = 0$.
@@ -276,19 +276,20 @@
       $\Aut(L/\mathbb{Q})$ is a group with at most 6 elements and it contains 3 distinct subgroups with 2 elements each.
       $S_3$ is the only group that satisfies that with $\ev{ r }, \ev{ r\rho }, \ev{ r\rho^2 }$.
     \item
-      Each element in $\Aut(L/\mathbb{Q})$ sends $7^{1/3}$ to one of $7^{1/3}, \omega 7^{1/3}, \omega^2 7^{1/3}$ and $\omega$ to one of $\omega$ or $\omega^2$.
+      Each element in $\Aut(L/\mathbb{Q})$ sends $7^{1/3}$ to one of $7^{1/3}, \zeta 7^{1/3}, \zeta^2 7^{1/3}$ and $\zeta$ to one of $\zeta$ or $\zeta^2$.
       Thus $\Aut(L/\mathbb{Q})$ contains 6 elements.
     \item
+      $ $
       \begin{center}
         \begin{tabular}{ |c|c|c|c|c|c|c| }
           \hline
-                         & 1 & 7^{1/3} & 7^{2/3} & \zeta & 7^{1/3}\zeta & 7^{2/3}\zeta \\
-            1            & 1 & 7^{1/3} & 7^{2/3} & \zeta & 7^{1/3}\zeta & 7^{2/3}\zeta \\
-            7^{1/3}      & 1 & 7^{1/3} & 7^{2/3} & \zeta & 7^{1/3}\zeta & 7^{2/3}\zeta \\
-            7^{2/3}      & 1 & 7^{1/3} & 7^{2/3} & \zeta & 7^{1/3}\zeta & 7^{2/3}\zeta \\
-            \zeta        & 1 & 7^{1/3} & 7^{2/3} & \zeta & 7^{1/3}\zeta & 7^{2/3}\zeta \\
-            7^{1/3}\zeta & 1 & 7^{1/3} & 7^{2/3} & \zeta & 7^{1/3}\zeta & 7^{2/3}\zeta \\
-            7^{2/3}\zeta & 1 & 7^{1/3} & 7^{2/3} & \zeta & 7^{1/3}\zeta & 7^{2/3}\zeta \\
+                                & 1 & $7^{1/3}$         & $7^{2/3}$         & $\zeta$   & $\zeta 7^{1/3}$   & $\zeta 7^{2/3}$ \\
+            \hline $\phi_1$     & 1 & $7^{1/3}$         & $7^{2/3}$         & $\zeta$   & $\zeta 7^{1/3}$   & $\zeta 7^{2/3}$ \\
+            \hline $\phi_2$     & 1 & $\zeta 7^{1/3}$   & $\zeta^2 7^{2/3}$ & $\zeta^2$ & $7^{1/3}$        & $\zeta 7^{2/3}$ \\
+            \hline $\phi_3$     & 1 & $\zeta^2 7^{1/3}$ & $\zeta 7^{2/3}$   & $\zeta$   & $7^{1/3}$        & $\zeta^2 7^{2/3}$ \\
+            \hline $\phi_4$     & 1 & $7^{1/3}$         & $7^{2/3}$         & $\zeta^2$ & $\zeta^2 7^{1/3}$ & $\zeta^2 7^{2/3}$ \\
+            \hline $\phi_5$     & 1 & $\zeta 7^{1/3}$   & $\zeta^2 7^{2/3}$ & $\zeta$   & $\zeta^2 7^{1/3}$ & $7^{2/3}$ \\
+            \hline $\phi_6$     & 1 & $\zeta^2 7^{1/3}$ & $\zeta 7^{2/3}$   & $\zeta^2$ & $\zeta 7^{1/3}$   & $7^{2/3}$ \\
           \hline
         \end{tabular}
       \end{center}
