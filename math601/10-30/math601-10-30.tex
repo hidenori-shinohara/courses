@@ -203,23 +203,6 @@
 
 \section{Galois Theory}
 
-\begin{exer}{(Problem 1)}
-  Let $F = \mathbb{Q}$.
-  Let $L = \mathbb{Q}(\sqrt{7}, \sqrt{-11})$.
-  To what familiar group is $\Aut(L/F)$ is isomorphic?
-\end{exer}
-
-\begin{proof}
-  $[K:\mathbb{Q}(\sqrt{7})] = [K:\mathbb{Q}(\sqrt{-11})] = 2$.
-  Since the characteristic of $K$ is not 2, by the argument presented on P.3 of the Galous Theory handout, $\Aut(K/\mathbb{Q}(\sqrt{7}))$ and $\Aut(K/\mathbb{Q}(\sqrt{-11}))$ have 2 elements.
-  For instance, $\alpha = \sqrt{7}$ and the minimal monic polynomial is $x^2 - 7$.
-  This gives $D = 28$ and two automorphisms in $\Aut(K/\mathbb{Q}(\sqrt{7}))$, the identity map, and $\sigma: \sqrt{D} \mapsto -\sqrt{D}$ as discussed in the handout.
-  Similarly, $\Aut(K/\mathbb{Q}(\sqrt{-11}))$ contains the identity map and $\sigma: \sqrt{D} \mapsto -\sqrt{D}$ where $D = -44$.
-  \todo[inline,caption={}]{
-    Finish this proof.
-  }
-\end{proof}
-
 \begin{exer}{(Problem 2)}
   Let $F \subset K$ be a field extension.
   \begin{enumerate}
@@ -239,7 +222,6 @@
     \item
       Let $F = \mathbb{Q}(\sqrt{7})$ and $K = \mathbb{Q}(\sqrt{7}, \sqrt{-11})$.
       Let $\sigma \in \Aut(K / \mathbb{Q})$ such that $\sigma(\sqrt{7}) = -\sqrt{7}, \sigma(\sqrt{-11}) = -\sqrt{-11}$.
-      The existence of such an automorphism is shown in the solution to Problem 1.
       $K$ is an $F$-vector space.
       However, $\sigma(\sqrt{7} \cdot 1) = -\sqrt{7} \ne \sqrt{7} = \sqrt{7}(\sigma(1))$, so $\sigma$ is not an $F$-linear transformation.
   \end{enumerate}
