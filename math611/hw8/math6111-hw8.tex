@@ -74,6 +74,28 @@
   }
 \end{proof}
 
+\begin{exer}{(Problem 15)}
+  For an exact sequence $A \rightarrow B \rightarrow C \rightarrow D \rightarrow E$ show that $C = 0$ if and only if the map $A \rightarrow B$ is surjective and $D \rightarrow E$ is injective.
+  Hence, for a pair of spaces $(X, A)$, the inclusion $A \rightarrow X$ induces isomorphisms on all homology groups if and only if $H_n(X, A) = 0$ for all $n$.
+\end{exer}
+
+\begin{proof}
+  Suppose $C = 0$.
+  $\Im(\phi_{AB}) = \ker(\phi_{BC}) = B$, so $\phi_{AB}$ is surjective.
+  $\ker(\phi_{DE}) = \Im(\phi_{CD}) = \{ 0 \}$, so $\phi_{DE}$ is injective.
+
+  On the other hand, suppose $\phi_{AB}$ is surjective and $\phi_{DE}$ is injective.
+  $\Im(\phi_{CD}) = \ker(\phi_{DE}) = \{ 0 \}$, so $\phi_{CD}$ is the zero map.
+  Therefore, $\ker(\phi_{CD}) = C$.
+  $\ker(\phi_{BC}) = \Im(\phi_{AB}) = B$, so $\phi_{BC}$ is the zero map.
+  Therefore, $\Im(\phi_{BC}) = 0$.
+  Hence, $C = \ker(\phi_{CD}) = \Im(\phi_{BC}) = 0$.
+
+  \todo[inline,caption={}]{
+    Finish the second part.
+  }
+\end{proof}
+
 \end{document}
 
 
