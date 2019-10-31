@@ -96,6 +96,38 @@
   }
 \end{proof}
 
+\begin{exer}{(Problem 16)}
+  \begin{itemize}
+    \item
+      Show that $H_0(X, A) = 0$ if and only if $A$ meets each path-component of $X$.
+    \item
+      \todo[inline,caption={}]{
+        Do Part (b).
+      }
+  \end{itemize}
+\end{exer}
+
+\begin{proof}
+  $ $
+  \begin{itemize}
+    \item
+      Let $\gamma_x + C_0(A) \in C_0(X) / C_0(A)$.
+      Since $A$ meets each path-component of $X$, there exists a path $\gamma: I \rightarrow X$ that joins a point $a \in A$ and the image of $\gamma_x$.
+      Then $\gamma$ can be seen as an element of $C_1(X)$ since $\gamma$ maps a 1-simplex into $X$.
+      Moreover, $\partial\gamma = \gamma_x - \gamma_a$ where $\gamma_a \in C_0(A)$ with $\Im(\gamma_a) = a$.
+      Therefore, $\partial(\gamma + C_1(A)) = \gamma_x + C_0(A)$, so $\gamma_x + C_0(A) \in \Im(\partial)$.
+      Hence, $H_0(X, A) = \ker(\partial_0)/\Im(\partial_1) = (C_0(X)/C_0(A)) / (C_0(X)/C_1(A)) = 0$.
+
+      \todo[inline,caption={}]{
+        Do the opposite direction.
+      }
+    \item
+      \todo[inline,caption={}]{
+        Do part (b).
+      }
+  \end{itemize}
+\end{proof}
+
 \end{document}
 
 
