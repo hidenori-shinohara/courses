@@ -1,0 +1,88 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Aut}{Aut}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 601 (Due 11/6)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\tableofcontents
+
+\section{Galois Theory II (P.2)}
+
+\begin{exer}{(Problem 1)}
+  Let $f(x) \in F[x]$ be an irreducible polynomial of degree $d$.
+  Let $F \subset K$ be a field extension such that $f(x)$ factors as a product of linear polynomials in $K[x]$.
+  Show that $f(x)$ is separable if and only if there exist $d$ distinct $F$-algebra homomorphisms, $F[x]/(f(x)) \rightarrow K$.
+\end{exer}
+
+\begin{proof}
+  Without loss of generality, assume $f(x)$ is monic and $f(x) = \prod_{i=1}^{d} (x - a_i)$ for some $a_i \in K$.
+
+  Suppose $f(x)$ is separable.
+  Then $a_i \ne a_j$ for all $i \ne j$.
+  For each $i$, let $\phi_i: F[x]/(f(x)) \rightarrow K$ be an $F$-algebra homomorphism such that $x \mapsto a_i$ and $a \mapsto a$ for all $a \in F$.
+  Then each $\phi_i$ is distinct because $\phi_i(x) \ne \phi_j(x)$ whenever $i \ne j$.
+  Thus we showed the existence of $d$ distinct $F$-algebra homomorphisms.
+
+  \todo[inline,caption={}]{
+    Show the other direction.
+  }
+\end{proof}
+
+\end{document}
+
+
