@@ -101,7 +101,7 @@
 \begin{exer}{(Problem 3)}
   Let $F \subset F[v_1, \cdots, v_r] = K$ be as in the previous problem.
   Let $w \in K$.
-  Show that the monic irreducible polynomial of $w$ is seaprable.
+  Show that the monic irreducible polynomial of $w$ is separable.
 \end{exer}
 
 \begin{proof}
@@ -109,6 +109,22 @@ $ $
  \todo[inline,caption={}]{
    Can I just use the results of Problem 1 and 2?
  }
+\end{proof}
+
+\section{Factoring Polynomials with Coefficients in Finite Fields}
+
+\begin{exer}{(Problem 9)}
+  Let $\mathbb{F}_q$ be a field with $q = p^m$ elements.
+  Let $f(x) \in \mathbb{F}_q[x]$ be square free.
+  Describe $\gcd(x^q - x, f(x))$ in terms of the linear factors of $f(x)$.
+\end{exer}
+
+\begin{proof}
+  Since $(x^q - x)' = -1$, $\gcd(x^q - x, (x^q - x)') = 1$.
+  Thus $x^q - x$ is square free by Problem 7 from last week.
+  Thus $x^q - x = \prod_{i=1}^{q} (x - a_i)$ where $\mathbb{F}_q = \{ a_1, \cdots, a_q \}$.
+  Each linear factor (if any) of $f(x)$ is associate to $x - a_i$ for some $i$.
+  Since $f(x)$ is square free, $\gcd(x^q - x, f(x))$ is the product of all the linear factors of $f(x)$.
 \end{proof}
 
 \end{document}
