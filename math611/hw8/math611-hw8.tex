@@ -151,6 +151,40 @@
   \end{itemize}
 \end{proof}
 
+\begin{exer}{(Problem 17)}
+  $ $
+  \begin{itemize}
+    \item
+      Compute the homology groups $H_n(X, A)$ when $X$ is $S^2$ or $S^1 \times S^1$ and $A$ is a finite set of points in $X$.
+    \item
+      Compute the groups $H_n(X, A)$ and $H_n(X, B)$ for $X$ a closed orientable surface of genus two with $A$ and $B$ the circles shown.
+  \end{itemize}
+\end{exer}
+
+\begin{proof}
+  $ $
+  \begin{itemize}
+    \item
+      Since a finite set of points in $S^2$ is a nonempty closed subspace that is a deformation retract of some neighborhood in $S^2$, we can apply Theorem 2.13.
+      Thus $\tilde{H}_2(A) \rightarrow \tilde{H}_2(S^2) \xrightarrow{\phi} \tilde{H_2}(S^2, A) \xrightarrow{\psi} \tilde{H_1}{A} \rightarrow \tilde{H_1}(S^2)$ is an exact sequence.
+      Then $\tilde{H_2}(A) = \tilde{H_1}(A) = \tilde{H_1}(S^2) = 0$ and $\tilde{H_2}(S^2) = \mathbb{Z}$.
+      Then $\tilde{H_2}(S^2, A) = \tilde{H_2}(S^2)/\ker(\phi) = \tilde{H_2}(S^2) = \mathbb{Z}$.
+
+      $\tilde{H}_0(A) \rightarrow \tilde{H}_0(S^2) \rightarrow \tilde{H_0}(S^2, A) \rightarrow 0$ is an exact sequence.
+      Since $\tilde{H}_0(A) = \tilde{H}_0(S^2) = 0$, $\tilde{H_0}(S^2, A) = 0$.
+
+      For any $n = 1$ or $n \ne 3$, $\tilde{H}_n(A) \rightarrow \tilde{H}_n(S^2) \rightarrow \tilde{H_n}(S^2, A) \rightarrow \tilde{H}_{n - 1}(A)$ is an exact sequence.
+      Since $\tilde{H}_n(A) = \tilde{H}_n(S^2) = \tilde{H}_{n - 1}(A) = 0$, $\tilde{H}_n(S^2, A) = 0$.
+      \todo[inline,caption={}]{
+        $S^1 \times S^1$
+      }
+    \item
+      \todo[inline,caption={}]{
+        Finish this!
+      }
+  \end{itemize}
+\end{proof}
+
 \end{document}
 
 
