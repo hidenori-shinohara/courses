@@ -123,9 +123,27 @@
       Therefore, $\partial(\gamma + C_1(A)) = \gamma_x + C_0(A)$, so $\gamma_x + C_0(A) \in \Im(\partial)$.
       Hence, $H_0(X, A) = \ker(\partial_0)/\Im(\partial_1) = (C_0(X)/C_0(A)) / (C_0(X)/C_1(A)) = 0$.
 
-      \todo[inline,caption={}]{
-        Do the opposite direction.
-      }
+      On other hand, suppose that $A$ does not meet each path component of $X$.
+      Let $x \in X$ be a point in a path component that $A$ does not intersect.
+      Let $\gamma_x: \Delta^0 \rightarrow X$ such that $\Im(\gamma_x) = \{ x \}$.
+      Then $\gamma_x \in \ker(\partial_0) = C_0(X, A)$.
+      Let $\gamma + C_1(A) \in C_1(X, A)$.
+      Then $\partial_1(\gamma + C_1(A)) = \partial_1(\gamma) + C_0(A)$.
+      Let $\gamma_{x_1}, \gamma_{x_2} \in C_0(X)$ such that $\partial_1(\gamma) = \gamma_{x_1} - \gamma_{x_2}$.
+      $\gamma_{x_1} - \gamma_{x_2} + C_0(A) \ne \gamma_x + C_0(A)$ if and only if $\gamma_{x_1} - \gamma_{x_2} - \gamma_x \in C_0(A)$.
+
+      \begin{itemize}
+        \item
+          If $\gamma$ lies in the same path component as $x$, then so do $x_1$ and $x_2$.
+          Suppose $x = x_1$.
+          Since $-\gamma_{x_2} \notin C_0(A)$, $\gamma_{x_1} - \gamma_{x_2} + C_0(A) \ne \gamma_x + C_0(A)$.
+          The case when $x \ne x_1$ and $x = x_2$ and the case when $x \ne x_1$ and $x \ne x_2$ can be proven in a similar way.
+        \item
+          If $\gamma$ lies in a different path component, then $\gamma_x \ne \gamma_{x_1}$ and $\gamma_x \ne \gamma_{x_2}$.
+          Therefore, $\gamma_{x_1} - \gamma_{x_2} + C_0(A) \ne \gamma_x + C_0(A)$.
+      \end{itemize}
+      Therefore, $\gamma_x \notin \Im(\partial_1)$.
+      Thus $H_0(X, A) = C_0(X, A) / \Im(\partial_1)$ is not 0.
     \item
       \todo[inline,caption={}]{
         Do part (b).
