@@ -78,9 +78,11 @@
   Then each $\phi_i$ is distinct because $\phi_i(x) \ne \phi_j(x)$ whenever $i \ne j$.
   Thus we showed the existence of $d$ distinct $F$-algebra homomorphisms.
 
-  \todo[inline,caption={}]{
-    Show the other direction.
-  }
+  Suppose there exist $d$ distinct homomorphisms $\phi_i$ for $i = 1, \cdots, d$.
+  For any $j$, $\prod_{i=1}^{d}(\phi_j(x) - a_i) = \phi_j(\prod_{i=1}^{d}(x - a_i)) = \phi_j(f(x)) = 0$, so $\phi_j(x) \in K$ is a root of $f(x)$.
+  Thus $x - \phi_i(x)$ divides $f(x)$ for each $i$.
+  Since $\phi_i$ is uniquely determined by the value $\phi_i(x)$, $\phi_i(x) \ne \phi_j(x)$ whenever $i \ne j$.
+  Thus $f(x) = \prod_{i=1}^{d}(x - \phi_i(x))$, and $f(x)$ is separable.
 \end{proof}
 
 \begin{exer}{(Problem 2)}
