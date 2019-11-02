@@ -94,11 +94,24 @@
   Therefore, $\Im(\phi_{BC}) = 0$.
   Hence, $C = \ker(\phi_{CD}) = \Im(\phi_{BC}) = 0$.
 
-  For each $n$, we have an exact sequence $0 \rightarrow C_n(A) \xrightarrow{i} C_n(X) \xrightarrow{j} C_n(X)/C_n(A) \rightarrow 0$ where $i$ is induced by the inclusion map $A \rightarrow X$ and $j$ is the canonical quotient map.
-  Moreover, the diagram formed by the exact sequence for each $n$ joined by $\partial$ is commutative by the definition of $\partial$.
-  \todo[inline,caption={}]{
-    Apply Theorem 2.16!
-  }
+  By Theorem 2.16 and the discussion at the bottom of P.117(Hatcher), we have a long exact sequence of homology groups
+  \begin{align} \label{problem15_seq}
+    H_n(A) \xrightarrow{i_*} H_n(X) \rightarrow H_n(X, A) \rightarrow H_{n - 1}(A) \xrightarrow{i_*} H_{n - 1}(X)
+  \end{align}
+  for $n \geq 1$.
+  Suppose the inclusion induces isomorphisms on all homology groups.
+  Then $H_n(X, A) = 0$ for all $n \geq 1$ by the first part.
+  Moreover, we have $H_1(X, A) \rightarrow H_0(A) \rightarrow H_0(X) \rightarrow H_0(X, A) \rightarrow 0$.
+  Since $H_1(X, A) = 0$, by the first part, $H_0(X) = 0$.
+  In order for $0 \rightarrow H_0(X, A) \rightarrow 0$ to be exact, $H_0(X, A)$ must be 0.
+  Therefore, $H_n(X, A) = 0$ for all $n \geq 0$.
+
+  Suppose that $H_n(X, A) = 0$ for all $n \geq 0$.
+  By exact sequence \ref{problem15_seq} above, $i_*: H_n(A) \rightarrow H_n(X)$ is surjective for $n \geq 1$ and injective for $n \geq 0$.
+  Thus $i_*$ is bijective for all $n \geq 1$.
+  We have $H_1(X, A) \rightarrow H_0(A) \rightarrow H_0(X) \rightarrow H_0(X, A)$.
+  Since $H_1(X, A) = H_0(X, A) = 0$, $i_*$ must be bijective by the exactness.
+  Therefore, the inclusion induces isomorphisms for all $n$.
 \end{proof}
 
 \begin{exer}{(Problem 16)}
