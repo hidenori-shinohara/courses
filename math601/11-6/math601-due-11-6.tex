@@ -127,6 +127,17 @@ $ $
   Moreover, any element in $\mathbb{F}_q$ satisfies $x^q - x = 0$, so $F_q(a) = a^q = a$ for any $a \in \mathbb{F}_q$.
 \end{proof}
 
+\begin{exer}{(Problem 2)}
+  Show that $F_p: \mathbb{F}_{q^r} \rightarrow \mathbb{F}_{q^r}$, $F_p(a) = a^p$ is not an element of $\Aut(\mathbb{F}_{q^r} / \mathbb{F}_q)$ unless $q = p$.
+\end{exer}
+
+\begin{proof}
+  If $q = p$, we are done.
+  Suppose $q > p$.
+  Let $\ev{\alpha} = (\mathbb{F}_{q})^{*}$.
+  Then the order of $\alpha$ is $q - 1$, so $F_p(\alpha) = \alpha^p \ne \alpha$.
+\end{proof}
+
 \section{Factoring Polynomials with Coefficients in Finite Fields}
 
 \begin{exer}{(Problem 9)}
