@@ -138,6 +138,21 @@ $ $
   Then the order of $\alpha$ is $q - 1$, so $F_p(\alpha) = \alpha^p \ne \alpha$.
 \end{proof}
 
+\begin{exer}{(Problem 3)}
+  Let $f(x) \in \mathbb{F}_q[x]$ be a monic irreducible polynomial of degree $r$.
+  Explain why $f(x)$ has a root $\alpha \in \mathbb{F}_{q^r}$.
+\end{exer}
+
+\begin{proof}
+  Let $f(x) = \sum_{i=0}^{r} a_ix^i$.
+  Since $\ev{f(x)}$ is a maximal ideal, $\mathbb{F}_q[x]/\ev{f(x)}$ is a field with an $\mathbb{F}_q$-basis $\{ 1, x, \cdots, x^{d - 1} \}$.
+  Thus the field contains $q^r$ elements.
+  By the uniqueness of a finite field, there exists an isomorphism $\phi: \mathbb{F}_{q^r} \rightarrow \mathbb{F}_q[x]/\ev{f(x)}$.
+  Let $\alpha = \phi^{-1}(x)$.
+  Then $\phi(\sum_{i=0}^{r} a_i\alpha^i) = \sum_{i=0}^{r}a_ix^i = 0$.
+  Thus $\mathbb{F}_{q^r}$ contains a root of $f(x)$.
+\end{proof}
+
 \section{Factoring Polynomials with Coefficients in Finite Fields}
 
 \begin{exer}{(Problem 9)}
