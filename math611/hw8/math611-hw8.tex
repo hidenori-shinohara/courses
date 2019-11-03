@@ -176,20 +176,19 @@
   $ $
   \begin{itemize}
     \item
-      Since a finite set of points in $S^2$ is a nonempty closed subspace that is a deformation retract of some neighborhood in $S^2$, we can apply Theorem 2.13.
-      Thus $\tilde{H}_2(A) \rightarrow \tilde{H}_2(S^2) \xrightarrow{\phi} \tilde{H_2}(S^2, A) \xrightarrow{\psi} \tilde{H_1}{A} \rightarrow \tilde{H_1}(S^2)$ is an exact sequence.
-      Then $\tilde{H_2}(A) = \tilde{H_1}(A) = \tilde{H_1}(S^2) = 0$ and $\tilde{H_2}(S^2) = \mathbb{Z}$.
-      Then $\tilde{H_2}(S^2, A) = \tilde{H_2}(S^2)/\ker(\phi) = \tilde{H_2}(S^2) = \mathbb{Z}$.
+      We will apply Theorem 2.16 to get the exact sequence with $H_n(A), H_n(X), H_n(X, A)$.
+      \begin{itemize}
+        \item
+          When $n \geq 3$, $H_n(S^2) \rightarrow H_n(S^2, A) \rightarrow H_{n - 1}(A)$ shows that $H_n(S^2, A)$ is 0 by the exactness since $H_n(S^2) = H_{n - 1}(A) = 0$.
+        \item
+          When $n = 2$, $H_n(A) \rightarrow H_n(S^2) \xrightarrow{\phi} H_n(S^2, A) \rightarrow H_{n - 1}(A)$ shows that $H_n(S^2, A) = H_n(S^2) = \mathbb{Z}$.
+          This is because $H_n(A) = H_{n - 1}(A) = 0$ so $\phi$ is an isomorphism by the exactness.
+        \item
+          \todo[inline,caption={}]{
+            $n = 0$ and $n = 1$.
+          }
+      \end{itemize}
 
-      $\tilde{H}_0(A) \rightarrow \tilde{H}_0(S^2) \rightarrow \tilde{H_0}(S^2, A) \rightarrow 0$ is an exact sequence.
-      Since $\tilde{H}_0(A) = \tilde{H}_0(S^2) = 0$, $\tilde{H_0}(S^2, A) = 0$.
-
-      For any $n \geq 3$, $\tilde{H}_n(A) \rightarrow \tilde{H}_n(S^2) \rightarrow \tilde{H_n}(S^2, A) \rightarrow \tilde{H}_{n - 1}(A)$ is an exact sequence.
-      Since $\tilde{H}_n(A) = \tilde{H}_n(S^2) = \tilde{H}_{n - 1}(A) = 0$, $\tilde{H}_n(S^2, A) = 0$.
-
-      Finally, $\tilde{H_1}(A) \rightarrow \tilde{H}_1(X) \xrightarrow{\phi} \tilde{H}_1(X?A) \xrightarrow{\psi} \tilde{H_0}(A) \rightarrow \tilde{H_0}(X)$.
-      We have $\tilde{H}_1(X / A) / \ker(\psi) = \Im(\psi)$.
-      Since $\psi$ is surjective and $\ker(\psi) = \Im(\phi) = 0$, $\tilde{H}_1(X / A) = \tilde{H}_0(A)$.
 
       \todo[inline,caption={}]{
         $S^1 \times S^1$
