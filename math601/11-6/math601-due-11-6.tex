@@ -206,6 +206,24 @@
   ($x^{q^2} - x$ may or may not be square free, but $f(x)$ is square free, so $h(x)$ must be square free.)
 \end{proof}
 
+\begin{exer}{(Problem 11)}
+  Given a square free polynomial $f(x) \in \mathbb{F}_q[x]$, describe how to use repeated $\gcd$ calculations to factor $f(x)$ as $f = f_1f_2 \cdots f_r$, where each $f_i$ is a product of distinct irreducible factors of degree $i$.
+\end{exer}
+
+\begin{proof}
+  Let $n \in \mathbb{N}$ be given.
+  Let $g(x) \in \mathbb{F}_q[x]$ be an irreducible monic polynomial of degree $n$.
+  Using a similar argument as Problem 10 above, $\mathbb{F}_{q^n}$ contains a root $\alpha$ of $g$.
+  Similarly, $\alpha$ is a root of $x^{q^n} - x$.
+
+  \todo[inline,caption={}]{
+    How can I show that $g(x) \mid x^{q^n} - x$?
+  }
+\end{proof}
+
+
+
+
 \end{document}
 
 
