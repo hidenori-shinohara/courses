@@ -189,10 +189,22 @@
           }
       \end{itemize}
 
+      \begin{figure}
+        \includegraphics[width=.5\linewidth]{torus_homology.jpeg}
+        \caption{Problem 17}
+        \label{fig:torus_homology}
+      \end{figure}
+      We will first compute the homology groups of a torus using Figure \ref{fig:torus_homology}.
+      $C_2 = \{ \sigma_1, \sigma_2 \}, C_1 = \{ a, b, c \}, C_0 = \{ v_0 \}$.
+      \begin{itemize}
+        \item
+          $H_2 = \ker(\partial_2) / \Im(\partial_3) = \ev{ \sigma_1 - \sigma_2 } / 0 = \mathbb{Z}$.
+        \item
+          $H_1 = \ker(\partial_1) / \Im(\partial_2) = \ev{ a, b, c } / \ev{ b - a + c, c - a + b } = \mathbb{Z}^2$ because $b - a + c = c - a + b$.
+        \item
+          $H_0 = \ker(\partial_0) / \Im(\partial_1) = \ev{ v_0 } / 0 = \mathbb{Z}$.
+     \end{itemize}
 
-      \todo[inline,caption={}]{
-        $S^1 \times S^1$
-      }
     \item
       \todo[inline,caption={}]{
         Finish this!
