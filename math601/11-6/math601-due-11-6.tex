@@ -153,6 +153,21 @@ $ $
   Thus $\mathbb{F}_{q^r}$ contains a root of $f(x)$.
 \end{proof}
 
+\begin{exer}{(Problem 4)}
+  With $f(x)$ as in the previous problem, show that $f(x) = \prod_{i=0}^{r-1} (x - \alpha^{q^i}) \in \mathbb{F}_{q^r}[x]$.
+  Conclude that $\mathbb{F}_{q^r}$ is a splitting field for $f(x)$ over $\mathbb{F}_q$.
+  In other words, $\alpha^{q^i}$ is a root of $f(x)$ for any $i \in \mathbb{N}$.
+  \todo[inline,caption={}]{
+    How do I show that $\alpha^{q^i} \ne \alpha^{q^j}$ if $0 \leq i < j \leq r - 1$?
+  }
+\end{exer}
+
+\begin{proof}
+  Let $f(x) = \sum_{i=0}^{r} a_ix^i$.
+  Then $(f(x))^q = (\sum_{i=0}^{r} a_ix^i)^q = \sum_{i=0}^{r}a_i^q(x^q)^i = \sum_{i=0}^r a_i(x^q)^i$.
+  Thus the $q$th power of any root $\beta$ of $f(x)$ is a root of $f(x)$.
+\end{proof}
+
 \section{Factoring Polynomials with Coefficients in Finite Fields}
 
 \begin{exer}{(Problem 9)}
