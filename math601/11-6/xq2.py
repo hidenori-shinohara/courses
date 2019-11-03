@@ -18,3 +18,9 @@ for p in ps:
             if irreducible2(b, c, p):
                 f = f * (x * x + b * x + c)
     print(trunc(f, p))
+
+## Output is
+# x**4 + x
+# x**9 - x
+# x**25 - x
+# x**49 - x

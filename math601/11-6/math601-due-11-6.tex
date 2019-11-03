@@ -181,6 +181,31 @@
   Since $f(x)$ is square free, $\gcd(x^q - x, f(x))$ is the product of all the linear factors of $f(x)$.
 \end{proof}
 
+\begin{exer}{(Problem 10)}
+  Let $f(x) \in \mathbb{F}_q[x]$ be square free.
+  Describe, $h(x) = \gcd(x^{q^2} - x, f(x))$, in terms of the irreducible quadratic polynomials which divide $f(x)$ and whatever other information is necessary.
+\end{exer}
+
+\begin{proof}
+  Since every element in $\mathbb{F}_q$ is a root of $x^{q^2} - x$, $h(x)$ is divisible by all the linear polynomials that divide $f(x)$.
+
+  Let $g(x) \in \mathbb{F}_q[x]$ be an irreducible monic quadratic polynomial.
+  Then $\mathbb{F}_q[x]/(g(x)) \cong \mathbb{F}_{q^2}$ with an isomorphism $\phi$.
+  Then $\phi(x)$ is a root of $g(x)$.
+  Thus $g = (x - \alpha)(x - \beta)$ in $\mathbb{F}_{q^2}[x]$.
+
+  Moreover, every element in $\mathbb{F}_{q^2}$ is a root of $x^{q^2} - x$.
+  Thus $g = (x - \alpha)(x - \beta) \mid x^{q^2} - x$.
+  Therefore, $h(x)$ is divisible by all the irreducible monic quadratic polynomials that divide $f(x)$.
+
+  Finally, the set of roots of $x^{q^2} - x$ is exactly $\mathbb{F}_{q^2}$.
+  Since $[\mathbb{F}_{q^2}:\mathbb{F}_q] = 2$, the degree of the minimal polynomial of each element must be either 1 or 2.
+  In other words, $x^{q^2} - x$ is a product of some linear and quadratic polynomials in $\mathbb{F}_q[x]$.
+
+  Therefore, $h(x)$ is exactly the product of all the irreducible monic polynomials of degree 1 or 2 that divide $f(x)$.
+  ($x^{q^2} - x$ may or may not be square free, but $f(x)$ is square free, so $h(x)$ must be square free.)
+\end{proof}
+
 \end{document}
 
 
