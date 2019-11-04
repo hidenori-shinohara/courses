@@ -279,6 +279,15 @@
   In other words, $\deg(g) = n$, so $f$ is irreducible.
 \end{proof}
 
+\begin{exer}{(Problem 13)}
+  Suppose $f(x) \in \mathbb{F}_q[x]$ is a product of $m$ distinct monic irreducible polynomials of degree $r$.
+  To what ring is $\mathbb{F}_q[x]/(f(x))$ isomorphic?
+\end{exer}
+
+\begin{proof}
+  By the Chinese remainder theorem, $\mathbb{F}_q[x]/(f(x)) = \mathbb{F}_q[x]/(f_1) \times \cdots \times \mathbb{F}_q[x]/(f_m)$.
+  Thus $\mathbb{F}_q[x]/(f(x)) = \mathbb{F}_{q^r} \times \cdots \times \mathbb{F}_{q^r}$ ($m$ times)
+\end{proof}
 
 
 
