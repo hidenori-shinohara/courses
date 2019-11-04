@@ -72,9 +72,28 @@
   Then $\ker(\phi_1) = 0, \Im(\phi_1) = \ker(\phi_2) = \{ (2k, k) \mid 0 \leq k \leq 3 \}$ and $\Im(\phi_2) = \mathbb{Z}_4$.
   Thus this is indeed an exact sequence.
 
-  \todo[inline,caption={}]{
-    Finish this!
-  }
+  We claim that $A = \mathbb{Z}_{p^i} \oplus \mathbb{Z}_{p^{m + n - i}}$ where $\max\{ m, n \} \leq i$.
+  \begin{itemize}
+    \item
+      Let $0 \rightarrow \mathbb{Z}_{p^m} \xrightarrow{\alpha} A \xrightarrow{\beta} \mathbb{Z}_{p^n} \rightarrow 0$ be given.
+      Then $\alpha$ is injective and $\beta$ is surjective by the exactness.
+      Let $u \in A$ such that $\beta(u) = 1$.
+      We claim that every element in $A$ can be uniquely expressed as $a\alpha(1) + bu$ where $0 \leq a \leq p^m - 1$ and $0 \leq b \leq p^n - 1$.
+
+      Let $0 \leq a \leq p^m - 1, 0 \leq b \leq p^n - 1$ be given such that $a\alpha(1) + bu = 0$.
+      Then $-a\alpha(1) = bu$, and $\beta(-a\alpha(1)) = 0$.
+      $bu = 0$ implies that $b\beta(u) = 0$, so $b = 0$.
+      Moreover, $-a\alpha(1) = 0$ implies that $\alpha(-a) = 0$, so $a = 0$ because $\alpha$ is injective.
+
+      Therefore, whenever $(a_1, b_1) \ne (a_2, b_2)$ , $a_1\alpha(1) + b_1u \ne a_2\alpha(1) + b_2u$ .
+      This implies that are at least $p^{m + n}$ elements in $A$ of this form.
+      By the exactness, $\mathbb{Z}_{p^n} = A / \mathbb{Z}_{p^m}$, so $A$ must contain exactly $p^{m + n}$ elements.
+      Therefore, every element in $A$ can be uniquely written in the form.
+      \todo[inline,caption={}]{
+        How can we use this to prove the rest?
+      }
+  \end{itemize}
+
 \end{proof}
 
 \begin{exer}{(Problem 15)}
