@@ -175,8 +175,19 @@
       Therefore, $\gamma_x \notin \Im(\partial_1)$.
       Thus $H_0(X, A) = C_0(X, A) / \Im(\partial_1)$ is not 0.
     \item
+      Suppose $H_1(X, A) = 0$.
+      By the exact sequence $H_1(A) \xrightarrow{\phi} H_1(X) \rightarrow H_1(X, A) \rightarrow H_0(A) \xrightarrow{\psi} H_1(X)$, we know that $\phi$ is surjective and $\psi$ is injective.
+      Suppose that there is a path component of $X$ that contains two or more path components of $A$.
+      Let $a, b$ be points in two distinct path components of $A$ that are contained in a path component of $X$.
+      We will regard $a, b$ as functions $\Delta^0 \rightarrow A$.
+      Then $a, b \in C_0(A)$ and $[a] \ne [b]$ in $H_0(A)$ because $a, b$ are in different path components of $A$, so $a - b \notin \Im(\partial_1)$.
+      However, $a, b$ live in the same path component of $X$, $a - b \in \Im(\partial_1) \subset C_0(X)$.
+      Therefore, $\phi([a]) = \phi([b])$ where $[a] \ne [b]$.
+      This is a contradiction because $\phi$ is injective.
+      Therefore, each path component of $X$ contains at most one path component of $A$.
+
       \todo[inline,caption={}]{
-        Do part (b).
+        Show the other direction.
       }
   \end{itemize}
 \end{proof}
@@ -295,7 +306,7 @@
   This shows that $f \in C_1(X / A)$.
   Moreover, $\partial(f) = v_0 - v_0 = 0$ where $v_0$ is the origin of the Hawaiian earring.
   Therefore, $[f] \in H_1(X / A)$.
-  We define $\zeta(k_1, \cdtos) = [f]$.
+  We define $\zeta(k_1, \cdots) = [f]$.
 
   Let $(k_1, \cdots) \ne (l_1, \cdots) \in \prod_{i=1}^{\infty} \mathbb{Z}$ be given.
   Let $\zeta(k_1, \cdots) = f, \zeta(l_1, \cdots) = g$ as described above.
