@@ -85,6 +85,36 @@
   Thus $f(x) = \prod_{i=1}^{d}(x - \phi_i(x))$, and $f(x)$ is separable.
 \end{proof}
 
+\begin{lem} \label{difficult_lemma}
+  Let $\phi: F \rightarrow F'$ be an isomorphism.
+  Let $K = F[v_1, \cdots, v_n]$.
+  Suppose that for each $v_i$, there exists a separable $f_i \in F[x]$ such that $f_i(v_i) = 0$.
+  ($f_i$'s need not be irreducible.)
+  Let $L$ be the splitting field of $f = \prod f_i$.
+  Then there exist $[K:F]$ homomorphisms $\Phi: K \rightarrow L$ such that $\Phi = \phi$ on $F$.
+\end{lem}
+
+\begin{proof}
+  We will use induction on $n$.
+  Suppose $n = 1$.
+  The minimal polynomial for $v_1$ divides $f_1$, and $f_1$ is a separable function, so the minimal polynomial has $[K:F]$ distinct roots.
+  Therefore, there exist $[K:F]$ homomorphisms from $K$ to $L$.
+
+  Suppose that we have shown this proposition for $n \leq k$ for some $k \in \mathbb{N}$.
+  Let $n = k + 1$.
+  By the inductive hypothesis $(n = 1)$, we have $[F[v_1]:F]$ homomorphisms $\psi$ from $F[v_1]$ to $L$.
+  In other words, we have $[F[v_1]:F]$ isomorphisms $\psi$ from $F[v_1]$ to $F[\psi(v_1)]$.
+  \begin{center}
+    \begin{tikzcd}
+      K \arrow[r, "\Phi"] \arrow[d, no head] & L \arrow[d, no head] \\
+      F[v_1] \arrow[r, "\psi"] \arrow[d, no head] & F[\psi(v_1)] \arrow[d, no head] \\
+      F \arrow[r, "\phi"] & F'
+    \end{tikzcd}
+  \end{center}
+  Now, by applying the inductive hypothesis on the ``upper" half of the diagram, we get $[K:F[v_1]]$ lifts of each $\psi$.
+  Therefore, in total, we get $[K:F] = [K:F[v_1]][F[v_1]:F]$ homomorphisms $\Phi$ that agree with $\phi$ on $F$.
+\end{proof}
+
 \begin{exer}{(Problem 2)}
   Let $F \subset F[v_1, \cdots, v_r] = K$ be an algebraic field extension such that the irreducible monic polynomial, $f_i(x) \in F[x]$, for $v_i$ is separable for each $i$.
   Let $F \subset L$ be a splitting field of $f(x) := \prod_{i=1}^r f_i(x) \in F[x]$.
@@ -94,10 +124,17 @@
 \end{exer}
 
 \begin{proof}
-  $ $
-  \todo[inline,caption={}]{
-     Because of Problem 3, I don't think I'm supposed to show that $g$ is separable.
-  }
+  By applying Lemma \ref{difficult_lemma} to the whole diagram, we know that there exist $[K:F]$ $F$-algebra homomorphisms $\Phi$.
+  Moreover, by applying Lemma \ref{difficult_lemma} to the ``upper" half of the diagram, each $\psi:F[w] \rightarrow F[\psi(w)]$ can be lifted to exactly $[K:F[w]]$ distinct homomorphisms.
+  \begin{center}
+    \begin{tikzcd}
+      K \arrow[r, "\Phi"] \arrow[d, no head] & L \arrow[d, no head] \\
+      F[w] \arrow[r, "\psi"] \arrow[d, no head] & F[\psi(w)] \arrow[d, no head] \\
+      F \arrow[r, "\Id"] & F'
+    \end{tikzcd}
+  \end{center}
+  This implies that there has to be exactly $[K:F]/[K:F[w]] = [F[w]:F]$ homomorphisms.
+  In other words, there are exactly $d$ homomorphisms.
 \end{proof}
 
 \begin{exer}{(Problem 3)}
