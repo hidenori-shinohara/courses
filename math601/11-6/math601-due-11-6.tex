@@ -252,6 +252,33 @@
   Then the $h$'s that we record are the products of distinct irreducible of factors of degree $i$ for each $i$.
 \end{proof}
 
+\begin{exer}{(Problem 12)}
+  Prove the following criterion for a degree $n$ polynomial $f(x) \in \mathbb{F}_q[x]$ to be irreducible:
+  $f(x)$ is irreducible if and only if
+  \begin{itemize}
+    \item
+      $\gcd(f(x), x^{q^n} - x) = f(x)$, and
+    \item
+      For each proper divisor $d$ of $n$, $\gcd(f(x), x^{q^d} - x) = 1$.
+  \end{itemize}
+\end{exer}
+
+\begin{proof}
+  Suppose $f(x)$ is irreducible.
+  By Lemma \ref{mylem}, $\gcd(f(x), x^{q^n} - x) = f(x)$.
+  Since the same lemma implies that $x^{q^d} - x$ cannot be divided by any irreducible polynomial of degree $> d$, $\gcd(f(x), x^{q^d} - x) = 1$.
+
+  Suppose the two conditions are met.
+  We will show that $f(x)$ is irreducible.
+  Let $g(x)$ be an irreducible polynomial that divides $f(x)$.
+  Since $\gcd(f(x), x^{q^d} - x) = 1$ for each proper divisor $d$ of $n$, $\gcd(g(x), x^{q^d} - x) = 1$ as well.
+  By the lemma, $\deg(g(x)) \nmid d$.
+  Since $\gcd(f, x^{q^n} - x) = f$, $\gcd(g, x^{q^n} - x) = g$.
+  By the lemma, $\deg(g) \mid n$.
+  Therefore, $\deg(g)$ is a divisor of $n$ that is not a proper divisor of $n$.
+  In other words, $\deg(g) = n$, so $f$ is irreducible.
+\end{proof}
+
 
 
 
