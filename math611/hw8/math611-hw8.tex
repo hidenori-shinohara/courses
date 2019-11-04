@@ -238,9 +238,39 @@
       \end{itemize}
 
     \item
-      \todo[inline,caption={}]{
-        Finish this!
-      }
+      $(X, A)$ is a good pair because $A$ is a nonempty closed subspace that is a deformation retract of some neighborhood in $X$.
+      By Proposition 2.22, $H_n(X, A) = \tilde{H}_n(X / A)$ for all $n$.
+      The quotient space $X / A$ is $T^2 \wedge T^2$ where $T^2$ is a torus.
+      By Corollary 2.25, $\tilde{H}_n(X / A) = \tilde{H}_n(T^2) \oplus \tilde{H}_n(T^2)$.
+      ($(T^2, p)$ is clearly a good pair for a point $p \in T^2$.)
+      We calculate above that
+      \begin{align*}
+        H_n(T^2) = \begin{cases}
+          \mathbb{Z} & (n = 0, 2) \\
+          \mathbb{Z}^2 & (n = 1) \\
+          0 & (n \geq 3).
+        \end{cases}
+      \end{align*}
+      Therefore,
+      \begin{align*}
+        H_n(X, A) = \tilde{H}_n(X / A) = \tilde{H}_n(T^2) \oplus \tilde{H}_n(T^2) = \begin{cases}
+          \mathbb{Z}^2 & (n = 2) \\
+          \mathbb{Z}^4 & (n = 1) \\
+          0 & (n = 0, n \geq 3).
+        \end{cases}
+      \end{align*}
+
+      Similarly, $X / B$ is $T^2 \wedge S^1$ because $(X, B)$ is a good pair.
+      Moreover, $(S^1, p)$ is a good pair for a point $p \in S^1$, so it suffices to check $\tilde{H}_n(T^2) \oplus \tilde{H}_n(S^1)$.
+
+      Therefore,
+      \begin{align*}
+        H_n(X, B) = \tilde{H}_n(X / B) = \tilde{H}_n(T^2) \oplus \tilde{H}_n(S^1) = \begin{cases}
+          \mathbb{Z} & (n = 2) \\
+          \mathbb{Z}^3 & (n = 1) \\
+          0 & (n = 0, n \geq 3).
+        \end{cases}
+      \end{align*}
   \end{itemize}
 \end{proof}
 
