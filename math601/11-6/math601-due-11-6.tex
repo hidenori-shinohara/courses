@@ -206,7 +206,7 @@
   ($x^{q^2} - x$ may or may not be square free, but $f(x)$ is square free, so $h(x)$ must be square free.)
 \end{proof}
 
-\begin{lem}
+\begin{lem}\label{mylem}
   Suppose $f \in \mathbb{F}_q[x]$ is irreducible.
   Let $d \in \mathbb{N}$.
   Then $f \mid (x^{q^d} - x)$ if and only if $\deg(f) \mid d$.
@@ -236,11 +236,20 @@
 \end{exer}
 
 \begin{proof}
-  Let $n \in \mathbb{N}$ be given.
-  Let $g(x) \in \mathbb{F}_q[x]$ be an irreducible monic polynomial of degree $n$.
-  Using a similar argument as Problem 10 above, $\mathbb{F}_{q^n}$ contains a root $\alpha$ of $g$.
-  Similarly, $\alpha$ is a root of $x^{q^n} - x$.
-  Since $g(x)$ is the minimal polynomial of $\alpha$, $g(x)$ divides $x^{q^n} - x$.
+  We will use Lemma \ref{mylem} above.
+  We will start with $n = 1$.
+  \begin{itemize}
+    \item
+      If $f(x)$ is a unit, terminate.
+    \item
+      Calculate $h(x) = \gcd(x^{q^n} - x, f(x))$.
+      This is the product of all irreducible polynomials of $f(x)$ of degree $n$ by Lemma \ref{mylem}.
+    \item
+      Record $h(x)$.
+      Set $f(x) = f(x) / h(x)$ and $n = n + 1$.
+      Repeat.
+  \end{itemize}
+  Then the $h$'s that we record are the products of distinct irreducible of factors of degree $i$ for each $i$.
 \end{proof}
 
 
