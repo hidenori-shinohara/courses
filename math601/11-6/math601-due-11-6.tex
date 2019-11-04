@@ -206,6 +206,31 @@
   ($x^{q^2} - x$ may or may not be square free, but $f(x)$ is square free, so $h(x)$ must be square free.)
 \end{proof}
 
+\begin{lem}
+  Suppose $f \in \mathbb{F}_q[x]$ is irreducible.
+  Let $d \in \mathbb{N}$.
+  Then $f \mid (x^{q^d} - x)$ if and only if $\deg(f) \mid d$.
+\end{lem}
+
+\begin{proof}
+  Let $d \in \mathbb{N}$ be given.
+  Let $n = \deg(f)$.
+  Then $\mathbb{F}_q[x]/(f(x)) = \mathbb{F}_{q^n}$ contains a root $\alpha$ of $f(x)$.
+
+  Suppose $n \mid d$.
+  $\alpha^{q^n} - \alpha = 0$ implies $0 = (\alpha^{q^n} - \alpha)^{q^n} = \alpha^{q^{2n}} - \alpha^{q^n} = \alpha^{q^{2n}} - \alpha$.
+  By repeating this process, we get $\alpha^{q^{d}} - \alpha = 0$ since $n \mid d$.
+  Thus $\alpha$ satisfies $f(x)$ and $x^{q^d} - x$, and $f(x)$ is irreducible.
+  Thus $f \mid x^{q^d} - x$.
+
+  Suppose $f(x) \mid (x^{q^d} - x)$.
+  Since $f(x)$ is an irreducible polynomial with a root $\alpha$, it must be the minimal polynomial of $\alpha$.
+  Thus $[\mathbb{F}_q(\alpha):\mathbb{F}_q] = n$.
+  $f(x) \mid (x^{q^d} - x)$ implies that $\alpha$ satisfies $x^{q^d} - x$.
+  Thus $\alpha \in \mathbb{F}_{q^d}$.
+  Then $d = [\mathbb{F}_{q^d}:\mathbb{F}_q(\alpha)][\mathbb{F}_q(\alpha):\mathbb{F}_q]$, so $n \mid d$.
+\end{proof}
+
 \begin{exer}{(Problem 11)}
   Given a square free polynomial $f(x) \in \mathbb{F}_q[x]$, describe how to use repeated $\gcd$ calculations to factor $f(x)$ as $f = f_1f_2 \cdots f_r$, where each $f_i$ is a product of distinct irreducible factors of degree $i$.
 \end{exer}
@@ -215,10 +240,7 @@
   Let $g(x) \in \mathbb{F}_q[x]$ be an irreducible monic polynomial of degree $n$.
   Using a similar argument as Problem 10 above, $\mathbb{F}_{q^n}$ contains a root $\alpha$ of $g$.
   Similarly, $\alpha$ is a root of $x^{q^n} - x$.
-
-  \todo[inline,caption={}]{
-    How can I show that $g(x) \mid x^{q^n} - x$?
-  }
+  Since $g(x)$ is the minimal polynomial of $\alpha$, $g(x)$ divides $x^{q^n} - x$.
 \end{proof}
 
 
