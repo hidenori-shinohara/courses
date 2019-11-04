@@ -122,6 +122,9 @@
   $F_q(a + b) = (a + b)^q = a^q + b^q$ since $p \mid \binom{q}{i}$ for $1 \leq i \leq q - 1$.
   Thus $F_q$ preserves addition, and it is clear that $F_q$ preserves multiplication, so $F_q$ is a homomorphism.
   Moreover, any element in $\mathbb{F}_q$ satisfies $x^q - x = 0$, so $F_q(a) = a^q = a$ for any $a \in \mathbb{F}_q$.
+
+  Finally, in order to show that $F_q$ is bijective, it suffices to check if it is injective since $\mathbb{F}_{q^r}$ is finite.
+  $F_q(a) = 0 \implies a^q = 0 \implies a = 0$, so $F_q$ is indeed injective.
 \end{proof}
 
 \begin{exer}{(Problem 2)}
