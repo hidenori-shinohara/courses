@@ -241,9 +241,10 @@
           This is because $H_n(A) = H_{n - 1}(A) = 0$ so $\phi$ is an isomorphism by the exactness.
         \item
           By Problem 16, $H_0(X, A) = 0$.
-          By the exact sequence $H_1(X, A) \rightarrow H_0(A) \rightarrow H_0(X)$ where $H_0(A) = \mathbb{Z}^{\abs{A}}$ and $H_0(X) = \mathbb{Z}$, we have $H_1(X, A) = \mathbb{Z}^{\abs{A} - 1}$.
+          We have the exact sequence $H_1(A) \rightarrow H_1(T^2) \rightarrow H_1(T^2, A) \xrightarrow{\phi} H_0(A) \xrightarrow{\psi} H_0(T^2) \rightarrow H_0(T^2, A)$ where $H_0(A) = \mathbb{Z}^{\abs{A}}, H_0(X) = \mathbb{Z}, H_1(T^2) = \mathbb{Z}^2$, and $H_1(A) = H_0(T^2, A) = 0$.
+          Moreover, $H_1(T^2, A) / \ker(\phi) = \Im(\phi) = \ker(\psi) = \mathbb{Z}^{\abs{A} - 1}$.
+          Since $\ker(\phi) = \mathbb{Z}^2$ by the exactness, $H_1(T^2, A) = \mathbb{Z}^{\abs{A} + 1}$.
       \end{itemize}
-
     \item
       $(X, A)$ is a good pair because $A$ is a nonempty closed subspace that is a deformation retract of some neighborhood in $X$.
       By Proposition 2.22, $H_n(X, A) = \tilde{H}_n(X / A)$ for all $n$.
