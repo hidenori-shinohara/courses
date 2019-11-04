@@ -165,6 +165,19 @@
   By Theorem 11 (iv) from Galois Theory II, $f$ must factor as a product of linear polynomials in $\mathbb{F}_{q^r}[x]$.
 \end{proof}
 
+\begin{exer}{(Problem 5)}
+  Prove $\Aut(\mathbb{F}_{q^r}/\mathbb{F}_q) \simeq \mathbb{Z}/(r)$.
+  Prove $\abs{\Aut(\mathbb{F}_{q^r}/\mathbb{F}_q)} = [\mathbb{F}_{q^r}:\mathbb{F}_q]$.
+\end{exer}
+
+\begin{proof}
+  Let $G = \ev{ F_q } \leq \Aut(\mathbb{F}_{q^r})$ as in the previous problem.
+  We claim that $\Aut(\mathbb{F}_{q^r}/\mathbb{F}_q) = G$.
+  By Problem 1, $G \leq \Aut(\mathbb{F}_{q^r}/\mathbb{F}_q)$.
+  By Proposition 12 from Galois Theory II, $[\mathbb{F}_{q^r}:\mathbb{F}_q] \leq \abs{G}$, so $r \leq \abs{G}$.
+  On the other hand, by Theorem 8 from Galois Theory II, $\abs{\Aut(\mathbb{F}_{q^r}/\mathbb{F}_q)} \leq [\mathbb{F}_{q^r}:\mathbb{F}_q] = r$.
+\end{proof}
+
 \section{Factoring Polynomials with Coefficients in Finite Fields}
 
 \begin{exer}{(Problem 9)}
