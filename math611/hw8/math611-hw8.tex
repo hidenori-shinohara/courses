@@ -247,7 +247,7 @@
       Thus $H_0(X, A) = C_0(X, A) / \Im(\partial_1)$ is not 0.
     \item
       Suppose $H_1(X, A) = 0$.
-      By the exact sequence $H_1(A) \xrightarrow{\phi} H_1(X) \rightarrow H_1(X, A) \rightarrow H_0(A) \xrightarrow{\psi} H_1(X)$, we know that $\phi$ is surjective and $\psi$ is injective.
+      By the exact sequence $H_1(A) \xrightarrow{\phi} H_1(X) \rightarrow H_1(X, A) \rightarrow H_0(A) \xrightarrow{\psi} H_0(X)$, we know that $\phi$ is surjective and $\psi$ is injective.
       Suppose that there is a path component of $X$ that contains two or more path components of $A$.
       Let $a, b$ be points in two distinct path components of $A$ that are contained in a path component of $X$.
       We will regard $a, b$ as functions $\Delta^0 \rightarrow A$.
@@ -257,9 +257,14 @@
       This is a contradiction because $\phi$ is injective.
       Therefore, each path component of $X$ contains at most one path component of $A$.
 
-      \todo[inline,caption={}]{
-        Show the other direction.
-      }
+      Suppose that $H_1(A) \rightarrow H_1(X)$ is surjective and each path-component of $X$ contains at most one path component of $A$.
+      Let $a, b \in H_0(A)$.
+      Suppose $\psi(a) = \psi(b)$.
+      Then $\psi(a) - \psi(b) = \partial \gamma$ for some $\gamma \in C_0(X)$.
+      $\gamma$ is a path in $X$, so $\psi(a), \psi(b)$ live in the same path component in $X$.
+      This implies that $\psi(a)$ and $\psi(b)$ live in the same path component of $A$, so $a = b$ in $H_0(A)$.
+      Therefore, $\psi$ is injective.
+      By the exactness, $H_1(X, A) = 0$.
   \end{itemize}
 \end{proof}
 
