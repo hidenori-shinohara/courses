@@ -129,10 +129,17 @@
   \end{align*}
   where $\psi(1) = (n, -k)$ and $\phi(x, y) = xu + y\alpha(1)$.
   Then $\Im(\psi) \subset \ker(\phi)$ since $\phi(n, -k) = nu - k\alpha(1) = 0$.
-  \todo[inline,caption={}]{
-    Show that $\ker(\phi) \subset \Im(\psi)$.
-  }
+  Choose $(x, y)$ such that $\phi(x, y) = 0$.
+  Then $xu + y\alpha(1) = 0$.
+  This implies $xu = -y\alpha(1) \in \Im(\alpha) = \ker(\beta)$, so $n \mid x$.
+  Let $c = x / n$.
+  Then $\phi(cn, -ck) = \phi(x, y) = 0$, so $\phi(0, y + ck) = 0$.
+  This implies $(y + ck)\alpha(1) = 0$, so $\alpha(y + ck) = 0$.
+  Since $\alpha$ is injective, $y = ck$.
+  This implies $(x, y) = c(n, -k)$.
+  Therefore, $\Im(\psi) = \ker(\phi)$.
   Moreover, $\phi$ is surjective, so this is indeed exact.
+
   This implies that $A$ is a finitely presented $\mathbb{Z}$-module.
   The Smith normal form of $[n; -k]$ is simply $[\gcd(n, -k); 0]$, and this shows that $A \simeq \mathbb{Z} / (\gcd(n, -k)) \times \mathbb{Z} / (0) = \mathbb{Z}/(d) \times \mathbb{Z}$ where $d = \gcd(n, -k)$.
   Therefore, the only $\mathbb{Z}$-modules that might satisfy the given exact sequence is $\mathbb{Z} \times \mathbb{Z}_d$ where $d$ is a divisor of $n$.
