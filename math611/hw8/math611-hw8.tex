@@ -110,9 +110,54 @@
       Therefore, $a_1 \geq \max\{ m, n \}$.
   \end{itemize}
   Hence, the $A$'s listed above are all the possible abelian groups to satisfy the exact sequence.
+
+  Finally, we will consider the exact sequence $0 \rightarrow \mathbb{Z} \xrightarrow{\alpha} A \xrightarrow{\beta} \mathbb{Z}_n \rightarrow 0$.
+  By the exactness, $\beta$ is surjective.
+  Let $u \in A$ such that $\beta(u) = 1$.
+  Let $x \in A$.
+  Then $\beta(x) = b\beta(u)$ for some $b$.
+  Then $\beta(x - bu) = 0$, so $x - bu \in \ker(\beta) = \Im(\alpha)$.
+  Therefore, $x - bu = a\alpha(1)$ for some $a$, and thus every element in $A$ can be expressed as a linear combination of $\alpha(1)$ and $u$.
+
+  Since $\beta(nu) = n\beta(u) = 0$ in $\mathbb{Z}_n$, $nu \in \ker(\beta) = \Im(\alpha)$.
+  Choose $k$ such that $nu = k\alpha(1)$.
+
+  We will consider the following exact sequence:
+
+  \begin{align*}
+    \mathbb{Z} \xrightarrow{\psi} \mathbb{Z}^2 \xrightarrow{\phi} A \rightarrow 0
+  \end{align*}
+  where $\psi(1) = (n, -k)$ and $\phi(x, y) = xu + y\alpha(1)$.
+  Then $\Im(\psi) \subset \ker(\phi)$ since $\phi(n, -k) = nu - k\alpha(1) = 0$.
   \todo[inline,caption={}]{
-    Finish the last part.
+    Show that $\ker(\phi) \subset \Im(\psi)$.
   }
+  Moreover, $\phi$ is surjective, so this is indeed exact.
+  This implies that $A$ is a finitely presented $\mathbb{Z}$-module.
+  The Smith normal form of $[n; -k]$ is simply $[\gcd(n, -k); 0]$, and this shows that $A \simeq \mathbb{Z} / (\gcd(n, -k)) \times \mathbb{Z} / (0) = \mathbb{Z}/(d) \times \mathbb{Z}$ where $d = \gcd(n, -k)$.
+  Therefore, the only $\mathbb{Z}$-modules that might satisfy the given exact sequence is $\mathbb{Z} \times \mathbb{Z}_d$ where $d$ is a divisor of $n$.
+  Let $d$ be any divisor of $n$.
+  Then we will show that $A = \mathbb{Z} \times \mathbb{Z}_d$ will satisfy the exact sequence.
+  Let $\alpha(1) = (k, 0)$ and $\beta(x, y) = dx + y$ where $k = n / d$.
+  \begin{itemize}
+    \item
+      $\alpha$ is injective.
+    \item
+      For each $m \in \mathbb{Z}_n$, $\beta(\lfloor m / d\rfloor, m \% d) = m$.
+      Thus $\beta$ is surjective.
+    \item
+      $\beta(\alpha(m)) = \beta(mk, 0) = dmk = 0$.
+      Therefore, $\Im(\alpha) \subset \ker(\beta)$.
+      Let $(x, y)$ be given such that $\beta(x, y) = 0$.
+      Then $n \mid dx + y$.
+      This implies $d \mid dx + y$, so $d \mid y$.
+      Therefore, $y = 0$.
+      This implies $n \mid dx$, so $k \mid x$.
+      In other words, $(x, y) \in \Im(\alpha)$.
+
+      Therefore, $\Im(\alpha) = \ker(\beta)$.
+  \end{itemize}
+  Therefore, $\{ \mathbb{Z} \times \mathbb{Z}_d \mid d \mid n \}$ is the set of $\mathbb{Z}$-modules that satisfy the exact sequence.
 \end{proof}
 
 \begin{exer}{(Problem 15)}
