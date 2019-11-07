@@ -65,27 +65,27 @@
 $ $
   \begin{itemize}
     \item
-      Does $\sum_{i=1}^{\infty} (\frac{-1}{3})^n$ converge?
+      Does $\sum_{n=1}^{\infty} (\frac{-1}{3})^n$ converge?
       Yes, geometric.
     \item
-      Does $\sum_{i=1}^{\infty} \abs{(\frac{-1}{3})^n}$ converge?
+      Does $\sum_{n=1}^{\infty} \abs{(\frac{-1}{3})^n}$ converge?
       \begin{align*}
-        \sum_{i=1}^{\infty} \abs{\Big(\frac{-1}{3}\Big)^n}
+        \sum_{n=1}^{\infty} \abs{\Big(\frac{-1}{3}\Big)^n}
           &= \abs{\frac{-1}{3}} + \abs{\Big(\frac{-1}{3}\Big)^2} + \abs{\Big(\frac{-1}{3}\Big)^3} + \cdots \\
           &= \frac{1}{3} + \Big(\frac{1}{3}\Big)^2 + \Big(\frac{1}{3}\Big)^2 + \cdots \\
-          &= \sum_{i=1}^{\infty} \Big(\frac{1}{3}\Big)^n.
+          &= \sum_{n=1}^{\infty} \Big(\frac{1}{3}\Big)^n.
       \end{align*}
       Yes, geometric.
     \item
-      Does $\sum_{i=1}^{\infty} \frac{(-1)^n}{n}$ converge?
-      Yes, geometric.
+      Does $\sum_{n=1}^{\infty} \frac{(-1)^n}{n}$ converge?
+      Yes, alternating.
     \item
-      Does $\sum_{i=1}^{\infty} \abs{\frac{(-1)^n}{n}}$ converge?
+      Does $\sum_{n=1}^{\infty} \abs{\frac{(-1)^n}{n}}$ converge?
       \begin{align*}
-        \sum_{i=1}^{\infty} \abs{\frac{(-1)^n}{3}}
+        \sum_{n=1}^{\infty} \abs{\frac{(-1)^n}{3}}
           &= \abs{\frac{-1}{1}} + \abs{\frac{(-1)^2}{2}} + \abs{\frac{(-1)^3}{3}} + \cdots \\
           &= \frac{1}{1} + \frac{1}{2} + \frac{1}{3} + \cdots \\
-          &= \sum_{i=1}^{\infty} \frac{1}{n}.
+          &= \sum_{n=1}^{\infty} \frac{1}{n}.
       \end{align*}
       No, harmonic.
   \end{itemize}
@@ -159,9 +159,9 @@ $ $
   \begin{itemize}
     \item
       $\sum_{n=1}^{\infty} (\frac{3n + 1}{4 - 2n})^n$.
-      Diverges since $L = 9/4$.
+      Diverges since $L = 3/2$.
     \item
-      $\sum_{n=4}^{\infty} [\frac{(-5)^{1 + 2n}}{2^{5n - 3}}]^n$.
+      $\sum_{n=4}^{\infty} \frac{(-5)^{1 + 2n}}{2^{5n - 3}}$.
       Absolutely converges since $L = 25/32$.
   \end{itemize}
 \end{exer}
