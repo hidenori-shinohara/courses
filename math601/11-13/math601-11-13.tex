@@ -119,4 +119,32 @@
   It is divisible by $g_i(x)$ if and only if $h \in \ev{ \alpha_i^2 }$ from Problem 15.
 \end{proof}
 
+\begin{exer}{(Problem 17)}
+  Describe a probabilistic factoring algorithm which has a very high probability of finding the irreducible factors of a polynomial $f(x) \in \mathbb{F}_q[x]$, provided one knows ahead of time that $f(x)$ is a product of m distinct irreducible polynomials of degree $r$.
+\end{exer}
+
+\begin{proof}
+  Let $i_0$ be fixed.
+  Given a random $h(x) \in \mathbb{F}_q[x]$, the probability that $h^{(q - 1)/2} - 1 \in (f_{i_0})$ is $1/2 - 1/(2q^r)$, which is slightly smaller than 50\%.
+  Therefore, it is likely that given a random $h(x) \in \mathbb{F}_q[x]$, the probability that $h^{(q - 1)/2} - 1 \in (f_i)$ for \textit{some} $i$'s is high.
+  However, the probability that $h^{(q - 1)/2} - 1 \in (f_i)$ in \textit{all} $i$'s is low.
+
+  In other words, the probability that $h^{(q - 1)/2} - 1$ is a proper divisor of $f$ is high.
+  Therefore, we can expect to factor $f(x)$ by 
+
+  \begin{itemize}
+    \item
+      Step 1: Generate a random polynomial $h(x) \in \mathbb{F}_q[x]/(f(x))$.
+    \item
+      Step 2: Calculate $h^{(q^r - 1)/2} - 1$.
+      This step can be done efficiently by exponentiation by squaring.
+    \item
+      Step 3: Calculate $d(x) = \gcd(f(x), h^{(q^r - 1)/2} - 1)$.
+      This step can be done efficiently by the Euclid algorithm.
+    \item
+      Step 4: If $1 \leq \deg(d(x)) \leq \deg(f(x))$, then factorize $f(x)/d(x)$ and $d(x)$ further by going back to Step 1 unless it is degree $r$.
+      Otherwise, we were unlucky, so we go back to Step 1.
+  \end{itemize}
+\end{proof}
+
 \end{document}
