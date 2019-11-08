@@ -85,4 +85,28 @@
   Hence, 1 value gives 0, $(q - 1)/2$ values give 1, and $(q - 1) / 2$ values give $-1$.
 \end{proof}
 
+\begin{exer}{(Problem 15)}
+  Let $f(x)$ be as in problem 13 and let $h \in \mathbb{F}_q[x]$ be a randomly chosen polynomial.
+  What is the probability that $h^{(q^r - 1)/2} = \pm 1$ in the ring $\mathbb{F}_q[x]/(f(x))$.
+\end{exer}
+
+\begin{proof}
+  As shown in Problem 13 last week, there exists an isomorphism $\Phi: \mathbb{F}_q[x]/(f(x)) \rightarrow \mathbb{F}_q[x]/(f_1(x)) \times \cdots \times \mathbb{F}_q[x]/(f_m(x))$ by the Chinese Remainder Theorem.
+  For any $h \in \mathbb{F}_q[x]$, $\Phi(h + (f)) = (h + (f_1), \cdots, h + (f_m))$.
+  Moreover, $\Phi(h^{(q - 1)/2} + (f)) = (h^{(q - 1)/2} + (f_1), \cdots, h^{(q - 1)/2} + (f_m))$.
+  Therefore, $h^{(q - 1)/2} + (f) = 1$ if and only if $h^{(q - 1)/2} + (f_1), \cdots, h^{(q - 1)/2} + (f_m)$ all equal 1.
+
+  Let $\alpha_1, \cdots, \alpha_m$ be generators of $(\mathbb{F}_q[x]/(f_1(x)))^*, \cdots, (\mathbb{F}_q[x]/(f_m(x)))^*$.
+  For each $i$, $h^{(q - 1)/2} + (f_i) = 1$ if and only if $h \in \ev{ \alpha_i^2 }$ by Problem 14.
+  Therefore, $h^{(q - 1)/2} + (f) = 1$ if and only if $(h + (f_1), \cdots, h + (f_m)) \in \ev{ \alpha_1^2 } \times \cdots \times \ev{ \alpha_m^2 }$.
+  There are exactly $((q^r - 1)/2)^m$ elements that satisfy that.
+  Therefore,
+  \begin{align*}
+    \frac{(\frac{q^r - 1}{2})^m}{(q^r)^m} = \Big(\frac{q^r - 1}{2q^r}\Big)^m = \Big(\frac{1}{2} - \frac{1}{2q^r}\Big)^m.
+  \end{align*}
+  is the probability that $h^{(q^r - 1)/2} = 1$ in $\mathbb{F}_q[x]/(f(x))$.
+
+  Using the exact same argument, we can derive that the probability that $h^{(q^r - 1)/2} = -1$ is exactly the same value.
+\end{proof}
+
 \end{document}
