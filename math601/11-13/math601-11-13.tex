@@ -72,17 +72,17 @@
   Let $\ev{\alpha} = (\mathbb{F}_q)^*$.
   Let $k \in \mathbb{Z}$.
   If $k$ is even, then $(\alpha^{k})^{(q - 1)/2} = (\alpha^{k/2})^{q - 1} = 1$.
-  If $k = 2l + 1$ for some $l$, then $(\alpha^{k})^{(q - 1)/2} = \alpha^{l(q - 1)}\cdot\alpha^{(q - 1)/2} = \alpha^{(q - 1) / 2}$.
+  If $k = 2l + 1$ for some $l$, then $(\alpha^{k})^{(q - 1)/2} = \alpha^{l(q - 1)}\cdot\alpha^{(q - 1)/2} = \alpha^{(q - 1) / 2} = -1$ because -1 has degree 2 and $\alpha^{(q - 1)/2}$ is the only element in $\ev{\alpha}$ of degree 2.
   Therefore, 
   \begin{align*}
     a^{(q - 1) / 2} &= \begin{cases}
       0 & (a = 0) \\
       1 & (\exists l \in \mathbb{Z}, a = \alpha^{2l}) \\
-      \alpha^{(q - 1)/2} & (\exists l \in \mathbb{Z}, a = \alpha^{2l + 1}).
+      -1 & (\exists l \in \mathbb{Z}, a = \alpha^{2l + 1}).
     \end{cases}
   \end{align*}
-  This is well defined because every nonzero element in $\mathbb{Z}_q$ is in $\ev{\alpha}$ and $2 \mid \abs{\ev{\alpha}} = q - 1$, so the parity of the exponent is well defined.
-  Hence, 1 value gives 0, $(q - 1)/2$ values give 1, and $(q - 1) / 2$ values give $\alpha^{(q - 1)/2}$.
+  This is well defined because every nonzero element in $\mathbb{Z}_q$ is in $\ev{\alpha}$ and $2 \mid \abs{\ev{\alpha}} = q - 1$, so the parity of the exponent does not depend on the choice of $k$.
+  Hence, 1 value gives 0, $(q - 1)/2$ values give 1, and $(q - 1) / 2$ values give $-1$.
 \end{proof}
 
 \end{document}
