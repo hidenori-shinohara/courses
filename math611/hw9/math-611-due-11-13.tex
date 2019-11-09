@@ -85,8 +85,17 @@
       The exact sequence $H_1(A) \rightarrow H_1(X) \rightarrow H_1(X, A) \rightarrow 0$ can be extended to $H_1(A) \rightarrow H_1(X) \rightarrow H_1(X, A) \rightarrow 0 \rightarrow 0$ by appending 0 at the end.
       Using the same argument as above, $f_*: H_1(X, A) \rightarrow H_1(Y, B)$ is an isomorphism.
     \item
+      Suppose $f: (D^n, S^{n - 1}) \rightarrow (D^n, D^n - \{ 0 \})$ is a homotopy equivalence.
       \todo[inline,caption={}]{
+        Prove that $f: S^{n - 1} \rightarrow D^n$ is a homotopy equivalence.
       }
+      Since $f: (D^n, S^{n - 1}) \rightarrow (D^n, D^n)$ is a homotopy equivalence, we have an isomorphism $f_*: H_n(D^n, S^{n - 1}) \rightarrow H_n(D^n, D^n)$.
+      $H_n(D^n, S^{n - 1}) = H_n(D^n / S^{n-1})$ since $(D^n, S^{n - 1})$ is a good pair.
+      Moreover, $D^n / S^{n - 1} = S^n$, so $H_n(D^n, S^{n - 1}) = \mathbb{Z}$.
+
+      On the other hand, $(D^n, D^n)$ is a good pair, so $H_n(D^n, D^n) = H_n(D^n/D^n) = H_n(\text{point}) = 0$ since $n \geq 1$.
+
+      Since $\mathbb{Z}$ is not isomorphic to $0$, the inclusion is not a homotopy equivalence of pairs.
   \end{itemize}
 
 \end{proof}
