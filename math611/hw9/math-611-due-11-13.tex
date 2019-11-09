@@ -1,0 +1,96 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Aut}{Aut}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 611 (Due 11/13)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\section{Simplicial and Singular Homology}
+
+\begin{exer}{(Problem 27)}
+  Let $f:(X, A) \rightarrow (Y, B)$ be a map such that both $f: X \rightarrow Y, f:A \rightarrow B$ are homotopy equivalences.
+
+  \begin{itemize}
+    \item
+      Show that $f_* : H_n(X, A) \rightarrow  H_n(Y, B)$ is an isomorphism for all $n$.
+    \item
+      For the case of the inclusion $f:(D^n, S^{n - 1}) \rightarrow (D^n, D^n \setminus \{ 0 \})$, show that $f$ is not a homotopy equivalence of pairs -
+      there is no $g: (D^n, D^n \setminus \{ 0 \}) \rightarrow (D^n, S^{n - 1})$ such that $fg$ and $gf$ are homotopic to the identity through maps of pairs.
+  \end{itemize}
+\end{exer}
+
+\begin{proof}
+  $ $
+  \begin{itemize}
+    \item
+      For each $n \geq 1$, we have an exact sequence $H_n(A) \rightarrow H_n(X) \rightarrow H_n(X, A) \rightarrow H_{n - 1}(A) \rightarrow H_{n - 1}(X)$ and another one with $X, A$ replaced with $Y, B$.
+      Moreover, they are connected by homomorphisms $f_*: H_n(A) \rightarrow H_n(B), f_*: H_n(X) \rightarrow H_n(Y), f_*:H_n(X, A) \rightarrow H_n(Y, B)$ such that the diagram commutes. (naturality)
+      Since $f: X \rightarrow Y$ and $f: A \rightarrow B$ are both homotopy equivalences, $f_*: H_n(X) \rightarrow H_n(Y), f_*: H_n(A) \rightarrow H_n(B)$ are isomorphisms.
+      By the Five lemma, $f_*: H_n(X, A) \rightarrow H_n(X, B)$ is an isomorphism.
+
+      The exact sequence $H_1(A) \rightarrow H_1(X) \rightarrow H_1(X, A) \rightarrow 0$ can be extended to $H_1(A) \rightarrow H_1(X) \rightarrow H_1(X, A) \rightarrow 0 \rightarrow 0$ by appending 0 at the end.
+      Using the same argument as above, $f_*: H_1(X, A) \rightarrow H_1(Y, B)$ is an isomorphism.
+    \item
+      \todo[inline,caption={}]{
+      }
+  \end{itemize}
+
+\end{proof}
+
+\end{document}
+
+
