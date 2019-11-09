@@ -14,18 +14,38 @@ def polypow(f, exp, modf, mod):
     res = poly(1, x, modulus = mod)
     while exp > 0:
         if exp % 2 == 1:
-            quotient, res = div(res * f, modf)
-        quotient, f = div(f * f, modf)
+            quotient, res = div(res * f, modf, modulus = mod)
+        quotient, f = div(f * f, modf, modulus = mod)
         exp = exp // 2
     return res
 
+# Calculate x^(p^n) - x % modf.
+def xqd(p, n, modf):
+    res = polypow(x, p**n, modf, p)
+    res -= poly(x, x, modulus = p)
+    return res
 
 
 def factor(f, p, originaldegree, factors, r):
     if f.degree() == r:
         factors.append(f)
     else:
-        for i in range(30):
+        # Problem 11
+#        g = poly(x**(73**3) - x, x, modulus = p)
+        g = xqd(p, 3, f)
+        d = gcd(f, g)
+        if 1 <= d.degree() < f.degree():
+            print(d)
+            # We found a proper factor.
+            # Factorize further.
+            factor(d, p, originaldegree, factors, r)
+            quotient, remainder = div(f, d, modulus = p)
+            factor(quotient, p, originaldegree, factors, r)
+        print("Returning")
+        return
+
+        # Problem 19
+        for i in range(10):
             h = randpoly(r, p)
             # Raise h to the power of (p^r - 1)/2.
             h = polypow(h, (p**r - 1) // 2, f, p)
@@ -48,8 +68,14 @@ def factorizepoly(f, mod):
         factors = []
         factor(f, mod, f.degree(), factors, r)
         if len(factors) * r != f.degree(): continue
+        prod = poly(1, x, modulus = mod)
         for fac in factors:
+            prod *= fac
             print(latex(fac))
+        if prod != f:
+            print("******ERROR!******")
+            print("******ERROR!******")
+            print("******ERROR!******")
         print()
         return
 
