@@ -159,4 +159,28 @@
   \end{itemize}
 \end{exer}
 
+\section{Galois Theory III}
+
+\begin{exer}{(Problem 1)}
+  Prove Proposition 23 part (ii).
+\end{exer}
+
+\begin{proof}
+  Clearly, $F \subset gK \subset L$ because $g \in \Aut(L / F)$.
+  $gK$ is a subfield because $g$ preserves addition, multiplication and multiplicative inverse, so $gK$ is closed under addition, multiplication and multiplicative inverse.
+
+  Let $\phi \in \Aut(L/gK)$.
+  Then clearly, $g^{-1}\phi g \in \Aut(L)$.
+  $g^{-1}\phi g$ fixes $K$ because $\forall x \in K, (g^{-1}\phi g)(x) = g^{-1}(g(x)) = x$.
+  Therefore, $\phi \in g\Aut(L/K)g^{-1}$.
+
+  Let $g\psi g^{-1} \in g\Aut(L/K)g^{-1}$.
+  Then $g\psi g^{-1} \in \Aut(L)$.
+  For all $g(k) \in g(K)$, $(g\psi g^{-1})(g(k)) = g(\psi(k)) = g(k)$.
+  Therefore, $g\psi g^{-1} \in \Aut(L/gK)$.
+\end{proof}
+
+
+
+
 \end{document}
