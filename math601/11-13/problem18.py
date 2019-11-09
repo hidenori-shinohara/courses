@@ -26,25 +26,22 @@ def xqd(p, n, modf):
     return res
 
 
-def factor(f, p, originaldegree, factors, r):
-    if f.degree() == r:
-        factors.append(f)
-    else:
-        # Problem 11
-#        g = poly(x**(73**3) - x, x, modulus = p)
-        g = xqd(p, 3, f)
+def factor(f, p, originaldegree, factors):
+    # Problem 11
+    for n in range(2, originaldegree):
+        g = xqd(p, n, f)
         d = gcd(f, g)
         if 1 <= d.degree() < f.degree():
-            print(d)
             # We found a proper factor.
             # Factorize further.
-            factor(d, p, originaldegree, factors, r)
+            factor(d, p, originaldegree, factors)
             quotient, remainder = div(f, d, modulus = p)
-            factor(quotient, p, originaldegree, factors, r)
-        print("Returning")
-        return
+            factor(quotient, p, originaldegree, factors)
+            return
 
-        # Problem 19
+    # Problem 19
+    for r in range(2, f.degree()):
+        if f.degree() % r != 0: continue
         for i in range(10):
             h = randpoly(r, p)
             # Raise h to the power of (p^r - 1)/2.
@@ -56,28 +53,26 @@ def factor(f, p, originaldegree, factors, r):
             else:
                 # We found a proper factor.
                 # Factorize further.
-                factor(d, p, originaldegree, factors, r)
+                factor(d, p, originaldegree, factors)
                 quotient, remainder = div(f, d)
-                factor(quotient, p, originaldegree, factors, r)
+                factor(quotient, p, originaldegree, factors)
                 return
+    factors.append(f)
 
 def factorizepoly(f, mod):
     print("Factorize %s" % f)
-    for r in range(1, f.degree() - 1):
-        if f.degree() % r != 0: continue
-        factors = []
-        factor(f, mod, f.degree(), factors, r)
-        if len(factors) * r != f.degree(): continue
-        prod = poly(1, x, modulus = mod)
-        for fac in factors:
-            prod *= fac
-            print(latex(fac))
-        if prod != f:
-            print("******ERROR!******")
-            print("******ERROR!******")
-            print("******ERROR!******")
-        print()
-        return
+    factors = []
+    factor(f, mod, f.degree(), factors)
+    prod = poly(1, x, modulus = mod)
+    for fac in factors:
+        prod *= fac
+        print(latex(fac))
+    if prod != f:
+        print("******ERROR!******")
+        print("******ERROR!******")
+        print("******ERROR!******")
+    print()
+    return
 
 f = poly(x**8 + x**7 - x**6 + x**5 + x**4 - x**3 - x**2 - x + 1, x, modulus = 3)
 factorizepoly(f, 3)
