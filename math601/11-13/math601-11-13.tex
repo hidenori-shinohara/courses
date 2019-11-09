@@ -142,7 +142,7 @@
       Step 3: Calculate $d(x) = \gcd(f(x), h^{(q^r - 1)/2} - 1)$.
       This step can be done efficiently by the Euclid algorithm.
     \item
-      Step 4: If $1 \leq \deg(d(x)) \leq \deg(f(x))$, then factorize $f(x)/d(x)$ and $d(x)$ further by going back to Step 1 unless it is degree $r$.
+      Step 4: If $1 \leq \deg(d(x)) < \deg(f(x))$, then factorize $f(x)/d(x)$ and $d(x)$ further by going back to Step 1 unless it is degree $r$.
       Otherwise, we were unlucky, so we go back to Step 1.
   \end{itemize}
 \end{proof}
