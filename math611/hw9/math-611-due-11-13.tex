@@ -86,16 +86,16 @@
       Using the same argument as above, $f_*: H_1(X, A) \rightarrow H_1(Y, B)$ is an isomorphism.
     \item
       Suppose $f: (D^n, S^{n - 1}) \rightarrow (D^n, D^n - \{ 0 \})$ is a homotopy equivalence.
-      \todo[inline,caption={}]{
-        Prove that $f: S^{n - 1} \rightarrow D^n$ is a homotopy equivalence.
-      }
-      Since $f: (D^n, S^{n - 1}) \rightarrow (D^n, D^n)$ is a homotopy equivalence, we have an isomorphism $f_*: H_n(D^n, S^{n - 1}) \rightarrow H_n(D^n, D^n)$.
-      $H_n(D^n, S^{n - 1}) = H_n(D^n / S^{n-1})$ since $(D^n, S^{n - 1})$ is a good pair.
-      Moreover, $D^n / S^{n - 1} = S^n$, so $H_n(D^n, S^{n - 1}) = \mathbb{Z}$.
+      Then there exists a $g: (D^n, D^n - \{ 0 \}) \rightarrow (D^n, S^{n - 1})$ such that $f \circ g$ and $g \circ f$ are homotopic to the identity maps in corresponding domains.
+      Since $g$ is continuous, $g(\overline{D^n - \{ 0 \}}) = \overline{g(D^n - \{ 0 \})} \subset \overline{S^{n - 1}} = S^{n - 1}$.
+      Therefore, $g$ maps $D^n$ into $S^{n - 1}$.
+      Since $f$ maps $S^{n - 1}$ into $D^n$, $g \circ f$ maps $S^{n - 1}$ into $S^{n - 1}$.
+      We know this is homotopic to the identity map from the problem statement.
+      Similarly, $f \circ g$ maps $D^n$ into $D^n$ and we know this is homotopic to the identity map from the problem statement.
+      Therefore, this implies that $D^n$ and $S^{n - 1}$ are homotopy equivalent.
+      However, this is false because $D^n$ is contractible but $S^{n - 1}$ is not.
 
-      On the other hand, $(D^n, D^n)$ is a good pair, so $H_n(D^n, D^n) = H_n(D^n/D^n) = H_n(\text{point}) = 0$ since $n \geq 1$.
-
-      Since $\mathbb{Z}$ is not isomorphic to $0$, the inclusion is not a homotopy equivalence of pairs.
+      Hence, $f$ cannot be homotopy equivalent.
   \end{itemize}
 
 \end{proof}
