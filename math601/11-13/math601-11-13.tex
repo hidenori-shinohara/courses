@@ -212,5 +212,19 @@
   \end{figure}
 \end{proof}
 
+\begin{exer}{(Problem 4)}
+  Let $F \subset M$ be a Galois extension with Galois group isomorphic to the dihedral group with eight elements (denoted D 4 in class).
+  Show that there is a tower of intermediate fields, $F \subset K \subset L$ such that $F \subset K$ is Galois and $K \subset L$ is Galois, but $F \subset L$ is not Galois.
+\end{exer}
+
+\begin{proof}
+  $G_1 = \ev{af}$ is a normal subgroup of $G_2 = \{ e, af, a^2, a^3f \}$ because the index is 2.
+  Similarly, $G_2$ is a normal subgroup of $D_4$ because the index is 2.
+  However, $G_1$ is not a normal subgroup of $D_4$.
+  (For instance, $f\ev{af}f^{-1} = \ev{fa}$ ,but $af \ne fa$.)
+  By the Fundamental Theorem of Galois Theory, $L^{G_1}$ and $L^{G_2}$ are intermediate fields.
+  By Proposition 23(iii), $L^{G_2} \subset L^{G_1}$ and $L^{D_4} \subset L^{G_2}$ is Galois, but $L^{D_4} \subset L^{G_1}$ is not Galois.
+\end{proof}
+
 
 \end{document}
