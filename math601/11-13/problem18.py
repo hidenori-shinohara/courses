@@ -3,13 +3,14 @@ from random import *
 
 x = symbols('x')
 
+# Find a random polynomial of degree <= deg in Z_{mod}.
 def randpoly(deg, mod):
     p = poly(0, x, modulus = mod)
     for d in range(deg):
         p = x * p + randint(0, mod - 1)
     return poly(p, x, modulus = mod)
 
-# Find f^exp % modf in Z_{mod}
+# Find f^exp % modf in Z_{mod}.
 def polypow(f, exp, modf, mod):
     res = poly(1, x, modulus = mod)
     while exp > 0:
@@ -69,8 +70,6 @@ def factorizepoly(f, mod):
         print(latex(fac))
     if prod != f:
         print("******ERROR!******")
-        print("******ERROR!******")
-        print("******ERROR!******")
     print()
     return
 
@@ -80,7 +79,5 @@ factorizepoly(f, 3)
 f = poly((x**12+48*x**11+42*x**10+58*x**9+11*x**8+25*x**7+22*x**6+30*x**5+34*x**4+16*x**3+62*x**2+21*x+27), x, modulus = 73)
 factorizepoly(f, 73)
 
-
 f = poly((x**12+12*x**11 +25*x**10 + 40*x**9 + 6*x**8 + 15*x**7 + 24*x**6+ 42*x**5 + 8*x**4 + 48*x**3 +68*x**2 + 50*x +68), x, modulus = 73)
 factorizepoly(f, 73)
-
