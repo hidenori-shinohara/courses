@@ -61,6 +61,31 @@
 
 \section{Simplicial and Singular Homology}
 
+\begin{exer}{(Problem 20)}
+  Show that $H(X) = H(SX)$ for all $n$, where $SX$ is the suspension of $X$.
+  More generally, thinking of $SX$ as the union of two cones $CX$ with their bases identified, compute the reduced homology groups of the union of any finite number of cones $CX$ with their bases identiﬁed.
+\end{exer}
+
+\begin{proof}
+  Let $i \geq 1$.
+  We have $\tilde{H}_i(CX) \rightarrow \tilde{H}_i(SX) \rightarrow \tilde{H}_i(SX, CX) \rightarrow \tilde{H}_{i - 1}(CX)$.
+  Since $CX$ is contractible by the deformation retract $f_t: (x, s) \mapsto (x, s(1 - t))$, $\tilde{H}_i(CX) = \tilde{H}_{i - 1}(CX) = 0$.
+  By the exactness, $\tilde{H}_i(SX) = \tilde{H}_i(SX, CX)$.
+  Let $x$ be the north pole of $CX$.
+  We will consider the inclusion $(SX - x, CX - x) \rightarrow (SX, CX)$.
+  By the excision theorem, $\tilde{H}_i(SX - x, CX - x) = \tilde{H}_i(SX, CX)$.
+
+  We will consider the exact sequence $\tilde{H}_i(SX - x) \rightarrow \tilde{H}_i(SX - x, CX - x) \rightarrow \tilde{H}_{i - 1}(CX - x) \rightarrow \tilde{H}_{i - 1}(SX - x)$.
+  Since $SX - x$ is contractible by the same argument as $CX$, $\tilde{H}_i(SX - x) = \tilde{H}_{i - 1}(SX - x) = 0$.
+  By the exactness, we have $\tilde{H}(SX - x, CX - x) = \tilde{H}_{i - 1}(CX - x)$.
+  Since $CX - x$ is homeomorphic to $X$, $\tilde{H}_{i - 1}(CX - x) = \tilde{H}_{i - 1}(X)$.
+  Hence, $\tilde{H}_i(SX) = \tilde{H}_{i - 1}(X)$.
+
+  \todo[inline,caption={}]{
+    Finish the second part.
+  }
+\end{proof}
+
 \begin{exer}{(Problem 22)}
   Prove by induction on dimension the following facts about the homology of a finite-dimensional $CW$ complex $X$, using the observation that $X_n / X_{n−1}$ is a wedge sum of $n$ spheres:
   \begin{itemize}
