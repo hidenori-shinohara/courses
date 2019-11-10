@@ -314,5 +314,21 @@
   By Proposition 23(iii), $L^{G_2} \subset L^{G_1}$ and $L^{D_4} \subset L^{G_2}$ is Galois, but $L^{D_4} \subset L^{G_1}$ is not Galois.
 \end{proof}
 
+\begin{exer}{(Problem 5)}
+  Let $F \subset M$ be a Galois extension with Galois group isomorphic to the symmetric group $S_4$.
+  Let $H = \ev{(123)} \subset S_4$.
+  Make a list of the intermediate fields in the extension, $F \subset M^H$.
+  For each intermediate field $L$ indicate whether or not $F \subset L$ is Galois and whether or not $L \subset M^H$ is Galois.
+\end{exer}
+
+\begin{proof}
+  $H' = \{ e, (12), (13), (23), (123), (132) \}$ is a proper subgroup of $S_4$ that contains $H$ properly.
+  Therefore, $F \subsetneq M^{H'} \subsetneq M$.
+  Since $[H':H] = 2$, $H$ is a normal subgroup of $H'$.
+  Therefore, $M^{H'} \subset M^{H}$ is Galois.
+  $H'$ is not a normal subgroup of $S_4$ because $(14)(12)(14) \notin H'$.
+  Therefore, $F \subset M^{H'}$ is not Galois.
+\end{proof}
+
 
 \end{document}
