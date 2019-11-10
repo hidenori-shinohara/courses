@@ -7,6 +7,13 @@ class Permutation:
         self.n = len(ls)
     def sends(self, i):
         return self.ls[i]
+    def __eq__(self, other):
+        for i in range(self.n):
+            if self.sends(i) != other.sends(i):
+                return False
+        return True
+    def __ne__(self, other):
+        return not self.__eq__(other)
     def cycle_notation(self):
         seen = {}
         result = ""
@@ -33,6 +40,9 @@ class Permutation:
         for i in range(self.n):
             inverse[self.sends(i)] = i
         return Permutation(inverse)
+    def __hash__(self):
+        return hash((self.ls))
+
 
 
 class TestPermutations(unittest.TestCase):
@@ -50,39 +60,50 @@ class TestPermutations(unittest.TestCase):
     def test_inverse(self):
         p = Permutation([1, 0, 2, 3, 4])
         self.assertEqual(p.inverse().cycle_notation(), p.cycle_notation())
+    def test_eq(self):
+        p = Permutation([1, 0, 2, 3, 4])
+        q = Permutation([1, 0, 2, 3, 4])
+        self.assertEqual(p == q, True)
+        p = Permutation([1, 0, 2, 3, 4])
+        q = Permutation([0, 1, 2, 3, 4])
+        self.assertEqual(p == q, False)
 
 # unittest.main()
 
-all_permutations = list(permutations(list(range(3))))
+def printgroup(ls):
+    res = '['
+    for p in H:
+        if len(res) >= 2:
+            res += ','
+        res += p.cycle_notation()
+    res += ']'
+    print(res)
+def remdup(ls):
+    newls = []
+    for i in range(len(ls)):
+        seen = False
+        for j in range(i):
+            if ls[i] == ls[j]:
+                seen = True
+        if not seen:
+            newls.append(ls[i])
+    return newls
 
-list_a = [[0, 1, 2], [1, 0, 2], [1, 0, 2], [1, 0, 2], [0, 1, 2], [1, 2, 0], [0, 2, 1], [1, 2, 0]]
-list_b = [[0, 1, 2], [0, 1, 2], [2, 1, 0], [1, 2, 0], [1, 2, 0], [2, 0, 1], [0, 2, 1], [1, 2, 0]]
+v = Permutation([1, 2, 0, 3])
+H = [v]
 
-cnt = 0
-casenumber = 0
-print("  \\begin{itemize}")
-for i in range(len(list_a)):
-    for j in range(2):
-        a = Permutation(list_a[i])
-        b = Permutation(list_b[i])
-        if j == 1:
-            if i in [0, 2, 5, 6, 7]:
-                continue
-            else:
-                a, b = b, a
-        casenumber += 1
-        print("    \\item Case %d: $\\phi_{%d}: a \mapsto %s, b \mapsto %s$" % (casenumber, casenumber, a.cycle_notation(), b.cycle_notation()))
-        conjugations = set()
-        for p in all_permutations:
-            perm = Permutation(p)
-            conja = perm.inverse().multiply(a).multiply(perm).cycle_notation()
-            conjb = perm.inverse().multiply(b).multiply(perm).cycle_notation()
-            conjugations.add("$a \mapsto %s, b \mapsto %s$" % (conja, conjb))
-
-        print("      The following maps are conjugates of $\phi_{%d}$" % (casenumber))
-        print("      \\begin{itemize}")
-        for conjugation in conjugations:
-            print("        \\item " + conjugation)
-            cnt += 1
-        print("      \\end{itemize}")
-print("  \\end{itemize}")
+def findclosure(ls):
+    for i in range(24):
+        newls = []
+        for p in ls:
+            newls.append(p)
+            for q in ls:
+                newls += [p.multiply(q)]
+        newls = remdup(newls)
+        print(len(ls))
+        print(len(newls))
+        if len(ls) == len(newls):
+            print("HELLO")
+            return newls
+        ls = newls.copy()
+print(printgroup(findclosure(H)))
