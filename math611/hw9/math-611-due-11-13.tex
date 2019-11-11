@@ -67,23 +67,24 @@
 \end{exer}
 
 \begin{proof}
+  It suffices to only prove the second part.
+  Let $(CX)^k$ denote the union of $k$ cones with their bases identified.
+  Specifically, $(CX)^2 = SX$.
+  We claim that $\tilde{H}_n(X) \cong \tilde{H}_{n + 1}((CX)^{k + 1})$ for all $k \geq 1$.
+
   Let $i \geq 1$.
-  We have $\tilde{H}_i(CX) \rightarrow \tilde{H}_i(SX) \rightarrow \tilde{H}_i(SX, CX) \rightarrow \tilde{H}_{i - 1}(CX)$.
+  We have $\tilde{H}_i(CX) \rightarrow \tilde{H}_i((CX)^{k + 1}) \rightarrow \tilde{H}_i((CX)^{k + 1}, CX) \rightarrow \tilde{H}_{i - 1}(CX)$.
   Since $CX$ is contractible by the deformation retract $f_t: (x, s) \mapsto (x, s(1 - t))$, $\tilde{H}_i(CX) = \tilde{H}_{i - 1}(CX) = 0$.
-  By the exactness, $\tilde{H}_i(SX) = \tilde{H}_i(SX, CX)$.
+  By the exactness, $\tilde{H}_i((CX)^{k + 1}) = \tilde{H}_i((CX)^{k + 1}, CX)$.
   Let $x$ be the north pole of $CX$.
-  We will consider the inclusion $(SX - x, CX - x) \rightarrow (SX, CX)$.
-  By the excision theorem, $\tilde{H}_i(SX - x, CX - x) = \tilde{H}_i(SX, CX)$.
+  We will consider the inclusion $((CX)^{k + 1} - x, CX - x) \rightarrow ((CX)^{k + 1}, CX)$.
+  By the excision theorem, $\tilde{H}_i((CX)^{k + 1} - x, CX - x) = \tilde{H}_i((CX)^{k + 1}, CX)$.
 
-  We will consider the exact sequence $\tilde{H}_i(SX - x) \rightarrow \tilde{H}_i(SX - x, CX - x) \rightarrow \tilde{H}_{i - 1}(CX - x) \rightarrow \tilde{H}_{i - 1}(SX - x)$.
-  Since $SX - x$ is contractible by the same argument as $CX$, $\tilde{H}_i(SX - x) = \tilde{H}_{i - 1}(SX - x) = 0$.
-  By the exactness, we have $\tilde{H}(SX - x, CX - x) = \tilde{H}_{i - 1}(CX - x)$.
+  We will consider the exact sequence $\tilde{H}_i((CX)^{k + 1} - x) \rightarrow \tilde{H}_i((CX)^{k + 1} - x, CX - x) \rightarrow \tilde{H}_{i - 1}(CX - x) \rightarrow \tilde{H}_{i - 1}((CX)^{k + 1} - x)$.
+  Since $(CX)^{k + 1} - x$ is contractible by the same argument as $CX$, $\tilde{H}_i((CX)^{k + 1} - x) = \tilde{H}_{i - 1}((CX)^{k + 1} - x) = 0$.
+  By the exactness, we have $\tilde{H}((CX)^{k + 1} - x, CX - x) = \tilde{H}_{i - 1}(CX - x)$.
   Since $CX - x$ is homeomorphic to $X$, $\tilde{H}_{i - 1}(CX - x) = \tilde{H}_{i - 1}(X)$.
-  Hence, $\tilde{H}_i(SX) = \tilde{H}_{i - 1}(X)$.
-
-  \todo[inline,caption={}]{
-    Finish the second part.
-  }
+  Hence, $\tilde{H}_i((CX)^{k + 1}) = \tilde{H}_{i - 1}(X)$.
 \end{proof}
 
 \begin{exer}{(Problem 22)}
