@@ -111,6 +111,11 @@ $ $
       Since $(X^n, X^{n - 1})$ is a good pair, $H_{n + 1}(X^n, X^{n - 1}) = H_{n + 1}(X^n / X^{n - 1}) = H_{n + 1}(\vee_{\alpha} S^n) = \oplus_{\alpha} 0 = 0$.
       By the inductive hypothesis, $H_i(X^{n - 1}) = 0$.
       Therefore, the exactness of $0 \rightarrow H_i(X^n) \rightarrow 0$ implies that $H_i(X^n) = 0$ for all $i > n$.
+
+      Moreover, the exact sequence $0 = H_n(X^{n - 1}) \rightarrow H_n(X^n) \xrightarrow{\phi} H_n(X^n / X^{n - 1})$ shows that $\phi$ is injective.
+      This means that $H_n(X^n / X^{n - 1}) = H_n(\wedge_{\alpha} S^n) = \oplus_{\alpha} \mathbb{Z}$ contains an isomorphic copy of $H_n(X^n) = H_n(X)$.
+      Therefore, $H_n(X)$ must be free.
+    \item
   \end{itemize}
 \end{proof}
 
