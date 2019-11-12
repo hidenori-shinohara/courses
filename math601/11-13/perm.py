@@ -14,6 +14,14 @@ class Permutation:
         return True
     def __ne__(self, other):
         return not self.__eq__(other)
+    def __lt__(self,other):
+        return (self.cycle_notation()<other.cycle_notation())
+    def __le__(self,other):
+        return (self.cycle_notation()<=other.cycle_notation())
+    def __gt__(self,other):
+        return (self.cycle_notation()>other.cycle_notation())
+    def __ge__(self,other):
+        return (self.cycle_notation()>=other.cycle_notation())
     def cycle_notation(self):
         seen = {}
         result = ""
@@ -41,7 +49,7 @@ class Permutation:
             inverse[self.sends(i)] = i
         return Permutation(inverse)
     def __hash__(self):
-        return hash((self.ls))
+        return hash('-'.join(str(i) for i in self.ls))
 
 
 
@@ -79,29 +87,40 @@ def printgroup(ls):
     res += ']'
     print(res)
 
-def remdup(ls):
-    newls = []
-    for i in range(len(ls)):
-        seen = False
-        for j in range(i):
-            if ls[i] == ls[j]:
-                seen = True
-        if not seen:
-            newls.append(ls[i])
-    return newls
-
 v = Permutation([1, 2, 0, 3])
 H = [v]
 
 def findclosure(ls):
+    ls.append(Permutation([0, 1, 2, 3]))
     for i in range(24):
-        products = ls.copy()
+        products = {Permutation([0, 1, 2, 3])}
         for p in ls:
             for q in ls:
-                products.append(p.multiply(q))
-        products = remdup(products)
+                products.add(p.multiply(q))
         if len(ls) == len(products):
-            return products
-        ls = products.copy()
+            return sorted(products)
+        ls = sorted(products)
 
-print(printgroup(findclosure(H)))
+allperms = list(permutations([0, 1, 2, 3]))
+
+allsubgroups = []
+for newp in allperms:
+    H = findclosure([v, Permutation(newp)])
+    seen = False
+    for subgrp in allsubgroups:
+        if H == subgrp:
+            seen = True
+    if not seen: allsubgroups.append(H)
+for i in range(len(allperms)):
+    for j in range(i):
+        newp1 = allperms[i]
+        newp2 = allperms[j]
+        H = findclosure([v, Permutation(newp1), Permutation(newp2)])
+        seen = False
+        for subgrp in allsubgroups:
+            if H == subgrp:
+                seen = True
+        if not seen: allsubgroups.append(H)
+
+for subgrp in allsubgroups:
+    printgroup(subgrp)
