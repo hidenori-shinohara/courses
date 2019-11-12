@@ -322,12 +322,19 @@
 \end{exer}
 
 \begin{proof}
-  $H' = \{ e, (12), (13), (23), (123), (132) \}$ is a proper subgroup of $S_4$ that contains $H$ properly.
-  Therefore, $F \subsetneq M^{H'} \subsetneq M$.
-  Since $[H':H] = 2$, $H$ is a normal subgroup of $H'$.
-  Therefore, $M^{H'} \subset M^{H}$ is Galois.
-  $H'$ is not a normal subgroup of $S_4$ because $(14)(12)(14) \notin H'$.
-  Therefore, $F \subset M^{H'}$ is not Galois.
+  There are only 4 subgroups of $S_4$ that contain $S_3$.
+  They are $H, S_3, A_4, S_4$.
+
+  Clearly, $M^H \subset M^H$ is Galois.
+  $H$ is not a normal subgroup of $S_4$ because $(14)(12)(14) \notin H$.
+  Therefore, $F \subset M^H \subset$ is not Galois.
+
+  $S_3 = \{ e, (12), (13), (23), (123), (132) \}$ is a proper subgroup of $S_4$ that contains $H$ properly.
+  Therefore, $F \subsetneq M^{S_3} \subsetneq M$.
+  Since $[S_3:H] = 2$, $H$ is a normal subgroup of $S_3$.
+  Therefore, $M^{S_3} \subset M^{H}$ is Galois.
+  $S_3$ is not a normal subgroup of $S_4$ because $(14)(12)(14) \notin S_3$.
+  Therefore, $F \subset M^{S_3}$ is not Galois.
 \end{proof}
 
 
