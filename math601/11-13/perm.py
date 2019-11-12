@@ -72,12 +72,13 @@ class TestPermutations(unittest.TestCase):
 
 def printgroup(ls):
     res = '['
-    for p in H:
+    for p in ls:
         if len(res) >= 2:
             res += ','
         res += p.cycle_notation()
     res += ']'
     print(res)
+
 def remdup(ls):
     newls = []
     for i in range(len(ls)):
@@ -94,16 +95,13 @@ H = [v]
 
 def findclosure(ls):
     for i in range(24):
-        newls = []
+        products = ls.copy()
         for p in ls:
-            newls.append(p)
             for q in ls:
-                newls += [p.multiply(q)]
-        newls = remdup(newls)
-        print(len(ls))
-        print(len(newls))
-        if len(ls) == len(newls):
-            print("HELLO")
-            return newls
-        ls = newls.copy()
+                products.append(p.multiply(q))
+        products = remdup(products)
+        if len(ls) == len(products):
+            return products
+        ls = products.copy()
+
 print(printgroup(findclosure(H)))
