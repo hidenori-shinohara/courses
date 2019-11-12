@@ -324,6 +324,24 @@
 \begin{proof}
   There are only 4 subgroups of $S_4$ that contain $S_3$.
   They are $H, S_3, A_4, S_4$.
+  The smallest subgroup containing $H$ and an element in $S_3$ is clearly either $H$ or $S_3$.
+  We will consider the smallest subgroup containing $H$ and an element $\sigma$ in $S_4 \setminus S_3$.
+  If $\sigma$ is an even permutation, $\ev{ H, \sigma }$ is a subgroup of $A_4$.
+  By Figure 8 on P.111 (Dummit and Foote), $\ev{ H, \sigma} = A_4$.
+  Suppose $\sigma$ is an odd permutation.
+  Since $\sigma \notin S_3$, $\sigma$ sends 4 to 1, 2, or 3.
+  Then $\sigma^{-1}(123)\sigma$ is an even permutation that sends 4 to 1, 2, or 3.
+  In other words, $\ev{ H, \sigma }$ contains an even permutation that is not in $H$.
+  Consider the group $H_e$ that consists of all the even permutation sin $\ev{ H, \sigma }$.
+  $H \subsetneq H_e \subset A_4$.
+  By Figure 8 on P.111 (Dummit and Foote), $H_e = A_4$.
+  Since $H$ properly contains $A_4$, it must be $S_4$.
+  Therefore, we showed that $\ev{ H, \sigma }$ is either $S_3, A_4, S_4$ for any $\sigma \notin H$.
+
+  Clearly, there is no subgroup between $A_4$ and $S_4$.
+  Similarly, there is no subgroup between $S_3$ and $S_4$.
+  If there is one, $\abs{S_3} = 6$ and $\abs{S_4} = 24$ imply that the subgroup has order 12.
+  However, the only subgroup of order 12 in $S_4$ is $A_4$, which does not contain $S_3$.
 
   Clearly, $M^H \subset M^H$ and $M^{S_4} \subset F$ are Galois.
   $H$ is not a normal subgroup of $S_4$ because $(14)(12)(14) \notin H$.

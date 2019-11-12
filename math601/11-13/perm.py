@@ -107,6 +107,7 @@ def findclosure(ls):
 
 
 allsubgroups = []
+d = {3:[], 6:[], 12:[], 24:[]}
 for newp in allperms:
     H = findclosure([v, newp])
     seen = False
@@ -115,17 +116,18 @@ for newp in allperms:
             seen = True
     if not seen: allsubgroups.append(H)
 for i in range(len(allperms)):
-    for j in range(i):
-        for k in range(j):
-            newp1 = allperms[i]
-            newp2 = allperms[j]
-            newp3 = allperms[k]
-            H = findclosure([v, newp1, newp2, newp3])
-            seen = False
-            for subgrp in allsubgroups:
-                if H == subgrp:
-                    seen = True
-            if not seen: allsubgroups.append(H)
+    newp = allperms[i]
+    H = findclosure([v, newp])
+    seen = False
+    for subgrp in allsubgroups:
+        if H == subgrp:
+            seen = True
+    if not seen: allsubgroups.append(H)
+    print("%s generates a subgroup of size %d" % (newp.cycle_notation(), len(H)))
+    d[len(H)].append(newp.cycle_notation())
 
+for k in d:
+    print("%d: %s" % (k, ", ".join(d[k])))
 for subgrp in allsubgroups:
     printgroup(subgrp)
+
