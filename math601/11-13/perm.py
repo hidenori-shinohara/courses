@@ -90,6 +90,8 @@ def printgroup(ls):
 v = Permutation([1, 2, 0, 3])
 H = [v]
 
+allperms = list(Permutation(p) for p in list(permutations([0, 1, 2, 3])))
+
 def findclosure(ls):
     ls.append(Permutation([0, 1, 2, 3]))
     for i in range(24):
@@ -97,15 +99,16 @@ def findclosure(ls):
         for p in ls:
             for q in ls:
                 products.add(p.multiply(q))
+                if len(products) >= 13:
+                    return sorted(allperms)
         if len(ls) == len(products):
             return sorted(products)
         ls = sorted(products)
 
-allperms = list(permutations([0, 1, 2, 3]))
 
 allsubgroups = []
 for newp in allperms:
-    H = findclosure([v, Permutation(newp)])
+    H = findclosure([v, newp])
     seen = False
     for subgrp in allsubgroups:
         if H == subgrp:
@@ -113,14 +116,16 @@ for newp in allperms:
     if not seen: allsubgroups.append(H)
 for i in range(len(allperms)):
     for j in range(i):
-        newp1 = allperms[i]
-        newp2 = allperms[j]
-        H = findclosure([v, Permutation(newp1), Permutation(newp2)])
-        seen = False
-        for subgrp in allsubgroups:
-            if H == subgrp:
-                seen = True
-        if not seen: allsubgroups.append(H)
+        for k in range(j):
+            newp1 = allperms[i]
+            newp2 = allperms[j]
+            newp3 = allperms[k]
+            H = findclosure([v, newp1, newp2, newp3])
+            seen = False
+            for subgrp in allsubgroups:
+                if H == subgrp:
+                    seen = True
+            if not seen: allsubgroups.append(H)
 
 for subgrp in allsubgroups:
     printgroup(subgrp)
