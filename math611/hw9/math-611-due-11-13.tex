@@ -112,9 +112,11 @@ $ $
       By the inductive hypothesis, $H_i(X^{n - 1}) = 0$.
       Therefore, the exactness of $0 \rightarrow H_i(X^n) \rightarrow 0$ implies that $H_i(X^n) = 0$ for all $i > n$.
 
-      Moreover, the exact sequence $0 = H_n(X^{n - 1}) \rightarrow H_n(X^n) \xrightarrow{\phi} H_n(X^n / X^{n - 1})$ shows that $\phi$ is injective.
-      This means that $H_n(X^n / X^{n - 1}) = H_n(\wedge_{\alpha} S^n) = \oplus_{\alpha} \mathbb{Z}$ contains an isomorphic copy of $H_n(X^n) = H_n(X)$.
+      Moreover, the exact sequence $0 = H_n(X^{n - 1}) \rightarrow H_n(X^n) \xrightarrow{\phi} H_n(X^n, X^{n - 1})$ shows that $\phi$ is injective.
+      This means that $H_n(X^n, X^{n - 1}) = \tilde{H}_n(X^n / X^{n - 1}) = \tilde{H}_n(\wedge_{\alpha} S^n) = \oplus_{\alpha} \mathbb{Z}$ contains an isomorphic copy of $H_n(X^n) = H_n(X)$.
       Therefore, $H_n(X)$ must be free.
+      Moreover, we have one $S^n$ for each $X^n$, so $H_n(X)$ is free with at most $k$ generators where $k$ is the number of $n$-cells in $X$.
+      This result is not necessary for Part (a), but we will utilize it in Part (c).
     \item
       Let $n \geq 1$ be fixed.
       (It does not make sense to discuss the existence of cells of dimension $0 - 1 = -1$, so it makes sense to assume $n \geq 1$.)
