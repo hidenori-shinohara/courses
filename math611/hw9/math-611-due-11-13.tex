@@ -150,6 +150,19 @@ $ $
       By the exactness, $H_n(X^k)$ is isomorphic to $H_n(X^{k + 1})$, so $H_n(X^{k + 1}) = H_n(X)$ is free with basis in bijective correspondence with the $n$-cells.
 
       By mathematical induction, $P(k)$ is true for any $k \in \mathbb{N}$.
+    \item
+      Let $n$ be fixed.
+      We will show that $H_n(X) = H_n(X^{n + 1})$.
+      For each $i \geq 1$, we have $H_{n + 1}(X^{n + i + 1}, X^{n + i}) \rightarrow H_{n}(X^{n + i}) \rightarrow H_{n}(X^{n + i + 1}) \rightarrow H_n(X^{n + i + 1}, X^{n + i})$.
+      $H_{n + 1}(X^{n + i + 1}, X^{n + i}) = \tilde{H}_{n + 1}(X^{n + i + 1} / X^{n + i}) = \tilde{H}_{n + 1}(\vee_{\alpha} S^{n + i + 1}) = 0$.
+      Similarly, $H_n(X^{n + i + 1}, X^{n + i}) = 0$.
+      Then $H_{n}(X^{n + i}) = H_n(X^{n + i + 1})$.
+      By induction on $i$, $H_n(X) = H_n(X^{n + 1})$ because the dimension of $X$ is finite.
+
+      We have the exact sequence $H_n(X^n) \xrightarrow{\psi} H_n(X^{n + 1}) \rightarrow H_n(X^{n + 1}, X^n)$.
+      $H_n(X^{n + 1}, X^n) = 0$ for the same argument as above, so $\psi$ is surjective.
+      In the last part of the solution to Part (a), we also showed that $H_n(X^n)$ is free with at most $k$ generators where $k$ is the number of $n$-cells.
+      Thus $H_n(X^{n + 1})$ has at most $k$ generators, so $H_n(X)$ has at most $k$ generators.
   \end{itemize}
 \end{proof}
 
