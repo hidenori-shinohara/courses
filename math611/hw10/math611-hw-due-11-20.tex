@@ -103,8 +103,36 @@
 \end{exer}
 
 \begin{exer}{(Problem 28 (b))}
-  \todo[inline,caption={}]{
-  }
+  Let $A, B$ be the Mobius strip and $\mathbb{R}P^2$ with a small neighborhood around them so the strip and $\mathbb{R}P^2$ are contained in $A$ and $B$.
+  For any $n \geq 3$, the exact sequence $H_n(A \cap B) \rightarrow H_n(A) \oplus H_n(B) \rightarrow H_n(X) \rightarrow H_{n - 1}(A \cap B)$ implies that $H_n(X) \cong H_n(A) \oplus H_n(B) = 0 \oplus 0 = 0$ because the intersection $A \cap B$ is homotopic to $S^1$, so $H_n(A \cap B) = H_{n - 1}(A \cap B) = 0$.
+  Since $X = A \cup B$ has one path component, $H_0(X) = \mathbb{Z}$.
+  We will consider the LES
+
+  \begin{align*}
+    \tilde{H}_2(A) \oplus \tilde{H}_2(B) \xrightarrow{f_1} \tilde{H}_2(X) 
+    \xrightarrow{f_2} \tilde{H}_1(A \cap B) \xrightarrow{f_3} \tilde{H}_1(A) \oplus \tilde{H}_1(B) \xrightarrow{f_4} \tilde{H}_1(X) 
+    \rightarrow \tilde{H}_0(A \cap B).
+  \end{align*}
+
+  $\tilde{H}_1(A \cap B) = \mathbb{Z}$, and $f_3$ maps $1$ to $(2, 1)$ because the generator wraps around the Mobius strip twice and the $\mathbb{R}P^2$ once.
+  Then $f_3$ is injective, so $f_2$ is the zero map.
+  In other words, $\ker(f_2) = \tilde{H}_2(X)$, so $f_1$ is surjective.
+  Since $\tilde{H}_2(A) \oplus \tilde{H}_2(B) = 0$, $\tilde{H}_2(X) = 0$.
+  Thus $H_2(X) = 0$.
+
+  By the first isomorphism theorem and exactness,
+
+  \begin{align*}
+    \tilde{H}_1(X)
+      &= \tilde{H}_1(A) \oplus \tilde{H}_1(B) / \ker(f_4) \\
+      &= (\mathbb{Z} \oplus \mathbb{Z}/2\mathbb{Z}) / \ev{(2, 1)} \\
+      &\cong \ev{a, b \mid 2b}  / \ev{2a + b} \\
+      &= \ev{a, b \mid 2b, 2a + b} \\
+      &= \ev{a, -2a \mid 2(-2a)} \\
+      &= \ev{a \mid 4a} \\
+      &= \mathbb{Z}_4.
+  \end{align*}
+  Therefore, $H_1(X) = \mathbb{Z}_4$.
 \end{exer}
 
 \begin{exer}{(Problem 29)}
