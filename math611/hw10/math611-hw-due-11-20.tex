@@ -1,0 +1,117 @@
+\documentclass[psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Aut}{Aut}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 611 (Due 11/20)}
+\author{Hidenori Shinohara}
+\maketitle
+
+
+\begin{exer}{(Problem 1)}
+  \todo[inline,caption={}]{
+  }
+\end{exer}
+
+\begin{exer}{(Problem 28 (a))}
+  Let $A, B$ be the Mobius strip and a torus with a small neighborhood around them so the strip and torus are contained in $A$ and $B$.
+  For any $n \geq 3$, the exact sequence $H_n(A \cap B) \rightarrow H_n(A) \oplus H_n(B) \rightarrow H_n(X) \rightarrow H_{n - 1}(A \cap B)$ implies that $H_n(X) \cong H_n(A) \oplus H_n(B) = 0 \oplus 0 = 0$ because the intersection $A \cap B$ is homotopic to $S^1$, so $H_n(A \cap B) = H_{n - 1}(A \cap B) = 0$.
+  $H_0(X) = \mathbb{Z]$ because $X$ has only one path component.
+
+  We will examine the LES
+
+  \begin{align*}
+    \tilde{H}_2(A \cap B) \rightarrow \tilde{H}_2(A) \oplus \tilde{H}_2(B) \xrightarrow{f_1} \tilde{H}_2(X) 
+    \xrightarrow{f_2} \tilde{H}_1(A \cap B) \xrightarrow{f_3} \tilde{H}_1(A) \oplus \tilde{H}_1(B) \xrightarrow{f_4} \tilde{H}_1(X) 
+    \rightarrow \tilde{H}_0(A \cap B).
+  \end{align*}
+
+  \begin{itemize}
+    \item
+      Sine $\tilde{H}_2(A \cap B) = 0$, so $f_1$ is injective.
+    \item
+      $\tilde{H}_1(A \cap B) = \mathbb{Z}$, and $f_3(1) = (2, (1, 0))$ because the intersection goes around the mobius strip twice while it only goes around the torus once.
+      Then $f_3$ is injective, so $\Im(f_2) = \ker(f_3) = 0$.
+      This implies that $\im(f_1) = \ker(f_2) = H_2$, so $f_1$ is surjective.
+  \end{itemize}
+
+  Therefore, $f_1$ is bijective, so $H_2(X) = \tilde{H}_2(X) = \tilde{H}_2(A) \oplus \tilde{H}_2(B) = 0 \oplus \mathbb{Z} = \mathbb{Z}$.
+
+  Finally, $f_4$'s surjectivity implies that 
+  \begin{align*}
+    \tilde{H}_1(X)
+      &\cong \tilde{H}_1(A) \oplus \tilde{H}_1(B) / \ker(f_4) \\
+      &= \mathbb{Z} \oplus \mathbb{Z}^2 / \ev{(2, (1, 0))} \\
+      &\cong \ev{a, b, c} / \ev{2a + b} \\
+      &\cong \ev{a, b, c \mid 2a + b} \\
+      &\cong \ev{a, -2a, c} \\
+      &\cong \ev{a, c} = \mathbb{Z} \oplus \mathbb{Z}.
+  \end{align*}
+  Thus $H_1(X) = \mathbb{Z} \oplus \mathbb{Z}$.
+\end{exer}
+
+\begin{exer}{(Problem 28 (b))}
+  \todo[inline,caption={}]{
+  }
+\end{exer}
+
+\begin{exer}{(Problem 29)}
+  \todo[inline,caption={}]{
+  }
+\end{exer}
+
+\end{document}
+
+
