@@ -1,0 +1,74 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Aut}{Aut}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 601 (Due 11/22)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\tableofcontents
+\section{THE THEOREM ON SYMMETRIC POLYNOMIALS}
+
+\begin{exer}{(Problem 1)}
+  By substituting $u_4 = 0$, we get $u_1^2u_2u_3 + u_1u_2^2u_3 + u_1u_2u_3^2 = s_3s_1$.
+  $s_3s_1$ with 4 variables expands to $u_{1}^{2} u_{2} u_{3} + u_{1}^{2} u_{2} u_{4} + u_{1}^{2} u_{3} u_{4} + u_{1} u_{2}^{2} u_{3} + u_{1} u_{2}^{2} u_{4} + u_{1} u_{2} u_{3}^{2} + 4 u_{1} u_{2} u_{3} u_{4} + u_{1} u_{2} u_{4}^{2} + u_{1} u_{3}^{2} u_{4} + u_{1} u_{3} u_{4}^{2} + u_{2}^{2} u_{3} u_{4} + u_{2} u_{3}^{2} u_{4} + u_{2} u_{3} u_{4}^{2}$.
+  Then $s_3s_1 - f$ where $f$ is the original polynomial gives us $4u_1u_2u_3u_4 = 4s_4$.
+  Therefore, $f = s_3s_1 - 4s_4$.
+\end{exer}
+
+\end{document}
+
+
