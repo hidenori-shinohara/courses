@@ -68,7 +68,7 @@
 \begin{exer}{(Problem 28 (a))}
   Let $A, B$ be the Mobius strip and a torus with a small neighborhood around them so the strip and torus are contained in $A$ and $B$.
   For any $n \geq 3$, the exact sequence $H_n(A \cap B) \rightarrow H_n(A) \oplus H_n(B) \rightarrow H_n(X) \rightarrow H_{n - 1}(A \cap B)$ implies that $H_n(X) \cong H_n(A) \oplus H_n(B) = 0 \oplus 0 = 0$ because the intersection $A \cap B$ is homotopic to $S^1$, so $H_n(A \cap B) = H_{n - 1}(A \cap B) = 0$.
-  $H_0(X) = \mathbb{Z]$ because $X$ has only one path component.
+  $H_0(X) = \mathbb{Z}$ because $X$ has only one path component.
 
   We will examine the LES
 
@@ -84,7 +84,7 @@
     \item
       $\tilde{H}_1(A \cap B) = \mathbb{Z}$, and $f_3(1) = (2, (1, 0))$ because the intersection goes around the mobius strip twice while it only goes around the torus once.
       Then $f_3$ is injective, so $\Im(f_2) = \ker(f_3) = 0$.
-      This implies that $\im(f_1) = \ker(f_2) = H_2$, so $f_1$ is surjective.
+      This implies that $\Im(f_1) = \ker(f_2) = H_2$, so $f_1$ is surjective.
   \end{itemize}
 
   Therefore, $f_1$ is bijective, so $H_2(X) = \tilde{H}_2(X) = \tilde{H}_2(A) \oplus \tilde{H}_2(B) = 0 \oplus \mathbb{Z} = \mathbb{Z}$.
@@ -136,8 +136,26 @@
 \end{exer}
 
 \begin{exer}{(Problem 29)}
-  \todo[inline,caption={}]{
-  }
+  As shown earlier,
+  \begin{align*}
+    H_n(M_g) &= \begin{cases}
+      \mathbb{Z}^{2g} & (n = 1) \\
+      \mathbb{Z} & (n = 0, 2) \\
+      0 & (n \geq 3).
+    \end{cases}
+  \end{align*}
+  Let $R_1, R_2$ be the first and second $R$ with a small neighborhood around them.
+  Then $X = R_1 \cup R_2$ and $R_1 \cap R_2$ is homotopy equivalent to $M_g$.
+  Let $n \geq 3$.
+  Consider the sequence 
+  \begin{align*}
+    H_n(R_1) \oplus H_n(R_2) \rightarrow H_n(X) \rightarrow H_{n - 1}(R_1 \cap R_2) \rightarrow H_{n - 1}(R_1) \oplus H_{n - 1}(R_2).
+  \end{align*}
+  A solid $g$-torus deformation retracts to the wedge sum of $g$ $S^1$'s.
+  $H_n(R_1) = H_n(R_2) = \oplus_{i=1}^g H_n(S^1) = 0$ for $n \geq 2$.
+  By the exactness, we have $H_n(X) = H_{n - 1}(R_1 \cap R_2) = H_{n - 1}(M_g)$.
+  Therefore, $H_n(X) = 0$ for $n \geq 4$, and $H_3(X) = \mathbb{Z}$.
+
 \end{exer}
 
 \end{document}
