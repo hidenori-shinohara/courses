@@ -1,19 +1,13 @@
 from sympy.polys.polyfuncs import symmetrize
 from sympy import *
 
-x, y, z = symbols('u_1 u_2 u_3')
+u1, u2, u3 = symbols('u_1 u_2 u_3')
 
-s1 = x + y + z
-s2 = x * y + y * z + z * x
-s3 = x * y * z
+u = [u1, u2, u3]
 
-u = [x, y, z]
-
-d = 0 * x + 1
+discriminant = 1
 for j in range(len(u)):
     for i in range(j):
-        d *= (u[i] - u[j]) * (u[i] - u[j])
+        discriminant *= (u[i] - u[j]) * (u[i] - u[j])
 
-sym = symmetrize(d, formal = True)[0]
-
-print(latex(sym))
+print(latex(symmetrize(discriminant, formal = True)[0]))
