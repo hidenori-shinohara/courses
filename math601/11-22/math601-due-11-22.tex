@@ -134,6 +134,18 @@
       By (i), the discriminant is 229, so $h(y) = y^2 - 229$.
       Also, $g(y) = y^3 - 4y - 1$ since $a = b = 0, c = -1, d = 1$.
       Therefore, both $h(y)$ and $g(y)$ are irreducible, so the Galois group is $S_4$.
+    \item
+      It does not have a linear factor by the rational root theorem.
+      Based on coefficients, if it factors into quadratic polynomials, it will be $(x^2 + ax + b)(x^2 - ax + c)$ for some $a, b, c \in \mathbb{Z}$ by Gauss' lemma.
+      This gives $bc = 12$ and $-ab + ac = -8$, so $a(c - 12/c) = -8$.
+      This is a quadratic polynomial in $c$ with the discriminant $64 - 48a$.
+      This must be a square for $c$ to exist.
+      By checking each possible value of $a$, we get $64 - 48 \cdot -8 = 448, 64 - 48 \cdot -4 = 256, 64 - 48 \cdot -2 = 160, 64 - 48 \cdot -1 = 112, 64 - 48 \cdot 1 = 16$.
+      (For other $a$, $64 - 48a < 0$.)
+      Thus the only two possible values are $a = 1, -4$.
+      $a = 1$ gives $c - b = -8$ and $bc = 12$, which we can confirm to be impossible by examining the divisors of 12.
+      Similarly, $a = -4$ gives $c - b = 2$ and $bc = 12$ and this is impossible to satisfy.
+      Therefore, $x^4 - 8x + 12$ is irreducible over $\mathbb{Q}$.
   \end{enumerate}
 \end{exer}
 
