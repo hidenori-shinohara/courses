@@ -91,6 +91,30 @@
        Hence, $H_1(X) = 0$.
 
        By examining the number of path components, $H_0(X) = \mathbb{Z}$.
+     \item
+       \begin{figure}
+       \includegraphics[width=.5\linewidth]{gtorus.jpeg}
+       \caption{Genus $g$ surface}
+       \label{fig:gtorus}
+       \end{figure}
+       Let $A, B$ denote the subspaces of $X$ as in Figure \ref{fig:gtorus}.
+       Then $A \cap B$ is homotopy equivalent to $S^1$, and $B$ is homotopy equivalent to the wedge sum of $2g$ $S^1$'s.
+
+       For any $n \geq 3$, $H_n(A) \oplus H_n(B) \rightarrow H_n(A \cup B) \rightarrow H_{n - 1}(A \cap B)$ shows that $H_n(A \cup B) = 0$ because $H_n(A) = H_n(B) = 0$ and $H_{n - 1}(A \cap B) = H_{n - 1}(S^1) = 0$.
+
+       We have $0 \rightarrow \tilde{H}_2(A \cup B) \xrightarrow{\alpha} \tilde{H}_1(A \cap B) \xrightarrow{\beta} \tilde{H}_1(A) \oplus \tilde{H}_1(B) \xrightarrow{\gamma} \tilde{H}_1(A \cup B) \rightarrow 0$.
+       We have 0's at the end because $\tilde{H}_2(A) \oplus \tilde{H}_2(B) = \tilde{H}_0(A \cap B) = 0$.
+       We have $\tilde{H}_1(A \cap B) = \mathbb{Z}$ and $\tilde{H}_1(A) \oplus \tilde{H}_1(B) = \vee_{i=1}^{2g}\tilde{H}_1(S^1) = \mathbb{Z}^{2g}$.
+       $\beta$ maps a generator $x$ into $(0, 0)$ because going around $A \cap B$ once cancels out all the generators of $\tilde{H}_1(B)$.
+       For instance, in Figure \ref{fig:gtorus}, $\beta(x) = a + b - a - b + \cdots = 0$.
+       Therefore, $\beta$ is the zero map.
+
+       This implies that $\gamma$ is injective.
+       By the exactness, $\gamma$ is surjective.
+       Therefore, $\gamma$ is isomorphic, and thus $H_1(A \cup B) = \tilde{H}_1(A \cup B) = \mathbb{Z}^{2g}$.
+
+       $\alpha$ is injective by the exactness, so $H_2(A \cup B) = \tilde{H}_2(A \cup B) = \Im(\alpha) = \tilde{H}_1(A \cap B) = \mathbb{Z}$.
+       $H_0(A \cap B) = H_0(S^1) = \mathbb{Z}$.
   \end{itemize}
 \end{exer}
 
