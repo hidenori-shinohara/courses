@@ -45,6 +45,7 @@
 \DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\ord}{ord}
 \DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Int}{int}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -61,8 +62,36 @@
 
 
 \begin{exer}{(Problem 1)}
-  \todo[inline,caption={}]{
-  }
+  \begin{itemize}
+    \item
+       \begin{figure}
+       \includegraphics[width=.5\linewidth]{quasi.jpeg}
+       \caption{Quasi circle}
+       \label{fig:quasi}
+       \end{figure}
+       As shown in Figure \ref{fig:quasi}, we will let $A, B$ denote subspaces of $X$ such that $X = A \cup B$ and $A \cap B$ consists of two line segments.
+       (Circled in the figure)
+       Moreover, $X = \Int A \cup \Int B$.
+
+       $H_n(A) = 0$ for all $n \geq 1$.
+       By Proposition 2.6 (Hatcher), it suffices to consider each path component of $A \cap B$ separately.
+       Each of them is homeomorphic to $\Delta^1$.
+       Thus $H_n(A \cap B) = H_n(\Delta^1) \oplus H_n(\Delta^1) = 0$ for all $n \geq 1$.
+       Using a similar argument, $H_n(B) = H_n(\Delta^1) \oplus H_n(\Delta^1) = 0$ for all $n \geq 1$.
+
+       By the exact sequence $H_n(A) \oplus H_n(B) \rightarrow H_n(A \cup B) \rightarrow H_{n - 1}(A \cap B)$, $H_n(A \cup B) = 0$ for all $n \geq 2$.
+
+       We will consider the exact sequence $0 \rightarrow H_1(A \cup B) \xrightarrow{\alpha} H_0(A \cap B) \xrightarrow{\beta} H_0(A) \oplus H_0(B)$.
+       We have 0 because $H_1(A) \oplus H_1(B) = 0$.
+       $H_0(A \cap B) = \mathbb{Z}^2, H_0(A) = \mathbb{Z}, H_0(B) = \mathbb{Z}^2$ by examining the number of path components.
+       Let $a, b$ be generators of $H_0(A \cap B)$.
+       Then $\beta(a, b) = (a + b, (a, b))$ because $a, b$ simply correspond to each path component in $A \cap B$.
+       Therefore, $\beta$ is injective.
+       Since $\alpha$ is injective by the exactness, $H_1(A \cup B) = \Im(\alpha) = \ker(\beta) = 0$.
+       Hence, $H_1(X) = 0$.
+
+       By examining the number of path components, $H_0(X) = \mathbb{Z}$.
+  \end{itemize}
 \end{exer}
 
 \begin{exer}{(Problem 28 (a))}
