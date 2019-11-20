@@ -46,6 +46,7 @@
 \DeclareMathOperator{\ord}{ord}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Int}{int}
+\DeclareMathOperator{\CP}{\mathbb{C}\mathbf{P}}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -145,6 +146,34 @@
            \end{align*}
          \item
            Since $X$ consists of one path component, $H_0(X) = \mathbb{Z}$.
+       \end{itemize}
+     \item
+       \todo[inline,caption={}]{
+         $\mathbb{R}P^3$.
+       }
+     \item
+       Let $A = \CP^n - (0: \cdots : 0:1), B = \{ (a_1: \cdots : a_n:1) \mid a_i \in \mathbb{C} \}$.
+       Since $\{ (0: \cdots :0:1) \}$ is closed, $A$ is an open set.
+       Moreover, $(0: \cdots :0:1)$ is an interior point of $B$.
+       Therefore, $\Int(A) \cup \Int(B) = \CP^n$.
+
+       %$A = \{ (a_1: \cdots :a_n:0) \mid \{ a_1, \cdots, a_n \} \ne \{ 0 \} \} \coprod \{ (a_1: \cdots : a_n:1) \mid \{ a_1, \cdots, a_n \} \ne \{ 0 \} \}$.
+       $A$ deformation retracts onto $\CP^{n - 1}$ by $F((a_1:\cdots :a_n:a_{n + 1}), t) = (a_1:\cdots : a_n:(1 - t)a_{n + 1})$.
+       $B$ is homeomorphic to $\mathbb{C}^n$, which is contractible.
+       Finally, $A \cap B = B \setminus (0 : \cdots : 0 : 1)$, which is homotopy equivalent to $\mathbb{C}^{n} - 0$.
+       This is homotopy equivalent to $\mathbb{R}^{2n} - 0$, so it is $S^{2n - 1}$.
+
+       We claim that $H_{2k}(\CP^n) = 0$ if $k > n$ and $\mathbb{Z}$ if $k \leq n$.
+       We will use this to calculate $H_k(\CP^n)$ by induction on $n$.
+       When $n = 0$, this is obvious because $\CP^0$ is a point.
+       Suppose that we have shown this for some $n - 1$ where $n \in \mathbb{N}$.
+       We will prove the case for $n$.
+       \begin{itemize}
+         \item
+           We have the exact sequence $H_{2n}(A) \oplus H_{2n}(B) \rightarrow H_{2n}(X) \rightarrow H_{2n - 1}(A \cap B) \rightarrow H_{2n - 1}(A) \oplus H_{2n - 1}(B)$.
+           $H_{2n}(A) = H_{2n - 1}(A) = 0$ by the inductive hypothesis since $A$ deformation retracts onto $\CP^{n - 1}$.
+           $H_{2n}(B) = H_{2n - 1}(B) = 0$ because $B$ is contractible.
+           By the exactness, $H_{2n}(X) \cong H_{2n - 1}(A \cap B) = \mathbb{Z}$ because $A \cap B$ is homotopy equivalent to $S^{2n - 1}$.
        \end{itemize}
 
   \end{itemize}
