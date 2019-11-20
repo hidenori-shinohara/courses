@@ -186,8 +186,25 @@
            $\tilde{H}_{2n - 1}(A) = 0$ by the inductive hypothesis.
            $\tilde{H}_{2n - 1}(B) = 0$, and $\tilde{H}_{2n - 2}(A \cap B) = 0$, so $H_{2n - 1}(X) = \tilde{H}_{2n - 1}(X) = 0$.
          \item
+          Let $1 \leq k \leq n - 1$.
+          We have the exact sequence
+          \begin{align*}
+            &\tilde{H}_{2k}(A \cap B) \rightarrow \tilde{H}_{2k}(A) \oplus \tilde{H}_{2k}(B) \rightarrow \tilde{H}_{2k}(X) \rightarrow \\
+            &\tilde{H}_{2k - 1}(A \cap B) \rightarrow \tilde{H}_{2k - 1}(A) \oplus \tilde{H}_{2k - 1}(B) \rightarrow \tilde{H}_{2k - 1}(X) \rightarrow \\
+            &\tilde{H}_{2k - 2}(A \cap B).
+          \end{align*}
+          $\tilde{H}_{2k}(A \cap B) = \tilde{H}_{2k - 2}(A \cap B) = 0$ because $2k \ne 2n - 1$ and $2k - 2 \ne 2n - 1$ by the parity.
+          $\tilde{H}_{2k}(B) = \tilde{H}_{2k - 1}(B) = 0$.
+          By the inductive hypothesis, $\tilde{H}_{2k}(A) = \mathbb{Z}$ and $\tilde{H}_{2k - 1}(A) = 0$.
+          By putting these together, the above sequence turns into
+          \begin{align*}
+            0 \rightarrow \mathbb{Z} \xrightarrow{\alpha} \tilde{H}_{2k}(X) \rightarrow
+            0 \rightarrow 0 \rightarrow \tilde{H}_{2k - 1}(X) \rightarrow
+            0.
+          \end{align*}
+          By the exactness, $H_{2k}(X) = \tilde{H}_{2k}(X) = \mathbb{Z}$ since $\alpha$ is an isomorphism, and $H_{2k - 1}(X) = \tilde{H}_{2k - 1}(X) = 0$.
        \end{itemize}
-
+       By induction, the proposition is true for all $n \in \mathbb{N}$.
   \end{itemize}
 \end{exer}
 
