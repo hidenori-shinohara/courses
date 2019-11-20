@@ -47,6 +47,7 @@
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Int}{int}
 \DeclareMathOperator{\CP}{\mathbb{C}\mathbf{P}}
+\DeclareMathOperator{\RP}{\mathbb{R}\mathbf{P}}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -148,10 +149,6 @@
            Since $X$ consists of one path component, $H_0(X) = \mathbb{Z}$.
        \end{itemize}
      \item
-       \todo[inline,caption={}]{
-         $\mathbb{R}P^3$.
-       }
-     \item
        Let $A = \CP^n - (0: \cdots : 0:1), B = \{ (a_1: \cdots : a_n:1) \mid a_i \in \mathbb{C} \}$.
        Since $\{ (0: \cdots :0:1) \}$ is closed, $A$ is an open set.
        Moreover, $(0: \cdots :0:1)$ is an interior point of $B$.
@@ -205,6 +202,32 @@
           By the exactness, $H_{2k}(X) = \tilde{H}_{2k}(X) = \mathbb{Z}$ since $\alpha$ is an isomorphism, and $H_{2k - 1}(X) = \tilde{H}_{2k - 1}(X) = 0$.
        \end{itemize}
        By induction, the proposition is true for all $n \in \mathbb{N}$.
+     \item
+       We will use the same approach as $\CP^n$.
+       Let $A = \RP^3 - (0:0:0:1)$, which deformation retracts to $\RP^2$ for the same reason as above.
+       Let $B = \{ (a:b:c:1) \mid a, b, c \in \mathbb{R} \} \simeq \mathbb{R}^3$.
+       $A \cap B = \mathbb{R}^3 - 0 \simeq S^2$.
+       \begin{itemize}
+         \item
+           For $n \geq 4$, $H_n(A) \oplus H_n(B) \rightarrow H_n(X) \rightarrow H_{n - 1}(A \cap B)$ gives $H_n(X) = 0$ because both ends are 0.
+         \item
+           \begin{align*}
+             &\tilde{H}_{3}(A) \oplus \tilde{H}_{3}(B) \rightarrow \tilde{H}_{3}(X) \rightarrow \\
+             &\tilde{H}_{2}(A \cap B) \rightarrow \tilde{H}_{2}(A) \oplus \tilde{H}_{2}(B) \rightarrow \tilde{H}_{2}(X) \rightarrow \\
+             &\tilde{H}_{1}(A \cap B) \rightarrow \tilde{H}_{1}(A) \oplus \tilde{H}_{1}(B) \rightarrow \tilde{H}_{1}(X) \rightarrow \\
+             &\tilde{H}_{0}(A \cap B).
+           \end{align*}
+           This exact sequence is
+           \begin{align*}
+             &0 \oplus 0 \rightarrow \tilde{H}_{3}(X) \rightarrow \\
+             &\mathbb{Z} \rightarrow 0 \oplus 0 \rightarrow 0 \rightarrow \\
+             &0 \rightarrow \mathbb{Z}/2 \oplus 0 \rightarrow \mathbb{Z}/2 \rightarrow \\
+             &0.
+           \end{align*}
+           Therefore, $H_3(X) = H_2(X) = 0$ and $H_1(X) = \mathbb{Z}/2\mathbb{Z}$.
+         \item
+          Finally, it contains one path component, so $H_0(X) = \mathbb{Z}$.
+       \end{itemize}
   \end{itemize}
 \end{exer}
 
