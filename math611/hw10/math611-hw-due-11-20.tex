@@ -115,6 +115,38 @@
 
        $\alpha$ is injective by the exactness, so $H_2(A \cup B) = \tilde{H}_2(A \cup B) = \Im(\alpha) = \tilde{H}_1(A \cap B) = \mathbb{Z}$.
        $H_0(A \cap B) = H_0(S^1) = \mathbb{Z}$.
+     \item
+       \begin{figure}
+       \includegraphics[width=.5\linewidth]{2g.jpeg}
+       \caption{$N_g$}
+       \label{fig:ng}
+       \end{figure}
+       Let $A, B$ denote the subspaces as in Figure \ref{fig:ng}.
+       Then $A$ deformation retracts onto a point, $B$ is homotopy equivalent to $\vee_g \mathbb{R}P^1$, which is homotopy equivalent to $\vee_gS^1$.
+       Finally, $A \cap B$ is homotopy equivalent to $S^1$.
+       For any $n \geq 3$, $H_n(A) \oplus H_n(B) \rightarrow H_n(X) \rightarrow H_{n - 1}(A \cap B)$ is exact, and $H_n(A) = H_n(B) = H_{n - 1}(A \cap B) = 0$, so $H_n(X) = 0$.
+       Consider $0 \rightarrow \tilde{H}_2(X) \xrightarrow{\alpha} \tilde{H}_1(A \cap B) \xrightarrow{\beta} \tilde{H}_1(A) \oplus \tilde{H}_1(B) \xrightarrow{\gamma} \tilde{H}_1(X) \rightarrow 0$.
+       We have 0 at the end because $\tilde{H}_2(A) \oplus \tilde{H}_2(B) = \tilde{H}_0(A \cap B) = 0$.
+       By exactness, $\alpha$ is injective and $\gamma$ is surjective.
+       Let $a$ be a generator of $\tilde{H}_1(A \cap B) = \mathbb{Z}$.
+       Then $\beta(a) = (0, 2(a_1 + \cdots + a_g))$ where $a_i$'s are generators of $\tilde{H}_1(B) = \mathbb{Z}^g$.
+       \begin{itemize}
+         \item
+           Since $\beta$ is injective, so $0 = \ker(\beta) = \Im(\alpha) = \tilde{H}_2(X) = H_2(X)$.
+         \item
+           Since $\gamma$ is surjective, $\tilde{H}_1(X) = \tilde{H}_1(A) \oplus \tilde{H}_1(B) / \ker(\gamma)$.
+           Since $\ker(\gamma) = \Im(\beta)$, this is $\ev{a_1, \cdots, a_g \mid 2(\sum a_i)}$.
+           \begin{align*}
+             H_1(X)
+               &= \ev{a_1, \cdots, a_g \mid 2(a_1 + \cdots + a_g)} \\
+               &= \ev{a_1 + \cdots + a_g, a_2, \cdots, a_g \mid 2(a_1 + \cdots + a_g)} \\
+               &= \ev{b, a_2, \cdots, a_g \mid 2b} \\
+               &= \mathbb{Z}^{g - 1} \oplus (\mathbb{Z}/2\mathbb{Z}).
+           \end{align*}
+         \item
+           Since $X$ consists of one path component, $H_0(X) = \mathbb{Z}$.
+       \end{itemize}
+
   \end{itemize}
 \end{exer}
 
