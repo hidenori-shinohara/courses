@@ -204,6 +204,12 @@
       $\phi(n)$ because for any $1 \leq m \leq n - 1$ such that $d = \gcd(m, n) \ne 1$, $(\zeta^m)^d = 1$, so $\zeta^m$ is not a primitive $n$th root.
       On the other hand, $(\zeta^m)^k = 1$ with $1 \leq k \leq n - 1$, then $n \mid mk$, so $\gcd(n, m) \ne 1$.
     \item
+      All the primitive roots are roots of $x^n - 1$.
+      Since $\sigma \in \Aut(K/F)$ permutes the roots of $x^n - 1$, all the primitive roots get mapped to roots of $x^n - 1$.
+      Suppose that $\sigma(\zeta) = \zeta'$ where $\zeta'$ is not a primitive root.
+      Then $\zeta'$ satisfies $x^m - 1$ where $m < n$.
+      This implies that $\sigma^{-1}$ sends $\zeta'$, a root of $x^m - 1$, to $\zeta$, which is not a root of $x^m - 1$.
+      This is a contradiction, so all the primitive roots must get mapped to primitive roots.
   \end{enumerate}
 \end{exer}
 \section{Galois Theory V}
