@@ -120,8 +120,8 @@ def findclosure(ls):
         ls = sorted(products)
 
 def powperm(p, n):
-    q = p
-    for i in range(n - 1):
+    q = Permutation([0, 1, 2, 3, 4])
+    for i in range(n):
         q = q.multiply(p)
     return q
 
@@ -130,10 +130,19 @@ b = Permutation([0, 2, 4, 1, 3])
 print("We are given %s %s" % (a, b))
 
 anyRelation = False
-for i in range(1, 5):
-    for j in range(1, 4):
-        if powperm(a, i) == powperm(b, j):
-            anyRelation = True
+for i in range(0, 5):
+    for j in range(0, 4):
+        for ii in range(0, 5):
+            for jj in range(0, 4):
+                if i + j == 0: continue
+                if ii + jj == 0: continue
+                if powperm(a, i).multiply(powperm(b, j)) == powperm(b, jj).multiply(powperm(a, ii)):
+                    anyRelation = True
+                    print("a^%db^%d = b^%da^%d" % (i, j, jj, ii))
+# a^1b^1 = b^1a^3
+print(a.multiply(b))
+print(b.multiply(a.multiply(a).multiply(a)))
+
 if not anyRelation:
     print("There is no relation between the two permutations.")
 
