@@ -130,6 +130,21 @@
       \mathligson
       Since the discriminant is a square, the Galois group is isomorphic to $A_3$.
     \item
+      Since $\Gal(K/\mathbb{Q}) = A_3$, the degree of extension is 3.
+      First, we claim that $K \subset \mathbb{R}$.
+      If $K$ is not a subset of $\mathbb{R}$, $\sigma(a + bi) = a - bi \in \Gal(K/\mathbb{Q})$.
+      However, this is impossible because $\abs{\sigma} = 2 \nmid 3 = \abs{A_3}$.
+
+      Let $\sigma \in \Gal(K/\mathbb{Q})$ be given.
+      Since the degree of extension is 3, there cannot be any intermediate field.
+      Therefore, if $a^{1/n} \notin \mathbb{Q}$, $\mathbb{Q}(a^{1/n}) = K$.
+      Hence, we can uniquely determine $\sigma$ by checking $\sigma(a^{1/n})$.
+      Since $a^{1/n}$ is a root of $x^n - a$, $\sigma(a^{1/n})$ must be a root of $x^n - a$.
+      Since $K \subset \mathbb{R}$, $\sigma(a^{1/n}) = \pm a^{1/n}$.
+      It is impossible that $\sigma(a^{1/n}) = -a^{1/n}$ since this implies $\abs{\sigma} = 2 \nmid 3$.
+      Therefore, $\sigma = \Id$, but this implies that $\Gal(K/\mathbb{Q})$ is trivial, which is a contradiction.
+
+      Thus $a^{1/n} \in \mathbb{Q}$.
   \end{enumerate}
 \end{exer}
 
