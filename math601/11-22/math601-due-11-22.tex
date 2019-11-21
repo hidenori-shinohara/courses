@@ -202,8 +202,31 @@
       $G_1$ has a subgroup $G_2 = \{(1),$ $(12345),$ $(13524),$ $(14253),$ $(15432)\}$ of index 2.
       $G_2$ is abelian, so we can pick $G_3 = \{(1)\}$.
       Then $G_3 \subset G_2 \subset G_1 \subset G$ is a filteration. 
-
   \end{enumerate}
+\end{exer}
+
+\begin{exer}{(Problem 3)}
+  \begin{figure}
+    \includegraphics[width=.5\linewidth]{subgroups.jpeg}
+    \caption{Subgroups}
+    \label{fig:subgroups}
+  \end{figure}
+  Figure \ref{fig:subgroups} shows all the subgroups of $G$ where $a = (1325), b = (1435), c = (1243), d = (1254), e = (2354)$.
+  By the fundamental theorem of Galois theory, there is a bijective correspondence between intermediate groups and intermediate fields, and the inclusion is reversed.
+  The degree of extension corresponds to the index.
+  By Lagrange's theorem, it is clear that, between any two groups connected by an edge in the figure, there cannot be any proper subgroups between them.
+
+  The number of subgroups of order 4 and 5 must be 5 and 1 by Sylow's theorem.
+  By writing out all the 20 elements
+  \begin{align*}
+    (1),(12)(35),(12345),(1243),(1254),(13)(45),(1325),(1342),(13524),(14)(23), \\
+    (14253),(1435),(1452),(15)(24),(1523),(1534),(15432),(2354),(2453),(25)(34),
+  \end{align*}
+  we conclude that the number of elements of order 2 is 5.
+  Thus the number of subgroups of order 2 is 5.
+  Finally, $G / \ev{(12345)}$ is isomorphic to $\mathbb{Z}/4$.
+  Therefore, there can be only one subgroup of order 10 between $G$ and $\ev{(12345)}$.
+  Conversely, since every subgroup of order 10 must contain a subgroup of order 5, $\ev{(12345), a^2}$ is the only subgroup of order 10.
 \end{exer}
 
 \end{document}
