@@ -216,6 +216,26 @@
       $\abs{(\mathbb{Z}/n)^*} = \phi(n)$ where $\phi(n)$ is Euler's totient function.
     \item
       $a \mapsto \zeta^a$.
+    \item
+      Let $\Phi: \Aut(K/F) \rightarrow (\mathbb{Z}/n)^*$ be defined such that $\Phi(\sigma) = m$ where $\sigma(\zeta) = \zeta^m$.
+      \begin{itemize}
+        \item
+          Well-defined?
+          Every automorphism in $\Aut(K/F)$ sends a primitive $n$th root to a primitive $n$th root as shown in (iii).
+          Therefore, $m$ must be coprime to $n$, so $\Phi(\sigma) \in (\mathbb{Z}/n)^*$ for all $\sigma \in \Aut(K/F)$.
+        \item
+          Group homomorphism?
+          Let $\sigma_1, \sigma_2 \in \Aut(K/F)$ be given.
+          Let $m_1, m_2$ be chosen such that $\sigma_1(\zeta) = \zeta^{m_1}, \sigma_2(\zeta) = \zeta^{m_2}$.
+          Then $\sigma_1 \circ \sigma_2$ maps $\zeta$ to $\zeta^{m_1m_2}$.
+          Therefore, $\Phi(\sigma_1 \circ \sigma_2) = m_1m_2 = \Phi(\sigma_1)\Phi(\sigma_2)$.
+        \item
+          Injective?
+          It suffices to check $\ker(\Phi)$.
+          If $\sigma \in \ker(\Phi)$, then $\sigma(\zeta) = \zeta^1$, so $\sigma = \Id$.
+          Thus the kernel is trivial.
+      \end{itemize}
+      Therefore, $\Phi$ is a well-defined, injective group homomorphism.
   \end{enumerate}
 \end{exer}
 \section{Galois Theory V}
