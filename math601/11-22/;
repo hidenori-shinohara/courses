@@ -200,10 +200,6 @@
       $x^n - 1$ cannot split in a field smaller than $K$ because $\zeta$ is a root.
       On the other hand, $\{ \zeta^i \mid 0 \leq i \leq n - 1 \}$ contains $n$ distinct roots of $x^n - 1$.
       Therefore, $K$ is the splitting field of $x^n - 1$.
-    \item
-      $\phi(n)$ because for any $1 \leq m \leq n - 1$ such that $d = \gcd(m, n) \ne 1$, $(\zeta^m)^d = 1$, so $\zeta^m$ is not a primitive $n$th root.
-      On the other hand, $(\zeta^m)^k = 1$ with $1 \leq k \leq n - 1$, then $n \mid mk$, so $\gcd(n, m) \ne 1$.
-    \item
   \end{enumerate}
 \end{exer}
 \section{Galois Theory V}
