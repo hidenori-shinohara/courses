@@ -247,8 +247,21 @@
       Let $\zeta = e^{2\pi i/5}$ and $K = \mathbb{Q}(\zeta)$.
       Then $\zeta$ is a primitive 5th root.
       $x^5 - 1 = (x - 1)(x^4 + x^3 + x^2 + x + 1)$.
-      Thus $\zeta$ is a root of $x^4 + x^3 + x^2 + x + 1$.
+      Thus $\zeta$ is a root of $f(x) = x^4 + x^3 + x^2 + x + 1$.
+      By substituting $x = x + 1$, we obtain $x^4 + 5x^3 + 10x^2 + 10x + 5$, which is irreducible by Eisenstein.
+      Therefore, $f(x)$ must be irreducible.
+
       By the argument above, $\Aut(K/F)$ can be embedded in $(\mathbb{Z}/5)^* = \ev{2}$.
+      This implies that $\Aut(K/F)$ either contains 1, 2, 4 elements.
+      Since $\Aut(K/F)$ has to be transitive, it cannot be trivial.
+      Suppose $\Aut(K/F)$ has two elements.
+      Let $r_1, \cdots, r_4$ denote the 4 distinct roots of $x^4 + x^3 + x^2 + x + 1$.
+      There must be a $\sigma \in \Aut(K/F)$ such that $r_2 = \sigma(r_1)$.
+      However, $\sigma$ must be the only nontrivial element in $\Aut(K/F)$.
+      Then there is no automorphism in $\Aut(K/F)$ that sends $r_1$ to $r_3$.
+      Therefore, $\Aut(K/F)$ is not transitive if it only contains two elements.
+
+      Therefore, $\Aut(K/F)$ must contain 4 elements, and thus $\Aut(K/F) \cong (\mathbb{Z}/5)^* = \ev{2}$.
   \end{enumerate}
 \end{exer}
 \section{Galois Theory V}
