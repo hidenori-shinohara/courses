@@ -75,12 +75,9 @@
   Thus it makes sense to consider $G / H$.
   The order of $G / H$ must be $p^m$ for some $1 \leq m \leq n - 1$.
   By the inductive hypothesis, $G / H$ is solvable.
-  Since every subgroup of $G / H$ can be realized as the quotient of a subgroup of $G$ by $H$, there must exist a sequence of subgroups $H = G_0 \leq G_1 \leq \cdots \leq G_l = G$ such that $G_0 / H \trianglelefteq G_1 / H \trianglelefteq \cdots \trianglelefteq G_l / H$ and $(G_{i + 1} / H) / (G_{i} / H)$ is abelian for each $i$.
+  Since every subgroup of $G / H$ can be realized as the quotient of a subgroup of $G$ by $H$[Theorem 20(1), P.99, Dummit and Foote], there must exist a sequence of subgroups $H = G_0 \leq G_1 \leq \cdots \leq G_l = G$ such that $G_0 / H \trianglelefteq G_1 / H \trianglelefteq \cdots \trianglelefteq G_l / H$ and $(G_{i + 1} / H) / (G_{i} / H)$ is abelian for each $i$.
   By Theorem 19 [P.98, Dummit and Foote], $(G_{i + 1} / H) / (G_{i} / H) \cong G_{i + 1} / G_{i}$, so $G_{i + 1} / G_i$ is abelian for each $i$.
-  Let $i$ be chosen arbitrarily, and let $g \in G_{i + 1}, h \in G_i$.
-  Since $G_i / H \trianglelefteq G_{i + 1} / H$, $ghg^{-1} + H = (g + H)(h + H)(g^{-1} + H) \in G_i / H$.
-  Therefore, $ghg^{-1} \in G_i$.
-  Thus $G_i \trianglelefteq G_{i + 1}$ for each $i$.
+  $G_i / H \trianglelefteq G_{i + 1} / H$ implies $G_i \trianglelefteq G_{i + 1}$ for each $i$ by Theorem 20(5) [P.99, Dummit and Foote].
 
   We showed the existence of a sequence $H = G_0 \trianglelefteq G_1 \trianglelefteq \cdots \trianglelefteq G_l = G$ such that $G_{i + 1} / G_i$ is abelian for each $i$.
   By the inductive hypothesis, there exists a similar sequence of subgroups from $\{ e \}$ to $H$.
@@ -93,6 +90,9 @@
   Let $t$ be the number of Sylow $p$-subgroups.
   By the third Sylow theorem, $t \mid m$ and $t \equiv 1 \pmod p$.
   The only number that satisfies this is 1, so every group of order 21 has a unique Sylow 7-subgroup.
+\end{exer}
+
+\begin{exer}{(Problem 4)}
 \end{exer}
 
 \end{document}
