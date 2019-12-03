@@ -1,0 +1,90 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{semantic}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 601 (Due 12/6)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\tableofcontents
+
+\section{Cauchy's Theorem, Finite $p$-groups, The Sylow theorems}
+
+\begin{exer}{(Problem 2)}
+  Let a prime number $p$ be given.
+  We will show that any group $G$ of order $p^n$ for some $n$ is solvable by induction on $n$.
+  When $n = 1$, $G \cong \mathbb{Z}_p$, which is abelian, so it is solvable.
+  Suppose we have shown the proposition for some $n \in \mathbb{N}$, and let $G$ be a group of order $p^{n + 1}$.
+  By Corollary 1 right above this problem statement in the handout, the center $H$ of $G$ is a nontrivial subgroup.
+  Moreover, $H$ is clearly a normal subgroup of $G$.
+  Thus it makes sense to consider $G / H$.
+  The order of $G / H$ must be $p^m$ for some $1 \leq m \leq n - 1$.
+  By the inductive hypothesis, $G / H$ is solvable.
+  Since every subgroup of $G / H$ can be realized as the quotient of a subgroup of $G$ by $H$, there must exist a sequence of subgroups $H = G_0 \leq G_1 \leq \cdots \leq G_l = G$ such that $G_0 / H \trianglelefteq G_1 / H \trianglelefteq \cdots \trianglelefteq G_l / H$ and $(G_{i + 1} / H) / (G_{i} / H)$ is abelian for each $i$.
+  By Theorem 19 [P.98, Dummit and Foote], $(G_{i + 1} / H) / (G_{i} / H) \cong G_{i + 1} / G_{i}$, so $G_{i + 1} / G_i$ is abelian for each $i$.
+  Let $i$ be chosen arbitrarily, and let $g \in G_{i + 1}, h \in G_i$.
+  Since $G_i / H \trianglelefteq G_{i + 1} / H$, $ghg^{-1} + H = (g + H)(h + H)(g^{-1} + H) \in G_i / H$.
+  Therefore, $ghg^{-1} \in G_i$.
+  Thus $G_i \trianglelefteq G_{i + 1}$ for each $i$.
+
+  We showed the existence of a sequence $H = G_0 \trianglelefteq G_1 \trianglelefteq \cdots \trianglelefteq G_l = G$ such that $G_{i + 1} / G_i$ is abelian for each $i$.
+  By the inductive hypothesis, there exists a similar sequence of subgroups from $\{ e \}$ to $H$.
+  Therefore, $G$ is solvable.
+\end{exer}
+
+\end{document}
