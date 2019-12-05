@@ -80,6 +80,7 @@
     Finish the $g(y)$ part.
     Or come up with something new.
   }
+
 \end{exer}
 
 \begin{exer}{(Problem 2)}
@@ -99,19 +100,7 @@
   Clearly, $V_4, C_4$ are solvable.
   We showed below (Problem 2 from the Cauchy handout) that every $p$-group is solvable.
   Thus any group with 8 elements is solvable.
-  We claim that $V_4$ is a normal subgroup of $A_4$.
-  Every element in $V_4$ is a product of two disjoint cycles.
-  Let $\sigma \in A_4$ and $p \in V_4$.
-  Let $a = \sigma^{-1}(1), b = p(a), \sigma(b) = c$.
-  Then $\sigma(p(\sigma^{-1}(c))) = 1$ because $p$ is its own inverse.
-  \todo[inline,caption={}]{
-    What if $c = 1$?
-  }
-  Thus $(1c)$ is contained in $\sigma p\sigma^{-1}$.
-  Using the same argument for the two numbers $d, e$ in $\{ d, e \} = (\{ 1, 2, 3, 4 \} \setminus \{ 1, c \})$, we obtain that the cycle $(de)$ is in $\sigma p \sigma^{-1}$.
-  Thus $\sigma p \sigma^{-1}$ is $(1c)(de)$ where $\{ 1, c, d, e \} = \{ 1, 2, 3, 4 \}$.
-  Therefore,  $\sigma p \sigma^{-1} \in V_4$.
-  Thus $V_4 \trianglelefteq A_4$.
+  The handout mentions $V_4 \transitive S_4$, so clearly $V_4 \trianglelefteq A_4$.
 
   Moreover, $A_4 / V_4$ has only 3 elements, so it is abelian.
   Thus $\{ e \} \subset V_4 \subset A_4 \subset S_4$ is a filtration because $A_4$ is an index-2 subgroup of $S_4$.
