@@ -150,4 +150,16 @@
   Therefore, $G$ is an extension of a solvable group $\mathbb{Z}_7$ by a solvable group $\mathbb{Z}_3$, so it must be solvable.
 \end{exer}
 
+\begin{exer}{(Problem 10)}
+  By the Corollary 1 indicated in the hint, we obtain a nontrivial center $C$ of $G$.
+  By Lagrange, $\abs{C} = p, p^2$.
+  If $\abs{C} = p^2$, then $G$ is abelian, so $G$ must be isomorphic to $\mathbb{Z} / (p^2)$ or $(\mathbb{Z} / p)^2$.
+  Suppose $\abs{C} = p$.
+  Since $C$ is normal, we will consider $G / C$, which is isomorphic to $\mathbb{Z} / p$.
+  Let $x + C$ be a generator of $G / C$ and $y$ be a generator of $C$.
+  Then every element in $G$ can be expressed as $x^iy^j$ for some $i, j \in \mathbb{Z}/p$.
+  However, this implies that $C = G$ because for any $i, j, k, l$, $(x^iy^j)(x^ky^l) = x^ix^ky^jy^l = x^kx^iy^ly^j = (x^ky^l)(x^iy^j)$ because a power of $y$ commutes with any element.
+  This is a contradiction, so $\abs{C} \ne p$.
+\end{exer}
+
 \end{document}
