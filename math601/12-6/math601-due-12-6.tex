@@ -184,6 +184,13 @@
       We have trivial homomorphisms $\psi_p: C_p \times C_q \rightarrow C_p$ and $\psi_q: C_p \times C_q \rightarrow C_q$ defined by $\psi_p(a, b) \rightarrow a$ and $\psi_q(a, b) \rightarrow b$.
       By the universal mapping property of the product, there must exist a unique group homomorphism $\Phi: G \rightarrow C_p \times C_q$ such that $\phi_p, \phi_q, \psi_p, \psi_q, \Phi$ all commute.
       Since $\phi_p = \psi_p \circ \Phi$ and $\phi_q = \psi_q \circ \Phi$ are both surjective, $\Phi$ must be surjective.
+    \item
+      Since $\abs{G} = pq$, $\Phi$ must be bijective, so it is an isomorphism.
+    \item
+      Clearly, $C_p$ and $C_q$ are isomorphic to $\mathbb{Z}/p$ and $\mathbb{Z}/q$.
+      Then the map $(a, b) \mapsto qa + b$ is an isomorphism from $\mathbb{Z}/p \times \mathbb{Z}/q$ into $\mathbb{Z}/pq$.
+      $\mathbb{Z}/pq$ is isomorphic to $C_{pq}$.
+      Therefore, $G$ is isomorphic to $C_{pq}$.
   \end{enumerate}
 \end{exer}
 
