@@ -269,27 +269,32 @@
 \begin{exer}{(Problem 11)}
   It suffices to show that every group of order 132 is solvable because it implies that every subgroup of a group of order 132 is solvable.
   Let $p = 11, m = 12$ and apply the third Sylow theorem.
-  Them $t \mid 12$ and $t \equiv 1 \pmod p$ is satisfied only by 1 or 12.
+  Them $t_{11} \mid 12$ and $t_{12} \equiv 1 \pmod p$ is satisfied only by 1 or 12.
+  Similarly, $t_2 = 1, 3, 11, 33$ and $t_3 = 1, 4, 22$.
   \begin{itemize}
     \item
-      Suppose $t = 1$.
+      Suppose $t_{11} = 1$.
       Let $H$ be the subgroup of order 11.
       Then $H$ is normal and $G / H$ is a group of order 12.
-      By Sylow, the number $t_4$ of subgroups of order 4 of $G / H$ is either 1 or 3 and the number $t_3$ of subgroups of order 3 is either 1 or 4.
-      If $t_4 = 1$ or $t_3 = 1$, then we obtain a normal subgroup $H'$ and $(G / H) / H'$ has 3 or 4 elements, which mean $(G / H)$ is solvable.
+      A group of order $12 = 3 \cdot 2^2$ is solvable by Lemmam \ref{twothree}.
       By Problem 4, $G$ is solvable.
-      Suppose $t_4 = 3$ and $t_3 = 4$.
-      Then we have 3 distinct subgroups $A_1, A_2, A_3$ of order 4 and 4 distinct subgroups $B_1, \cdots, B_4$ of order 3.
-      By Lagrange, for any $i \ne j$, $B_i \cap B_j = \{ e \}$, and, for any $i, j$, $B_i \cap A_j = \{ e \}$.
-      However, this implies that $G$ contains more than 12 elements.
-      (i.e., $B_1 = \{ v_1, v_2, v_3 \}, B_2 = \{v_1, v_4, v_5 \}, \cdots, B_4 = \{ v_1, v_8, v_9 \}$ and $A_1 = \{ v_1, v_{10}, v_{11}, v_{12} \}$.)
-      Therefore, this case is impossible.
     \item
-      Suppose $t = 12$.
-      \todo[inline,caption={}]{
-        I think this is only possible if $G$ is abelian.
-        But I don't know how to proceed.
-      }
+      Suppose $t_2 = 1$.
+      Then the subgroup $H$ of order 4 is normal.
+      $G / H$ is a group of order 33, which is solvable by Problem 9.
+    \item
+      Suppose $t_3 = 1$.
+      Then the subgroup $H$ of order 3 is normal.
+      $G / H$ is a group of order 44.
+      By the third Sylow theorem, we know that there has to be exactly one subgroup $H'$ of order 11 ($t \mid 4$ and $t \equiv 1 \pmod{11}$) of $G / H$.
+      Thus we have $(G / H) / H'$ is a group of order 4, which is solvable.
+    \item
+      Suppose $1 \notin \{ t_2, t_3, t_{11} \}$.
+      Then $t_{11} = 12$, so $G$ contains at least $(11 - 1) \cdot 12 = 120$ elements of order 11.
+      Similarly, $t_2 \geq 3$, so $G$ contains at least $(4 - 1) \cdot 3 = 9$ elements of order 2 or 4.
+      Finally, $t_3 \geq 4$, so $G$ contains at least $(3 - 1) \cdot 4 = 8$ elements of order 3.
+      11, 2, 3 are pairwise coprime, but $120 + 9 + 8 = 137 > 132$, so this is a contradiction.
+      Therefore, this case cannot happen.
   \end{itemize}
 \end{exer}
 
