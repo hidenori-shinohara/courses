@@ -162,15 +162,20 @@
 \end{exer}
 
 \begin{exer}{(Problem 7)}
-  Since we are given that $\mathbb{Q}(\alpha)$ is the splitting field, every root of $f(x)$ can be expressed by multiplying, adding, dividing and subtracting rational numbers and $\alpha$.
-  This implies that $\sigma \in G = \Aut(\mathbb{Q}(\alpha)/\mathbb{Q})$ is uniquely determined by $\sigma(\alpha)$.
-  Therefore, $\abs{G} \leq 80$.
-
-  \todo[inline,caption={}]{
-    The Galois group should have exactly 80 elements by the fundamental theorem of Galois theory.
-    $80 = 5 \cdot 2^4$.
-    Use Problem 4.
-  }
+  Since $\deg(f) = 80$ and $f$ is the minimal polynomial (possibly after canceling out the first coefficient), $[\mathbb{Q}(\alpha):\mathbb{Q}] = 80$.
+  Since $\mathbb{Q} \subset \mathbb{Q}(\alpha)$ is Galois, $\abs{\Aut(\mathbb{Q}(\alpha)/\mathbb{Q})} = 80$.
+  Therefore, it suffices to show that a group of order 80 is solvable.
+  By the Sylow theorems, let $t_2, t_5$ be the number of subgroups of order 16 and 5.
+  Then $t_2 \mid 5$ and $t_2 \equiv 1 \pmod 2$, so $t_2 = 1, 5$.
+  Similarly, $t_5 \mid 16$ and $t_5 \equiv 1 \pmod 5$, so $t_5 = 1, 16$.
+  If $t_2 = 1$ or $t_5 = 1$, then the subgroup is normal.
+  Then the quotient group is of order 5 or 16, which, by exercise 2 above, is solvable because they are both a power of a prime.
+  Suppose $t_2 = 5$ and $t_5 = 16$.
+  Since the intersection of two subgroups is a subgroup, Lagrange implies that the 16 subgroups of order 5 only intersect at the identity element.
+  Therefore, we know that at least $16 \cdot (5 - 1) = 64$ elements have order 5.
+  Similarly, $t_2 = 5$, so there are at least $5 \cdot (16 - 1) = 75$ non-identity elements whose order divide 16.
+  However, this is clearly impossible because 5 and 16 are coprime and we only have 80 elements.
+  Therefore, this case is impossible.
 \end{exer}
 
 \begin{exer}{(Problem 8)}
