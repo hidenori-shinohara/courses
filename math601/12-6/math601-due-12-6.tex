@@ -80,6 +80,7 @@
 
 \section{Galois Theory VI}
 
+
 \begin{exer}{(Problem 1)}
   Let $u_1, u_2, u_3, u_4$ be the variables of the elementary symmetric polynomials $s_1, s_2, s_3, s_4$.
   Then $f(x) = (x - u_1)(x - u_2)(x - u_3)(x - u_4)$.
@@ -160,6 +161,43 @@
   Any group of prime order is abelian and thus solvable.
   Therefore, $G$ is an extension of a solvable group $\mathbb{Z}_7$ by a solvable group $\mathbb{Z}_3$, so it must be solvable.
 \end{exer}
+
+\begin{lem}\label{twothree}
+  A group of order $3 \cdot 2^k$ is solvable for any $k \geq 0$.
+\end{lem}
+
+\begin{proof}
+  When $k = 0$, this is trivial.
+  When $k = 1$, we have a subgroup of order 3 by Cauchy, which is normal because the index is 2.
+  Since every abelian group is solvable, Exercise 4 implies that a group of order 6 is solvable.
+
+  Suppose that we have shown this for some $k \in \mathbb{N}$.
+  Let $G$ be a group of order $3 \cdot 2^{k + 1}$.
+  It suffices to find a proper, nontrivial normal subgroup $N$ of $G$.
+  If such an $N$ exists, the orders of $N$ and $G / N$ are either a prime power or of the form $3 \cdot 2^l$, so they are both solvable by the inductive hypothesis and Exercise 2.
+  By the Sylow theorem, the number $t$ of Sylow-2 group must divide 3, so $t = 1, 3$.
+  \begin{itemize}
+    \item
+      If $t = 1$, then we have a normal subgroup of order $2^{k + 1}$, so we are done.
+    \item
+      Suppose $t = 3$.
+      Let $H_1, H_2, H_3$ be the three Sylow-2 groups.
+      Let $g \in G$ be given.
+      Then $gH_1g^{-1} = H_i, gH_2g^{-1} = H_j, gH_3g^{-1} = H_k$ where $\{ i, j, k \} = \{ 1, 2, 3 \}$.
+      Thus we can associate $g$ to the permutation that sends 1 to $i$, 2 to $j$, and 3 to $k$.
+      This association induces a group homomorphism $\Phi: G \rightarrow S_3$.
+      By the second Sylow theorem, $\ker(\Phi) \ne G$.
+      Since $G / \ker(\Phi)$ is a nontrivial subgroup of $S_3$, $G / \ker(\Phi) \leq 6$.
+      Since $\abs{G} \geq 3 \cdot 2^2 = 12$, $\ker(\Phi)$ is a nontrivial, proper normal subgroup of $G$.
+  \end{itemize}
+  Therefore, in each case, we found a nontrivial, proper normal subgroup of $G$.
+  By induction, the statement is true for any $k \geq 0$.
+\end{proof}
+
+\begin{exer}{(Problem 8)}
+  Lemma \ref{twothree} shows that a group of order 192 is solvable because $192 = 3 \cdot 2^6$.
+\end{exer}
+
 
 \begin{exer}{(Problem 7)}
   Since $\deg(f) = 80$ and $f$ is the minimal polynomial (possibly after canceling out the first coefficient), $[\mathbb{Q}(\alpha):\mathbb{Q}] = 80$.
