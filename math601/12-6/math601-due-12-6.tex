@@ -86,14 +86,13 @@
 
 \begin{exer}{(Problem 2)}
   $f(x) = x^6 - 2$ is irreducible over $\mathbb{Q}$ by Eisenstein ($p = 2$).
-  The roots are $\\{ \zeta^{i} \sqrt[6]{2} \mid i = 0, \cdots, 5 \\}$ where $\zeta = e^{2\pi i / 6} = (1 + \sqrt{-3}) / 2$.
-  The 6 roots plot a hexagon on the $\mathbb{C}$-plane.
-  $\rho(\zeta^{i}\sqrt[6]{2}) = \zeta^{i + 1} r$ and $r(z) = \overline{z}$ are both automorphisms of the splitting field $\mathbb{Q}(\zeta, \sqrt[6]{2})$ that fix $\mathbb{Q}$.
-  $\rho$ and $r$ correspond to rotation and reflection of the hexagon, so $\Aut(\mathbb{Q}(\zeta, \sqrt[6]{2})/\mathbb{Q})$ contains $D_6$.
-
-  \todo[inline,caption={}]{
-    Prove that the Galois group is exactly $D_6$.
-  }
+  The roots are $\{ \zeta^{i} \sqrt[6]{2} \mid i = 0, \cdots, 5 \}$ where $\zeta = e^{2\pi i / 6} = (1 + \sqrt{-3}) / 2$.
+  Then the splitting field $L$ is $\mathbb{Q}(\zeta^0\sqrt[6]{2}, \cdots, \zeta^5\sqrt[6]{2}) = \mathbb{Q}(\zeta, \sqrt[6]{2})$.
+  Let $\sigma \in \Aut(L/\mathbb{Q})$.
+  The minimal polynomial of $\sqrt[6]{2}$ is $x^6 - 2$, so $\sigma(\sqrt[6]{2}) = \zeta^i\sqrt[6]{2}$ for some $i$.
+  The minimal polynomial of $\zeta$ is $x^2 - x + 1$, so $\sigma(\zeta) = \zeta, \overline{\zeta}$.
+  Thus there are $6 \cdot 2 = 12$ automorphisms.
+  This is isomorphic to $D_6$ because $\sqrt[6]{2} \mapsto \zeta\sqrt[6]{2}$ corresponds to rotation and $\zeta \mapsto \overline{\zeta}$ corresponds to reflection.
 \end{exer}
 
 \begin{exer}{(Problem 3)}
