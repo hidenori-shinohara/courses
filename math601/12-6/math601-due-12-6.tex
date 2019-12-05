@@ -178,8 +178,12 @@
       Then the map $G \rightarrow \mathbb{Z}_{q}$ such that $g \mapsto i$ is a surjective group homomorphism.
       A surjective homomorphism $G \rightarrow \mathbb{Z}_q$ can be constructed in a similar fashion.
     \item
-      \todo[inline,caption={}]{
-      }
+      The problem statement simply says the existence of a homomorphism, which can be achieved by the ``zero" map $g \mapsto e$.
+      We will instead show the existence of a surjective homomorphism.
+      In (1), we showed the existence of surjective homomorphisms $\phi_p: G \rightarrow C_p$ and $\phi_q: G \rightarrow C_q$.
+      We have trivial homomorphisms $\psi_p: C_p \times C_q \rightarrow C_p$ and $\psi_q: C_p \times C_q \rightarrow C_q$ defined by $\psi_p(a, b) \rightarrow a$ and $\psi_q(a, b) \rightarrow b$.
+      By the universal mapping property of the product, there must exist a unique group homomorphism $\Phi: G \rightarrow C_p \times C_q$ such that $\phi_p, \phi_q, \psi_p, \psi_q, \Phi$ all commute.
+      Since $\phi_p = \psi_p \circ \Phi$ and $\phi_q = \psi_q \circ \Phi$ are both surjective, $\Phi$ must be surjective.
   \end{enumerate}
 \end{exer}
 
