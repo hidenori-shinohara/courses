@@ -232,4 +232,25 @@
   This is a contradiction, so $\abs{C} \ne p$.
 \end{exer}
 
+\begin{exer}{(Problem 11)}
+  It suffices to show that every group of order 132 is solvable because it implies that every subgroup of a group of order 132 is solvable.
+  Let $p = 11, m = 12$ and apply the third Sylow theorem.
+  Them $t \mid 12$ and $t \equiv 1 \pmod p$ is satisfied only by 1 or 12.
+  \begin{itemize}
+    \item
+      Suppose $t = 1$.
+      Let $H$ be the subgroup of order 11.
+      Then $H$ is normal and $G / H$ is a group of order 12.
+      By Sylow, the number $t_4$ of subgroups of order 4 of $G / H$ is either 1 or 3 and the number $t_3$ of subgroups of order 3 is either 1 or 4.
+      If $t_4 = 1$ or $t_3 = 1$, then we obtain a normal subgroup $H'$ and $(G / H) / H'$ has 3 or 4 elements, which mean $(G / H)$ is solvable.
+      By Problem 4, $G$ is solvable.
+    \item
+      Suppose $t = 12$.
+      \todo[inline,caption={}]{
+        I think this is only possible if $G$ is abelian.
+        But I don't know how to proceed.
+      }
+  \end{itemize}
+\end{exer}
+
 \end{document}
