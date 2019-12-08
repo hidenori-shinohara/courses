@@ -76,6 +76,15 @@
   }
 \end{proof}
 
+\begin{exer}{(Problem 1(a))}
+  \begin{figure}
+    \includegraphics[width=.5\linewidth]{problem1_a.jpeg}
+    \caption{Problem 1(a)}
+    \label{fig:problem1a}
+  \end{figure}
+  We will use the 1-skeletons in Figure \ref{fig:problem1a} to calculate the fundamental group of $S$.
+\end{exer}
+
 \begin{exer}{(Problem 1(b))}
   \begin{figure}
     \includegraphics[width=.5\linewidth]{Mg.jpeg}
@@ -102,7 +111,7 @@
   Then $\tilde{H}_2(A) = \tilde{H}_2(B) = \tilde{H}_0(A \cap B) = 0$.
   Thus the above sequence can be simplified to 
   \begin{align*}
-    0 \rightarrow \tilde{H}_2(X) \xrightarrows{\alpha} &\tilde{H}_1(A \cap B) \xrightarrow{\beta} \tilde{H}_1(A) \oplus \tilde{H}_1(B) \xrightarrow{\gamma} \tilde{H}_1(X) \rightarrow 0.
+    0 \rightarrow \tilde{H}_2(X) \xrightarrow{\alpha} &\tilde{H}_1(A \cap B) \xrightarrow{\beta} \tilde{H}_1(A) \oplus \tilde{H}_1(B) \xrightarrow{\gamma} \tilde{H}_1(X) \rightarrow 0.
   \end{align*}
   Since the sequence is exact, $\alpha$ must be injective and $\gamma$ must be surjective.
   We will examine $\beta$ to calculate the homology groups.
@@ -247,9 +256,9 @@
   $H_3(S^1 \vee S^2) = 0$ by the Mayer-Vietoris sequence $0 = H_3(S^1) \oplus H_3(S^2) \rightarrow H_3(S^1 \vee S^2) \rightarrow H_3(S^1 \cap S^2) = 0$ where $S^1, S^2 \subset S^1 \vee S^2$ are technically $S^1$ and $S^2$ with a small neighborhood.
   Therefore, instead of $\psi$, we can consider the map $\psi': H_3(S^3) \rightarrow H_3(S^1 \vee S^2 \vee S^3)$ defined by $\psi'(x) = \psi(0, x)$.
   By construction of the Mayer-Vietoris sequence, $\psi'$ is induced by the inclusion map $i$.
-  Since homology is a covariant functor, $p^*$ and $\tilde{i}^*$, which are induced by $p$ and $\tilde{i}$, must commute with $\psi' = i^*$.
+  Since homology is a covariant functor, $p^{*}$ and $\tilde{i}^{*}$, which are induced by $p$ and $\tilde{i}$, must commute with $\psi' = i^{*}$.
   In other words, $i^{*} = \psi' = p^{*} \circ \tilde{i}^{*}$.
-  Since $i^*$ is an isomorphism, $\tilde{i}^*$ must be injective.
+  Since $i^{*}$ is an isomorphism, $\tilde{i}^{*}$ must be injective.
   This implies $H_3(\tilde{Y})$ contains an isomorphic copy of $H_3(S^3) = \mathbb{Z}$.
 
   We calculate in Part (b) that $H_3(\tilde{X}) = 0$.
