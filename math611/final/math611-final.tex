@@ -2,6 +2,7 @@
 
 %-------Packages---------
 \usepackage{amssymb,amsfonts}
+\usepackage{mathtools}
 \usepackage{semantic}
 \usepackage{fullpage}
 \usepackage{tikz-cd}
@@ -91,12 +92,46 @@
   Let $A = \{ (\theta, (x, y, z)) \mid -\epsilon \leq \theta \leq \pi + \epsilon \}, B = \{ (\theta, (x, y, z)) \mid \pi - \epsilon \leq \theta \leq 2\pi + \epsilon \}$ where $\epsilon > 0$ is a small number.
   Then each $A$ and $B$ deformation retracts to a space homeomorphic to $S^2$.
   $A \cap B$ consists of two path components, each of which deformation retracts to a space homeomorphic to $S^2$.
+  The homology groups of $A \cap B$ are relatively easy to calculate because $H_n(A \cap B) = H_n(S^2 \coprod S^2) = H_n(S^2) \oplus H_n(S^2)$ by Proposition 2.6 for any $n$.
   Moreover, it is clear that $\int(A) \cup \int(B) = X$.
   We will consider the Mayer-Vietoris sequence formed by $A, B \subset X$.
-  \todo[inline,caption={}]{
-    Do the Mayer Vietoris stuff.
-  }
 
+  First, we will consider the sequence $H_n(A) \oplus H_n(B) \rightarrow H_n(X) \rightarrow H_{n - 1}(A \cap B)$ for each $n \geq 4$.
+  $H_n(A) = H_n(B) = H_{n - 1}(A \cap B) = 0$ for $n \geq 4$
+  By the exactness, $H_n(X) = 0$ for all $n \geq 4$.
+  Next, we will consider the following sequence:
+
+  \begin{align*}
+    &\tilde{H}_3(A \cap B) \rightarrow \tilde{H}_3(A) \oplus \tilde{H}_3(B) \rightarrow \tilde{H}_3(X) \xrightarrow{\alpha} \\
+    &\tilde{H}_2(A \cap B) \xrightarrow{\beta} \tilde{H}_2(A) \oplus \tilde{H}_2(B) \xrightarrow{\gamma} \tilde{H}_2(X) \rightarrow \\
+    &\tilde{H}_1(A \cap B) \rightarrow \tilde{H}_1(A) \oplus \tilde{H}_1(B) \rightarrow \tilde{H}_1(X) \rightarrow \\
+    &\tilde{H}_0(A \cap B) \rightarrow \tilde{H}_0(A) \oplus \tilde{H}_0(B).
+  \end{align*}
+
+  $\tilde{H}_3(A \cap B) = \tilde{H}_3(A) = \tilde{H}_3(B) = \tilde{H}_1(A \cap B) = \tilde{H}_1(A) = \tilde{H}_1 = \tilde{H}_0(A) = \tilde{H}_0(B) = 0$, and $\tilde{H}_0(A \cap B)$.
+  By replacing the exact sequence with those values and splitting the sequence into two for readability, we obtain the following sequences:
+  \begin{gather*}
+    0 \rightarrow \tilde{H}_3(X) \xrightarrow{\alpha} \tilde{H}_2(A \cap B) \xrightarrow{\beta} \tilde{H}_2(A) \oplus \tilde{H}_2(B) \xrightarrow{\gamma} \tilde{H}_2(X) \rightarrow 0, \\
+    0 \rightarrow \tilde{H}_1(X) \rightarrow \mathbb{Z} \rightarrow 0.
+  \end{gather*}
+
+  By the exactness, we can conclude that $\tilde{H}_1(X) \cong \mathbb{Z}$.
+  We will examine the homomorphism $\beta$ to understand the sequence.
+  $\tilde{H}_2(A \cap B) = \ev{[a], [b] \mid [[a], [b]]}$ where each $a, b$ lives in $A \cap B$ and $a$ lives in one of the path components of $A \cap B$ and $b$ lives in the other.
+  Moreover, $[a] = [b]$ in $\tilde{H}_2(A)$ and $\tilde{H}_2(B)$.
+  (Based on orientation, $[a] = -[b]$, but we can simply change the orientation of $[b]$ in that case.)
+  Then $\beta(c_1[a] + c_2[b]) = ((c_1 + c_2)[a], (c_1 + c_2)[a])$.
+  This gives us that $\Im(\alpha) = \ker(\beta) = \{ c[a] - c[b] \mid c \in \mathbb{Z} \} = \mathbb{Z}$.
+  By the exactness, $\alpha$ is injective, so $\tilde{H}_3(X) = \mathbb{Z}$.
+  Moreover, $\ker(\gamma) = \Im(\beta) = \{ (c[a], c[a]) \mid c \in \mathbb{Z} \}$.
+  By the exactness, $\gamma$ is surjective, so $\tilde{H}_2(X) = (\tilde{H}_2(A) \oplus \tilde{H}_2(B)) / \Im(\beta) = \ev{[a]} \oplus \ev{[a]} / \ev{([a], [a])} = \mathbb{Z}$.
+  Since reduced homology groups and homology groups are identical when $n \geq 2$, we have
+  \begin{align*}
+    H_n(X) &= \begin{cases}
+      \mathbb{Z} & (n = 0, 1, 2, 3) \\
+      0 & (n \geq 4).
+    \end{cases}
+  \end{align*}
 
 
   By Corollary 2.25, $\tilde{H}_n(S^1 \vee S^2 \vee S^3) = \tilde{H}_n(S^1) \otimes \tilde{H}_n(S^2) \otimes \tilde{H}_n(S^3)$.
@@ -108,6 +143,7 @@
       0 & (n = 0, n \geq 4).
     \end{cases}
   \end{align*}
+
   For $n \geq 1$, $\tilde{H}_n(Y) = H_n(Y)$, so $H_0(Y) = H_1(Y) = H_2(Y) = H_3(Y) = \mathbb{Z}$ and $H_n(Y) = 0$ for all $n \geq 4$.
 
 \end{exer}
