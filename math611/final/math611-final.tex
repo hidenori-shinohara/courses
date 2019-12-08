@@ -83,6 +83,12 @@
     \label{fig:problem1a}
   \end{figure}
   We will use the 1-skeletons in Figure \ref{fig:problem1a} to calculate the fundamental group of $S$.
+  The fundamental group of the left side with a 2-cell attached is $\ev{a_1, b_1, \cdots, a_g, b_g, c \mid [a_1, b_1] \cdots [a_g, b_g]c}$, and the right side is $\ev{gf, f^{-1}h \mid gfh^{-1}f}$.
+  By Van Kampen, the fundamental group of $S$ is 
+  \begin{align*}
+    \ev{ a_1, b_1, \cdots, a_g, b_g, c, gf, f^{-1}h \mid [a_1, b_1] \cdots [a_g, b_g]c, gfh^{-1}f, c(gh)^{-1}}
+  \end{align*}
+  where $c(gh)^{-1}$ corresponds to $i_{\alpha\beta}(c)i_{\beta\alpha}(c)^{-1}$ because we identify $c$ with $gh$.
 \end{exer}
 
 \begin{exer}{(Problem 1(b))}
