@@ -116,10 +116,17 @@
   A generator of $\tilde{H}_1(A \cap B)$ goes around the intersection once, which is homotopy equivalent to $a_1 + b_1 - a_1 - b_1 + \cdots = 0$ inside $A$.
   A generator of $\tilde{H}_1(A \cap B)$ goes around the Mobius strip twice inside $B$.
   Therefore, $\beta$ sends a generator of $\tilde{H}_1(A \cap B)$ to $(0, 2a)$.
-  \todo[inline,caption={}]{
-    This is different from what I thought the answer should be...?
-    Find out how this argument differs from the one in my notes from yesterday.
-  }
+
+  Since $\Im(\alpha) = \ker(\beta) = 0$ and $\alpha$ is injective, $\tilde{H}_2(A \cup B) = 0$.
+  Since $\gamma$ is surjective and $\Im(\beta) = \ker(\gamma)$, $\tilde{H}_1(A \cup B) = \mathbb{Z}^{2g} \oplus \mathbb{Z} / \ev{(0, 2)} = \mathbb{Z}^{2g} \oplus (\mathbb{Z} / 2\mathbb{Z})$.
+  Since $H_n = \tilde{H}_n$ when $n \geq 2$ and $X$ is path connected, we have
+  \begin{align*}
+    H_n(X) = \begin{cases}
+      0 & (n \geq 2) \\
+      \mathbb{Z}^{2g} \oplus (\mathbb{Z} / 2\mathbb{Z}) & (n = 1) \\
+      \mathbb{Z} & (n = 0).
+    \end{cases}
+  \end{align*}
 \end{exer}
 
 \begin{exer}{(Problem 2)}
