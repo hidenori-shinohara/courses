@@ -64,12 +64,15 @@
 \maketitle
 
 \begin{lem}\label{lemma:g}
-  $H_1(\vee_g S^1) = \mathbb{Z}^g$ and $H_n(\vee_g S^1) = 0$ for $n \geq 2$.
+  $H_0(\vee_g S^1) = \mathbb{Z}, H_1(\vee_g S^1) = \mathbb{Z}^g$ and $H_n(\vee_g S^1) = 0$ for $n \geq 2$.
 \end{lem}
 
 \begin{proof}
-  This can be shown using induction.
-  When $g = 1$, this is obvious.
+  For any $g$, it is clear that $H_0(\vee_g S^1) = \mathbb{Z}$ by the number of path components.
+
+  We will consider the $n$th homology groups for $n \geq 1$.
+
+  When $g = 1$, the proposition is obvious.
   Suppose we have shown this for some $g \in \mathbb{N}$.
   \begin{figure}[!htb]
     \includegraphics[width=.5\linewidth]{lemmasg.jpeg}
@@ -189,6 +192,51 @@
   Since $\phi$ is surjective, $\phi(r_1), \phi(r_2), \phi(r_3)$ generate $\mathbb{Z}^4$.
   However, this implies $\{ \phi(r_1), \phi(r_2), \phi(r_3) \}$ is a basis of $\mathbb{R}^4$ because $\{ (1, 0, 0, 0), \cdots, (0, 0, 0, 1) \}$ is.
   This is clearly a contradiction, so we need at least four 2-cells.
+\end{exer}
+
+\begin{exer}{(Problem 3)}
+  \begin{figure}[!htb]
+    \includegraphics[width=.5\linewidth]{problem3.jpeg}
+    \caption{Problem 3}
+    \label{fig:problem3}
+  \end{figure}
+  Figure \ref{fig:problem3} shows what $X$ looks like.
+  (It does not include all the faces in order to avoid cluttering the figure.)
+  $X$ clearly deformation retracts to a point.
+  Let $x \in X$.
+  For any $n \geq 1$, the exact sequence $\tilde{H}_n(X) \rightarrow \tilde{H}_n(X, X \setminus \{ x \}) \rightarrow \tilde{H}_{n - 1}(X \setminus \{ x \}) \rightarrow \tilde{H}_{n - 1}(X)$ shows that $\tilde{H}_n(X, X \setmius \{ x \}) \cong \tilde{H}_{n - 1}(X \setminus \{ x \})$ because $\tilde{H}_n(X) = \tilde{H}_{n - 1}(X) = 0$.
+  \todo[inline,caption={}]{
+    What happens when $n = 0$?
+  }
+  We will try to calculate $\tilde{H}_n(X \setminus \{ x \})$ for each $n \geq 1$.
+  There are five cases:
+  \begin{enumerate}
+    \item 
+      Suppose $x = v_i$ for some $i$.
+      Then $X \setminus \{ x \}$ deformation retracts to a point, so $\tilde{H}_n(X, X \setminus \{ x \}) = \tilde{H}_{n - 1}(X \setminus \{ x \}) = \tilde{H}_{n - 1}(\cdot) = 0$ for all $n \geq 1$.
+    \item
+      Suppose $x \in \Int([v_i, v_j])$ for some $i \ne j$.
+      In other words, $x$ lies in the edge $v_iv_j$, and $x \ne v_i$ and $x \ne v_j$.
+      This case is exactly the same as above because $X \setminus \{ x \}$ deformation retracts to a point,
+    \item
+      Suppose $x$ is on one of the faces.
+      In other words, $v \in \Int([v, v_i, v_j])$ for some $i \ne j$.
+      The space is homotopy equivalent to $S^1$, so $\tilde{H}_n(X, X \setminus \{ x \}) = \tilde{H}_{n - 1}(S^1)$.
+      Therefore, $\tilde{H}_n(X, X \setminus \{ x \}) = \mathbb{Z}$ when $n = 2$ and 0 otherwise.
+    \item
+      Suppose $x = v$.
+      Then the space is homotopy equivalent to the 1-skeleton of the 3-simplex.
+      In other words, $X \setminus \{ x \}$ deformation retracts to a space consisting of 4 edges $[v, v_1], [v, v_2], [v, v_3], [v, v_4]$.
+      Using a similar argument as Problem 2(a), we can see that it is homotopy equivalent to $S^1 \vee S^1 \vee S^1$.
+      By Lemma \ref{lemma:g}, $\tilde{H}_n(X, X \setminus \{ x \}) = \mathbb{Z}^3$ when $n = 2$ and 0 otherwise.
+    \item
+      Suppose $x$ is on one of the edges from $v$.
+      In other words, $x \in \Int([v, v_i])$ for some $i$.
+      Without loss of generality, $i = 2$.
+      Then the 3 faces shown in Figure \ref{fig:problem3} deformation retract to the edges $[v, v_i], [v_2, v_i]$ for each $i = 1, 3, 4$.
+      Using a similar argument as Problem 2(a), we can see that it is homotopy equivalent to $S^1 \vee S^1$.
+      By Lemma \ref{lemma:g}, $\tilde{H}_n(X, X \setminus \{ x \}) = \mathbb{Z}^2$ when $n = 2$ and 0 otherwise.
+  \end{enumerate}
 \end{exer}
 
 \begin{exer}{(Problem 5(a))}
