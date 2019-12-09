@@ -331,25 +331,39 @@
 \end{exer}
 
 \begin{exer}{(Problem 6)}
+  By Proposition 1.32, Theorem 1.38 and Proposition 1.39, it suffices to find a subgroup of $\pi_1(\Sigma_g)$ whose index is 3 and check whether it is normal.
+
   Let $g = 0$.
   Then $\pi_1(\Sigma_g) = 0$.
-  By Proposition 1.32, there exists no connected, 3-sheeted cover.
+  There does not exist an index-3 subgroup.
+  Therefore, there exists no non-normal, connected, 3-sheeted cover.
 
   Let $g = 1$.
-  Then $\Sigma_g$ is a torus.
-  \begin{figure}[!htb]
-    \includegraphics[width=.5\linewidth]{problem6_1.jpeg}
-    \caption{$\Sigma_g$}
-    \label{fig:problem6_1}
-  \end{figure}
-  Let $\tilde{\Sigma}_g$ be the covering space in Figure \ref{fig:problem6_1}.
-  $\tilde{\Sigma}_g$ is a 3-sheeted covering space.
-  The fundamental group of $\Sigma_g$ is $\mathbb{Z} \times \mathbb{Z}$, all of whose subgroups are normal.
-  By Proposition 1.39, $\tilde{\Sigma_g}$ must be a normal covering space because $p_{*}(\pi_1(\tilde{X}))$ is normal.
-  Therefore, when $g = 1$, $\Sigma_g$ does not have a connected, non-normal, 3-sheeted cover.
+  Then $\Sigma_g$ is a torus, so the fundamental group of $\Sigma_g$ is $\ev{ a, b \mid [a, b] }$.
+  Since it is abelian, all the subgroups are normal.
+  Therefore, there exists no non-normal, connected, 3-sheeted cover.
 
+  Let $g \geq 2$.
+  Then $\pi_1(\Sigma_g) = \ev{a_1, b_1, a_2, b_2, \cdots, a_g, b_g \mid [a_1, b_1] \cdots [a_g, b_g]}$.
+  Consider the homomorphism $\phi: \pi_1(\Sigma_g) \rightarrow S_3$ such that
+  \begin{itemize}
+    \item
+      $a_1 \mapsto (123)$.
+    \item
+      $a_2 \mapsto (12)$.
+    \item
+      $a_i \mapsto (1)$ for all $i \geq 3$ and $b_i \mapsto (1)$ for all $i$.
+  \end{itemize}
+  This is indeed a homomorphism because 
+  \begin{align*}
+    \phi([a_1, b_1] \cdots [a_g, b_g])
+        &= \phi([a_1, b_1])\phi([a_2, b_2]) \\
+        &= (123)(123)^{-1}(12)(12)^{-1} \\
+        &= (1).
+  \end{align*}
+  Moreover, $\phi$ is surjective.
   \todo[inline,caption={}]{
-    Solve $g \geq 2$!
+    Finish this!
   }
 \end{exer}
 
