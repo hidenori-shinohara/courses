@@ -63,32 +63,6 @@
 \author{Hidenori Shinohara}
 \maketitle
 
-\begin{lem}\label{lemma:g}
-  $H_0(\vee_g S^1) = \mathbb{Z}, H_1(\vee_g S^1) = \mathbb{Z}^g$ and $H_n(\vee_g S^1) = 0$ for $n \geq 2$.
-\end{lem}
-
-\begin{proof}
-  For any $g$, it is clear that $H_0(\vee_g S^1) = \mathbb{Z}$ by the number of path components.
-
-  We will consider the $n$th homology groups for $n \geq 1$.
-
-  When $g = 1$, the proposition is obvious.
-  Suppose we have shown this for some $g \in \mathbb{N}$.
-  \begin{figure}[!htb]
-    \includegraphics[width=.5\linewidth]{lemmasg.jpeg}
-    \caption{$\vee_g S^1$}
-    \label{fig:lemsg}
-  \end{figure}
-  Split $\vee_{g + 1} S^1$ into $\vee_g S^1$ and $S^1$ with a small neighborhood.
-  Figure \ref{fig:lemsg} shows the case when $g = 2$.
-  The intersection deformation retracts to a point.
-  For simplicity, we will denote each component $\vee_g S^1$ and $S^1$ although they come with some extra neighborhood.
-  The Mayer-Vietoris sequence $H_n(\vee_g S^1) \oplus H_n(S^1) \rightarrow H_n(\vee_{g + 1} S^1) \rightarrow H_{n - 1}((\vee_g S^1) \cap S^1)$ gives $H_n(\vee_{g + 1}S^1)$ for all $n \geq 2$ because $H_n(\vee_g S^1) = H_n(S^1) = H_n((\vee_g S^1) \cap S^1) = 0$.
-  We will consider the exact sequence $\tilde{H}_1((\vee_g S^1) \cap S^1) \rightarrow \tilde{H}_1(\vee_g S^1) \oplus \tilde{H}_1(S^1) \rightarrow \tilde{H}_1(\vee_{g + 1} S^1) \rightarrow \tilde{H}_0((\vee_g S^1) \cap S^1)$.
-  Since $\tilde{H}_1((\vee_g S^1) \cap S^1) = \tilde{H}_0((\vee_g S^1) \cap S^1) = 0$, 
-  $\tilde{H}_1(\vee_{g + 1} S^1) = \tilde{H}_1(\vee_g S^1) \oplus \tilde{H}_1(S^1) = \mathbb{Z}^g \oplus \mathbb{Z} = \mathbb{Z}^{g + 1}$.
-\end{proof}
-
 
 \begin{exer}{(Problem 1(a))}
   \begin{figure}[!htb]
@@ -136,7 +110,7 @@
   Since the sequence is exact, $\alpha$ must be injective and $\gamma$ must be surjective.
   We will examine $\beta$ to calculate the homology groups.
   Since $A \cap B$ is homotopy equivalent to $S^1$, $\tilde{H}_1(A \cap B) = \mathbb{Z}$.
-  By Lemma \ref{lemma:g}, $\tilde{H}_1(A) = \mathbb{Z}^{2g}$.
+  By Corollary 2.25, $\tilde{H}_1(A) = \mathbb{Z}^{2g}$.
   Finally, $\tilde{H}_1(B) = \mathbb{Z}$.
   Let $a_1, b_1, \cdots, a_g, b_g$ denote generators of $\mathbb{Z}^{2g}$ and let $a$ denote a generator of $\tilde{H}_1(B)$.
   A generator of $\tilde{H}_1(A \cap B)$ goes around the intersection once, which is homotopy equivalent to $a_1 + b_1 - a_1 - b_1 + \cdots = 0$ inside $A$.
@@ -228,14 +202,14 @@
       Then the space is homotopy equivalent to the 1-skeleton of the 3-simplex.
       In other words, $X \setminus \{ x \}$ deformation retracts to a space consisting of 4 edges $[v, v_1], [v, v_2], [v, v_3], [v, v_4]$.
       Using a similar argument as Problem 2(a), we can see that it is homotopy equivalent to $S^1 \vee S^1 \vee S^1$.
-      By Lemma \ref{lemma:g}, $\tilde{H}_n(X, X \setminus \{ x \}) = \mathbb{Z}^3$ when $n = 2$ and 0 otherwise.
+      By Corollary 2.25, $\tilde{H}_n(X, X \setminus \{ x \}) = \mathbb{Z}^3$ when $n = 2$ and 0 otherwise.
     \item
       Suppose $x$ is on one of the edges from $v$.
       In other words, $x \in \Int([v, v_i])$ for some $i$.
       Without loss of generality, $i = 2$.
       Then the 3 faces shown in Figure \ref{fig:problem3} deformation retract to the edges $[v, v_i], [v_2, v_i]$ for each $i = 1, 3, 4$.
       Using a similar argument as Problem 2(a), we can see that it is homotopy equivalent to $S^1 \vee S^1$.
-      By Lemma \ref{lemma:g}, $\tilde{H}_n(X, X \setminus \{ x \}) = \mathbb{Z}^2$ when $n = 2$ and 0 otherwise.
+      By Corollary 2.25, $\tilde{H}_n(X, X \setminus \{ x \}) = \mathbb{Z}^2$ when $n = 2$ and 0 otherwise.
   \end{enumerate}
 \end{exer}
 
