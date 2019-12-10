@@ -49,6 +49,7 @@
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Gal}{Gal}
 \DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\RP}{\mathbb{R}\mathbf{P}}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -218,6 +219,31 @@
       Using a similar argument as Problem 2(a), we can see that it is homotopy equivalent to $S^1 \vee S^1$.
       By Corollary 2.25, $\tilde{H}_n(X, X \setminus \{ x \}) = \mathbb{Z}^2$ when $n = 2$ and 0 otherwise.
   \end{enumerate}
+\end{exer}
+
+\begin{exer}{(Problem 4)}
+  As mentioned in Example 2.42 [Hatcher], $\RP^n$ has a CW structure with one cell $e^k$ in each dimensino $k \leq n$, and the attaching map for $e^k$ is the 2-sheeted covering projection $\phi: S^{k - 1} \rightarrow \RP^{k - 1}$.
+  $X$ can be constructed by constructing $\RP^n$ as above and attaching an extra $e^n$ in the same manner that we attach the first $e^n$.
+  Thus the cellular chain complex for $X$ is
+  \begin{itemize}
+    \item
+      If $n$ is even, $0 \rightarrow \mathbb{Z}^2 \xrightarrow{\alpha} \mathbb{Z} \xrightarrow{0} \mathbb{Z} \xrightarrow{2} \mathbb{Z} \xrightarrow{0} \cdots \xrightarrow{2} \mathbb{Z} \xrightarrow{0} \mathbb{Z} \xrightarrow{2} \mathbb{Z} \xrightarrow{0} \mathbb{Z} \rightarrow 0$.
+    \item
+      If $n$ is odd, $0 \rightarrow \mathbb{Z}^2 \xrightarrow{\beta} \mathbb{Z} \xrightarrow{2} \mathbb{Z} \xrightarrow{0} \mathbb{Z} \xrightarrow{2} \cdots \xrightarrow{2} \mathbb{Z} \xrightarrow{0} \mathbb{Z} \xrightarrow{2} \mathbb{Z} \xrightarrow{0} \mathbb{Z} \rightarrow 0$.
+  \end{itemize}
+  It is clear that $d_k$ is the same as the one in the textbook for $k < n$.
+  $\alpha$ is a map that sends $(a, b) \rightarrow 2a + 2b$ where each $a, b$ corresponds to each of the two $e^n$'s and each $a, b$ gets doubled for the same reason the $d_n$ in Example 2.42 is multiplication by 2.
+  Similarly, $\beta$ is a map that sends $(a, b) \rightarrow 0$ where each $a, b$ gets sent to 0 and 0 + 0 = 0.
+  From this, it follows that
+
+  \begin{align*}
+    H_{n}(X) = \begin{cases}
+      \mathbb{Z}^2 & \text{for $k = n$,} \\
+      \mathbb{Z} & \text{for $k = 0$,} \\
+      \mathbb{Z}_2 & \text{for $k$ odd, $0 < k < n$,} \\
+      0 & \text{otherwise.} \\
+    \end{cases}
+  \end{align*}
 \end{exer}
 
 \begin{exer}{(Problem 5(a))}
