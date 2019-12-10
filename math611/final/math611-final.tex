@@ -77,6 +77,14 @@
     \ev{ a_1, b_1, \cdots, a_g, b_g, c, gf, f^{-1}h \mid [a_1, b_1] \cdots [a_g, b_g]c, gfh^{-1}f, c(gh)^{-1}}
   \end{align*}
   where $c(gh)^{-1}$ corresponds to $i_{\alpha\beta}(c)i_{\beta\alpha}(c)^{-1}$ because we identify $c$ with $gh$.
+  Let $\alpha = gf, \beta = f^{-1}h$.
+  Then
+  \begin{align*}
+    &\ev{ a_1, b_1, \cdots, a_g, b_g, c, gf, f^{-1}h \mid [a_1, b_1] \cdots [a_g, b_g]c, gfh^{-1}f, c(gh)^{-1}} \\
+    &\cong \ev{ a_1, b_1, \cdots, a_g, b_g, c, \alpha, \beta \mid [a_1, b_1] \cdots [a_g, b_g]c, \alpha\beta^{-1}, c(\alpha\beta)^{-1}} \\
+    &\cong \ev{ a_1, b_1, \cdots, a_g, b_g, c, \alpha \mid [a_1, b_1] \cdots [a_g, b_g]c, c\alpha^{-2}} \\
+    &\cong \ev{ a_1, b_1, \cdots, a_g, b_g, \alpha \mid [a_1, b_1] \cdots [a_g, b_g]\alpha^2}.
+  \end{align*}
 \end{exer}
 
 \begin{exer}{(Problem 1(b))}
