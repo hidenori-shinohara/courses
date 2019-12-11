@@ -166,19 +166,18 @@
 \end{exer}
 
 \begin{exer}{(Problem 2(b))}
-  From Figure \ref{fig:k33}, it is clear that attaching four 2-cells, each killing one $S^1$, will give a simply connected space.
+  From Figure \ref{fig:k33}, it is clear that attaching four 2-cells, each killing one of $a, b, c, d$, will give a simply connected space.
   We claim that 4 is the smallest number.
 
-  When we attach 2-cells to the graph, the fundamental graph of the resulting space is $\ev{ a, b, c, d} / \ev{ r_1, r_2, \cdots }$ where each $r_i$ is the relation given by a product of $a, b, c, d$ in the order the boundary of the $i$th 2-cell was attached.
-  Therefore, it suffices to show that $\ev{a, b, c, d} / \ev{r_1, r_2, r_3} \ne 0$.
-  On the contrary, suppose that it is.
+  When we attach 2-cells to the graph, the fundamental graph of the resulting space is $\ev{ a, b, c, d} / \ev{ r_1, r_2, \cdots }$ where each $r_i$ is the relation given by a product of $a, b, c, d$ corresponding to how the boundary of the $i$th 2-cell was attached.
+  Therefore, it suffices to show that $\ev{a, b, c, d} / \ev{r_1, r_2, r_3} \ne 0$ for any $r_1, r_2, r_3$.
+  On the contrary, suppose that there exist $r_1, r_2, r_3$ such that the quotient group is 0.
   
   If $\ev{a, b, c, d} / \ev{r_1, r_2, r_3} = 0$, then $\ev{a, b, c, d} = \ev{r_1, r_2, r_3}$.
   We will consider the surjective group homomorphism $\phi: \ev{a, b, c, d} \rightarrow \mathbb{Z}^4$ defined by $a \mapsto (1, 0, 0, 0), b \mapsto (0, 1, 0, 0), \cdots, d \mapsto (0, 0, 0, 1)$.
   Each $r_1, r_2, r_3$ is a product of $a, b, c, d$, so $\phi(r_i) = (d_{i, 1}, d_{i, 2}, d_{i, 3}, d_{i, 4})$ for some $d_{i, j} \in \mathbb{Z}$.
-  Since $\ev{a, b, c, d} = \ev{r_1, r_2, r_3}$, $\phi(\ev{a, b, c, d}) = \phi(\ev{r_1, r_2, r_3})$.
-  Since $\phi$ is surjective, $\phi(r_1), \phi(r_2), \phi(r_3)$ generate $\mathbb{Z}^4$.
-  However, this implies $\{ \phi(r_1), \phi(r_2), \phi(r_3) \}$ is a basis of $\mathbb{R}^4$ because $\{ (1, 0, 0, 0), \cdots, (0, 0, 0, 1) \}$ is.
+  $\{ (1, 0, 0, 0), \cdots, (0, 0, 0, 1) \}$ is a basis of $\mathbb{R}^4$, and each element in $\{ (1, 0, 0, 0), \cdots, (0, 0, 0, 1) \}$ can be expressed as an integer linear combination of $(d_{i, 1}, \cdots, d_{i, 4})$.
+  However, this implies $\{ \phi(r_1), \phi(r_2), \phi(r_3) \}$ spans $\mathbb{R}^4$.
   This is clearly a contradiction, so we need at least four 2-cells.
 \end{exer}
 
