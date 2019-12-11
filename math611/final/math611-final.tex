@@ -191,7 +191,7 @@
   (It does not include all the faces in order to avoid cluttering the figure.)
   $X$ clearly deformation retracts to a point.
   Let $x \in X$.
-  From Exercise 2.1.16(a) [a homework problem from Hatcher], the 0th homology groups are all 0 regardless of where $x$ is.
+  From Exercise 2.1.16(a) [a homework problem from Hatcher], $H_0(X, X \setminus \{ x \}) = 0$ regardless of where $x$ is.
 
   For any $n \geq 1$, the exact sequence $\tilde{H}_n(X) \rightarrow \tilde{H}_n(X, X \setminus \{ x \}) \rightarrow \tilde{H}_{n - 1}(X \setminus \{ x \}) \rightarrow \tilde{H}_{n - 1}(X)$ shows that $\tilde{H}_n(X, X \setminus \{ x \}) \cong \tilde{H}_{n - 1}(X \setminus \{ x \})$ because $\tilde{H}_n(X) = \tilde{H}_{n - 1}(X) = 0$.
   We will calculate $\tilde{H}_n(X, X \setminus \{ x \}) = \tilde{H}_{n - 1}(X \setminus \{ x \})$ for each $n \geq 1$.
@@ -212,7 +212,7 @@
     \item
       Suppose $x = v$.
       Then the space is homotopy equivalent to the 1-skeleton of the 3-simplex.
-      In other words, $X \setminus \{ x \}$ deformation retracts to a space consisting of 4 edges $[v, v_1], [v, v_2], [v, v_3], [v, v_4]$.
+      In other words, $X \setminus \{ x \}$ deformation retracts to a space consisting of 6 edges $[v_i, v_j]$ with $i \ne j$.
       Using a similar argument as Problem 2(a), we can see that it is homotopy equivalent to $S^1 \vee S^1 \vee S^1$.
       By Corollary 2.25, $\tilde{H}_n(X, X \setminus \{ x \}) = \mathbb{Z}^3$ when $n = 2$ and 0 otherwise.
     \item
@@ -236,7 +236,7 @@
       If $n$ is odd, $0 \rightarrow \mathbb{Z}^2 \xrightarrow{\beta} \mathbb{Z} \xrightarrow{2} \mathbb{Z} \xrightarrow{0} \mathbb{Z} \xrightarrow{2} \cdots \xrightarrow{2} \mathbb{Z} \xrightarrow{0} \mathbb{Z} \xrightarrow{2} \mathbb{Z} \xrightarrow{0} \mathbb{Z} \rightarrow 0$.
   \end{itemize}
   It is clear that $d_k$ is the same as the one in the textbook for $k < n$.
-  $\alpha$ is a map that sends $(a, b) \rightarrow 2a + 2b$ where each $a, b$ corresponds to each of the two $e^n$'s and each $a, b$ gets doubled for the same reason the $d_n$ in Example 2.42 is multiplication by 2.
+  $\alpha$ is a map that sends $(a, b) \rightarrow 2a + 2b$ where each $a, b$ corresponds to each of the two $e^n$'s and each $a, b$ gets multiplied by 2 for the same reason the $d_n$ in Example 2.42 is multiplication by 2.
   Similarly, $\beta$ is a map that sends $(a, b) \rightarrow 0$ where each $a, b$ gets sent to 0 and 0 + 0 = 0.
   From this, it follows that
 
@@ -265,17 +265,17 @@
 
   $X$ and $Y$ are both path connected, so $H_0(X) = H_0(Y) = \mathbb{Z}$.
 
-  We will consider two subspaces of $X$ the union of whose interiors equals $X$.
+  We will consider two subspaces of $X$ such that the union of the interiors equals $X$.
   Identify each point of $X = S^1 \times S^2$ by a pair of coordinates $(\theta, (x, y, z))$ where $\theta$ is the angle in $S^1$ and $(x, y, z)$ satisfies $x^2 + y^2 + z^2 = 1$.
   Let $A = \{ (\theta, (x, y, z)) \mid -\epsilon \leq \theta \leq \pi + \epsilon \}, B = \{ (\theta, (x, y, z)) \mid \pi - \epsilon \leq \theta \leq 2\pi + \epsilon \}$ where $\epsilon > 0$ is a small number.
-  Then each $A$ and $B$ deformation retracts to a space homeomorphic to $S^2$.
+  Then both $A$ and $B$ deformation retract to a space homeomorphic to $S^2$.
   $A \cap B$ consists of two path components, each of which deformation retracts to a space homeomorphic to $S^2$.
   The homology groups of $A \cap B$ are relatively easy to calculate because $H_n(A \cap B) = H_n(S^2 \coprod S^2) = H_n(S^2) \oplus H_n(S^2)$ by Proposition 2.6 for any $n$.
   Moreover, it is clear that $\Int(A) \cup \Int(B) = X$.
   We will consider the Mayer-Vietoris sequence formed by $A, B \subset X$.
 
   First, we will consider the sequence $H_n(A) \oplus H_n(B) \rightarrow H_n(X) \rightarrow H_{n - 1}(A \cap B)$ for each $n \geq 4$.
-  $H_n(A) = H_n(B) = H_{n - 1}(A \cap B) = 0$ for $n \geq 4$
+  $H_n(A) = H_n(B) = H_{n - 1}(A \cap B) = 0$ for $n \geq 4$.
   By the exactness, $H_n(X) = 0$ for all $n \geq 4$.
   Next, we will consider the following sequence:
 
@@ -286,7 +286,7 @@
     &\tilde{H}_0(A \cap B) \rightarrow \tilde{H}_0(A) \oplus \tilde{H}_0(B).
   \end{align*}
 
-  $\tilde{H}_3(A \cap B) = \tilde{H}_3(A) = \tilde{H}_3(B) = \tilde{H}_1(A \cap B) = \tilde{H}_1(A) = \tilde{H}_1 = \tilde{H}_0(A) = \tilde{H}_0(B) = 0$, and $\tilde{H}_0(A \cap B)$.
+  $\tilde{H}_3(A \cap B) = \tilde{H}_3(A) = \tilde{H}_3(B) = \tilde{H}_1(A \cap B) = \tilde{H}_1(A) = \tilde{H}_1(B) = \tilde{H}_0(A) = \tilde{H}_0(B) = 0$, and $\tilde{H}_0(A \cap B) = \mathbb{Z}$ because $A \cap B$ consists of two path components.
   By replacing the exact sequence with those values and splitting the sequence into two for readability, we obtain the following sequences:
   \begin{gather*}
     0 \rightarrow \tilde{H}_3(X) \xrightarrow{\alpha} \tilde{H}_2(A \cap B) \xrightarrow{\beta} \tilde{H}_2(A) \oplus \tilde{H}_2(B) \xrightarrow{\gamma} \tilde{H}_2(X) \rightarrow 0, \\
@@ -297,13 +297,13 @@
   We will examine the homomorphism $\beta$ to understand the sequence.
   $\tilde{H}_2(A \cap B) = \ev{[a], [b] \mid [[a], [b]]}$ where each $a, b$ lives in $A \cap B$ and $a$ lives in one of the path components of $A \cap B$ and $b$ lives in the other.
   Moreover, $[a] = [b]$ in $\tilde{H}_2(A)$ and $\tilde{H}_2(B)$.
-  (Based on orientation, $[a] = -[b]$, but we can simply change the orientation of $[b]$ in that case.)
+  ($[a]$ may be $-[b]$, but we can simply change the orientation of $[b]$ in that case.)
   Then $\beta(c_1[a] + c_2[b]) = ((c_1 + c_2)[a], (c_1 + c_2)[a])$.
   This gives us that $\Im(\alpha) = \ker(\beta) = \{ c[a] - c[b] \mid c \in \mathbb{Z} \} = \mathbb{Z}$.
   By the exactness, $\alpha$ is injective, so $\tilde{H}_3(X) = \mathbb{Z}$.
   Moreover, $\ker(\gamma) = \Im(\beta) = \{ (c[a], c[a]) \mid c \in \mathbb{Z} \}$.
   By the exactness, $\gamma$ is surjective, so $\tilde{H}_2(X) = (\tilde{H}_2(A) \oplus \tilde{H}_2(B)) / \Im(\beta) = \ev{[a]} \oplus \ev{[a]} / \ev{([a], [a])} = \mathbb{Z}$.
-  Since reduced homology groups and homology groups are identical when $n \geq 2$, we have
+  Since reduced homology groups and homology groups are identical when $n \geq 1$, we have
   \begin{align*}
     H_n(X) &= \begin{cases}
       \mathbb{Z} & (n = 0, 1, 2, 3) \\
