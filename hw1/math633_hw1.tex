@@ -104,7 +104,30 @@
 \end{exer}
 
 \begin{exer}{(Problem 4)}
-  TODO
+  \begin{itemize}
+    \item
+      $a \implies b$.
+      Define
+      \begin{align*}
+       \psi(h) = \begin{cases}
+         \frac{f(z_0 + h) - f(z_0)}{h} - w & (h \ne 0) \\
+         0 & (h = 0).
+       \end{cases}
+      \end{align*}
+      Then $\psi$ is defined on a neighborhood of $0$ because $z_0$ is an interior point of $U$.
+      Moreover, $\lim_{h \rightarrow 0} \psi(h) = 0$.
+    \item
+      $b \implies c$.
+      Locally, $\frac{\abs{f(z_0 + h) - f(z_0) - wh}}{{\abs{h}}} = \psi(h)$, so the limit is 0 as $h \rightarrow 0$.
+    \item
+      $c \implies a$.
+      \begin{align*}
+        \lim_{h \rightarrow 0} \frac{f(z_0 + h) - f(z_0)}{h} = w
+          &\iff \lim_{h \rightarrow 0} \frac{f(z_0 + h) - f(z_0) - wh}{h} = 0 \\
+          &\iff \lim_{h \rightarrow 0} \frac{\abs{f(z_0 + h) - f(z_0) - wh}}{\abs{h}} = 0.
+      \end{align*}
+      Thus $c \implies a$.
+  \end{itemize}
 \end{exer}
 
 \begin{exer}{(Problem 5(i)(ii))}
