@@ -1,0 +1,91 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{semantic}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 602(Homework 1)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\begin{exer}{1}
+  \begin{itemize}
+    \item
+      Let $p \in V(I \cap J)$.
+      For any $\sum_{i=1}^{n} f_ig_i \in IJ$, we have $f_ig_i \in I \cap J$ for each $i$.
+      Thus $(\sum_{i=1}^{n} f_ig_i)(p) = 0$, so $p \in V(IJ)$.
+      Let $p \in V(IJ)$.
+      Let $f \in I \cap J$.
+      Then $f^2 \in IJ$, so $(f(p))^2 = 0$.
+      Thus $f(p) = 0$, so $p \in V(I \cap J)$.
+      Therefore, $V(I \cap J) = V(IJ)$.
+
+      Let $p \in V(I) \cup V(J)$.
+      Then either all polynomials in $I$ vanish at $p$ or all polynomials in $J$ vanish at $p$.
+      Thus all the polynomials in the intersection must vanish at $p$.
+      Thus $V(I) \cup V(J) \subset V(I \cap J)$.
+      On the other hand, let $p \in V(I \cap J) \setminus (V(I) \cup V(J))$.
+      If no such element exists, we are done.
+      Then every polynomial in the intersection vanishes at $p$.
+      Let $f \in I$ and $g \in J$ be polynomials that do not vanish at $p$.
+      Then $fg \in I \cap J$, so $(fg)(p) = 0$.
+      However, this is impossible because $f(p) \ne 0$ and $g(p) \ne 0$.
+      Therefore, $V(I) \cup V(J) = V(I \cap J)$.
+  \end{itemize}
+\end{exer}
+
+
+\end{document}
