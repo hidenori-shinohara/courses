@@ -124,6 +124,14 @@
       Then $x = a + b$ where $a \in f^{-1}(J_1)$ and $b \in f^{-1}(J_2)$.
       This implies $x = a + b$ where $f(a) \in J_1$ and $f(b) \in J_2$.
       Then, $f(x) = f(a + b) = f(a) + f(b) \in J_1 + J_2$, so $x \in f^{-1}(J_1 + J_2)$.
+    \item
+      $f^{-1}(J_1 \cap J_2) = f^{-1}(J_1) \cap f^{-1}(J_2)$ from set theory.
+    \item
+      Let $\sum_{i=1}^{n} a_ib_i \in J_1^cJ_2^c$ where $a_i \in J_1^c$ and $b_i \in J_2^c$.
+      Then $f(a_i) \in J_1$ and $f(b_i) \in J_2$.
+      Thus $\sum f(a_i)f(b_i) \in J_1J_2$.
+      Since $f$ preserves product and addition, $f(\sum a_ib_i) \in J_1J_2$.
+      Thus $\sum a_ib_i \in f^{-1}(J_1J_2) = (J_1J_2)^c$.
   \end{itemize}
 \end{exer}
 
