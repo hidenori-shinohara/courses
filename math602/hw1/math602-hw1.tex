@@ -227,5 +227,18 @@
 
 \end{exer}
 
+\begin{exer}{(Problem 4)}
+  Let $f = \sum_{i=1}^{m} a_ix^i, g = \sum_{i=1}^{n} b_ix^i \notin p[x]$.
+  Let $m', n'$ be the smallest integer such that $a_{m'}, b_{n'} \notin p[x]$.
+  Such $m', n'$ must exist because $f, g \notin p[x]$.
+  Then the coefficient of $x^{m' + n'}$ in $fg$ is $\sum_{i=0}^{m' + n'} a_ib_{m' + n' - i}$.
+  Then $a_ib_{m' + n' - i} \in p$ if and only if $i \ne m'$.
+  The coefficient of $x^{m' + n'}$ in $fg$ is not in $p[x]$.
+  Therefore, $fg \notin p[x]$, so $p[x]$ is a prime ideal.
+
+  $(0)$ is a maximal ideal of $Q$.
+  However, $(0)$ is not a maximal ideal in $\mathbb{Q}[x]$ because $(x)$ is a proper ideal of $\mathbb{Q}[x]$ that properly contains $(0)$.
+\end{exer}
+
 
 \end{document}
