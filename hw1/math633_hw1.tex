@@ -64,8 +64,15 @@
 \begin{exer}{(Problem 1)}
   \begin{itemize}
     \item
-      From basic topology, the closure of $A$ is equal to the intersection of all closed sets containing $A$.
-      The intersection of closed sets is closed, so $\overline{A}$ is closed.
+      Let $x$ be a limit point of $\overline{A}$.
+      If $x \in A$, $x \in \overline{A}$ and we are done.
+      Suppose $x \notin A$.
+      Then $x_n \rightarrow x$ for some $\{ x_n \} \subset \overline{A}$.
+      If infinitely many terms in $\{ x_n \}$ are in $A$, then $x$ is a limit point of $A$.
+      Suppose otherwise.
+      Then for all sufficiently large $n \in \mathbb{N}$, there exists $\{ x_{n, i} \} \subset A$ that converges to $x_n$, so we can pick sufficiently large $j_n$ such that $\abs{x_n - x_{n, j_n}} < 1 / n$.
+      Then $\{ x_{n, j_n} \}$ is a sequence of points in $A$ that converges to $x$, so $x$ is a limit point of $A$.
+      Thus $x \in \overline{A}$.
     \item
       Let $z \in \overline{A} \setminus A$.
       $z$ is a limit point of $A$ and $A \subset B$, so $z$ is a limit point of $B$.
