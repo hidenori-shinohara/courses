@@ -71,6 +71,22 @@
       0 & \text{otherwise}.
     \end{cases}
   \end{align*}
+  Suppose $n$ is even.
+  For any field $F$, we obtain the cellular chain complex
+
+  \begin{align*}
+    0 \rightarrow F \xrightarrow{2} F \xrightarrow{0} \cdots \xrightarrow{2} F \xrightarrow{0} F \rightarrow 0.
+  \end{align*}
+
+  If the characteristic is 2, then all maps are 0.
+  Therefore, $H_k(\RP^n; F) = F$ if $k \leq n$ and $H_k(\RP^n; F) = 0$ otherwise.
+  If the characteristic is not 2, then $H_0(\RP^n; F) = F$ and all other homology groups are 0.
+  If $n$ is odd, we obtain
+  \begin{align*}
+    0 \rightarrow F \xrightarrow{0} F \xrightarrow{2} \cdots \xrightarrow{2} F \xrightarrow{0} F \rightarrow 0.
+  \end{align*}
+  If the characteristic is 2, $H_k(\RP^n; F) = F$ if $k \leq n$ and $H_k(\RP^n; F) = 0$ otherwise.
+ Otherwise, $H_0(\RP^n; F) = H_n(\RP^n; F) = F$ and all other homology groups are 0.
 \end{exer}
 
 \end{document}
