@@ -61,6 +61,19 @@
 \author{Hidenori Shinohara}
 \maketitle
 
+\begin{exer}{(Problem 2a)}
+  Let $\gamma(t) = Re^{2\pi it}$.
+  \begin{align*}
+    \int_{\gamma} z^ndz
+      &= \int_{0}^{1} R^ne^{2\pi i nt}R2\pi ie^{2\pi it} dt \\
+      &= 2\pi i R^{n + 1}\int_{0}^{1} e^{2\pi i (n + 1)t} dt \\
+      &= \begin{cases}
+        R^{n + 1} \frac{e^{2\pi i(n + 1)t}}{n + 1} = 0 & (n \ne -1) \\
+        2\pi i & (n = -1).
+      \end{cases}
+  \end{align*}
+\end{exer}
+
 \begin{exer}{(Problem 3)}
   \begin{align*}
     \int_a^b \abs{z'(t)} dt
