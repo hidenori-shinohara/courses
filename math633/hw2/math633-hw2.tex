@@ -72,7 +72,7 @@
   where $\tilde{z}(s): [c, d] \rightarrow \mathbb{C}$ is a reparametrization of $z(t): [a, b] \rightarrow \mathbb{C}$.
 \end{exer}
 
-\begin{exer}{(Problem 4)}
+\begin{exer}{(Problem 4a)}
   If $t^{\star} \in \Omega_1$, then there exists an open neighborhood $U$ of $z(t^{\star})$ contained in $\Omega_1$.
   Then $z^{-1}(U)$ is a neighborhood of $t^{\star}$ in $[0, 1]$ because $z$ is continuous.
   Since $z(1) \in \Omega_2$, $t^{\star} \ne 1$.
@@ -85,6 +85,21 @@
   In each case, we reached a contradiction, so $\Omega$ is not disconnected.
 \end{exer}
 
+\begin{exer}{(Problem 4b)}
+  For every $v \in \Omega_1$, there exists an open set $U$ such that $v \in U \subset \Omega_1$.
+  Then for any $v' \in U$, $v$ and $v'$ can be joined by $\gamma(t) = tv + (1 - t)v'$.
+  Thus $U \subset \Omega_1$, so $\Omega_1$ is open.
+
+  Let $v \in \Omega_2$.
+  Suppose that for all $\epsilon > 0$, the open disk at $v$ with the radius $\epsilon$ is not contained in $\Omega_2$.
+  Otherwise we are done.
+  Let $v_0 = w$.
+  For every $n \in \mathbb{N}$, choose $v_n \in D(v, 1/n) \setminus \Omega_2$.
+  Then there exists a path between each $v_n$ and $w$.
+  Moreover, there exists a path between $v_n$ and $v_{n - 1}$ for each $n$ and we will call it $\gamma_n$.
+  Define $\gamma: [0, 1] \rightarrow \Omega$ such that for each $n \in \mathbb{N}$, $\gamma([1 - 1/n, 1 - 1/(n+1)])$ is the path $\gamma_n$ and $\gamma(1) = v$.
+  Then $\gamma$ is a well-defined path from $w$ to $v$, which is a contradiction because $v \in \Omega_2$.
+\end{exer}
 
 \end{document}
 
