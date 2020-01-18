@@ -72,6 +72,19 @@
   where $\tilde{z}(s): [c, d] \rightarrow \mathbb{C}$ is a reparametrization of $z(t): [a, b] \rightarrow \mathbb{C}$.
 \end{exer}
 
+\begin{exer}{(Problem 4)}
+  If $t^{\star} \in \Omega_1$, then there exists an open neighborhood $U$ of $z(t^{\star})$ contained in $\Omega_1$.
+  Then $z^{-1}(U)$ is a neighborhood of $t^{\star}$ in $[0, 1]$ because $z$ is continuous.
+  Since $z(1) \in \Omega_2$, $t^{\star} \ne 1$.
+  However, this implies the existence of $\epsilon > 0$ such that $t^{\star} + \epsilon < 1$ and $z(t^{\star} + \epsilon) \in \Omega_1$.
+  This is a contradiction.
+
+  If $t^{\star} \in \Omega_2$, then there exists an open neighborhood $U$ of $z(t^{\star})$ contained in $\Omega_2$.
+  Since $U$ is open, $z^{-1}(U)$ is a neighborhood of $t^{\star}$ in $[0, 1]$, so $\exists \epsilon > 0$ such that $z(t^{\star} - \epsilon) \in \Omega_2$.
+
+  In each case, we reached a contradiction, so $\Omega$ is not disconnected.
+\end{exer}
+
 
 \end{document}
 
