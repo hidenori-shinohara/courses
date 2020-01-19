@@ -61,6 +61,33 @@
 \author{Hidenori Shinohara}
 \maketitle
 
+\begin{exer}{(Problem 1)}
+  \begin{align*}
+    \frac{\partial}{\partial x}(T^{-1} \circ f \circ T)(x, y)
+      &= \lim_{h \rightarrow 0} \frac{T^{-1}(f(T(x + h, y))) - T^{-1}(f(T(x, y)))}{h} \\
+      &= \lim_{h \rightarrow 0} \frac{T^{-1}(f(x + h + iy)) - T^{-1}(f(x + iy))}{h} \\
+      &= \lim_{h \rightarrow 0} \frac{T^{-1}(f(x + h + iy) - f(x + iy))}{h} \\
+      &= T^{-1}(\lim_{h \rightarrow 0} \frac{f(x + h + iy) - f(x + iy)}{h}) \\
+      &= T^{-1}(f'(x + iy)) \\
+      &= T^{-1}(f'(T(x, y))).
+  \end{align*}
+  Using the same argument again, we obtain $\frac{\partial^2}{\partial x^2}(T^{-1} \circ f \circ T)(x, y) = T^{-1}(f''(T(x, y)))$.
+
+  \begin{align*}
+    \frac{\partial}{\partial y}(T^{-1} \circ f \circ T)(x, y)
+      &= \lim_{h \rightarrow 0} \frac{T^{-1}(f(T(x, y + h))) - T^{-1}(f(T(x, y)))}{h} \\
+      &= \lim_{h \rightarrow 0} \frac{T^{-1}(f(x + i(y + h))) - T^{-1}(f(x + iy))}{h} \\
+      &= \lim_{h \rightarrow 0} \frac{T^{-1}(i(f(x + i(y + h)) - f(x + iy)))}{ih} \\
+      &= T^{-1}(i\lim_{h \rightarrow 0} \frac{f(x + i(y + h)) - f(x + iy)}{ih}) \\
+      &= T^{-1}(if'(x + iy)) \\
+      &= T^{-1}(if'(T(x, y))).
+  \end{align*}
+  Using the same argument again, we obtain $\frac{\partial^2}{\partial y^2}(T^{-1} \circ f \circ T)(x, y) = T^{-1}(-f''(T(x, y))) = -T^{-1}(f''(T(x, y)))$ because $i^2 = -1$.
+
+  Thus $\frac{\partial^2}{\partial x^2}(T^{-1} \circ f \circ T)(x, y) + \frac{\partial^2}{\partial y^2}(T^{-1} \circ f \circ T)(x, y) = 0$.
+
+\end{exer}
+
 \begin{exer}{(Problem 2a)}
   Let $\gamma(t) = Re^{2\pi it}$.
   \begin{align*}
