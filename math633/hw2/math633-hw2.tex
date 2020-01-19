@@ -94,6 +94,34 @@
   Each $\int_0^1 e^{2\pi i t(k + 1)} dt = 0$ because $e^{2\pi it(k + 1)} / (2\pi i t(k + 1))$ is a primitive.
 \end{exer}
 
+\begin{exer}{(Problem 2c)}
+  \begin{align*}
+    \frac{1}{(z - a)(z - b)}
+      &= \frac{1}{a - b}(\frac{1}{z - a} - \frac{1}{z - b}) \\
+  \end{align*}
+  Thus we will compute two integrals and add them later.
+
+  \begin{align*}
+    \int_{\gamma} \frac{1}{z - a} dz
+      &= \int_{\gamma} \frac{1 / z}{1 - a / z} dz \\
+      &= \int_{\gamma} \frac{1}{z} \sum_{k=0}^{\infty} (-\frac{a}{z})^k dz \\
+      &= \sum_{k=0}^{\infty} (-a)^k\int_{\gamma} \frac{1}{z^{k + 1}} dz \\
+      &= 2\pi i
+  \end{align*}
+  because $z^{-(k + 1)}$ has a primitive $z^{-k}/-k$ whenever $k \ne 0$ and when $k = 0$ we can use the results above.
+
+  \begin{align*}
+    \int_{\gamma} \frac{1}{b - z} dz
+      &= \int_{\gamma} \frac{1 / b}{1 - z / b} dz \\
+      &= \frac{1}{b} \sum_{k=0}^{\infty} \int_{\gamma} (\frac{z}{b})^k dz \\
+      &= \frac{1}{b} \sum_{k=0}^{\infty} \frac{1}{b^k} \int_{\gamma} z^k dz \\
+      &= 0
+  \end{align*}
+  because $z^{k + 1} / (k + 1)$ is a primitive.
+
+  By putting these together, we conclude that the desired value is $2\pi i / (a - b)$.
+\end{exer}
+
 \begin{exer}{(Problem 3)}
   \begin{align*}
     \int_a^b \abs{z'(t)} dt
