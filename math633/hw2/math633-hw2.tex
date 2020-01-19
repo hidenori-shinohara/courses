@@ -74,6 +74,26 @@
   \end{align*}
 \end{exer}
 
+\begin{exer}{(Problem 2b)}
+  Let $\gamma(t) = z_0 + Re^{2\pi it}$ where $\abs{R / z_0} < 1$.
+  \begin{align*}
+    \int_{\gamma} z^ndz
+      &= \int_{0}^{1} (z_0 + Re^{2\pi it})^n(z_0 + Re^{e\pi it})' dt
+  \end{align*}
+  When $n \ne -1$, $(z_0 + Re^{2\pi it})^{n + 1} / (n + 1)$ is a primitive, so the integral is 0.
+  Suppose $n = -1$.
+
+  \begin{align*}
+    \int_{0}^{1} \frac{2 \pi i Re^{2\pi it}}{z_0 + Re^{2\pi i t}} dt
+      &= \int_{0}^{1} \frac{2 \pi i Re^{2\pi it} / z_0}{1 + Re^{2\pi i t} / z_0} dt \\
+      &= \int_{0}^{1} \frac{2\pi i Re^{2\pi it}}{z_0} \cdot \sum_{k=0}^{\infty} (\frac{-Re^{2\pi it}}{z_0})^kdt \\
+      &= -2\pi i\sum_{k=0}^{\infty} \int_0^1 (\frac{-Re^{2\pi it}}{z_0})^{k + 1} dt \\
+      &= -2\pi i\sum_{k=0}^{\infty} (\frac{-Re^{2\pi it}}{z_0})^{k + 1}\int_0^1 e^{2\pi i t(k + 1)} dt \\
+      &= 0.
+  \end{align*}
+  Each $\int_0^1 e^{2\pi i t(k + 1)} dt = 0$ because $e^{2\pi it(k + 1)} / (2\pi i t(k + 1))$ is a primitive.
+\end{exer}
+
 \begin{exer}{(Problem 3)}
   \begin{align*}
     \int_a^b \abs{z'(t)} dt
