@@ -72,40 +72,40 @@
     \end{cases}
   \end{align*}
   Suppose $n$ is even.
-  For any field $F$, we obtain the cellular chain complex
+  For any abelian group $G$, we obtain the cellular chain complex
 
   \begin{align*}
-    0 \rightarrow F \xrightarrow{2} F \xrightarrow{0} \cdots \xrightarrow{2} F \xrightarrow{0} F \rightarrow 0.
+    0 \rightarrow G \xrightarrow{2} G \xrightarrow{0} \cdots \xrightarrow{2} G \xrightarrow{0} G \rightarrow 0.
   \end{align*}
 
-  If the characteristic is 2, then all maps are 0.
-  Therefore, $H_k(\RP^n; F) = F$ if $k \leq n$ and $H_k(\RP^n; F) = 0$ otherwise.
-  If the characteristic is not 2, then $H_0(\RP^n; F) = F$ and all other homology groups are 0.
+  If $1 + 1 = 0$ in $G$, then all maps are 0.
+  Therefore, $H_k(\RP^n; G) = G$ if $k \leq n$ and $H_k(\RP^n; G) = 0$ if $k > n$.
+  Otherwise, $H_0(\RP^n; G) = G$ and all other homology groups are 0.
   If $n$ is odd, we obtain
   \begin{align*}
-    0 \rightarrow F \xrightarrow{0} F \xrightarrow{2} \cdots \xrightarrow{2} F \xrightarrow{0} F \rightarrow 0.
+    0 \rightarrow G \xrightarrow{0} G \xrightarrow{2} \cdots \xrightarrow{2} G \xrightarrow{0} G \rightarrow 0.
   \end{align*}
-  If the characteristic is 2, $H_k(\RP^n; F) = F$ if $k \leq n$ and $H_k(\RP^n; F) = 0$ otherwise.
- Otherwise, $H_0(\RP^n; F) = H_n(\RP^n; F) = F$ and all other homology groups are 0.
+  If $1 + 1 = 0$ in $G$, $H_k(\RP^n; G) = G$ if $k \leq n$ and $H_k(\RP^n; G) = 0$ otherwise.
+  Otherwise, $H_0(\RP^n; G) = H_n(\RP^n; G) = G$ and all other homology groups are 0.
 \end{exer}
 
 \begin{exer}{(Exercise 1(b))}
   As discussed in Example 2.37, $H_2(N_g; \mathbb{Z}) = 0, H_1(N_g; \mathbb{Z}) = \mathbb{Z}^{g - 1} \oplus \mathbb{Z}_2$, and $H_0(N_g; \mathbb{Z}) = \mathbb{Z}$.
-  For a field $F$, the cellular chain complex is
+  For an abelian group $G$, the cellular chain complex is
 
   \begin{align*}
-    0 \rightarrow F \xrightarrow{d_2} F^g \xrightarrow{d_1} F \rightarrow 0.
+    0 \rightarrow G \xrightarrow{d_2} G^g \xrightarrow{d_1} G \rightarrow 0.
   \end{align*}
 
   As discussed in Example 2.37, $d_2(1) = (2, 2, \cdots, 2)$ and $d_1 = 0$.
-  If the characteristic of $F$ is 2, then $H_2(X; F) = H_0(X; F) = F$ and $H_1(X; F) = F^g$.
-  Otherwise, then $H_2(X; F) = 0, H_1(X; F) = F^{g - 1}$ and $H_0(X; F) = F$.
+  If $1 + 1 = 0$ in $G$, then $H_2(X; G) = H_0(X; G) = G$ and $H_1(X; G) = G^g$.
+  Otherwise, then $H_2(X; G) = 0, H_1(X; G) = G^{g - 1}$ and $H_0(X; G) = G$.
 \end{exer}
 
 \begin{exer}{(Exercise 1(c))}
   For a $Z$-module $R$, we have
   \begin{align*}
-    0 \rightarrow R \xrightarrow{0} R \xrightarrow{a} R \xrightarrow{0} R \xrightarrow 0.
+    0 \rightarrow R \xrightarrow{0} R \xrightarrow{a} R \xrightarrow{0} R \rightarrow 0.
   \end{align*}
 
   When $R = \mathbb{Z}$, we obtain
@@ -117,8 +117,8 @@
     \end{cases}
   \end{align*}
 
-  When $R$ is a field with characteristic that divides $a$, $H_i(X; R) = R$ if $i = 0, 1, 2, 3$.
-  If $R$ is a field with characteristic that does not divide $a$, $H_3(X; R) = H_0(X; R) = R$ and all other cohomology groups are 0.
+  When $R$ is an abelian group such that $1 + 1 + \cdots + 1 = 0$ ($a$ times), $H_i(X; R) = R$ if $i = 0, 1, 2, 3$.
+  Otherwise, $H_3(X; R) = H_0(X; R) = R$ and all other cohomology groups are 0.
 \end{exer}
 
 \end{document}
