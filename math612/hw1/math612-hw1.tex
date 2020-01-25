@@ -47,6 +47,7 @@
 \DeclareMathOperator{\ord}{ord}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Tor}{Tor}
 \DeclareMathOperator{\RP}{\mathbb{R}P}
 
 \makeatletter
@@ -109,6 +110,11 @@
 
   When $G = \mathbb{Q}$, the universal coefficient theorem gives an isomorphism $H_k(X) \otimes Q \cong H_k(X; \mathbb{Q})$ since $Q$ is torsion free.
   $\mathbb{Z} \otimes \mathbb{Q} \cong \mathbb{Q}$ and $\mathbb{Z} / 2 \otimes \mathbb{Q} = 0$ because 2 is invertible in $\mathbb{Q}$.
+  This agrees with the results above.
+
+  When $G = \mathbb{Z} / 2^l$, we have $0 \rightarrow H_k(X) \otimes G \rightarrow H_k(X; G) \rightarrow \Tor(H_{k - 1}(C), G) \rightarrow 0$.
+  $\Tor(H_{k - 1}(C), G) = \ker(\mathbb{Z} / 2^l \xrightarrow{2} \mathbb{Z} / 2^l) = \mathbb{Z} / 2$.
+  $\mathbb{Z} / 2 \otimes \mathbb{Z} / 2^l \otimes \mathbb{Z} / 2 = \mathbb{Z} / 2$ because $\gcd(2, 2^l, 2) = 2$.
   This agrees with the results above.
 \end{exer}
 
