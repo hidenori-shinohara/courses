@@ -78,15 +78,36 @@
     0 \rightarrow G \xrightarrow{2} G \xrightarrow{0} \cdots \xrightarrow{2} G \xrightarrow{0} G \rightarrow 0.
   \end{align*}
 
-  If $1 + 1 = 0$ in $G$, then all maps are 0.
-  Therefore, $H_k(\RP^n; G) = G$ if $k \leq n$ and $H_k(\RP^n; G) = 0$ if $k > n$.
-  Otherwise, $H_0(\RP^n; G) = G$ and all other homology groups are 0.
   If $n$ is odd, we obtain
   \begin{align*}
     0 \rightarrow G \xrightarrow{0} G \xrightarrow{2} \cdots \xrightarrow{2} G \xrightarrow{0} G \rightarrow 0.
   \end{align*}
-  If $1 + 1 = 0$ in $G$, $H_k(\RP^n; G) = G$ if $k \leq n$ and $H_k(\RP^n; G) = 0$ otherwise.
-  Otherwise, $H_0(\RP^n; G) = H_n(\RP^n; G) = G$ and all other homology groups are 0.
+
+  \begin{itemize}
+    \item
+      Suppose $k$ is even and $2 \leq k \leq n$.
+      The homology at $\xrightarrow{0} G \xrightarrow{2}$ is
+      \begin{itemize}
+        \item
+          $0$ if $G = \mathbb{Q}, \mathbb{Z}/p^k\mathbb{Z}$ with $p \ne 2$.
+        \item
+          $\mathbb{Z} / 2\mathbb{Z}$ if $G = \mathbb{Z}/2^k$.
+      \end{itemize}
+    \item
+      Suppose $k$ is odd and $1 \leq k \leq n - 1$.
+      The homology at $\xrightarrow{2} G \xrightarrow{0}$ is
+      \begin{itemize}
+        \item
+          $G / 2G \cong G$ if $G = \mathbb{Q}, \mathbb{Z}/p^k\mathbb{Z}$ with $p \ne 2$ because multiplication by 2 is an isomorphism.
+        \item
+          $\mathbb{Z} / 2\mathbb{Z}$ if $G = \mathbb{Z}/2^k$.
+      \end{itemize}
+    \item
+      Suppose $k = n$ and $n$ is odd, or $k = 0$.
+      The homology at $\xrightarrow{0} G \xrightarrow{0}$ is $G$.
+  \end{itemize}
+
+
 \end{exer}
 
 \begin{exer}{(Exercise 1(b))}
