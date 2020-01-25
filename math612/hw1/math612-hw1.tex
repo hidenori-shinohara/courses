@@ -113,10 +113,15 @@
   This agrees with the results above.
 
   When $G = \mathbb{Z} / 2^l$, we have $0 \rightarrow H_k(X) \otimes G \rightarrow H_k(X; G) \rightarrow \Tor(H_{k - 1}(C), G) \rightarrow 0$.
-  $\Tor(H_{k - 1}(C), G) = \ker(\mathbb{Z} / 2^l \xrightarrow{2} \mathbb{Z} / 2^l) = \mathbb{Z} / 2$.
-  $\mathbb{Z} / 2 \otimes \mathbb{Z} / 2^l \otimes \mathbb{Z} / 2 = \mathbb{Z} / 2$ because $\gcd(2, 2^l, 2) = 2$.
+  If $k = n$ and $k$ is odd, $H_k(X) = \mathbb{Z}$, so $\mathbb{Z} / 2^l \cong H_k(X; \mathbb{Z} / 2^k)$.
+  If $k - 1 = n$ and $k - 1$ is odd, we obtain $0 \rightarrow 0 \rightarrow H_k(X; \mathbb{Z} / 2^l) \rightarrow \Tor(\mathbb{Z}, \mathbb{Z} / 2^l) \rightarrow 0$, so $H_k(X; \mathbb{Z} / 2^l) = 0$.
+  If $k$ is odd and $0 < k < n$, $0 \rightarrow \mathbb{Z} / 2 \otimes \mathbb{Z} / 2^l \rightarrow H_k(X; \mathbb{Z} / 2^l) \rightarrow \Tor(H_{k - 1}(X), \mathbb{Z} / 2^l) \rightarrow 0$.
+  The $\Tor$ is 0 because if $k = 0$, $H_{k - 1}(X) = \mathbb{Z}$ and $H_{k - 1}(X) = 0$ otherwise.
+  Thus $H_k(X; \mathbb{Z} / 2^l) = \mathbb{Z} / 2 \otimes \mathbb{Z} / 2^l = \mathbb{Z} / 2$.
+  In any other cases, the universal coefficient theorem gives the SES $0 \rightarrow 0 \rightarrow H_n(X; G) \rightarrow 0 \rightarrow 0$.
   This agrees with the results above.
 \end{exer}
+
 
 \begin{exer}{(Exercise 1(b))}
   As discussed in Example 2.37, $H_2(N_g; \mathbb{Z}) = 0, H_1(N_g; \mathbb{Z}) = \mathbb{Z}^{g - 1} \oplus \mathbb{Z}_2$, and $H_0(N_g; \mathbb{Z}) = \mathbb{Z}$.
