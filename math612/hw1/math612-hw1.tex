@@ -144,7 +144,24 @@
   If $G = \mathbb{Z} / p^l$ with $p \ne 2$ or $G = \mathbb{Q}$, then $H_2(X; G) = 0, H_1(X; G) = G^g / \ev{(1, \cdots, 1)} = G^{g - 1}$ and $H_0(X; G) = G$ because $2^{-1}$ exists.
   Suppose $G = \mathbb{Z} / 2^l$.
   Then $H_2(X; G) = \mathbb{Z} / 2$ because the kernel is an index-2 subgroup.
-  $H_1(X; G) = G^g / \ev{(2a, \cdots, 2a)} = G^g \otimes \mathbb{Z} / 2^{l - 1}$, and $H_0(X; G) = G$.
+  $H_1(X; G) = G^g / \ev{(2a, \cdots, 2a)} = G^{g - 1} \otimes \mathbb{Z} / 2$, and $H_0(X; G) = G$.
+
+  We will verify the results using the universal coefficient theorem.
+
+  Suppose $G = \mathbb{Q}$.
+  Then $\Tor(H_{n - 1}(C), G) = 0$ for any $n$.
+  Thus $H_0(X; G) = \mathbb{Z} \otimes \mathbb{Q} = \mathbb{Q}$ and $H_1(X; G) = (\mathbb{Z}^{g - 1} \oplus \mathbb{Z}_2) \otimes \mathbb{Q} = (\mathbb{Z} \otimes \mathbb{Q})^{g - 1} \oplus (\mathbb{Z}_2 \otimes \mathbb{Q}) = \mathbb{Q}^{g - 1}$.
+
+  Suppose $G = \mathbb{Z} / p^l$ with $p \ne 2$.
+  When $n = 1$, $H_{n - 1}(C) = \mathbb{Z}$, so $\Tor(H_{n - 1}(C), G) = 0$.
+  Thus $H_1(C; G) = (\mathbb{Z}^{g - 1} \oplus \mathbb{Z}_2) \otimes \mathbb{Z} / p^l = (\mathbb{Z} / p^l)^{g - 1}$.
+  When $n = 2$, $H_n(C) = 0$ and $\Tor(H_{n - 1}(C), \mathbb{Z} / p^l) = 0$ because multiplication by $p^l$ does not kill any element in $\mathbb{Z}^{g - 1} \oplus \mathbb{Z} / 2$.
+
+  Suppose $G = \mathbb{Z} / 2^l$.
+  When $n = 1$, $\Tor(H_{n - 1}(C), G) = \Tor(\mathbb{Z}, G) = 0$.
+  Thus $H_n(C; G) = H_n(C) \otimes G = (\mathbb{Z} / 2^l)^{g - 1} \oplus \mathbb{Z} / 2$.
+  When $n = 2$, $H_n(C) = 0$ and $\Tor(H_{n - 1}(C), \mathbb{Z} / 2^l) = \ker((\mathbb{Z}^{g - 1} \oplus \mathbb{Z}_2) \xrightarrow{2^l} (\mathbb{Z}^{g - 1} \oplus \mathbb{Z}_2)) = \mathbb{Z} / 2$.
+  Thus $H_2(C; G) = \mathbb{Z} / 2$.
 \end{exer}
 
 \begin{exer}{(Exercise 1(c))}
