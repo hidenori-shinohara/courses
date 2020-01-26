@@ -141,8 +141,10 @@
   \end{align*}
 
   As discussed in Example 2.37, $d_2(1) = (2, 2, \cdots, 2)$ and $d_1 = 0$.
-  If $1 + 1 = 0$ in $G$, then $H_2(X; G) = H_0(X; G) = G$ and $H_1(X; G) = G^g$.
-  Otherwise, then $H_2(X; G) = 0, H_1(X; G) = G^{g - 1}$ and $H_0(X; G) = G$.
+  If $G = \mathbb{Z} / p^l$ with $p \ne 2$ or $G = \mathbb{Q}$, then $H_2(X; G) = 0, H_1(X; G) = G^g / \ev{(1, \cdots, 1)} = G^{g - 1}$ and $H_0(X; G) = G$ because $2^{-1}$ exists.
+  Suppose $G = \mathbb{Z} / 2^l$.
+  Then $H_2(X; G) = \mathbb{Z} / 2$ because the kernel is an index-2 subgroup.
+  $H_1(X; G) = G^g / \ev{(2a, \cdots, 2a)} = G^g \otimes \mathbb{Z} / 2^{l - 1}$, and $H_0(X; G) = G$.
 \end{exer}
 
 \begin{exer}{(Exercise 1(c))}
