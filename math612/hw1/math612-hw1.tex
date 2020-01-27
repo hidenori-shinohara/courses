@@ -184,9 +184,23 @@
       $H_1(X; \mathbb{Z}) = \mathbb{Z} / a\mathbb{Z}$.
       When $R = \mathbb{Z} / p^k$, we obtain $(\mathbb{Z} / p^k) / a(\mathbb{Z} / p^k) = \mathbb{Z} / \gcd(p^k, a)$.
   \end{itemize}
-  \todo[inline,caption={}]{
-    Use the UCT to verify the results.
-  }
+
+  We will use the universal coefficient theorem to verify the results.
+  \begin{itemize}
+    \item
+      When $R = \mathbb{Q}$, we have $H_k(X; R) \cong H_k(X) \otimes R$.
+      Thus $H_3(X; \mathbb{Q}) = \mathbb{Q}, H_2(X; \mathbb{Q}) = 0, H_1(X; \mathbb{Q}) = \mathbb{Z}/a\mathbb{Z} \otimes \mathbb{Q}$ because $m \otimes n = am \otimes n/a = 0$.
+    \item
+      When $R = \mathbb{Z} / p^k$, we have $H_i(X; \mathbb{Z} / p^k) \cong (H_i(X) \otimes \mathbb{Z} / p^k) \oplus \ker(H_{i - 1}(X) \xrightarrow{p^k} H_{i - 1}(X))$.
+      \begin{itemize}
+        \item
+          When $i = 3$, $\mathbb{Z} / p^k \oplus 0 = \mathbb{Z} / p^k$.
+        \item
+          When $i = 2$, $0 \oplus \ker(\mathbb{Z} / a\mathbb{Z} \xrightarrow{p^k} \mathbb{Z} / a\mathbb{Z}) = \mathbb{Z} / \gcd(a, p^k)\mathbb{Z}$.
+        \item
+          When $i = 1$, $(\mathbb{Z} / a\mathbb{Z} \otimes \mathbb{Z} / p^k\mathbb{Z}) \oplus 0 = \mathbb{Z} / \gcd(a, p^k)\mathbb{Z}$.
+      \end{itemize}
+  \end{itemize}
 \end{exer}
 
 \begin{exer}{(Exercise 3(a))}
