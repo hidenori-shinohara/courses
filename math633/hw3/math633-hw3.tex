@@ -1,0 +1,82 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{semantic}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 633 Homework 3}
+\author{Hidenori Shinohara}
+\maketitle
+
+\begin{exer}{(Problem 1)}
+  A simply connected space is clearly piecewise smooth simply connected.
+  Let $\Omega$ be piecewise smooth simply connected and $\gamma_1, \gamma_2: [0, 1] \rightarrow \Omega$ be two continuous curves with the same end points.
+  Since $\Omega$ is open, $\gamma_1(t)$ has an open ball around it that is contained in $\Omega$ for each $t \in [0, 1]$.
+  Since $[0, 1]$ is compact and $\gamma_1$ is continuous, $\gamma_1([0, 1])$ is compact.
+  Hence, there is a finite partition $0 = t_0 < t_1 < \cdots < t_{n - 1} < t_n = 1$ such that $\gamma_1([t_i, t_{i + 1}])$ is contained in an open ball $\subset \Omega$ for each $i$.
+  Then $\gamma_1$ is homotopic to the curve $\gamma_{1'}$ that consists of $n$ straight lines, $i$th of which is the line between $\gamma_1(t_i)$ and $\gamma_1(t_{i - 1})$ where $i = 1, \cdots, n$.
+  This can be shown by the ``straight-line" homotopy because $\gamma_1([t_{i - 1}, t_{i}])$ and the $i$th straight line are in an open ball contained in $\Omega$.
+
+  A similar argument can be applied to show that $\gamma_2$ is homotopic to a curve $\gamma_{2'}$ that consists of finitely many straight lines.
+  A curve consisting of finitely many straight lines is clearly piecewise smooth.
+
+  Therefore, $\gamma_1 \sim \gamma_{1'} \sim \gamma_{2'} \sim \gamma_2$.
+  Thus $\Omega$ is simply connected.
+\end{exer}
+
+\end{document}
+
+
