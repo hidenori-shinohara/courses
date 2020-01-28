@@ -47,6 +47,7 @@
 \DeclareMathOperator{\ord}{ord}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Int}{int}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -75,6 +76,24 @@
 
   Therefore, $\gamma_1 \sim \gamma_{1'} \sim \gamma_{2'} \sim \gamma_2$.
   Thus $\Omega$ is simply connected.
+\end{exer}
+
+\begin{exer}{(Problem 2)}
+  Define $T(x, y) = x + iy$.
+  \begin{align*}
+    \int_{S} fdz
+      &= \int_{0}^{1} f(t)dt + \int_{0}^{1} f(it)(it)'dt + \int_{0}^{1} f(1 + it)(1 + it)'dt + \int_{0}^{1} f(t + i)(t + i)'dt \\
+      &= \int_{0}^{1} f(t) + f(t + i)dt + i\int_{0}^{1} f(it) + f(1 + it) dt \\
+      &= \int_{0}^{1} f(T(x, 0)) + f(T(x, 1)) dx + i\int_{0}^{1} f(T(0, y)) + f(T(1, y)) dy \\
+      &= \int_{0}^{1} u(T(x, 0)) + u(T(x, 1)) dx + i\int_{0}^{1} u(T(0, y)) + u(T(1, y)) dy  \\
+      &\nbsp + i\int_{0}^{1} v(T(x, 0)) + v(T(x, 1)) dx - \int_{0}^{1} v(T(0, y)) + v(T(1, y)) dy \\
+      &= \int_{0}^{1} u(T(x, 0)) + u(T(x, 1)) dx - \int_{0}^{1} v(T(0, y)) + v(T(1, y)) dy \\
+      &\nbsp + i(\int_{0}^{1} u(T(0, y)) + u(T(1, y)) dy + \int_{0}^{1} v(T(x, 0)) + v(T(x, 1)) dx) \\
+      &= \int_{S} u \circ T dx + \int_{S} -v \circ T dy + i(\int_{S} v \circ T dx + \int_{S} u \circ T) \\
+      &= \int_{\Int S} -\frac{\partial v}{\partial x} - \frac{\partial u}{\partial y} + i(\int_{\Int S} \frac{\partial u}{\partial x} - \frac{\partial v}{\partial y}) \\
+      &= 0.
+  \end{align*}
+
 \end{exer}
 
 \begin{exer}{(Problem 4)}
