@@ -1,0 +1,79 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{semantic}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 602 Homework 2}
+\author{Hidenori Shinohara}
+\maketitle
+
+\begin{exer}{(Problem 1)}
+  We will assume that the problem meant to say ``$su$ with $s \in S \setminus \{ 0 \}$" because it would be trivial otherwise.
+  Choose $a_{n - 1}, \cdots, a_0 \in R$ such that $u^n + a_{n - 1}u^{n - 1} + \cdots + a_1u^1 + a_0 = 0$.
+  If $a_0 = 0$, then $u(u^{n - 1} + a_{n - 1}u^{n - 2} + \cdots + a_1) = 0$.
+  Since we are dealing with integral domains, this implies $u^{n - 1} + a_{n - 1}u^{n - 2} + \cdots + a_1 = 0$.
+  By repeating this process, we obtain a monic polynomial with coefficients in $R$ and a nonzero constant term that $u$ satisfies.
+
+  Therefore, we may assume $a_0 \ne 0$.
+  Then $u(a_1 + a_2u + \cdots + a_{n - 1}u^{n - 2} + u^{n - 1}) = -a_0 \in R$.
+  Since $a_0 \ne 0$, $a_1 + a_2u + \cdots + a_{n - 1}u^{n - 2} + u^{n - 1}$ is a nonzero element in $S$.
+  Hence, we showed that some multiple of $u$ lives in $R$.
+\end{exer}
+
+\end{document}
+
+
