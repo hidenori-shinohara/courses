@@ -62,14 +62,23 @@
 \author{Hidenori Shinohara}
 \maketitle
 
+\begin{lem}\label{integral}
+  Let $R \subset S$ be integral domains and suppose $S$ is integral over $R$.
+  Then for every $s \in S$, there exists a monic polynomial with coefficients in $R$ and a nonzero constant term that $s$ satisfies.
+\end{lem}
+
+\begin{proof}
+  Choose $a_{n - 1}, \cdots, a_0 \in R$ such that $s^n + a_{n - 1}s^{n - 1} + \cdots + a_1s^1 + a_0 = 0$.
+  If $a_0 = 0$, then $s(s^{n - 1} + a_{n - 1}s^{n - 2} + \cdots + a_1) = 0$.
+  Since we are dealing with integral domains, this implies $s^{n - 1} + a_{n - 1}s^{n - 2} + \cdots + a_1 = 0$.
+  By repeating this process, we obtain a monic polynomial with coefficients in $R$ and a nonzero constant term that $s$ satisfies.
+\end{proof}
+
 \begin{exer}{(Problem 1)}
   We will assume that the problem meant to say ``$su$ with $s \in S \setminus \{ 0 \}$" because it would be trivial otherwise.
-  Choose $a_{n - 1}, \cdots, a_0 \in R$ such that $u^n + a_{n - 1}u^{n - 1} + \cdots + a_1u^1 + a_0 = 0$.
-  If $a_0 = 0$, then $u(u^{n - 1} + a_{n - 1}u^{n - 2} + \cdots + a_1) = 0$.
-  Since we are dealing with integral domains, this implies $u^{n - 1} + a_{n - 1}u^{n - 2} + \cdots + a_1 = 0$.
-  By repeating this process, we obtain a monic polynomial with coefficients in $R$ and a nonzero constant term that $u$ satisfies.
+  Choose $a_{n - 1}, \cdots, a_0 \in R$ such that $u^n + a_{n - 1}u^{n - 1} + \cdots + a_1u^1 + a_0 = 0$ with $a_0 \ne 0$.
+  This is possible by Lemma \ref{integral} that we showed above.
 
-  Therefore, we may assume $a_0 \ne 0$.
   Then $u(a_1 + a_2u + \cdots + a_{n - 1}u^{n - 2} + u^{n - 1}) = -a_0 \in R$.
   Since $a_0 \ne 0$, $a_1 + a_2u + \cdots + a_{n - 1}u^{n - 2} + u^{n - 1}$ is a nonzero element in $S$.
   Hence, we showed that some multiple of $u$ lives in $R$.
@@ -115,6 +124,20 @@
   Without loss of generality, $x \in q$.
   Then $x \in R \cap q$.
   Thus $R \cap q$ is a prime ideal of $R$.
+\end{exer}
+
+\begin{exer}{(Problem 6)}
+  Suppose $R$ is a field.
+  Let $x \in S$ and $x \ne 0$.
+  By Lemma \ref{integral}, we can choose $a_{n - 1}, \cdots, a_0 \in R$ with $a_0 \ne 0$ such that $x^n + a_{n - 1}x^{n - 1} + \cdots + a_1x + a_0 = 0$.
+  This implies $x((x^{n - 1} + a_{n - 1}x^{n - 1} + \cdots + a_1) / -a_0) = 1$, so $x$ is a unit in $S$.
+
+  Suppose $S$ is a field.
+  Let $x \in R$ and $x \ne 0$.
+  Then $1 / x \in S$.
+  Thus $(1/x)^n + a_{n - 1}(1/x)^{n - 1} + \cdots + a_1(1/x) + a_0 = 0$ for some $a_{n - 1}, \cdots, a_0 \in R$ with $a_0 \ne 0$.
+  This implies $1 + x(a_{n - 1} + a_{n - 2}x + \cdots + a_1x^{n - 2} + a_0x^{n - 1}) = 0$, so $-(a_{n - 1} + a_{n - 2}x + \cdots + a_1x^{n - 2} + a_0x^{n - 1}) = 1 / x$.
+  Clearly, $a_{n - 1} + a_{n - 2}x + \cdots + a_1x^{n - 2} + a_0x^{n - 1} \in R$, so $1 / x \in R$, and thus $R$ is a field.
 \end{exer}
 
 \end{document}
