@@ -46,6 +46,7 @@
 \DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\ord}{ord}
 \DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\Gal}{Gal}
 
 \makeatletter
@@ -78,6 +79,32 @@
   Let $R = \mathbb{Z}$ and $S = 2\mathbb{Z}$.
   $R \setminus S$ is not even an ideal because $0 \notin R \setminus S$.
   Thus $R \setminus S$ is not a prime ideal.
+\end{exer}
+
+\begin{exer}{(Problem 3)}
+  \todo[inline,caption={}]{
+    Solve this!
+  }
+\end{exer}
+
+\begin{exer}{(Problem 4)}
+  Let $p \in \Spec(R)$ such that $I \subset p$.
+  Define $p / I = \{ x + I \mid x \in p \} \subset R / I$.
+  By the third isomorphism theorem of rings, $p / I$ is an ideal of $R / I$.
+  Let $x + I, y + I \in R / I$ and suppose $(x + I)(y + I) \in p / I$.
+  Then $xy + I = z + I$ for some $z \in p$.
+  Thus $xy - z \in I \subset p$ and $z \in p$.
+  Thus $xy \in p$, so $x \in p$ or $y \in p$.
+  This implies $x + I \in p / I$ or $y + I \in p / I$, so $p / I \in \Spec(R / I$.
+
+  On the other hand, let $A / I \subset \Spec(R / I)$ be given.
+  By the third isomorphism theorem of rings, every ideal of $R / I$ must be of the form $A / I$ where $A$ is an ideal of $R$ that contains $I$.
+  Let $x, y \in R$ and suppose $xy \in A$.
+  Then $xy + I \in A / I$, so $(x + I)(y + I) \in A / I$.
+  Without loss of generality, $x + I \in A / I$.
+  Then $x + I = a + I$ for some $a \in A$.
+  Thus $x - a \in I \subset A$ and $a \in A$, so $x \in A$.
+  Therefore, $A$ is a prime ideal of $R$ containing $I$.
 \end{exer}
 
 \end{document}
