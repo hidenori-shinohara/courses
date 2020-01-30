@@ -141,6 +141,19 @@
   Clearly, $a_{n - 1} + a_{n - 2}x + \cdots + a_1x^{n - 2} + a_0x^{n - 1} \in R$, so $1 / x \in R$, and thus $R$ is a field.
 \end{exer}
 
+\begin{exer}{(Problem 8)}
+  It is clear that $0, 1 \in \overline{R}$.
+  It suffices to show that $\overline{R}$ is closed under multiplication and addition.
+  Let $x, y \in \overline{R}$.
+  Then $R[x]$ is a finitely generated $R$-module because $x$ is integral over $R$ by Proposition 5.1 [Atiyah].
+  Since $y$ is integral over $R$, $y$ is integral over $R[x]$.
+  Thus $(R[x])[y]$ is a finitely generated $R[x]$-module.
+  Then $R[x, y] = (R[x])[y]$ is a finitely generated $R$-module.
+  In other words, $R[x, y]$ is a ring that is a finitely generated $R$-module.
+  Since $R[xy] \subset R[x, y]$ and $R[x + y] \subset R[x, y]$, $xy, x + y$ are integral over $R$ by Proposition 5.1 [Atiyah].
+  Therefore, $\overline{R}$ is a subring of $R$.
+\end{exer}
+
 \end{document}
 
 
