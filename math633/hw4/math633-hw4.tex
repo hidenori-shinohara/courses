@@ -65,15 +65,37 @@
 \section{Homework 4}
 
 \begin{exer}{(Problem 1)}
-  Show that if $f$ is entire and $\Re(f)$ is bounded above then $f$ is constant.
-\end{exer}
-
-\begin{proof}
   $\abs{\exp(f)} = \exp(\Re(f))$.
   Since $\Re(f)$ is bounded above, $\exp(f)$ is bounded.
   By Liouville's theorem, $\exp(f)$ is constant.
   Thus $f$ is constant because $f$ is continuous and $\exp(z) = \exp(w)$ if and only if $z - w = 2k\pi i$ for some $k \in \mathbb{Z}$.
-\end{proof}
+\end{exer}
+
+\begin{exer}{(Problem 2)}
+  Define
+  \begin{align*}
+    v(x, y) &= \int_{0}^{y} \frac{\partial u}{\partial x}(x, t) dt - \int_{0}^{x} \frac{\partial u}{\partial y}(t, 0) dt.
+  \end{align*}
+  This gives us:
+  \begin{align*}
+    v_x(x, y)
+      &= \int_{0}^{y} \frac{\partial^2 u}{\partial x^2}(x, t) dt - \frac{\partial u}{\partial y}(x, 0) \\
+      &= -\int_{0}^{y} \frac{\partial^2 u}{\partial t^2}(x, t) dt - \frac{\partial u}{\partial y}(x, 0) \\
+      &= -(\frac{\partial u}{\partial y}(x, y) - \frac{\partial u}{\partial y}(x, 0)) - \frac{\partial u}{\partial y}(x, 0) \\
+      &= -\frac{\partial u}{\partial y}(x, y) \\
+      &= -u_y(x, y). \\
+    v_y(x, y)
+      &= \frac{\partial u}{\partial x}(x, y) - \int_0^x \frac{\partial^2 u}{\partial y^2}(t, 0) dt \\
+      &= \frac{\partial u}{\partial x}(x, y) + \int_0^x \frac{\partial^2 u}{\partial x^2}(t, 0) dt \\
+      &= \frac{\partial u}{\partial x}(x, y) + \frac{\partial u}{\partial x}(x, 0) - \frac{\partial u}{\partial x}(x, 0) \\
+      &= \frac{\partial u}{\partial x}(x, y) \\
+      &= u_x(x, y).
+  \end{align*}
+  By Theorem 2.4, $u + iv$ is holomorphic on $D$.
+  Given two $v_1, v_2:D \rightarrow \mathbb{R}$ satisfying such properties, $(u + v_1i) - (u + v_2i)$ is a holomorphic function whose real value is always 0.
+  By the Cauchy-Riemann equation, the derivative of $i(v_1 - v_2)$ must be 0.
+  In other words, $v_1 - v_2$ must be constant.
+\end{exer}
 
 
 \end{document}
