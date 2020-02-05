@@ -47,7 +47,6 @@
 \DeclareMathOperator{\ord}{ord}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Gal}{Gal}
-\DeclareMathOperator{\Re}{Re}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -95,6 +94,57 @@
   Given two $v_1, v_2:D \rightarrow \mathbb{R}$ satisfying such properties, $(u + v_1i) - (u + v_2i)$ is a holomorphic function whose real value is always 0.
   By the Cauchy-Riemann equation, the derivative of $i(v_1 - v_2)$ must be 0.
   In other words, $v_1 - v_2$ must be constant.
+\end{exer}
+
+\begin{exer}{(Problem 3)}
+  Let $\gamma_1, \gamma_2, \gamma_3, \gamma_4$ be defined such that
+  \begin{itemize}
+    \item
+      $\gamma_1(t) = (-1/R)t - R(1 - t)$.
+    \item
+      $\gamma_2(t) = -e^{-\pi i t}/R$.
+    \item
+      $\gamma_3(t) = Rt - (1 - t) / R$.
+    \item
+      $\gamma_4(t) = Re^{\pi it}$.
+  \end{itemize}
+  Then the 4 curves form a piecewise smooth closed contractible curve $\gamma$.
+  Since $\exp(iz) / z$ has no singularity inside $\gamma$, $\int_{\gamma} \exp(iz) / z dz = 0$.
+  We will integrate $\exp(iz) / z$ over $\gamma_i$ for each $i = 1, \cdots, 4$.
+  \begin{itemize}
+    \item
+      \begin{align*}
+        \lim \int_{\gamma_1} \frac{e^{iz}}{z}
+          &= \lim \int_{-R}^{-1/R} \frac{\cos x + i\sin x}{x} dx. \\
+      \end{align*}
+    \item
+      \begin{align*}
+        \lim \int_{\gamma_2} \frac{e^{iz}}{z}
+          &= \lim [\int \frac{1}{z} + i\int 1 + \frac{iz}{2!} + \frac{(iz)^2}{3!} + \cdots] \\
+      \end{align*}
+      $\int_{\gamma_2} \frac{1}{z} = \int_{0}^{1} \frac{\pi i e^{-\pi i t}}{-e^{-\pi i t}} dt = \pi i$.
+      The function $z \mapsto 1 + \frac{iz}{2!} + \frac{(iz)^2}{3!} + \cdots$ is entire, so it is bounded on the unit disk.
+      In other words, there exists a $B > 0$ such that $\forall \abs{z} < 1, \abs{1 + \frac{iz}{2!} + \frac{(iz)^2}{3!} + \cdots} < B$.
+      Then $\abs{\int 1 + \frac{iz}{2!} + \frac{(iz)^2}{3!} + \cdots} \leq \int\abs{1 + \frac{iz}{2!} + \frac{(iz)^2}{3!} + \cdots} < \int_{\gamma_2} B$.
+      As $R \rightarrow \infty$, $\int_{\gamma_2} B = 0$ as $B$ does not depend on $R$.
+      Therefore, $\lim \int_{\gamma_2} \frac{e^{iz}}{z} = \lim \int \frac{1}{z} = \pi i$.
+    \item
+      \begin{align*}
+        \lim \int_{\gamma_3} \frac{e^{iz}}{z}
+          &= \lim \int_{1/R}^{R} \frac{\cos x + i\sin x}{x} dx.
+      \end{align*}
+    \item
+      \begin{align*}
+        \abs{\int_{\gamma_4} \frac{e^{iz}}{z} dz}
+          &= \abs{\int_{0}^{1} \frac{e^{iRe^{\pi i t}}}{Re^{\pi i t}}R\pi i e^{\pi i t} dt } \\
+          &\leq \int_{0}^{1} \abs{\frac{e^{iRe^{\pi i t}}}{Re^{\pi i t}}R\pi i e^{\pi i t}} dt \\
+          &\leq \pi \int_{0}^{1} \frac{1}{e^{R\sin \pi t}} dt.
+      \end{align*}
+      First, $e^{R\sin \pi t}$ is symmetric around $t = 1/2$.
+      Moreover, $\sin \pi t \geq 2t \geq 0$ whenever $t \in [0, 1/2]$ because $2t$ is the straight line approximation of $\sin \pi t$ on $[0, 1 / 2]$.
+      Then $\pi \int_{0}^{1} \frac{1}{e^{R\sin \pi t}} dt = 2\pi \frac{e^{-2Rt}}{-2Rt}\big\vert^{1/2}_{0} = 0$ as $R \rightarrow \infty$.
+  \end{itemize}
+  Therefore, we obtain that $2i\int_{0}^{\infty} \frac{\sin x}{x} = \pi i$.
 \end{exer}
 
 
