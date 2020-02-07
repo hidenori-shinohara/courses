@@ -110,8 +110,8 @@
   turn into two chain complexes with a chain map
   \begin{center}
     \begin{tikzcd}[cells={nodes={minimum height=2em}}]
-      0 & \Hom(F_1, G)                              \arrow[l]& \Hom(F_0, G) \arrow[l,"f_1"]                              &  \Hom(H, G) \arrow[l,"f_0"]                             & 0 \arrow[l] \\
-      0 & \Hom(F_1, G) \arrow[u,"(\cdot n)^{\ast}"] \arrow[l]& \Hom(F_0, G) \arrow[l,"f_1"] \arrow[u,"(\cdot n)^{\ast}"] &  \Hom(H, G) \arrow[l,"f_0"] \arrow[u,"(\cdot n)^{\ast}"] & 0 \arrow[l].
+      0 & \Hom(F_1, G)                              \arrow[l]& \Hom(F_0, G) \arrow[l,"f_1^{\ast}"]                              &  \Hom(H, G) \arrow[l,"f_0^{\ast}"]                             & 0 \arrow[l] \\
+      0 & \Hom(F_1, G) \arrow[u,"(\cdot n)^{\ast}"] \arrow[l]& \Hom(F_0, G) \arrow[l,"f_1^{\ast}"] \arrow[u,"(\cdot n)^{\ast}"] &  \Hom(H, G) \arrow[l,"f_0^{\ast}"] \arrow[u,"(\cdot n)^{\ast}"] & 0 \arrow[l].
     \end{tikzcd}
   \end{center}
   This diagram commutes because a group homomorphism for abelian groups commute with multiplication by $n$.
@@ -123,6 +123,26 @@
   \end{align*}
   where $(\phi \circ (\cdot n))(x) = \phi(n(x)) = n(\phi(x)) = (n\phi)(x)$ for all $x \in F_1$.
   Therefore, the map induced by $(\cdot n)^{\ast}$ is simply multiplication by $n$.
+
+  \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+      0 & \Hom(F_1, G) \arrow[d,"(\cdot n)_{\ast}"] \arrow[l]& \Hom(F_0, G) \arrow[l,"f_1^{\ast}"] \arrow[d,"(\cdot n)_{\ast}"] &  \Hom(H, G) \arrow[l,"f_0^{\ast}"] \arrow[d,"(\cdot n)_{\ast}"] & 0 \arrow[l] \\
+      0 & \Hom(F_1, G)                              \arrow[l]& \Hom(F_0, G) \arrow[l,"f_1^{\ast}"]                              &  \Hom(H, G) \arrow[l,"f_0^{\ast}"]                             & 0 \arrow[l].
+    \end{tikzcd}
+  \end{center}
+  For every $\phi \in \Hom(H, G)$ and $x \in F_0$,
+
+  \begin{align*}
+    ((\cdot n)_{\ast}(f_0^{\ast}(\phi)))(x)
+      &= ((\cdot n)_{\ast}(\phi \circ f_0))(x) \\
+      &= n((\phi \circ f_0)(x)) \\
+      &= n(\phi(f_0(x))) \\
+      &= ((\cdot n)_{\ast}\phi)(f_0(x)) \\
+      &= f_0^{\ast}((\cdot n)_{\ast}\phi)(x).
+  \end{align*}
+
+  Similarly, $(\cdot n)_{\ast}$ commutes with $f_1^{\ast}$, so $(\cdot n)_{\ast}$ is a chain map.
+  For any $\phi + \im(f_1^{\ast}) \in \Ext(H, G)$, $(\cdot n)_{\ast}(\phi + \im(f_1^{\ast})) = n\phi + \im(f_1^{\ast})$, so it is multiplication by $n$.
 \end{exer}
 
 \end{document}
