@@ -49,6 +49,7 @@
 \DeclareMathOperator{\Gal}{Gal}
 \DeclareMathOperator{\Ext}{Ext}
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\im}{im}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -97,6 +98,31 @@
   \end{align*}
   Similarly, $f_{\ast}(f_1^{\ast}(\sigma)) = f_1^{\ast}(f_{\ast}(\sigma))$ for every $\sigma \in \Hom(F_0, G)$.
   Since a chain map induces a homomorphism on cohomology groups, $f$ induces a map from $\Ext(H, G) \rightarrow \Ext(H, G')$.
+\end{exer}
+
+\begin{exer}{(Exercise 1.2)}
+  \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+      0 \arrow[r] & F_1 \arrow[r,"f_1"] \arrow[d,"\cdot n"] &  F_0 \arrow[r,"f_0"] \arrow[d,"\cdot n"] &  H \arrow[r] \arrow[d,"\cdot n"] & 0 \\
+      0 \arrow[r] & F_1 \arrow[r,"f_1"]                     &  F_0 \arrow[r,"f_0"]                     &  H \arrow[r]                     & 0 \\
+    \end{tikzcd}
+  \end{center}
+  turn into two chain complexes with a chain map
+  \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+      0 & \Hom(F_1, G)                              \arrow[l]& \Hom(F_0, G) \arrow[l,"f_1"]                              &  \Hom(H, G) \arrow[l,"f_0"]                             & 0 \arrow[l] \\
+      0 & \Hom(F_1, G) \arrow[u,"(\cdot n)^{\ast}"] \arrow[l]& \Hom(F_0, G) \arrow[l,"f_1"] \arrow[u,"(\cdot n)^{\ast}"] &  \Hom(H, G) \arrow[l,"f_0"] \arrow[u,"(\cdot n)^{\ast}"] & 0 \arrow[l].
+    \end{tikzcd}
+  \end{center}
+  This diagram commutes because a group homomorphism for abelian groups commute with multiplication by $n$.
+  Therefore, $(\cdot n)^{\ast}$ induces a homomorphism on $\Ext(H, G) = \Hom(F_1, G) / \im(f_1^{\ast})$.
+  Moreover, $\forall \phi + \im(f_1^{\ast}) \in \Ext(H, G)$,
+  \begin{align*}
+    (\cdot n)^{\ast}(\phi + \im(f_1^{\ast}))
+      &= \phi \circ (\cdot n) + \im(f_1^{\ast})
+  \end{align*}
+  where $(\phi \circ (\cdot n))(x) = \phi(n(x)) = n(\phi(x)) = (n\phi)(x)$ for all $x \in F_1$.
+  Therefore, the map induced by $(\cdot n)^{\ast}$ is simply multiplication by $n$.
 \end{exer}
 
 \end{document}
