@@ -64,27 +64,36 @@
 \maketitle
 
 \begin{exer}{(Exercise 1)}
-  \todo[inline,caption={}]{
-    Work on the first part.
-  }
+  Fix $G$ and let $\alpha: H \rightarrow H'$ be given.
+  Let $0 \rightarrow F_1 \xrightarrow{f_1} F_0 \xrightarrow{f_0} H \rightarrow 0, 0 \rightarrow G_1 \xrightarrow{g_1} G_0 \xrightarrow{g_0} H \rightarrow 0$ be free resolutions.
+  By Lemma 3.1(a), we obtain two homomorphisms $\alpha_1: F_1 \rightarrow G_1, \alpha_0: F_0 \rightarrow G_0$ which commutes with $f_i, g_i, \alpha$.
+  Then we obtain two chain complexes
+
+  \begin{align*}
+    &0 \leftarrow \Hom(F_1, G) \xleftarrow{f_1^{\ast}} \Hom(F_0, G) \xleftarrow{f_0^{\ast}} \Hom(H, G) \leftarrow 0 \\
+    &0 \leftarrow \Hom(F_1, G') \xleftarrow{f_1^{\ast}} \Hom(F_0, G') \xleftarrow{f_0^{\ast}} \Hom(H, G') \leftarrow 0.
+  \end{align*}
+
+  with induced maps $\alpha_1^{\ast}, \alpha_0^{\ast}, \alpha^{\ast}$ forming a chain map from the chain complex on the bottom to the one on the top.
+  Then $\alpha_1^{\ast}$ induces a map from $\Ext(H', G) \rightarrow \Ext(H, G)$.
+
   Fix $H$ and let $f: G \rightarrow G'$ be given.
-  Let $0 \rightarrow F_1 \xrightarrow{f_1} F_0 \xrightarrow{f_2} H \rightarrow 0$ be a free resolution of $H$.
+  Let $0 \rightarrow F_1 \xrightarrow{f_1} F_0 \xrightarrow{f_0} H \rightarrow 0$ be a free resolution of $H$.
   We obtain two cochain complexes where $f_{\ast}$ is a chain map from the top one to the bottom one.
 
   \begin{align*}
-    &0 \leftarrow \Hom(F_1, G) \xleftarrow{f_1^{\ast}} \Hom(F_0, G) \xleftarrow{f_2^{\ast}} \Hom(H, G) \leftarrow 0 \\
-    &0 \leftarrow \Hom(F_1, G') \xleftarrow{f_1^{\ast}} \Hom(F_0, G') \xleftarrow{f_2^{\ast}} \Hom(H, G') \leftarrow 0.
+    &0 \leftarrow \Hom(F_1, G) \xleftarrow{f_1^{\ast}} \Hom(F_0, G) \xleftarrow{f_0^{\ast}} \Hom(H, G) \leftarrow 0 \\
+    &0 \leftarrow \Hom(F_1, G') \xleftarrow{f_1^{\ast}} \Hom(F_0, G') \xleftarrow{f_0^{\ast}} \Hom(H, G') \leftarrow 0.
   \end{align*}
 
-  $f_{\ast}$ indeed makes the diagram commute because
-  For any $\sigma \in \Hom(H, G)$,
+  $f_{\ast}$ indeed makes the diagram commute because for any $\sigma \in \Hom(H, G)$,
   \begin{align*} 
-    f_{\ast}(f_2^{\ast}(\sigma))
-      &= f_{\ast}(\sigma \circ f_2) \\
-      &= f \circ (\sigma \circ f_2) \\
-      &= (f \circ \sigma) \circ f_2 \\
-      &= f_2^{\ast}(f \circ \sigma) \\
-      &= f_2^{\ast}(f_{\ast}(\sigma)).
+    f_{\ast}(f_0^{\ast}(\sigma))
+      &= f_{\ast}(\sigma \circ f_0) \\
+      &= f \circ (\sigma \circ f_0) \\
+      &= (f \circ \sigma) \circ f_0 \\
+      &= f_0^{\ast}(f \circ \sigma) \\
+      &= f_0^{\ast}(f_{\ast}(\sigma)).
   \end{align*}
   Similarly, $f_{\ast}(f_1^{\ast}(\sigma)) = f_1^{\ast}(f_{\ast}(\sigma))$ for every $\sigma \in \Hom(F_0, G)$.
   Since a chain map induces a homomorphism on cohomology groups, $f$ induces a map from $\Ext(H, G) \rightarrow \Ext(H, G')$.
