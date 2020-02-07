@@ -155,7 +155,7 @@
 
 \begin{exer}{(Exercise 3.1.6(a))}
   The chain complex we obtain is isomorphic to $0 \rightarrow \mathbb{Z}^2 \xrightarrow{\alpha} \mathbb{Z}^3 \xrightarrow{0} \mathbb{Z} \rightarrow 0$ where $\alpha(a, b) = (a + b)(1, 1, -1)$.
-  Apply $\Hom(-, \mathbb{Z})$, and we obtain
+  If we apply $\Hom(-, \mathbb{Z})$, we obtain
   \begin{itemize}
     \item
       $H^0(T; \mathbb{Z}) = \Hom(\mathbb{Z}, \mathbb{Z}) = \mathbb{Z}$.
@@ -165,6 +165,17 @@
       $H^1(T; \mathbb{Z}) = \ker(\alpha^{\ast}) = \mathbb{Z} \oplus \mathbb{Z}$.
     \item
       $H^2(T; \mathbb{Z}) = \Hom(\mathbb{Z}^2, \mathbb{Z}) / \im(\alpha^{\ast}) = \mathbb{Z}$ because $(a, b) \mapsto a$ and $(a, b) \mapsto a + b$ form a basis for $\Hom(\mathbb{Z}^2, \mathbb{Z})$ and $\im(\alpha^{\ast})$ is spanned by $(a, b) \mapsto a + b$.
+  \end{itemize}
+  If we apply $\Hom(-, \mathbb{Z}_2)$, we obtain
+  \begin{itemize}
+    \item
+      $H^0(T; \mathbb{Z}_2) = \Hom(\mathbb{Z}_2, \mathbb{Z}_2) = \mathbb{Z}_2$.
+    \item
+      $\alpha^{\ast}(\phi) = 0$ if and only if $\phi(1, 1, 1) = 0$.
+      $(a, b, c) \mapsto a + b$ and $(a, b, c) \mapsto a + c$ form a basis for the subspace consisting of such homomorphisms.
+      $H^1(T; \mathbb{Z}_2) = \ker(\alpha^{\ast}) = \mathbb{Z}_2 \oplus \mathbb{Z}_2$.
+    \item
+      $H^2(T; \mathbb{Z}_2) = \Hom(\mathbb{Z}_2^2, \mathbb{Z}_2) / \im(\alpha^{\ast}) = \mathbb{Z}_2$ because $(a, b) \mapsto a$ and $(a, b) \mapsto a + b$ form a basis for $\Hom(\mathbb{Z}_2^2, \mathbb{Z}_2)$ and $\im(\alpha^{\ast})$ is spanned by $(a, b) \mapsto a + b$.
   \end{itemize}
 \end{exer}
 
