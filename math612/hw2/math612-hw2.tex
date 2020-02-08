@@ -207,7 +207,25 @@
     \item
       $H_2 = \ker(0) / \im(\alpha^{\ast}) = \ev{\pi_1, \pi_2} / \ev{\pi_1 + \pi_2, \pi_1 + \pi_2} = \ev{\pi_1} = \mathbb{Z}_2$.
   \end{itemize}
+\end{exer}
 
+\begin{exer}{(Exercise 3.1.6(b), klein bottle)}
+  The chain complex we obtain is $0 \rightarrow \mathbb{Z}^2 \xrightarrow{\alpha} \mathbb{Z}^3 \xrightarrow{0} \mathbb{Z} \rightarrow 0$ with $\alpha(a, b) = (a + b, a - b, b - a)$.
+  Again, we will use the projection map $\pi_i$ of the $i$th coordinate to form bases of the dual spaces.
+  $\ker 0^{\ast} = \mathbb{Z}, \im 0^{\ast} = 0$.
+  $\ker(\alpha^{\ast}) = \ev{\pi_2 + \pi_3}$ and $\im(\alpha^{\ast}) = \ev{\pi_1 + \pi_2, \pi_1 - \pi_2}$ because
+  \begin{align*}
+    (\alpha^{\ast}(\pi_i))(a, b) &= \begin{cases}
+      a + b & (i = 1) \\
+      a - b & (i = 2) \\
+      b - a & (i = 3).
+    \end{cases}
+  \end{align*}
+
+  Thus $H_0 =\mathbb{Z}$, $H_1 = \ev{\pi_2 + \pi_3} / 0 = \mathbb{Z}$ and $H_2 = \ev{\pi_1, \pi_2 \mid \pi_1 + \pi_2, \pi_1 - \pi_2} = \mathbb{Z} / 2$.
+  \todo[inline,caption={}]{
+    Confirm my answer.
+  }
 \end{exer}
 
 \end{document}
