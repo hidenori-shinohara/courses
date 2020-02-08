@@ -50,6 +50,7 @@
 \DeclareMathOperator{\Ext}{Ext}
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Tor}{Tor}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -63,6 +64,8 @@
 \title{Math 612 (Homework 2)}
 \author{Hidenori Shinohara}
 \maketitle
+
+\section{Section 3.1}
 
 \begin{exer}{(Exercise 1)}
   Fix $G$ and let $\alpha: H \rightarrow H'$ be given.
@@ -228,6 +231,42 @@
   $\ker(\alpha^{\ast}) = \ev{\pi_1 + \pi_2, \pi_1 + \pi_3}$ and $\im(\alpha^{\ast}) = \ev{\pi_1 + \pi_2}$.
 
   Thus $H_0 = \mathbb{Z}_2$, $H_1 = \ev{\pi_1 + \pi_2, \pi_1 + \pi_3} / 0 = \mathbb{Z}_2 \oplus \mathbb{Z}_2$ and $H_2 = \ev{\pi_1, \pi_2 \mid \pi_1 + \pi_2} = \mathbb{Z}_2$.
+\end{exer}
+
+\section{Section 3.A}
+
+\begin{exer}{(Exercise 1)}
+  If the characteristic of $F$ is infinity, the Tor functor becomes 0, so the UCT gives us an isomorphism $H_n(X; \mathbb{Z}) \otimes F \cong H_n(X; F)$.
+  Therefore, the rank of $H_n(X; \mathbb{Z})$ equals the dimension of $H_n(X; F)$.
+
+  Suppose the characteristic of $F$ is $p$.
+  By the UCT, $H_n(X; F) \cong (H_n(X; \mathbb{Z}) \otimes F) \oplus \Tor(H_{n - 1}(X; \mathbb{Z}); F)$.
+  Suppose $H_n(X; \mathbb{Z}) = \mathbb{Z}^d \oplus (\oplus_{i=1}^{n} \mathbb{Z}_{p_i^{k_i}})$ where $p_1 = \cdots = p_m = p$.
+
+  \begin{align*}
+    \Tor(\mathbb{Z}^d \oplus \mathbb{Z}_{p_1^{k_1}} \oplus \cdots \oplus \mathbb{Z}_{p_n^{k_n}}; F)
+      &= \oplus_{i=1}^{n} \Tor(\mathbb{Z}_{p_i^{k_i}}; F) \\
+      &= \oplus_{i=1}^{n} \ker(F \xrightarrow{p_i^{k_i}} F) \\
+      &= F^m.
+  \end{align*}
+
+  Also,
+  \begin{align*}
+    (\mathbb{Z}^d \oplus \mathbb{Z}_{p_1^{k_1}} \oplus \cdots \oplus \mathbb{Z}_{p_n^{k_n}}) \otimes F
+      &= (\mathbb{Z} \otimes F)^d \oplus (\mathbb{Z}_{p_1^{k_1}} \otimes F) \oplus \cdots \oplus (\mathbb{Z}_{p_n^{k_n}} \otimes F) \\
+      &= F^d \oplus (\oplus_{i=1}^{n} (\mathbb{Z}_{p_i^{k_i}} \otimes F)) \\
+      &= F^d \oplus (\oplus_{i=1}^{n} (F / p_i^{k_i}F)) \\
+      &= F^{d + m}.
+  \end{align*}
+
+  Therefore,
+  \begin{itemize}
+    \item
+      Each $\mathbb{Z}$ summand in $H_n(X; \mathbb{Z})$ ``adds" one to the dimension of $H_n(X; F)$.
+    \item
+      Each $\mathbb{Z} / p^{k_i}$ summand in $H_n(X; \mathbb{Z})$ ``adds" one to the dimension of $H_n(X; F)$ and adds one to the dimension of $H_{n + 1}(X; F)$.
+      This gets cancelled out when taking the sum to calculate the Euler characteristic.
+  \end{itemize}
 \end{exer}
 
 \end{document}
