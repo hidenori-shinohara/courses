@@ -139,6 +139,33 @@
   Therefore, $x - d_1y_1 - \cdots - d_my_m = i(c_1a_1 + \cdots + c_na_n) = c_1x_1 + \cdots + c_nx_n$, so $x = c_1x_1 + \cdots + c_nx_n + d_1y_1 + \cdots + d_my_m$.
 \end{exer}
 
+\begin{exer}{(Exercise 11)}
+  This statement is not true.
+  When $R = \mathbb{Z}$ and $I = (0)$, $I \otimes_{\mathbb{Z}} \mathbb{Q} = 0$.
+
+  However, the statement is true if $I \ne 0$.
+  Let $u \in I$ be a nonzero element.
+
+  Define $h: I \times K \rightarrow K$ by $(a, x / y) \mapsto ax / y$.
+  Let $f \in \Hom(I \times K, T)$ be given.
+
+  Define $g: K \rightarrow T$ by $x / y \mapsto f(u, x / uy)$.
+  Then 
+  \begin{align*}
+    (g \circ h)(a, x / y)
+      &= g(h(a, x / y)) \\
+      &= g(ax / y) \\
+      &= f(u, \frac{ax}{yu}) \\
+      &= af(u, \frac{x}{yu}) \\
+      &= f(au, \frac{x}{yu}) \\
+      &= uf(a, \frac{x}{yu}) \\
+      &= f(a, \frac{xu}{yu}) \\
+      &= f(a, x/y).
+  \end{align*}
+
+  Thus $f, g, h$ commute and thus $K \cong I \otimes K$.
+\end{exer}
+
 
 \end{document}
 
