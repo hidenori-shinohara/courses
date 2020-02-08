@@ -179,6 +179,37 @@
   \end{itemize}
 \end{exer}
 
+\begin{exer}{(Exercise 3.1.6(b), projective plane)}
+  We obtain a chain complex $0 \rightarrow \mathbb{Z}^2 \xrightarrow{\alpha} \mathbb{Z}^3 \xrightarrow{\beta} \mathbb{Z}^2 \rightarrow 0$ where $\alpha(a, b) = (b - a, a - b, a + b)$ and $\beta(a, b, c) = (a + b, -a - b)$.
+  By applying $\Hom(-, \mathbb{Z})$, we obtain a cochain complex.
+  Each $\Hom(\mathbb{Z}^k, \mathbb{Z})$ has a basis $\{ \pi_1, \pi_2, \cdots, \pi_k \}$ where $\pi_i$ is a projection on the $i$th coordinate.
+  Then $(\beta^{\ast}(\pi_1))(a, b, c) = a + b, (\beta^{\ast}(\pi_2))(a, b, c) = -a - b$.
+  Thus $\ker(\beta^{\ast}) = \ev{ \pi_1 + \pi_2 }$ and $\im(\beta^{\ast}) = \ev{\pi_1 + \pi_2}$.
+  The kernel and image of $\alpha$ can be calculated similarly.
+  \begin{itemize}
+    \item
+      $H^0 = \ker(\beta^{\ast}) = \mathbb{Z}$.
+    \item
+      $H^1 = \ker(\alpha^{\ast}) / \im(\beta^{\ast}) = \ev{\pi_1 + \pi_2} / \ev{\pi_1 + \pi_2} = 0$.
+    \item
+      $H_2 = \ker(0) / \im(\alpha^{\ast}) = \ev{\pi_1, \pi_2} / \ev{\pi_1 - \pi_2, \pi_1 - \pi_2} = \ev{\pi_1 + \pi_2, \pi_1 \mid \pi_1 + \pi_2, 2\pi_1} = \mathbb{Z}_2$.
+  \end{itemize}
+
+  Similarly, we apply $\Hom(-\mathbb{Z}_2)$.
+  Each $\Hom(\mathbb{Z}^k, \mathbb{Z}_2)$ has a basis $\{ \pi_1, \pi_2, \cdots, \pi_k \}$ where $\pi_i$ is a projection on the $i$th coordinate.
+  The calculation of the kernels and images are almost identical as above with the only exception $\ker(\alpha^{\ast})$.
+  This is because $\alpha^{\ast}(\pi_i) : (a, b) \mapsto a + b$ for each $i = 1, 2, 3$, so the kernel is $\ev{ \pi_1 + \pi_2, \pi_1 + \pi_3 }$.
+  \begin{itemize}
+    \item
+      $H^0 = \ker(\beta^{\ast}) = \ev{\pi_1 + \pi_2} = \mathbb{Z}_2$.
+    \item
+      $H^1 = \ker(\alpha^{\ast}) / \im(\beta^{\ast}) = \ev{\pi_1 + \pi_2, \pi_1 + \pi_3} / \ev{\pi_1 + \pi_2} = \mathbb{Z}_2$.
+    \item
+      $H_2 = \ker(0) / \im(\alpha^{\ast}) = \ev{\pi_1, \pi_2} / \ev{\pi_1 + \pi_2, \pi_1 + \pi_2} = \ev{\pi_1} = \mathbb{Z}_2$.
+  \end{itemize}
+
+\end{exer}
+
 \end{document}
 
 
