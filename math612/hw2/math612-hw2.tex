@@ -248,6 +248,7 @@
 \end{exer}
 
 \begin{exer}{(Exercise 3.1.8(b))}
+  Let $q$ be the quotient map $(X, A) \rightarrow (X / A, A / A)$.
   Let $V$ be a neighborhood of $A$ in $X$ that deformation retracts onto $A$.
   We have a commutative diagram
   \begin{center}
@@ -256,11 +257,13 @@
       H^n(X / A, A / A) \arrow[u,"q^{\ast}"] &  H^n(X / A, V / A) \arrow[l] \arrow[u,"q^{\ast}"] \arrow[r] &  H^n(X / A - A / A, V / A - A / A) \arrow[u,"q^{\ast}"].
     \end{tikzcd}
   \end{center}
-  The upper horo map is an isomorphism since in the long exact sequence of the triple $(X, V< A)$ the groups $H^n(V, A)$ are zero for all n, because a deformation retraction of $V$ onto $A$ gives a homotopy equivalence of pairs $(V, A) \simeq (A, A)$, and $H_n(A, A) = 0$.
+  The upper horizontal map is an isomorphism since in the long exact sequence of the triple $(X, V< A)$ the groups $H^n(V, A)$ are zero for all n, because a deformation retraction of $V$ onto $A$ gives a homotopy equivalence of pairs $(V, A) \simeq (A, A)$, and $H_n(A, A) = 0$.
   The deformation retraction of $V$ onto $A$ induces a deformation retraction of $V / A$ onto $A / A$, so the same argument shows that the lower left horizontal map is an isomorphism as well.
   The other two horizontal maps are isomorphisms directly from excision.
   The right-hand vertical map $q_{\ast}$ is an isomorphism since $q$ restricts to a homeomorphism on the complement of $A$.
   From the commutativity of the diagram, it follows that the left-hand $q_{\ast}$ is an isomorphism.
+  Since $A / A$ is a point, $H^n(X / A, A / A) \cong \tilde{H}^n(X / A)$.
+  Therefore, $H^n(X, A) \cong \tilde{H}^n(X / A)$.
 \end{exer}
 
 \section{Section 3.A}
