@@ -233,6 +233,15 @@
   Thus $H_0 = \mathbb{Z}_2$, $H_1 = \ev{\pi_1 + \pi_2, \pi_1 + \pi_3} / 0 = \mathbb{Z}_2 \oplus \mathbb{Z}_2$ and $H_2 = \ev{\pi_1, \pi_2 \mid \pi_1 + \pi_2} = \mathbb{Z}_2$.
 \end{exer}
 
+\begin{exer}{(Exercise 3.1.8(a))}
+  $S^0$ consists of two points, so $\tilde{H}^i(S^0; G) = G^2 / G = G$ if $i = 0$ and 0 otherwise because $\tilde{H}^0(S^0; G)$ is all functions module constant functions.
+  Suppose we have shown $\tilde{H}^i(S^k; G) = G$ if $i = k$ and 0 otherwise.
+  By the long exact sequence of a pair, we obtain $\tilde{H}^i(D^{k + 1}; G) \rightarrow \tilde{H}^i(S^k; G) \rightarrow \tilde{H}^{i + 1}(D^{k + 1}, S^k; G) \rightarrow \tilde{H}^{i + 1}(D^{k + 1}; G)$.
+  Since $D^{k + 1}$ is contractible, $\tilde{H}^i(D^{k + 1}; G) = 0$ for all $i$.
+  This induces an isomorphism $\tilde{H}^i(S^k; G) \cong \tilde{H}^{i + 1}(D^{k + 1}, S^k; G) = \tilde{H}^{i + 1}(S^{k + 1}; G) = G$.
+  Therefore, $H^k(S^0; G) = G^2$ and 0 if $k > 0$, and $H^k(S^n; G) = G$ if $k \in \{ 0, n \}$ and 0 otherwise.
+\end{exer}
+
 \section{Section 3.A}
 
 \begin{exer}{(Exercise 1)}
