@@ -239,6 +239,12 @@
   Since $D^{k + 1}$ is contractible, $\tilde{H}^i(D^{k + 1}; G) = 0$ for all $i$.
   This induces an isomorphism $\tilde{H}^i(S^k; G) \cong \tilde{H}^{i + 1}(D^{k + 1}, S^k; G) = \tilde{H}^{i + 1}(S^{k + 1}; G) = G$.
   Therefore, $H^k(S^0; G) = G^2$ and 0 if $k > 0$, and $H^k(S^n; G) = G$ if $k \in \{ 0, n \}$ and 0 otherwise.
+
+  The Mayer-Vietoris sequence gives $\tilde{H}^k(A; G) \oplus \tilde{H}^k(B; G) \rightarrow \tilde{H}^k(A \cap B; G) \rightarrow \tilde{H}^{k + 1}(S^n; G) \rightarrow \tilde{H}^{k + 1}(A; G) \oplus \tilde{H}^{k + 1}(B; G)$ where $A, B$ are the northern and southern hemispheres with some extra part so the union of the interiors equals $S^n$. 
+  Since $A$ and $B$ are contractible regardless of the value of $k$, $\tilde{H}^k(A; G) = \tilde{H}^k(B; G) = \tilde{H}^{k + 1}(A; G) = \tilde{H}^k(B; G) = 0$.
+  This gives us an isomorphism $\tilde{H}^k(A \cap B; G) \cong \tilde{H}^{k + 1}(S^n; G)$.
+  $A \cap B$ is homotopic to $S^n$.
+  By induction, $\tilde{H}^k(A \cap B; G) = G$ if $k = n$ and 0 otherwise.
 \end{exer}
 
 \section{Section 3.A}
@@ -287,6 +293,7 @@
   $\Tor(T(A), \mathbb{Q}) = T(A) \otimes \mathbb{Q} = 0$.
   Thus $\Tor(T(A), \mathbb{Q} / \mathbb{Z}) = T(A) \otimes \mathbb{Z} = T(A)$.
 \end{exer}
+
 
 \end{document}
 
