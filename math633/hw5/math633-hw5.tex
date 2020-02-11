@@ -67,8 +67,24 @@
 \end{exer}
 
 \begin{exer}{(Problem 2)}
-  \todo[inline,caption={}]{
-  }
+  The desired equation can be obtained by integrating $\frac{e^{iz}}{z^2 + a^2}$ over the closed curve $\gamma$ consisting of the interval $\gamma_1 = [-R, R]$ and the arc $\gamma_2 = Re^{\pi it}$ with $t \in [0, 1]$ as $R \rightarrow \infty$ and comparing the real part.
+  In the following calculation, we assume $R$ is sufficiently large.
+  \begin{align*}
+    \int_{\gamma} \frac{e^{iz}}{z^2 + a^2}
+      &= \int_{\gamma} \frac{(e^{iz})/(z + ia)}{z - ia} dz \\
+      &= 2\pi i\frac{e^{i(ia)}}{2ia} \\
+      &= \pi\frac{e^{-a}}{a}. \\
+    \int_{\gamma_1} \frac{e^{iz}}{z^2 + a^2}
+      &= \int_{-R}^{R} \frac{e^{ix}}{x^2 + a^2} dx \\
+      &= \int_{-R}^{R} \frac{\cos x}{x^2 + a^2} dx + i\int_{-R}^{R} \frac{\sin x}{x^2 + a^2} dy. \\
+    \abs{\int_{\gamma_2}\frac{e^{iz}}{z^2 + a^2} dz}
+      &\leq \int_{0}^{1}\frac{\abs{e^{i\gamma_2(t)}}}{\abs{Re^{2\pi it} + a^2}}\abs{\gamma_2'(t)} dz \\
+      &= R\int_{0}^{1} \frac{e^{-R\sin \pi t}}{\abs{Re^{2\pi it} + a^2}} dz \\
+      &\leq R\int_{0}^{1} \frac{e^{-R\sin \pi t}}{R / 2} dz \\
+      &= 2\int_{0}^{1} e^{-R\sin \pi t} dz \\
+      &= 2\frac{e^{-R\sin \pi t}}{-R \sin \pi} \Big{\vert}^1_0 \\
+      &= 0 & \text{(as $R \rightarrow \infty$)}.
+  \end{align*}
 \end{exer}
 
 \begin{exer}{(Problem 3)}
