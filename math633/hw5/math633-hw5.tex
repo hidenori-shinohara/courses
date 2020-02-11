@@ -1,0 +1,89 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{semantic}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 633 (Homework 5)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\begin{exer}{(Problem 1)}
+  \todo[inline,caption={}]{
+  }
+\end{exer}
+
+\begin{exer}{(Problem 2)}
+  \todo[inline,caption={}]{
+  }
+\end{exer}
+
+\begin{exer}{(Problem 3)}
+  $p(z) = az + b$ with $a \ne 0$ are the only bijective polynomials.
+
+  By the fundamental theorem of algebra, every polynomial $p(z)$ with coefficients in $\mathbb{C}$ is of the form $a\prod_{i=1}^{n}(z - a_i)$ for $a \ne 0, a_1, \cdots, a_n \in \mathbb{C}$.
+  If $a_i \ne a_j$ for some $i, j$, then $p$ cannot be injective.
+  Thus any bijective polynomials must be of the form $a(z - b)^n$ for some $a \ne 0$ and $b \in \mathbb{C}$.
+  If $n \geq 2$, then $p(\omega + b) = a\omega^n = a$ where $\omega = e^{2\pi i j / n}$ where $j = 0, \cdots, n - 1$.
+  Thus $n = 1$ if the polynomial is injective.
+  In other words, any bijective polynomial must be linear.
+
+  On the other hand, it is clear that any non-constant linear function is bijective.
+\end{exer}
+
+\end{document}
+
+
