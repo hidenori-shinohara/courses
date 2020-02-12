@@ -47,6 +47,7 @@
 \DeclareMathOperator{\ord}{ord}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\im}{im}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -108,6 +109,15 @@
   \begin{enumerate}[label=(\alph*)]
     \item 
       False. $e^{2k\pi i} = 1$ for any $k \in \mathbb{Z}$.
+    \item
+      False. $\Omega = \mathbb{C}$, and define
+      \begin{align*}
+        f(z) &= \begin{cases}
+          iz & (\im(z) \geq 0) \\
+          i\overline{z} & (\im(z) \leq 0).
+        \end{cases}
+      \end{align*}
+      $\overline{z}$ is not holormophic by the Cauchy-Rienamm equation.
   \end{enumerate}
 \end{exer}
 
