@@ -90,6 +90,19 @@ $q_2 = 0$
 \begin{exer}{(Exercise 5)}
   \begin{itemize}
     \item
+      Induction on $n$.
+      When $n = 1$, the result is trivial.
+      Let $n = k + 1$ for some $k \in \mathbb{N}$.
+      Suppose that the result is not true for some ideal and $k + 1$ prime ideals.
+      Then we can pick $x_j \in I \setminus \cup_{i \ne j}  p_i$ for each $j$.
+      (If not, $I \subset p_i$ for some $i \ne j$ by the inductive hypothesis.)
+      Consider the element $x = x_1 \cdots x_k + x_{k + 1}$.
+      The element $x_1 \cdots x_k$ is in every $p_1, \cdots, p_k$, but $x_{k + 1}$ is not in any of $p_1, \cdots, p_k$ by construction.
+      Therefore, $x \notin p_1 \cup \cdots \cup p_k$.
+      Since $x \in I$, $x \in p_{k + 1}$.
+      However, this implies that $x_1 \cdots x_k \in p_{k + 1}$.
+      Since $p_{k + 1}$ is prime, $x_i \in p_{k + 1}$ for some $i = 1, \cdots, k$.
+      Contradiction.
     \item
       Suppose otherwise.
       Pick $x_j \in I_j \setminus p$ for each $j$.
