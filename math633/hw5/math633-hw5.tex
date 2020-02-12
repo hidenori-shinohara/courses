@@ -117,7 +117,15 @@
           i\overline{z} & (\im(z) \leq 0).
         \end{cases}
       \end{align*}
-      $\overline{z}$ is not holormophic by the Cauchy-Rienamm equation.
+      $\overline{z}$ is not holormophic by the Cauchy-Riemann equation.
+    \item
+      True.
+      \begin{align*}
+        \frac{\partial f}{\partial x} &= \int_{C_1(0)} \frac{g(w)}{(w - z)^2} dw \\
+        \frac{\partial f}{\partial y} &= i\int_{C_1(0)} \frac{g(w)}{(w - z)^2} dw.
+      \end{align*}
+      Thus this satisfies the Cauchy-Riemann equation.
+      Moreover, $f$ is continuous, so $f$ is holomorphic.
   \end{enumerate}
 \end{exer}
 
