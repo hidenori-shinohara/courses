@@ -1,5 +1,5 @@
 from sympy import *
-from sympy.abc import x, y
+from sympy.abc import x, y, z
 
 # Check if p2 divides p1.
 def isdivisible(p1, p2):
@@ -36,3 +36,15 @@ div2 = poly(x - y * y * y, order='lex')
 divisionAlgorithm(p, [div1, div2])
 print()
 divisionAlgorithm(p, [div2, div1])
+
+print("Computation!")
+print("problem 2")
+
+p = poly(4 * z * z * z + x * y * y + 3 * z, x, y, z, order='lex')
+print(latex(LT(p)))
+p = poly(4 * z * z * z + x * y * y + 3 * z, z, y, x, order='lex')
+print(latex(LT(p)))
+
+print("problem 3")
+print(groebner([x * y + y**2 - 1, x * y], z, y, x, order = 'grlex'))
+
