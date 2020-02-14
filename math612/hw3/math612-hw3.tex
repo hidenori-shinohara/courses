@@ -62,6 +62,32 @@
 \maketitle
 
 \begin{exer}{(3.1.11)}
+  Since $M(\mathbb{Z}_m, n)$ consists of $e^0, e^n, e^{n + 1}$, we obtain
+  \begin{align*}
+    \tilde{H}_i(X) &= \begin{cases}
+      \mathbb{Z} / m\mathbb{Z} & (i = n) \\
+      0 & (i \ne n).
+    \end{cases}
+  \end{align*}
+
+  From previous homework,
+  \begin{align*}
+    \tilde{H}_i(X / S^n) = \tilde{H}_i(S^{n + 1}) &= \begin{cases}
+      \mathbb{Z} & (i = n + 1) \\
+      0 & (i \ne n + 1).
+    \end{cases}
+  \end{align*}
+
+  Thus the map on $\tilde{H}_i(-; \mathbb{Z})$ is the zero map for each $i$.
+  On the other hand, the long exact sequence of a pair gives us $\tilde{H}^{n + 1}(X, S^n; \mathbb{Z}) \xrightarrow{q^{\ast}} \tilde{H}^{n + 1}(X; \mathbb{Z}) \rightarrow \tilde{H}^{n + 1}(S^n; \mathbb{Z})$ where $\tilde{H}^{n + 1}(S^n; \mathbb{Z}) = 0$, so $q^{\ast}$ is surjective.
+  Therefore, it is nontrivial because $\tilde{H}^{n + 1}(X; \mathbb{Z}) \ne 0$.
+
+  \todo[inline,caption={}]{
+    Natural?
+  }
+
+  The long exact sequence of a pair gives us $\tilde{H}_n(S^n; \mathbb{Z}) \rightarrow \tilde{H}_n(X; \mathbb{Z}) \rightarrow \tilde{H}_n(X, S^n; \mathbb{Z}) = \tilde{H}_n(S^{n + 1}; \mathbb{Z}) = 0$ which implies the surjectivity of the induced map.
+  Since $\tilde{H}_n(X; \mathbb{Z}) \ne 0$, the induced map is nonzero.
 \end{exer}
 
 \begin{exer}{(3.1.13)}
