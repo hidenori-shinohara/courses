@@ -62,11 +62,15 @@
 \maketitle
 
 \begin{exer}{(3.1.11)}
-  Since $M(\mathbb{Z}_m, n)$ consists of $e^0, e^n, e^{n + 1}$, we obtain
+  Using the cellular homology, we obtain
   \begin{align*}
     \tilde{H}_i(X) &= \begin{cases}
       \mathbb{Z} / m\mathbb{Z} & (i = n) \\
       0 & (i \ne n).
+    \end{cases} \\
+    \tilde{H}^i(X) &= \begin{cases}
+      \mathbb{Z} / m\mathbb{Z} & (i = n + 1) \\
+      0 & (i \ne n + 1).
     \end{cases}
   \end{align*}
 
@@ -88,6 +92,8 @@
 
   The long exact sequence of a pair gives us $\tilde{H}_n(S^n; \mathbb{Z}) \rightarrow \tilde{H}_n(X; \mathbb{Z}) \rightarrow \tilde{H}_n(X, S^n; \mathbb{Z}) = \tilde{H}_n(S^{n + 1}; \mathbb{Z}) = 0$ which implies the surjectivity of the induced map.
   Since $\tilde{H}_n(X; \mathbb{Z}) \ne 0$, the induced map is nonzero.
+
+  The map induced on $\tilde{H}^i(-;\mathbb{Z})$ is the zero map for any $i$ because at least one of $\tilde{H}^i(S^n; \mathbb{Z})$ or $\tilde{H}^i(X; \mathbb{Z})$ is 0 for each $i$.
 \end{exer}
 
 \begin{exer}{(3.1.13)}
