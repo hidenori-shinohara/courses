@@ -1,0 +1,92 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{semantic}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 633 Midterm}
+\author{Hidenori Shinohara}
+\maketitle
+
+\begin{prop}[Goursat's Theorem]
+  If $\Omega$ is an open set in $\mathbb{C}$, and $T \subset \Omega$ is a triangle whose interior is also contained in $\Omega$, then
+  \begin{align*}
+    \int_{\gamma} f(z) dz = 0
+  \end{align*}
+  whenever $f$ is holomorphic in $\Omega$.
+\end{prop}
+
+\begin{proof}
+$ $
+  \begin{itemize}
+    \item
+      Let $T^0 = T$.
+      Having created $T^i$, create 4 triangles from $T^i$ as shown in the textbook with the natural orientation.
+      Then one of the 4 triangles, denoted by $T^{i + 1}$, must satisfy $\abs{\int_{T^i} f(z)dz} \leq 4\abs{\int_{T^{i + 1}} f(z)dz}$.
+      Since $\{ T_i \}$ is a sequence of nonempty compact sets whose diameter diminishes, there must exist a unique point $z_0$ that belongs to all $T^i$.
+    \item
+      Since $f$ is holomorphic at $z_0$, $f(z) = f(z_0) + f'(z_0)(z - z_0) + \psi(z)(z - z_0)$ where $\psi(z) \rightarrow 0$ as $z \rightarrow z_0$.
+    \item
+      Since $f(z_0) + f'(z_0)(z - z_0)$ has a primitive, $\int_{T^n} f(z)dz = \int_{T^n}\psi(z)(z - z_0)dz$ for any $n$.
+      $\abs{\int_{T^n}\psi(z)(z - z_0)dz} \leq \epsilon_ndp / 4^n$ where $\epsilon_n = \sup_{z \in T^n} \abs{\psi(z)}$, $d$ the diameter of $T$, and $p$ the perimeter of $T$.
+      $\epsilon_n \rightarrow 0$ as $n \rightarrow \infty$, so $\abs{\int_{T} f(z)dz} \leq \epsilon_ndp = 0$ as $n \rightarrow 0$.
+  \end{itemize}
+\end{proof}
+
+
+\end{document}
+
+
