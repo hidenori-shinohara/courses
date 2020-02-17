@@ -167,5 +167,19 @@ $ $
   Let $R \rightarrow \infty$.
 \end{proof}
 
+\begin{prop}[Corollary 4.6(The Fundamental Theorem of Algebra)]
+  Every non-constant polynomial $P(z) = a_nz^n + \cdots + a_0$ with complex coefficients has a root in $\mathbb{C}$.
+\end{prop}
+
+\begin{proof}
+  Proof by contradiction.
+  Consider $P(z) / z^n = a_n + (a_{n - 1} / z + \cdots + a_0 / z^n)$.
+  As $\abs{z} \rightarrow \infty$, the right side approaches $a_n \ne 0$.
+  Thus there exist $c > 0$ and $R > 0$ such that $\abs{P(z)} > c\abs{z}^n$ whenever $\abs{z} > R$.
+  In other words, $\abs{P(z)}$ is bounded below by a positive number when $\abs{z} > R$.
+  On the other hand, $1 / P$ is continuous and the disc $\abs{z} \leq R$ is compact, so $1 / P$ is bounded below on the disc.
+  By Liouville's theorem, $P(z)$ is constant.
+  Contradiction.
+\end{proof}
 
 \end{document}
