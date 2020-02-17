@@ -103,6 +103,41 @@ $ $
   }
 \end{proof}
 
+\begin{prop}[Theorem 5.1]
+  If $f$ is holomorphic in $\Omega$, then
+  \begin{align*}
+    \int_{\gamma_0} f(z)dz = \int_{\gamma_1}f(z) dz  
+  \end{align*}
+  whenever the two curves $\gamma_0$ and $\gamma_1$ are homotopic in $\Omega$.
+\end{prop}
+
+\begin{proof}
+  $ $
+  \begin{itemize}
+    \item
+      Let $F: (s, t) \mapsto \gamma_s(t)$ be a homotopy between $\gamma_0$ and $\gamma_1$.
+      Let $\epsilon > 0$ be chosen such that $B(F(s, t), 3\epsilon) \subset \Omega$ for all $s, t$.
+      Such an $\epsilon$ must exist because $F([0, 1]^2)$ is compact.
+    \item
+      Choose $\delta > 0$ such that $\sup_{t \in [0, 1]}\abs{\gamma_{s_1}(t) - \gamma_{s_2}(t)} < \epsilon}$ whenever $\abs{s_1 - s_2} < \delta$.
+      Such a $\delta$ must exist because $F$ is uniformly continuous.
+    \item
+      Pick $\abs{s_1 - s_2} < \delta$.
+      Choose discs $D_0, \cdots, D_n$ of radius $2\epsilon$ and points $\{ z_0, \cdots, z_{n + 1} \}$, $\{ w_0, \cdots, w_{n + 1} \}$ on $\gamma_{s_1}, \gamma_{s_2}$, respectively such that $z_i, z_{i + 1}, w_i, w_{i + 1} \in D_i$.
+      Let $F_i$ denote the primitive of $f$ on $D_i$.
+      Then $F_{i + 1}(z_{i + 1}) - F_i(w_{i + 1}) = F_{i + 1}(z_{i + 1}) - F_{i}(w_{i + 1})$.
+    \item
+      \begin{align*}
+        \int_{\gamma_{s_1}} f - \int_{\gamma_{s_2}} f
+          &= \sum_{i=0}^{n} [F_i(z_{i + 1}) - F_i(z_i)] - \sum_{i=0}^{n} [F_i(w_{i + 1}) - F_i(w_i)] \\
+          &= \sum_{i=0}^{n} [F_i(z_{i + 1}) - F_i(z_i) - F_i(w_{i + 1}) + F_i(w_i)] \\
+          &= F_n(z_{n + 1}) - F_n(w_{n + 1}) - (F_0(z_0) - F_0(w_0)) \\
+          &= 0.
+      \end{align*}
+  \end{itemize}
+\end{proof}
+
+
 \end{document}
 
 
