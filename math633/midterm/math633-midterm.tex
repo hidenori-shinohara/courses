@@ -137,6 +137,24 @@ $ $
   \end{itemize}
 \end{proof}
 
+\begin{prop}[Theorem 5.2]
+  Any holomorphic function in a simply connected domain has a primitive.
+\end{prop}
+
+\begin{proof}
+  $ $
+  \begin{itemize}
+    \item
+      Fix a point $z_0$ in $\Omega$ and define $F(z) = \int_{\gamma}f(w)dw$ where $\gamma$ is a path from $z_0$ to $z$.
+      Then $F(z + h) - F(z) = \int_{\eta} f(w)dw$ where $\eta$ is the path from $z$ to $z + h$.
+    \item
+      Since $f$ is continuous at $z$, $f(w) = f(z) + \psi(w)$ where $\psi(w) \rightarrow 0$ as $w \rightarrow z$.
+      Therefore, $F(z + h) - F(z) = f(z)\int_{\eta}dw + \int_{\eta} \psi(w)dw = f(z)h + \int_{\eta} \psi(w)dw$.
+      Since $\abs{(\int_{\eta} \psi(w) dw) / h} \leq \sup_{w \in \eta} \abs{\psi(w)} = 0$ as $h \rightarrow 0$.
+      Thus $\lim_{h \rightarrow 0} (F(z + h) - F(z)) / h = f(z)$.
+  \end{itemize}
+\end{proof}
+
 
 \end{document}
 
