@@ -182,4 +182,37 @@ $ $
   Contradiction.
 \end{proof}
 
+\section{Cauchy’s integral formula}
+
+\begin{prop}{Cauchy’s integral formula}
+  Suppose $f$ is holomorphic in an open set that contains the closure of a disc $D$.
+  If $C$ denotes the boundary circle of this disc with the positive orientation, then
+  \begin{align*}
+    f(z) = \frac{1}{2\pi i}\int_{C} \frac{f(\zeta)}{\zeta - z}d\zeta
+  \end{align*}
+  for any point $z \in D$.
+\end{prop}
+
+\begin{proof}
+  Consider the keyhole $\Gamma_{\delta, \epsilon}$ where $\delta$ denotes the width of the corridor and $\epsilon$ denotes the radius of the small circle. 
+  \begin{itemize}
+    \item
+      The whole integral: $\int_{\Gamma_{\delta, \epsilon}} F(\zeta)d\zeta = 0$ by Cauchy's theorem.
+    \item
+      Corridors: They cancel out.
+    \item
+      The small circle:
+      $F(\zeta) = \frac{f(\zeta) - f(z)}{\zeta - z} + \frac{f(z)}{\zeta - z}$ 
+      \begin{itemize}
+        \item
+          The first term on the right-hand side is bounded, so the integral over $C_{\epsilon}$ goes to 0 as $\epsilon \rightarrow 0$.
+        \item
+          $\int_{C_{\epsilon}} f(z) / (\zeta - z) d\zeta = f(z) \int_{0}^{2\pi} \epsilon ie^{-it}/(\epsilon e^{-it}) dt = -f(z)2\pi i$.
+      \end{itemize}
+    \item
+      The big circle:
+      This is just $\int_{C} f(\zeta) / (\zeta - z) d\zeta$.
+  \end{itemize}
+\end{proof}
+
 \end{document}
