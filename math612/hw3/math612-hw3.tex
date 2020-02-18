@@ -116,6 +116,19 @@
 \end{exer}
 
 \begin{exer}{(3.2.1)}
+  Suppose $X$ is the union of contractible open sets $A_1, \cdots, A_n$.
+  Since each $A_i$ is contractible, $H^k(X, A_i; R) = H^k(X; R)$ for all $k \geq 1$.
+
+  \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+      H^{k_1}(X, A_1; R) \times \cdots \times H^{k_n}(X, A_n; R) \arrow[r]      \arrow[d, "\cong"] &  H^{k_1 + \cdots + k_n}(X, A_1 \cup \cdots \cup A_n; R) \arrow[d] \\
+      H^{k_1}(X; R) \times \cdots \times H^{k_n}(X; R)           \arrow[r, "f"]                    &  H^{k_1 + \cdots + k_n}(X; R).
+    \end{tikzcd}
+  \end{center}
+
+  This diagram commutes by the naturality of a cup product.
+  $H^{k_1 + \cdots + k_n}(X, \bigcup_i A_i; R) = H^{k_1 + \cdots + k_n}(X, X; R) = 0$ for all $k + l \ge 1$.
+  By the commutativity of this diagram, the function $f$ must be 0.
 \end{exer}
 
 \begin{exer}{(3.2.2)}
