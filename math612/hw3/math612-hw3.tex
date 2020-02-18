@@ -48,6 +48,7 @@
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Gal}{Gal}
 \DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\RP}{\mathbb{R}P}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -77,7 +78,7 @@
 
   From previous homework,
   \begin{align*}
-    \tilde{H}_i(X / S^n) = \tilde{H}_i(S^{n + 1}) &= \begin{cases}
+    \tilde{H}^i(X / S^n) = \tilde{H}_i(S^{n + 1}) &= \begin{cases}
       \mathbb{Z} & (i = n + 1) \\
       0 & (i \ne n + 1).
     \end{cases}
@@ -116,6 +117,9 @@
 \end{exer}
 
 \begin{exer}{(3.2.1)}
+\end{exer}
+
+\begin{exer}{(3.2.2)}
   Suppose $X$ is the union of contractible open sets $A_1, \cdots, A_n$.
   Since each $A_i$ is contractible, $H^k(X, A_i; R) = H^k(X; R)$ for all $k \geq 1$.
 
@@ -131,10 +135,22 @@
   By the commutativity of this diagram, the function $f$ must be 0.
 \end{exer}
 
-\begin{exer}{(3.2.2)}
+\begin{exer}{(3.2.3(a))}
+  Suppose otherwise.
+  Let $f: \RP^n \rightarrow \RP^m$ be such a function.
+  Then $f$ induces a map on $f^{\ast}: H^{\ast}(\RP^m) \rightarrow H^{\ast}(\RP^n)$.
+  In other words, $f^{\ast}: \mathbb{Z}_m[\alpha]/(\alpha^{m + 1}) \rightarrow \mathbb{Z}_n[\beta]/(\beta^{n + 1})$ where $\alpha, \beta$ are generators of $H^1(\RP^m)$ and $H^1(\RP^n)$.
+  $H^1(\RP^m; \mathbb{Z}_2) = \mathbb{Z}_2 = \{ 0, \alpha \}$ and $H^1(\RP^n; \mathbb{Z}_2) = \mathbb{Z}_2 = \{ 0, \beta \}$.
+  Since $f$ induces a nontrivial map $H^1(\RP^m; \mathbb{Z}_2) \rightarrow H^1(\RP^n; \mathbb{Z}_2)$, $f^{\ast}(\alpha) = \beta$.
+  However, $f^{\ast}(0) = f^{\ast}(\alpha^{m + 1}) = (f^{\ast}(\alpha))^{m + 1} = \beta^{m + 1} \ne 0$ because $m < n$.
+  This is a contradiction, so such a function does not exist.
+
+  \todo[inline,caption={}]{
+    CP?
+  }
 \end{exer}
 
-\begin{exer}{(3.2.3)}
+\begin{exer}{(3.2.3(b))}
 \end{exer}
 
 \begin{exer}{(3.2.6)}
