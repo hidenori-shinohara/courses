@@ -156,6 +156,26 @@
 \end{exer}
 
 \begin{exer}{(3.2.7)}
+  Let $f:\RP^3 \rightarrow \RP^2 \vee S^3$ be a homotopy equivalence.
+  Then it induces isomorphisms.
+  \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+      H^1(\RP^3; \mathbb{Z}_2) \arrow[d, "f^{\ast}"] & \times & H^2(\RP^3; \mathbb{Z}_2) \arrow[r] \arrow[d, "f^{\ast}"] & H^3(\RP^3; \mathbb{Z}_2) \arrow[d, "f^{\ast}"] \\
+      H^1(\RP^2 \vee S^3; \mathbb{Z}_2)              & \times & H^2(\RP^2 \vee S^3; \mathbb{Z}_2) \arrow[r]              & H^3(\RP^2 \vee S^3; \mathbb{Z}_2).
+    \end{tikzcd}
+  \end{center}
+
+  The cohomology groups of a wedge sum is the direct sum of cohomology groups of the two spaces.
+  By rewriting the diagram above with generators, we obtain
+  \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+      \{ 0, \alpha \} \arrow[d, "f^{\ast}"] & \times & \{ 0, \alpha^2 \} \arrow[r] \arrow[d, "f^{\ast}"] & \{ 0, \alpha^3 \} \arrow[d, "f^{\ast}"]\\
+      \{ 0, \beta \} \oplus \{ 0, \gamma \} & \times & \{ 0, \beta^2 \} \oplus 0 \arrow[r]               & 0 \oplus \{ 0, \gamma^2 \}.
+    \end{tikzcd}
+  \end{center}
+  This implies $f^{\ast}$ sends $\alpha^2$ to $(\beta^2, 0)$ and $\alpha^3$ to $(0, \gamma^2)$.
+  However, this implies $(0, 0) = (f^{\ast}(\alpha^2))^3 = (f^{\ast}(\alpha^3))^2 = (0, \gamma^4) = (0, \gamma)$.
+  This is a contradiction because $0 \ne \gamma$.
 \end{exer}
 
 \end{document}
