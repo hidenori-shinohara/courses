@@ -47,6 +47,7 @@
 \DeclareMathOperator{\ord}{ord}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Ext}{Ext}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -89,6 +90,24 @@
   \todo[inline,caption={}]{
     Natural?
   }
+  \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+      0 \arrow[r] & \Ext(H_n(X); \mathbb{Z})     \arrow[r] \arrow[d] &  H^{n + 1}(X; \mathbb{Z})       \arrow[r] \arrow[d] &  \Hom(H_{n + 1}(X); \mathbb{Z}) \arrow[r] \arrow[d] & 0 \\
+      0 \arrow[r] & \Ext(H_n(X/S^n); \mathbb{Z}) \arrow[r]           &  H^{n + 1}(X / S^n; \mathbb{Z}) \arrow[r]           &  \Hom(H_{n + 1}(X / S^n); \mathbb{Z}) \arrow[r]    & 0
+    \end{tikzcd}
+  \end{center}
+
+  is
+
+  \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+      0 \arrow[r] & \mathbb{Z}_m \arrow[r] \arrow[d] &  \mathbb{Z}_m  \arrow[r] \arrow[d] &  0 \arrow[r] \arrow[d] & 0 \\
+      0 \arrow[r] & 0            \arrow[r]           &  \mathbb{Z}    \arrow[r]           &  \mathbb{Z} \arrow[r]  & 0.
+    \end{tikzcd}
+  \end{center}
+
+  This splitting is not natural because the middle term in the first sequence is isomorphic to $\mathbb{Z}_m \oplus 0$ and the second one is $0 \oplus \mathbb{Z}$.
+
 
   The long exact sequence of a pair gives us $\tilde{H}_n(S^n; \mathbb{Z}) \rightarrow \tilde{H}_n(X; \mathbb{Z}) \rightarrow \tilde{H}_n(X, S^n; \mathbb{Z}) = \tilde{H}_n(S^{n + 1}; \mathbb{Z}) = 0$ which implies the surjectivity of the induced map.
   Since $\tilde{H}_n(X; \mathbb{Z}) \ne 0$, the induced map is nonzero.
