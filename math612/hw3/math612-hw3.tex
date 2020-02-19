@@ -207,6 +207,20 @@
 \end{exer}
 
 \begin{exer}{(3.2.6)}
+  For simplicity, we will abuse a notation and let $g$ be the quotient of the map $(z_0, \cdots, z_n) \mapsto (z_0^d, \cdots, z_n^d)$ for any $n$.
+  We will first consider the case when $n = 1$.
+  Then $\mathbb{C}P^1$ is homeomorphic to $S^2$, so $g^{\ast}: H^2(\mathbb{C}P^1; \mathbb{Z}) \rightarrow H^2(\mathbb{C}P^1; \mathbb{Z})$ is simply multiplication by $d$ since $H^2(\mathbb{C}P^1; \mathbb{Z}) = \mathbb{Z}$.
+  Consider the inclusion $i: \mathbb{C}P^n \mapsto \mathbb{C}P^1$.
+  Then we obtain the following commutative diagram:
+  \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+      H^2(\mathbb{C}P^1; \mathbb{Z}) \arrow[r, "i^{\ast}"]                       & H^2(\mathbb{C}P^n; \mathbb{Z}) \\
+      H^2(\mathbb{C}P^1; \mathbb{Z}) \arrow[r, "i^{\ast}"] \arrow[u, "g^{\ast} = (\cdot d)"] & H^2(\mathbb{C}P^n; \mathbb{Z}) \arrow[u, "g^{\ast}"].
+    \end{tikzcd}
+  \end{center}
+  Let $\alpha$ denote a generator of $H^2(\mathbb{C}P^1; \mathbb{Z})$.
+  Then $i^{\ast}(g^{\ast}(\alpha)) = d\beta$ where $\beta = i^{\ast}(\alpha)$ is a generator of $H^2(\mathbb{C}P^n; \mathbb{Z})$ for $H^{\ast}(\mathbb{C}P^n; \mathbb{Z}) = \mathbb{Z}[\beta]/(\beta^{n + 1})$ with $\abs{\beta} = 2$.
+  Therefore, $g^{\ast}(\beta^k) = (g^{\ast}(\beta))^k = (d\beta)^k = d^k\beta^k$ for any $\beta^k \in H^{\ast}(\mathbb{C}P^n; \mathbb{Z})$.
 \end{exer}
 
 \begin{exer}{(3.2.7)}
