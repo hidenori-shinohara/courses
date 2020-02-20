@@ -48,6 +48,7 @@
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Gal}{Gal}
 \DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Spec}{Spec}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -71,6 +72,17 @@
   Then $a^n / s^n \in S^{-1}I$ for some $n \in \mathbb{N}$.
   Then $a^n \in I$, so $a \in \sqrt{I}$.
   Since $s \in S$, $a / s \in S^{-1}\sqrt{I}$.
+\end{exer}
+
+\begin{exer}{(2)}
+  Let $\{ V_{\alpha} \}$ be an open cover of $\Spec(R)$.
+  For each $\alpha$, $\Spec(R) \setminus V_{\alpha} = V(a_{\alpha})$ for some ideal $a_{\alpha}$ of $R$.
+  $\Spec(R) = \cup_{\alpha \in I} V_{\alpha} = U_{\alpha \in I} (\Spec(R) \setminus V(a_{\alpha})) = \Spec(R) \setminus V(\cup a_{\alpha}) = \Spec(R) \setminus V(\sum a_{\alpha})$.
+  In other words, $V(\sum a_{\alpha}) = \emptyset$.
+  Since every proper ideal is contained in a maximal ideal, $\sum a_{\alpha} = (1)$.
+  This implies $1 = x_{\alpha_1} + \cdots + x_{\alpha_n}$ for some $\alpha_1, \cdots, \alpha_n \in I$ and $x_{\alpha_i} \in a_{\alpha_i}$.
+  Then $\cup V_{\alpha_i} = \Spec(R) \setminus V(\cup a_{\alpha_i}) = \Spec(R) \setminus V(1) = \Spec(R)$.
+  Thus $\Spec(R)$ is indeed compact.
 \end{exer}
 
 \begin{exer}{(3)}
