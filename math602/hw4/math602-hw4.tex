@@ -47,6 +47,7 @@
 \DeclareMathOperator{\ord}{ord}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Ann}{Ann}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -76,6 +77,19 @@
   $(M:N)$ is nonempty.
   For any $a, b \in (M:N)$, $(a - b)N = aN + (-b)N = aN + bN \subset M$, so $a - b \in (M:N)$.
   Finally, for any $a \in (M:N), x \in R$, $(xa)N = a(xN) \subset aN \subset M$, $ax \in (M:N)$.
+\end{exer}
+
+\begin{exer}{(6b)}
+  $ $
+  \begin{align*}
+    a \in \Ann((M + N) / M)
+      &\iff a((M + N) / M) = 0 \\
+      &\iff \forall (m + n) + M \in (M + N) / M, a((m + n) + M) = 0 \\
+      &\iff \forall (m + n) + M \in (M + N) / M, am + an \in M \\
+      &\iff \forall n \in N, an \in M \\
+      &\iff aN \subset M \\
+      &\iff a \in (M:N).
+  \end{align*}
 \end{exer}
 
 \end{document}
