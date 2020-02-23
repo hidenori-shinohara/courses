@@ -1,0 +1,84 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{semantic}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 612(Homework 4)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\begin{exer}{(8)}
+  By using cellular cohomology, we obtain 
+  \begin{align*}
+    H^i(X; \mathbb{Z}) = H^i(Y; \mathbb{Z}) &= \begin{cases}
+      \mathbb{Z} & (i = 0, 4), \\
+      \mathbb{Z}_p & (i = 3),
+    \end{cases} \\
+    H^i(X; \mathbb{Z}_p) = H^i(Y; \mathbb{Z}_p) &= \begin{cases}
+      \mathbb{Z}_p & (i = 0, 2, 3, 4),
+    \end{cases} \\
+  \end{align*}
+  Therefore, we cannot distinguish $X$ from $Y$ by looking at the cohomology groups.
+  When using the coefficient $\mathbb{Z}$, cup products are simply 0 because nontrivial cohomology groups are of order 3 and 4.
+  Thus we cannot distinguish $X$ from $Y$ by looking at the cohomology rings of $X$ and $Y$.
+  Since $H^i(Y; \mathbb{Z}_p) = H^i(S^4; \mathbb{Z}_p) \oplus H^i(M(\mathbb{Z}_p, 2); \mathbb{Z}_p)$ and the cup product of elements from different ``components" in a wedge sum is 0, cup products in $H^{\ast}(Y; \mathbb{Z}_p)$ are all 0.
+  On the other hand, the cup product $\alpha \smile \alpha$ where $\alpha$ is a generator of $H^2(\mathbb{C}P^2; \mathbb{Z}_p)$ is nontrivial because $\alpha \smile \alpha$ is a generator of $H^4(\mathbb{C}P^2; \mathbb{Z}_p)$.
+\end{exer}
+
+\end{document}
+
+
