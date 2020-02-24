@@ -98,6 +98,27 @@
   }
 \end{exer}
 
+\begin{exer}{(10)}
+  Let $X = Y = \mathbb{Z}$ with the discrete topology.
+  Then the only nontrivial cohomology groups are $H^0(X; \mathbb{Z}) = H^0(Y; \mathbb{Z}) = \mathbb{Z}$.
+  Therefore, it suffices to check the cross product map $H^0(X; \mathbb{Z}) \otimes H^0(Y; \mathbb{Z}) \rightarrow H^0(X \times Y; \mathbb{Z})$.
+  Every element in $H^0(\mathbb{Z}; \mathbb{Z})$ simply represents a map $\mathbb{Z} \rightarrow \mathbb{Z}$.
+  Then for each $f \in H^0(X; \mathbb{Z}), g \in H^0(Y; \mathbb{Z})$, $f \times g: (a, b) \mapsto f(a)g(b)$.
+  We claim that this is not surjective.
+
+  Let $\delta$ be the map such that $\delta(i, j) = \delta_{i, j}$.
+  Then clearly, $\delta \in H^0(X \times Y; \mathbb{Z})$.
+  Suppose that there exists $\sum_{i=1}^{n} a^i \otimes b^i$ that gets mapped to $\delta$.
+  Let $a_i, b_i \in \mathbb{Z}^n$ (with subscripts instead of superscripts) denote the vectors $a_i = \ev{a^1(i), \cdots, a^n(i)}, b_i = \ev{b^1(i), \cdots, b^n(i)}$.
+  Then for each $i \in \mathbb{Z}$, the inner product $\ev{a_i, b_i} = \delta_{i, j}$.
+  We claim that the set $\{ a_i \mid i \in \mathbb{Z} \}$ is linearly independent over $\mathbb{R}$.
+  For simplicity, let $c_1, \cdots, c_m \in \mathbb{R}$ be given such that $\sum_{i=1}^{m} c_ia_i = 0$.
+  (In general, indices could be taken over any finite subset of $\mathbb{Z}$.)
+  This implies $\sum_{i=1}^{m} c_i\delta_{i, j} = 0$ by taking the inner product with $b_j$ for each $j$.
+  Therefore, we obtain a linearly independent set of infinitely many vectors in $\mathbb{R}^n$.
+  This is clearly impossible, so the cross product map cannot be surjective.
+\end{exer}
+
 
 \end{document}
 
