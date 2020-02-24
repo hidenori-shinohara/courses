@@ -47,6 +47,7 @@
 \DeclareMathOperator{\ord}{ord}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\RP}{\mathbb{R}P}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -78,6 +79,25 @@
   Since $H^i(Y; \mathbb{Z}_p) = H^i(S^4; \mathbb{Z}_p) \oplus H^i(M(\mathbb{Z}_p, 2); \mathbb{Z}_p)$ and the cup product of elements from different ``components" in a wedge sum is 0, cup products in $H^{\ast}(Y; \mathbb{Z}_p)$ are all 0.
   On the other hand, the cup product $\alpha \smile \alpha$ where $\alpha$ is a generator of $H^2(\mathbb{C}P^2; \mathbb{Z}_p)$ is nontrivial because $\alpha \smile \alpha$ is a generator of $H^4(\mathbb{C}P^2; \mathbb{Z}_p)$.
 \end{exer}
+
+\begin{exer}{(5)}
+  Consider the canonical map $\mathbb{Z}_{2k} \rightarrow \mathbb{Z}_2$.
+  It induces a chain map between the cellular chain complexes of $\RP^{\infty}$ over $\mathbb{Z}_{2k}$ and $\mathbb{Z}_2$.
+  Moreover, they induce homomorphisms $\phi: H^i(\RP^{\infty};\mathbb{Z}_{2}) \rightarrow H^i(\RP^{\infty};\mathbb{Z}_{2k})$.
+  By cellular cohomology, $H^0(\RP^{\infty}; \mathbb{Z}_{2k}) = \mathbb{Z}_{2k}$ and $H^i(\RP^{\infty}; \mathbb{Z}_{2k}) = \mathbb{Z}_2$ for $i \geq 1$.
+  Let $\gamma$ denote a generator of $H^1(\RP^{\infty};\mathbb{Z}_2)$.
+  Then $\phi(\gamma)$ must be a generator of $H^1(\RP^{\infty};\mathbb{Z}_{2k})$ because $\phi$ is induced by the map $1 \mapsto 1$.
+  Let $\alpha = \phi(\gamma)$.
+  $H^1(\RP^{\infty}; \mathbb{Z}_{2k}) = \mathbb{Z}_2$, so we obtain the relation $2\alpha$.
+
+  Let $\beta$ be a generator of $H^2(\RP^{\infty};\mathbb{Z}_{2k})$.
+  Since $H^2(\RP^{\infty};\mathbb{Z}_{2k}) = \mathbb{Z}_2$, we obtain the relation $2\beta$.
+  \todo[inline,caption={}]{
+    How do I obtain the relation $\alpha^2 - k\beta$?
+    More specifically, is $\phi: H^2 \rightarrow H^2$ an isomorphism or the zero map?
+  }
+\end{exer}
+
 
 \end{document}
 
