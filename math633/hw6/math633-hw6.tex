@@ -95,8 +95,21 @@
 \end{exer}
 
 \begin{exer}{(3)}
-  \todo[inline,caption={}]{
-  }
+  $f$ is entire, so it has a power series expansion $\sum a_nz^n$.
+  Then $f$ can be extended to a function on $\hat{\mathbb{C}}$ in a canonical way.
+
+  If $f$ has a removable singularity at $\infty$, then $f$ is bounded in a neighborhood $N$ containing $\infty$.
+  Then $N^c$ is a compact subset of $\mathbb{C}$, so $f$ is bounded on $N^c$.
+  Therefore, $f$ is bounded on $\mathbb{C}$, so $f$ is constant, which is a contradiction because $f$ must be bijective.
+
+  Suppose $f$ has an essential singularity at $\infty$.
+  Then $f(\hat{\mathbb{C}} \setminus D)$ is dense in $\mathbb{C}$ where $D$ is the unit disk.
+  This implies that $f(\hat{\mathbb{C}} \setminus D) \cap f(D) \ne \emptyset$, which contradicts the bijectivity of $f$.
+
+  Therefore, $f$ has a pole at $\infty$.
+  By Part (c) of Problem 2, $f$ is a mobius transformation.
+  $c = 0$ because $-d / c$ would be a pole otherwise.
+  Thus $f = (a / d)z + (b / d)$ with $a / d \ne 0$.
 \end{exer}
 
 \end{document}
