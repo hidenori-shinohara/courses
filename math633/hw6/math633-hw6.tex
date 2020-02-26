@@ -79,9 +79,19 @@
   Let $\phi: z \mapsto (az + b) / (cz + d)$ and $\psi: z \mapsto (-dz + b) / (cz - a)$.
   Then $\phi(\psi(z)) = z$ and $\psi(\phi(z)) = z$, and $(-d)(-a) - bc = ad - bc \ne 0$.
 
-  \todo[inline,caption={}]{
-    Finish the last part.
-  }
+  Let $f:\hat{\mathbb{C}} \rightarrow \hat{\mathbb{C}}$ be a bijective meromophism.
+  $f$ is actually just holomorphic because $f$ cannot have two poles since it is injective.
+  Let $g$ be a mobius transformation that sends $f(\infty)$ to $\infty$.
+  Then $g \circ f$ is a bijective map on $\hat{\mathbb{C}}$ into $\hat{\mathbb{C}}$.
+  Since $g \circ f$ sends $\infty$ to $\infty$, $g \circ f$ is a bijection on $\mathbb{C}$.
+  If $h = g \circ f$ is a polynomial, it must be linear by the previous homework.
+  Then $f = g^{-1} \circ h$ is a Mobius transformation.
+  Suppose $h = g \circ f$ is not a polynomial.
+  Then $(g \circ f)(\{ \abs{z} < 1 \})$ is open because $(g \circ f)$ is a continuous bijection.
+  $(g \circ f)(\{ \abs{z} > 1 \})$ is dense in $\mathbb{C}$ because $z \mapsto (g \circ f)(1 / z)$ has an essential singularity around $0$.
+  However, this implies there exist $\abs{z_1} > 1, \abs{z_2} < 1$ such that $(g \circ f)(z_1) = (g \circ f)(z_2)$.
+  This is a contradiction because $g \circ f$ is bijective.
+  Therefore, this case is not possible.
 \end{exer}
 
 \begin{exer}{(3)}
