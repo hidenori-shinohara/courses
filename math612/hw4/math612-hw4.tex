@@ -106,6 +106,23 @@
   }
 \end{exer}
 
+\begin{exer}{(9)}
+  The quotient map $\mathbb{Z} \rightarrow \mathbb{Z}_p$ induces a map $f: H^{\ast}(X) \rightarrow H^{\ast}(X; \mathbb{Z}_p)$.
+  Then we have a map $H^{\ast}(X) \times \mathbb{Z}_p \rightarrow H^{\ast}(X; \mathbb{Z}_p)$ defined by $(\alpha, a) \mapsto af(\alpha)$.
+  Since this is bilinear, we obtain a map $\phi: H^{\ast}(X) \otimes \mathbb{Z}_p \rightarrow H^{\ast}(X; \mathbb{Z}_p)$.
+  Suppose $\phi(\alpha \otimes a) = 0$.
+  Without loss of generality, we assume $a = 1$.
+  Then $f(\alpha)(\sigma) = 0$ for any $\sigma$.
+  In other words, $\alpha(\sigma) \in p\mathbb{Z}$ for any $\sigma$.
+  This implies the existence of $\beta \in H^{\ast}(X)$ such that $\alpha = p\beta$.
+  Then $\alpha \otimes 1 = \beta \otimes 0 = 0$.
+  Thus the kernel is 0, so $\phi$ is injective.
+
+  By the universal coefficient theorem, we obtain $H^k(X; \mathbb{Z}_p) \cong \Hom(H_k(X); \mathbb{Z}_p) \cong \coprod \mathbb{Z}_p$.
+  Similarly, $H^k(X) \cong \coprod \mathbb{Z}$.
+  Then $\phi$ is the ring homomorphism from $\coprod \mathbb{Z}$ to $\coprod \mathbb{Z}_p$ when restricted to each dimension, so it is surjective.
+\end{exer}
+
 \begin{exer}{(10)}
   Let $X = Y = \mathbb{Z}$ with the discrete topology.
   Then the only nontrivial cohomology groups are $H^0(X; \mathbb{Z}) = H^0(Y; \mathbb{Z}) = \mathbb{Z}$.
