@@ -82,28 +82,28 @@
 
 \begin{exer}{(5)}
   Consider the canonical map $\mathbb{Z}_{2k} \rightarrow \mathbb{Z}_2$.
-  It induces homomorphisms $\phi: H^i(\RP^{\infty};\mathbb{Z}_{2}) \rightarrow H^i(\RP^{\infty};\mathbb{Z}_{2k})$.
+  It induces homomorphisms $\phi: H^i(\RP^{\infty};\mathbb{Z}_{2k}) \rightarrow H^i(\RP^{\infty};\mathbb{Z}_{2})$.
   By cellular cohomology, $H^0(\RP^{\infty}; \mathbb{Z}_{2k}) = \mathbb{Z}_{2k}$ and $H^i(\RP^{\infty}; \mathbb{Z}_{2k}) = \mathbb{Z}_2$ for $i \geq 1$.
-  Let $\alpha$ denote a generator of $H^1(\RP^{\infty};\mathbb{Z}_{2k})$.
-  Then $\phi(\alpha)$ must be a generator of $H^1(\RP^{\infty};\mathbb{Z}_{2})$ because $\phi$ is induced by the map $\overline{1} \mapsto \overline{1}$.
-  Moreover, $H^1(\RP^{\infty}; \mathbb{Z}_{2k}) = \mathbb{Z}_2$, so we obtain the relation $2\alpha$.
+  Let $\alpha$ denote a generator of $H^1(\RP^{\infty};\mathbb{Z}_{2k})$, which equals the coset represented by $k$, and let $\beta$ denote a generator of $H^2(\RP^{\infty}; \mathbb{Z}_{2k})$, which equals the coset represented by $1$, and let $\gamma$ denote a generator of $H^1(\RP^{\infty}; \mathbb{Z}_2)$.
+  Then $2\alpha = 2\beta = 0$.
+  Then $\phi$ on the even dimensions are all isomorphisms because $1 \mapsto 1$.
 
-  Let $\beta$ be a generator of $H^2(\RP^{\infty};\mathbb{Z}_{2k})$.
-  Since $H^2(\RP^{\infty};\mathbb{Z}_{2k}) = \mathbb{Z}_2$, we obtain the relation $2\beta$.
-  $H^2(\RP^{\infty}; \mathbb{Z}_{2k}) = \{ \overline{0}, \overline{k} \}$, and $\beta$ corresponds to $\overline{k}$.
+  Suppose $k$ is even.
+  Then $\phi(\alpha) = 0$ because $k$ is even.
+  Moreover, $\phi(\alpha^2) = (\phi(\alpha))^2 = 0$.
+  Since $\phi$ is an isomorphism on the even dimensions, $\alpha^2 = 0$.
+  Thus $\alpha - k\beta = 0$.
 
-  \begin{itemize}
-    \item
-      If $k$ is even, $\phi$ sends $\beta$ which represents the coset $\overline{k}$ to 0 in $\mathbb{Z}_2$, so $\phi(\beta) = 0$.
-      \todo[inline,caption={}]{
-        Wait, isn't this kinda weird?
-        $\phi(\alpha^2) = \phi(\alpha)^2 = \gamma^2 \ne 0$, so $\phi$ cannot be the zero map.
-      }
-    \item
-      If $k$ is odd, $\phi$ sends $\overline{k}$ to $1$, so $\phi$ is an isomorphism between $H^2(\RP^{\infty}; \mathbb{Z}_{2k}) = \mathbb{Z}_2$ and $H^2(\RP^{\infty}; \mathbb{Z}_2) = \mathbb{Z}_2$.
-      Then $\phi(\alpha^2) = \phi(\alpha)^2 = \gamma^2$ and $\phi(\beta) = \gamma^2$, so $\alpha^2 = \beta$.
-      Since $2\beta = 0$, $\alpha^2 = \beta$ implies $\alpha^2 - k\beta = 0$.
-  \end{itemize}
+  Suppose $k$ is odd.
+  Then the $\phi$ are isomorphisms on the odd dimensions as well because $\overline{k} \mapsto 1$.
+  Then $\phi(\beta) = \gamma^2 = \phi(\alpha)^2$, so $\alpha^2 = \beta$.
+  Thus $\alpha - k\beta = 0$.
+
+  Therefore, we obtained the relations $2\alpha, 2\beta, \alpha^2 - k\beta$.
+
+  \todo[inline,caption={}]{
+    Show why these are all the relations.
+  }
 \end{exer}
 
 \begin{exer}{(10)}
