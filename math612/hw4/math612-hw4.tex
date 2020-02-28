@@ -114,9 +114,18 @@
   Then $\alpha \otimes 1 = \beta \otimes 0 = 0$.
   Thus the kernel is 0, so $\phi$ is injective.
 
-  \todo[inline,caption={}]{
-    Prove this!
-  }
+  Let $[\sigma] \in H^k(X; \mathbb{Z}_p)$.
+  Then $\partial\sigma = 0$.
+  Let $\tilde{\sigma}$ denote the lift of $\sigma$ in $C^k(X)$.
+  Since $\partial\sigma = 0$, $\partial\tilde{\sigma} \in C^k(X; p\mathbb{Z})$.
+  Then $(1/p)\partial\tilde{\sigma} \in C^k(X; \mathbb{Z})$.
+  Since $\partial^2 = 0$, $\partial (1/p)\partial\tilde{\sigma} = 0$.
+  Therefore, $(1/p)\partial\tilde{\sigma} \in H^{k + 1}(X)$ and $p((1/p)\partial\tilde{\sigma}) = 0$.
+  Since $H^{k + 1}(X)$ is free, $(1/p)\partial\tilde{\sigma}$ is a coboundary.
+  In other words, it equals $\partial \gamma$ for some $\gamma$.
+  Then we obtain $\partial(\tilde{\sigma} - p\gamma) = 0$.
+  Then $\tilde{\sigma} - p\gamma \in H^k(X)$ gets mapped to $[\sigma]$ under the induced map.
+  This proves the surjectivity.
 \end{exer}
 
 \begin{exer}{(10)}
@@ -160,6 +169,29 @@
 
 \begin{exer}{(15)}
   By the Kunneth formula, $\dim H^k(X \times Y; F) = \dim \sum_i H^i(X; F) \otimes H^{k - i}(Y; F) = \sum_i (\dim H^i(X; F))(\dim H^{k - i}(Y; F))$.
+  \begin{itemize}
+    \item
+      $S^n$ gives us $a_0 = a_n = 1$ and $a_i = 0$ for all other $i$ from previous homework.
+    \item
+      $a_0 = 1$ in every case.
+      We will consider the cellular chain complex
+      Suppose $F$ has no 2-torsion.
+      Then $a_n = 1$ if $n$ is odd and $a_n = 0$ if $n$ is even.
+
+      Suppose the characteristic of $F$ is 2.
+      Then $a_0 = \cdots = a_n = 1$ because the multiplication by 2 is the 0 map.
+    \item
+      $a_0 = 1$ in every case.
+      Suppose $F$ has no 2-torsion.
+      Then $a_i = 0$ for all $i \geq 1$.
+
+      Suppose the characteristic of $F$ is 2.
+      Then $a_i = 1$ for every $i$ because the multiplication by 2 is the 0 map.
+    \item
+      By Theorem 3.19 and the UCT, $a_{2k} = 1$ for each integer $k \leq n / 2$.
+    \item
+      By Theorem 3.19 and the UCT, $a_{2k} = 1$ for each $k$.
+  \end{itemize}
 \end{exer}
 
 
