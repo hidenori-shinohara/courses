@@ -140,6 +140,24 @@
   This is clearly impossible, so the cross product map cannot be surjective.
 \end{exer}
 
+\begin{exer}{(11)}
+  Let $f: S^{k + l} \rightarrow S^k \times S^l$.
+  By the Kunneth formula, $H^{\ast}(S^k \times S^l) \cong H^{\ast}(S^k) \otimes H^{\ast}(S^l)$.
+  Let $\alpha \in H^{\ast}(S^k \times S^l)$.
+  By the isomorphism, $\alpha$ corresponds to some $\beta \in H^k(S^k)$ and $\gamma \in H^l(S^l)$ where $\alpha = \beta \times \gamma$.
+  Then $f^{\ast}(\alpha) = f^{\ast}p_1^{\ast}\beta \smile f^{\ast}p_2^{\ast}\gamma$.
+  Since $H^k(S^{k + l}) = 0$, $f^{\ast}p_1^{\ast} = 0$.
+  Therefore, $f^{\ast}(\alpha) = 0$.
+  In other words, $f^{\ast}$ is the zero map.
+
+  Since each cohomology group of $S^{k + l}$ is free, the UCT implies $H^{k + l}(S^{k + l}) \cong \Hom(H_{k + l}(S^{k + l}), \mathbb{Z})$.
+  Similarly, $H^{k + l}(S^k \times S^l) \cong \Hom(H_{k + l}(S^k \times S^l), \mathbb{Z})$.
+
+  Then $f^{\ast}$ can be seen as a homomorphism from $\Hom(H_{k + l}(S^k \times S^l), \mathbb{Z})$ to $\Hom(H_{k + l}(S^{k + l}), \mathbb{Z})$.
+  In other words, $f^{\ast}$ and $f_{\ast}$ are the dual of each other.
+  Therefore, $f^{\ast} = 0$ implies $f_{\ast} = 0$.
+\end{exer}
+
 
 \end{document}
 
