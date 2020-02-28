@@ -159,6 +159,25 @@
 \end{exer}
 
 
+\begin{exer}{(18)}
+  As discussed in Example 3.7, $\alpha_i, \beta_i$ generated $H^1(M; \mathbb{Z})$.
+  Therefore, every element in $H^1(M; \mathbb{Z})$ can be expressed as $\sum a_i\alpha_i + \sum b_i\beta_i$.
+  If it is nonzero, at least one of $a_i$ or $b_i$ is nonzero.
+  If $a_i \ne 0$ for some $i$, multiplying $\beta_i$ gives us $a_i$.
+  If $b_i \ne 0$ for some $i$, multiplying $\alpha_i$ gives us $b_i$.
+  Thus for every $\alpha \in H^1(M; \mathbb{Z})$, there exists $\beta$ such that $\alpha\beta \ne 0$.
+
+  Suppose $M \simeq X \vee Y$.
+  $H^2(X; \mathbb{Z}) \otimes H^2(Y;\mathbb{Z}) = H^2(X \vee Y; \mathbb{Z}) = H^2(M; \mathbb{Z}) = \mathbb{Z}$.
+  Without loss of generality, $H^2(X; \mathbb{Z}) = \mathbb{Z}$ and $H^2(Y; \mathbb{Z}) = 0$.
+  If $H^1(Y; \mathbb{Z}) = 0$, then $\tilde{H}^0(Y; \mathbb{Z}) \ne 0$.
+  This implies that $Y$ has multiple path components, which contradicts $M \simeq X \vee Y$.
+  If $H^1(Y; \mathbb{Z}) \ne 0$, then let $\gamma$ denote a nonzero element in $H^1(Y; \mathbb{Z})$.
+  For any $\gamma' \in H^1(Y; \mathbb{Z})$, then $\gamma\gamma' \in H^2(Y; \mathbb{Z}) = 0$.
+  For any $\gamma' \in H^1(X; \mathbb{Z})$, then $\gamma\gamma' = 0$ because $\gamma$ and $\gamma'$ are from different ``components" of the wedge sum.
+  Therefore, $M$ cannot be homotopy equivalent to $X \vee Y$.
+\end{exer}
+
 \end{document}
 
 
