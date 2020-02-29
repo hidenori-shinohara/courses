@@ -124,6 +124,28 @@
   Therefore, $f^{-1}(q)$ is primary.
 \end{exer}
 
+\begin{exer}{(7)}
+  Since $\sqrt{I}$ is maximal, $I \ne R$.
+
+  Let $x + I, y + I \in A / I$ be two nonzero elements such that $(x + I)(y + I) = 0$.
+  In other words, $xy \in I$.
+  Since $I \subset \sqrt{I}$, $(x + \sqrt{I})(y + \sqrt{I}) = 0$.
+  Since $\sqrt{I}$ is maximal, $A / \sqrt{I}$ is a field.
+  Therefore, $x + \sqrt{I} = 0$ or $y + \sqrt{I} = 0$.
+  In other words, $x \in \sqrt{I}$ or $y \in \sqrt{I}$.
+  If $x \in \sqrt{I}$, then $x + I$ is nilpotent in $A + I$.
+  Suppose $x \notin \sqrt{I}$.
+  Since $\sqrt{I}$ is maximal, $(x) + \sqrt{I} = (1)$.
+  Therefore, $ax + b = 1$ for some $a \in R$ and $b \in \sqrt{I}$.
+  Since $b \in \sqrt{I}$, $b^n \in I$ for some $n \geq 1$.
+  Therefore $1 = ((ax + b) + I)^n = (ax + b)^n + I = xc + I$ for some element $c$ since $b^n + I = 0$.
+  However, this implies $0 = (x + I)(y + I)(c + I) = y + I$, which is a contradiction.
+  Therefore, $x + I$ must be nilpotent in $A + I$.
+  By symmetry, $y + I$ must be nilpotent in $A + I$.
+  
+  We have shown that every zero divisor in $A / I$ is nilpotent, which is precisely the definition of a primary ideal.
+\end{exer}
+
 \end{document}
 
 
