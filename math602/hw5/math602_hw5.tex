@@ -1,0 +1,113 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{semantic}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 602 (Homework 5)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\begin{exer}{(1)}
+  This can be proved using induction.
+  The base case $m = 1$ is trivial.
+  Suppose that the proposition has been shown for some $m \in \mathbb{N}$.
+  We will show the $(m + 1)$ case.
+  By the definition of a determinant,
+  \begin{align*}
+    \Delta = \sum_{k=1}^{m + 1} (-1)^{k + 1}\det(M_{k, 1})
+  \end{align*}
+  where $M_{k, 1}$ is the matrix obtained by deleting the $k$th row and 1st column.
+  We can apply the inductive hypothesis to each $M_{k, 1}$ because, for instance, when $k = 1$,
+  \begin{align*}
+    \det(M_{1, 1})
+      &= \det\begin{bmatrix}
+        \alpha_2 & \alpha_2^2 & \cdots & \alpha_2^m \\
+        & \ddots & \\
+        \alpha_{m + 1} & \alpha_{m + 1}^2 & \cdots & \alpha_{m + 1}^m
+        \end{bmatrix} \\
+      &= \alpha_2 \cdots \alpha_{m + 1}\det\begin{bmatrix}
+        1 & \alpha_2 & \alpha_2^2 & \cdots & \alpha_2^{m - 1} \\
+        & \ddots & \\
+        1 & \alpha_{m + 1} & \alpha_{m + 1}^2 & \cdots & \alpha_{m + 1}^{m - 1}
+        \end{bmatrix} \\
+      &= \alpha_2 \cdots \alpha_{m + 1}\prod_{2 \leq i < j \leq m} (\alpha_j - \alpha_i).
+  \end{align*}
+  A similar argument can be applied to other cases and we obtain
+  \begin{align*}
+    \Delta = \sum_{k=1}^{m + 1} (-1)^{k + 1}(\alpha_1 \cdots \hat{\alpha_k} \cdots \alpha_m)\prod_{i < j, i \ne k, j \ne k} (\alpha_j - \alpha_i).
+  \end{align*}
+  It can be observed that, for each $k = 1, \cdots, m + 1$, the $k$th term $(\alpha_1 \cdots \hat{\alpha_k} \cdots \alpha_m)\prod_{i < j, i \ne k, j \ne k} (\alpha_j - \alpha_i)$ does not contain any $\alpha_k$.
+  On the other hand, for any $l \ne k$, every term that we obtain when expanding the $l$th term contains $\alpha_k$.
+  Therefore, it suffices to show that, for each $k$, the sum of all the terms in $\prod_{1 \leq i < j \leq m + 1}(\alpha_j - \alpha_i)$ that do not contain $\alpha_k$ is equal to the $k$th term in the above expression.
+  \begin{align*}
+    \prod_{1 \leq i < j \leq m + 1} (\alpha_j - \alpha_i)
+      &= \prod_{k + 1 \leq j} (\alpha_j - \alpha_k)\prod_{j \leq k - 1} (\alpha_k - \alpha_j)\prod_{1 \leq i < j \leq m + 1, i \ne k, j \ne k}(\alpha_j - \alpha_i) \\
+      &= (-1)^{k - 1}\prod_{j \ne k} (\alpha_j - \alpha_k)\prod_{1 \leq i < j \leq m + 1, i \ne k, j \ne k}(\alpha_j - \alpha_i) \\
+      &= (-1)^{k - 1}(\alpha_1 \cdots \hat{\alpha_k} \cdots \alpha_{m + 1})\prod_{1 \leq i < j \leq m + 1, i \ne k, j \ne k}(\alpha_j - \alpha_i) + \alpha_kF(\alpha_1, \cdots, \alpha_{m + 1}) \\
+      &= (-1)^{k + 1}(\alpha_1 \cdots \hat{\alpha_k} \cdots \alpha_{m + 1})\prod_{1 \leq i < j \leq m + 1, i \ne k, j \ne k}(\alpha_j - \alpha_i) + \alpha_kF(\alpha_1, \cdots, \alpha_{m + 1})
+  \end{align*}
+  for some polynomial $F$.
+
+  $\Delta^2 \ne \prod_{i \ne j}(\alpha_j - \alpha_i)$ in general.
+  Let $\alpha_1 = 0, \alpha_2 = 1$.
+  Then $\det(A)^2 = \det\begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix}^2 = 1$.
+  On the other hand, $\prod_{i \ne j}(\alpha_j - \alpha_i) = (0 - 1)(1 - 0) = -1$.
+\end{exer}
+
+\end{document}
+
+
