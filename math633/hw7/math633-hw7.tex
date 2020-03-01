@@ -72,6 +72,18 @@
   }
 \end{exer}
 
+\begin{exer}{(10)}
+  Let $\sigma(z) = -i(z + 1) / (z - 1)$.
+  Then $\sigma$ sends the unit disk to the upper half-plane with $\infty$ since
+  $\sigma(a + bi) = (-2b - (a^2 + b^2 - 1)i) / ((a - 1)^2 + b^2)$.
+  On the other hand, $\sigma^{-1}: z \mapsto (z - i) / (z + i)$ sends the upper half plane with $\infty$ to the unit disk because $\abs{a + (b - 1)i} \leq \abs{a + (b + 1)i}$ if $b \geq 0$.
+  Therefore, $\sigma$ is a bijection between the unit disk and $H \cup \{ \infty \}$.
+  $F \circ \sigma$ sends the unit disk to the unit disk, and $F(\sigma(0)) = 0$.
+  By Lemma 2.1, $\abs{(F \circ \sigma)(w)} \leq \abs{w}$ for every $w \in D$.
+  Then for every $z \in \mathbb{H}$, $\sigma^{-1}(z) \in D$.
+  Then $\bs{F(z)} = \abs{(F \circ \sigma)(\sigma^{-1}(z))} \leq \abs{\sigma^{-1}(z)} = \abs{(z - i) / (z + i)}$, which is the desired result.
+\end{exer}
+
 \begin{exer}{(12(a))}
   Let $a \ne b$ be two fixed points.
   Let $\sigma(z) = (z - a) / (1 - \overline{a}z)$.
