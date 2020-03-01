@@ -146,6 +146,25 @@
   We have shown that every zero divisor in $A / I$ is nilpotent, which is precisely the definition of a primary ideal.
 \end{exer}
 
+\begin{exer}{(9)}
+  Let $x \in (q:b)$.
+  Then $xb \in q$.
+  Since $b \notin q$, $x^n \in q$ for some $n \geq 1$.
+  However, this implies $x \in p$.
+  Since $(q:b) \subset p$, $\sqrt{(q:b)} \subset \sqrt{p} = p$.
+  Clearly, $q \subset (q:b)$, so $p = \sqrt{q} \subset \sqrt{(q:b)}$.
+  Therefore, $p = \sqrt{(q:b)}$.
+
+  We will now show that $\sqrt{(q:b)}$ is primary.
+  Let $x, y$ be chosen such that $xy \in (q:b)$.
+  If $y^n \in (q:b)$ for some $n \geq 1$, we are done.
+  In other words, if $y \in \sqrt{(q:b)} = p$, then we are done.
+  Suppose otherwise.
+  Then $xyb \in q$, so $(xb)y \in q$.
+  This implies $xb \in q$ because $y \notin \sqrt{q}$.
+  This implies $x \in (q:b)$, and we are done.
+\end{exer}
+
 \end{document}
 
 
