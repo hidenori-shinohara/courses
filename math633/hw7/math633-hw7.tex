@@ -116,9 +116,33 @@
       -1 & i \\
       1 & i
     \end{bmatrix}
-    = \frac{1}{2} \begin{bmatrix} e^{i\theta} + 1 & -i(e^{i\theta} - 1) \\ i(e^{i\theta} - 1) & e^{i\theta} + 1 \end{bmatrix}
+    &= \frac{1}{2} \begin{bmatrix} e^{i\theta} + 1 & -i(e^{i\theta} - 1) \\ i(e^{i\theta} - 1) & e^{i\theta} + 1 \end{bmatrix} \\
+    &\rightarrow \frac{1}{2} \begin{bmatrix} 1 & -i(e^{i\theta} - 1) / (e^{i\theta} + 1) \\ i(e^{i\theta} - 1) / (e^{i\theta} + 1)  & 1 \end{bmatrix} \\
+    &\rightarrow \frac{1}{2} \begin{bmatrix} 1 & -i(i\tan(\theta / 2))  \\ i(i\tan(\theta / 2))  & 1 \end{bmatrix} \\
+    &\rightarrow \frac{1}{2} \begin{bmatrix} 1 & \tan(\theta / 2)  \\ -\tan(\theta / 2)  & 1 \end{bmatrix}.
   \end{align*}
   Thus the answer is the mobius transformation associated to the last matrix.
+\end{exer}
+
+\begin{exer}{(16(b))}
+  Let $\alpha = a + bi$.
+  \begin{align*}
+    \begin{bmatrix}
+      -1 & i \\
+      1 & i
+    \end{bmatrix}^{-1}
+    \begin{bmatrix}
+      -1 & \alpha \\
+      -\overline{\alpha} & 1 \\
+    \end{bmatrix}
+    \begin{bmatrix}
+      -1 & i \\
+      1 & i
+    \end{bmatrix}
+    &= \frac{1}{2} \begin{bmatrix} \overline{\alpha} - \alpha & -i(\alpha + \overline{\alpha} - 2) \\ -i(\alpha + \overline{\alpha} + 2) & \alpha - \overline{\alpha} \end{bmatrix} \\ 
+    &\rightarrow \begin{bmatrix} b & a - 1 \\ a + 1 & -b \end{bmatrix}.
+  \end{align*}
+  After multiplying $1 / (1 - a^2 - b^2)$ to every term, we obtain a matrix associated to the desired mobius transformation.
 \end{exer}
 
 \end{document}
