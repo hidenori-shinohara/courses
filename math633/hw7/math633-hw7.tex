@@ -145,6 +145,19 @@
   After multiplying $1 / (1 - a^2 - b^2)$ to every term, we obtain a matrix associated to the desired mobius transformation.
 \end{exer}
 
+\begin{exer}{(16(c))}
+  Let $\alpha = g(0)$.
+  Then $\psi_{\alpha}$ is an automorphism of the unit disk that sends $\alpha$ to 0.
+  Then $\psi_{\alpha} \circ g$ is an automorphism of the unit disk that fixes 0.
+  By applying Lemma 2.1 to $\psi_{\alpha} \circ g$ and its inverse, we obtain that $\abs{\psi_{\alpha} \circ g} \leq 1$ and $\abs{(\psi_{\alpha} \circ g)^{-1}} \leq 1$.
+  Thus $\abs{\psi_{\alpha} \circ g} = 1$.
+  Therefore, $\psi_{\alpha} \circ g$ is a rotation by Lemma 2.1.
+  By (a), $h = f^{-1} \circ \psi_{\alpha} \circ g \circ f$ is a Mobius transformation associated to a real matrix with determinant 1.
+  Then $f^{-1} \circ g \circ f = f^{-1} \circ \psi_{\alpha}^{-1} \circ f \circ h$.
+  By Part (b), $f^{-1} \circ \psi_{\alpha}^{-1} \circ f$ is a Mobius transformation associated to a real matrix with determinant 1 because $\psi_{\alpha}^{-1} = \psi_{\alpha}$.
+  Since the composition of two Mobius transformations corresponds to the product of the two associated matrices, the composition corresponds to a real matrix whose determinant is 1.
+\end{exer}
+
 \end{document}
 
 
