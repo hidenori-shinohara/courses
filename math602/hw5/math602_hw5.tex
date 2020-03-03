@@ -46,6 +46,7 @@
 \DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\ord}{ord}
 \DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\ann}{ann}
 \DeclareMathOperator{\Gal}{Gal}
 
 \makeatletter
@@ -183,6 +184,23 @@
   By symmetry, $y + I$ must be nilpotent in $A + I$.
   
   We have shown that every zero divisor in $A / I$ is nilpotent, which is precisely the definition of a primary ideal.
+\end{exer}
+
+\begin{exer}{(8)}
+  Let $F = \{ \ann(x) \mid 0 \ne x \in A \}$.
+  Since $A$ is Noetherian, $F$ has a maximal element.
+  We claim that every maximal element $\ann(x)$ in $F$ is a prime ideal.
+  Let $\ann(x)$ be a maximal element in $F$.
+  Suppose $ab \in \ann(x)$ and $b \notin \ann(x)$.
+  Since $\ann(x) \subset \ann(bx)$ and $\ann(x)$ is a maximal element, $\ann(x) = \ann(bx)$.
+  Since $ab \in \ann(x)$, $abx = 0$, so $a \in \ann(bx)$.
+  Therefore, $a \in \ann(x)$.
+
+  $a$ be a zero divisor of $A$.
+  Then $ay = 0$ for some $y \ne 0$ in $A / (0) = A$.
+  In other words, $a \in \ann(y) \in F$.
+  By the argument above, $a \in \ann(x)$ for some associated prime of $(0)$ containing $\ann(y)$.
+  The other direction is trivial from the definition of an associated prime.
 \end{exer}
 
 \begin{exer}{(9)}
