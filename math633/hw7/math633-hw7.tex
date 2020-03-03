@@ -81,7 +81,7 @@
   $F \circ \sigma$ sends the unit disk to the unit disk, and $F(\sigma(0)) = 0$.
   By Lemma 2.1, $\abs{(F \circ \sigma)(w)} \leq \abs{w}$ for every $w \in D$.
   Then for every $z \in \mathbb{H}$, $\sigma^{-1}(z) \in D$.
-  Then $\bs{F(z)} = \abs{(F \circ \sigma)(\sigma^{-1}(z))} \leq \abs{\sigma^{-1}(z)} = \abs{(z - i) / (z + i)}$, which is the desired result.
+  Then $\abs{F(z)} = \abs{(F \circ \sigma)(\sigma^{-1}(z))} \leq \abs{\sigma^{-1}(z)} = \abs{(z - i) / (z + i)}$, which is the desired result.
 \end{exer}
 
 \begin{exer}{(12(a))}
@@ -98,6 +98,27 @@
 \begin{exer}{(12(b))}
   The map $\sigma: z \mapsto (z - i) / (z + i)$ maps the upper half-plane to the unit disk bijectively.
   Then $\sigma \circ f \circ \sigma^{-1}$ where $f(z) = z + 1$ is a holomorphic bijection on $f$ that has no fixed point because $f$ has no fixed point.
+\end{exer}
+
+\begin{exer}{(16(a))}
+  The composition of mobius transformations corresponds to the multiplication of the corresponding matrices.
+  Thus it suffices to calculate
+  \begin{align*}
+    \begin{bmatrix}
+      -1 & i \\
+      1 & i
+    \end{bmatrix}^{-1}
+    \begin{bmatrix}
+      e^{i\theta} & 0 \\
+      0 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+      -1 & i \\
+      1 & i
+    \end{bmatrix}
+    = \frac{1}{2} \begin{bmatrix} e^{i\theta} + 1 & -i(e^{i\theta} - 1) \\ i(e^{i\theta} - 1) & e^{i\theta} + 1 \end{bmatrix}
+  \end{align*}
+  Thus the answer is the mobius transformation associated to the last matrix.
 \end{exer}
 
 \end{document}
