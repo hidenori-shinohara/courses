@@ -69,9 +69,20 @@
   By Proposition 1.1, $f' \ne 0$ on $U'$.
   In other words, $f'$ is nonzero on $U$.
 
-  \todo[inline,caption={}]{
-    The other direction
-  }
+  Suppose $f'(z) \ne 0$ for all $z \in U$.
+  Let $z_0 \in U$.
+  It suffices to show that $f$ is locally injective.
+  Choose sufficiently small $r > 0$ such that
+  \begin{itemize}
+    \item
+      $f'(z) \ne 0$ on $D_r(z_0)$.
+    \item
+      $f(z) \ne f(z_0)$ whenever $z \ne z_0$ and $\abs{z - z_0} \leq r$.
+  \end{itemize}
+  This is possible by Theorem 4.8 on P.52.
+  Let $m = \min\{ \abs{f(z) - f(z_0)} \mid \abs{z - z_0} = r \}$.
+  First, $m$ must exist because the set is compact, and $m > 0$ because we chose $r$ such that $f(z) \ne f(z_0)$ whenever $0 < \abs{z - z_0} \leq r$.
+  Actually, I don't think this solution will work...
 \end{exer}
 
 \begin{exer}{(10)}
