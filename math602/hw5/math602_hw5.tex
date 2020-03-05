@@ -109,6 +109,14 @@
   On the other hand, $\prod_{i \ne j}(\alpha_j - \alpha_i) = (0 - 1)(1 - 0) = -1$.
 \end{exer}
 
+\begin{exer}{(2(b))}
+  Since $L = K[\alpha]$, $1/\alpha = a_n\alpha^{n - 1} + \cdots + a_1\alpha^0$ with $a_n \ne 0$.
+  Thus $0 = a_n\alpha^n + \cdots + a_1\alpha^1 - 1$.
+  This implies $0 = a_n^n\alpha^n + \cdots + a_n^{n - 1}a_1\alpha^1 - a_n^{n - 1}$, so $0 = (a_n\alpha)^n + a_{n - 1}(a_n\alpha)^{n - 1} + \cdots + a_n^{n - 2}\alpha_1(a_n\alpha)^1 - a_n^{n - 1}$.
+  Therefore, $a_n\alpha$ satisfies a monic polynomial with coefficients in $A$, so $a_n\alpha$ is integral over $A$.
+  Moreover, $\alpha \in K[a_n\alpha]$, so $L = K[a_n\alpha]$.
+\end{exer}
+
 \begin{exer}{(3)}
   Let $x_1, \cdots, x_m$ be generators of $C$ as an $A$-algebra, and let $y_1, \cdots, y_n$ be generators of $C$ as a $B$-module.
   Since $y_1, \cdots, y_n$ generate $C$ as a $B$-module, every element in $C$ can be expressed as a linear combination of $y_i$'s over $B$.
