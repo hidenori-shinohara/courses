@@ -43,6 +43,7 @@
 
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\adj}{adj}
 \DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\ord}{ord}
 \DeclareMathOperator{\Aut}{Aut}
@@ -131,6 +132,14 @@
 \begin{exer}{(2(c))}
   Any $b \in B$ satisfies a monic polynomial with coefficients in $A$.
   $\sigma(b)$ satisfies the same monic polynomial since $\sigma$ fixes all the coefficients, so $\sigma(b) \in B$.
+\end{exer}
+
+\begin{exer}{(2(d))}
+  Let $A$ denote the Vandermonde matrix, $k$ denote the column vector with $k_i$'s and $\sigma$ denote the column vector with $\sigma_i(b)$.
+  Then $\det(A)k = \adj(A)Ak = \adj(A)\sigma$.
+  By part (b) and (c), $\det(A), \adj(A), \sigma$ all live in $B$.
+  Thus $\det(A)k_i$ lives in $B$.
+  Therefore, $\det(A)^2k_i \in B$.
 \end{exer}
 
 \begin{exer}{(3)}
