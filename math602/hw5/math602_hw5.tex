@@ -152,6 +152,17 @@
   \end{align*}
 \end{exer}
 
+\begin{exer}{(2(f))}
+  Let $f(x) = \prod_{\sigma \in G} (x - \sigma(\alpha))$.
+  Then $f$ is the minimal polynomial of $\alpha$.
+  Moreover, $f'(\alpha) = (\alpha - \sigma_1(\alpha)) \cdots (\alpha - \sigma_n(\alpha))$ because the $x - \alpha$ term gets killed.
+  By 2(e), we have $\Delta^2 = \prod_{\sigma} \sigma(\prod_{\tau \ne \sigma} (\alpha - \tau(\alpha))) = \prod_{\sigma} \sigma(f'(\alpha))$.
+  By separability, $f'(\alpha) \ne 0$.
+  Since $\sigma$ is an automorphism, $\sigma(f'(\alpha)) \ne 0$.
+  Therefore, $\Delta^2$ is the product of nonzero elements, so $\Delta^2 \ne 0$.
+  Moreover, $\Delta^2$ lives in $K$ because it is fixed by any element in $G$.
+\end{exer}
+
 \begin{exer}{(3)}
   Let $x_1, \cdots, x_m$ be generators of $C$ as an $A$-algebra, and let $y_1, \cdots, y_n$ be generators of $C$ as a $B$-module.
   Since $y_1, \cdots, y_n$ generate $C$ as a $B$-module, every element in $C$ can be expressed as a linear combination of $y_i$'s over $B$.
