@@ -239,6 +239,16 @@
   We will prove that there exists $n \in \mathbb{N}$ such that $N = \{ m \in M \mid x^nm \in N \} \cap (x^nM + N)$ since the given problem statement does not make much sense.
   One direction is obvious because for any $n \in \mathbb{N}$, $N \subset \{ m \in M \mid x^nm \in N \} \cap (x^nM + N)$.
   We will show the opposite direction.
+  Let $A_n = \{ m \in M \mid x^nm \in N \}$ for each $n$.
+  Then $A_1 \subset A_2 \subset \cdots$ is an ascending chain of ideals.
+  $R$ is Noetherian, so there exists $n \in \mathbb{N}$ after which the chain stabilizes.
+  Let $x^na + b \in A_n \cap (x^nM + N)$ where $a \in M$ and $b \in N$.
+  Then $x^n(x^na + b) \in N$.
+  Since $b \in N$, this implies $x^{2n}a \in N$.
+  In other words, $a \in A_{2n}$.
+  Since the chain stabilizes, $A_{2n} = A_n$.
+  Thus $a \in A_n$, thus $x^na \in N$.
+  Hence, $x^na + b \in N$.
 \end{exer}
 
 \end{document}
