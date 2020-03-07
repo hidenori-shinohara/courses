@@ -61,11 +61,40 @@
 \author{Hidenori Shinohara}
 \maketitle
 
-2.2 (p. 155): #7
+\begin{exer}{(2.2.7)}
+  Let $f(x_1, \cdots, x_n) = (-x_1, x_2, x_3, \cdots, x_n)$.
+  Then
+  \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+      \mathbb{R}^n \setminus \{ 0 \} \arrow[r, "f"] \arrow[d, "r"]   & \mathbb{R}^n \setminus \{ 0 \} \arrow[d, "r"] \\
+      S^{n - 1} \arrow[r, "\text{reflection}"] & S^{n - 1}
+    \end{tikzcd}
+  \end{center}
+  where $r$ is the obvious deformation retraction.
+  By (e) on P.134, the reflection map induces -1 on $H^{n - 1}(S^{n - 1})$.
+  By naturality, $f_{\ast}$ is -1.
 
-3.3 (p. 257): #1, 2, 3. (We will talk a lot about the concept of orientability in class the Monday after break, but feel to start reading up.
+  Similarly, let $f(x_1, \cdots, x_n) = (cx_1, x_2, x_3, \cdots, x_n)$ with $c > 0$.
+  Then
+  \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+      \mathbb{R}^n \setminus \{ 0 \} \arrow[r, "f"] \arrow[d, "r"]   & \mathbb{R}^n \setminus \{ 0 \} \arrow[d, "r"] \\
+      S^{n - 1} \arrow[r, "g"] & S^{n - 1}
+    \end{tikzcd}
+  \end{center}
+  where $r$ is the obvious deformation retraction.
+  Then $g$ is a function that is homotopy equivalent to the identity map on $S^{n - 1}$.
+  By (e) on P.134, $g$ induces the identity map on $H^{n - 1}(S^{n - 1})$.
+  By naturality, $f_{\ast}$ is 1.
 
-And also the following: Show that there exists a homeomorphism f: CP^n \to CP^n whose induced map on H^{2n}(CP^n;Z) is multiplication by -1 iff n is odd.
+  Using the exact same argument, $(x_1, \cdots, x_i, \cdots, x_j, \cdots, x_n) \mapsto (x_1, \cdots, x_j, \cdots, x_i, \cdots, x_n)$ induces -1 because a reflection is -1 and $(x_1, \cdots, x_i, \cdots, x_j, \cdots, x_n) \mapsto (x_1, \cdots, x_i, \cdots, x_j + x_i, \cdots, x_n)$ induces 1 because homotopy equivalent maps induce the same map.
+  Therefore, we have shown that elementary matrices induce 1 or -1 based on the sign of their determinants.
+  Any invertible linear operation can be written as a product of elementary matrices and since $(fg)_{\ast} = f_{\ast}g_{\ast}$ the given invertible linear operation induces 1 or -1 based on the sign of their determinants.
+\end{exer}
+
+3.3 (p. 257): 1, 2, 3. (We will talk a lot about the concept of orientability in class the Monday after break, but feel to start reading up.
+
+And also the following: Show that there exists a homeomorphism $f: CP^n \to CP^n$ whose induced map on $H^{2n}(CP^n;Z)$ is multiplication by -1 iff n is odd.
 
 
 \end{document}
