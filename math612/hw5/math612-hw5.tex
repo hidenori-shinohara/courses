@@ -92,6 +92,30 @@
   Any invertible linear operation can be written as a product of elementary matrices and since $(fg)_{\ast} = f_{\ast}g_{\ast}$ the given invertible linear operation induces 1 or -1 based on the sign of their determinants.
 \end{exer}
 
+\begin{exer}{(3.3.1)}
+  Let $A, B$ be two copies of $\mathbb{R}_{\geq 0}$.
+  Consider the space $X$ obtained from $A \cup B$ and the relation $a \sim b$ whenever $a = b = 0$ or $a = b > 1$.
+  Then such a space is clearly second countable and locally homeomorphic to $\mathbb{R}$.
+  For each point $x \in X$, $H_1(\mathbb{R}^1, \mathbb{R}^1 - \{ x \}) = H_0(S^0) = \{ [-1], [1] \}$ because $S^0$ consists of two points -1, 1.
+  Therefore, for every point $x \in X \setminus \{ 0 \}$, there are exactly two choices of generators, each of which corresponds to a number larger than $x$ or smaller than $x$, which we will refer to ``positive" and ``negative" for convenience.
+  Suppose $X$ is orientable.
+  \begin{figure}[!htb]
+  \includegraphics[width=.5\linewidth]{orientability.jpeg}
+  \caption{Orientability}
+  \label{fig:orientability}
+  \end{figure}
+  The 0.1 in the blue neighborhood which was originally in $A$ has an orientation that is either positive or negative.
+  Without loss of generality, it has the positive orientation.
+  This implies that 1 in $A$ has the positive orientation, which in turn implies that all numbers $> 1$ sufficiently close to 1 have the positive orientation.
+
+  Then the 0.1 in the blue neighborhood which was originally in $B$ has an orientation that is negative.
+  Therefore, the orientation at 1 which was originally in $A$ has the positive orientation, and 1 which was originally in $B$ has the negative orientation.
+  This implies that 1 in $B$ has the positive orientation, which in turn implies that all numbers $> 1$ sufficiently close to 1 have the negative orientation.
+
+  This is a contradiction, so $X$ is not orientable.
+\end{exer}
+
+
 3.3 (p. 257): 1, 2, 3. (We will talk a lot about the concept of orientability in class the Monday after break, but feel to start reading up.
 
 And also the following: Show that there exists a homeomorphism $f: CP^n \to CP^n$ whose induced map on $H^{2n}(CP^n;Z)$ is multiplication by -1 iff n is odd.
