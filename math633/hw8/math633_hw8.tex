@@ -75,6 +75,14 @@
       &\implies \abs{\frac{f(z) - f(w)}{1 - \overline{f(w)}f(z)}} \leq \abs{\frac{z - w}{1 - \overline{w}z}} \\
       &\implies \rho(f(z), f(w)) \leq \rho(z, w).
   \end{align*}
+
+  For any $z \in D$ and for any appropriate value of $h \ne 0$,
+  \begin{align*}
+    \rho(f(z + h), f(z)) \leq \rho(z + h, z)
+      &\implies \abs{\frac{f(z + h) - f(z)}{1 - \overline{f(z + h)}f(z)}} \leq \abs{\frac{z + h - z}{1 - \overline{(z + h)}z}} \\
+      &\implies \abs{\frac{f(z + h) - f(z)}{h}} \cdot \frac{1}{\abs{1 - \overline{f(z + h)}f(z)}} \leq \abs{\frac{1}{1 - \overline{(z + h)}z}}.
+  \end{align*}
+  By letting $h \rightarrow 0$, we obtain the Schwarz-Pick lemma.
 \end{exer}
 
 \end{document}
