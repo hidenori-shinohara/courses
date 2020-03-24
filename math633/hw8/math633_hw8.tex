@@ -1,0 +1,82 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{semantic}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{math 633 (Homework 8)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\begin{exer}{(Problem 13)}
+  For any $w \in D$, $\phi_w(z) = (z - w) / (1 - \overline{w}z)$ is an automorphism on $D$ that maps $w$ to $0$.
+  Fix $w \in D$.
+  Then $\phi_{f(w)} \circ f \circ \phi_w^{-1}$ is an automorphism that maps 0 to 0.
+  By Lemma 2.1, $\abs{(\phi_{f(w)} \circ f \circ \phi_w^{-1})(z)} \leq \abs{z}$ for all $z \in D$.
+  Fix $z \in D$.
+  Then $\phi_w(z) \in D$, so $\abs{(\phi_{f(w)} \circ f \circ \phi_w^{-1})(\phi_w(z))} \leq \abs{\phi_w(z)}$.
+  This equals to
+  \begin{align*}
+    \abs{(\phi_{f(w)} \circ f \circ \phi_w^{-1})(\phi_w(z))} \leq \abs{\frac{z - w}{1 - \overline{w}z}}
+      &\implies \abs{\phi_{f(w)}(f(z))} \leq \abs{\frac{z - w}{1 - \overline{w}z}} \\
+      &\implies \abs{\frac{f(z) - f(w)}{1 - \overline{f(w)}f(z)}} \leq \abs{\frac{z - w}{1 - \overline{w}z}} \\
+      &\implies \rho(f(z), f(w)) \leq \rho(z, w).
+  \end{align*}
+\end{exer}
+
+\end{document}
+
+
