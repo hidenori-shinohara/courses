@@ -15,6 +15,7 @@
 \usepackage{graphicx}
 \usepackage[bookmarks]{hyperref}
 
+
 %--------Theorem Environments--------
 %theoremstyle{plain} --- default
 \newtheorem{thm}{Theorem}[section]
@@ -61,9 +62,29 @@
 \author{Hidenori Shinohara}
 \maketitle
 
-At long last, here is the next HW assignment. Because of our extra meeting this week, it will be due next Friday, April 3, at 5pm.
+% At long last, here is the next HW assignment. Because of our extra meeting this week, it will be due next Friday, April 3, at 5pm.
+% 
+% Hatcher, section 3.3: 6, 8, 10, 11, 12, 15, 17
+% 
+\begin{exer}{(Exercise 3.3.8)}
+  Let $y \in B$ and $x_i$ denote the point in $B_i$ such that $f(x_i) = y$ for each $i$.
+  Let $\mu_i$ denote the local orientation at $x_i$ induced by the orientation of $M$.
+  For each $i$, we have the following diagrams using excisions, exact sequences of pairs and maps induced by $f$, inclusions and projections:
+  \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+                      & H_n(B_i, B_i - x_i) \arrow[dl] \arrow[r] \arrow[d] & H_n(B, B - y) \arrow[d]\\
+      H_n(M, M - x_i) & H_n(M, M - f^{-1}(y)) \arrow[l] \arrow[r]          & H_n(N, N - y) \\
+                      & H_n(M) \arrow[ul, "\cong"] \arrow[r] \arrow[u, "j"]              & H_n(N) \arrow[u] \\
+    \end{tikzcd}
+  \end{center}
+  using the idea for the proof of Proposition 2.30.
 
-Hatcher, section 3.3: 6, 8, 10, 11, 12, 15, 17
+  $H_n(B_i, B_i - x_i) \rightarrow H_n(M, M - x_i)$, $H_n(B, B - y) \rightarrow H_n(N, N - y)$ and $H_n(N) \rightarrow H_n(N, N - y)$ are all isomorphisms.
+  Since this diagram commutes for each $i$, $H_n(M, M - f^{-1}(y)) = \oplus_{i} H_n(B_i, B_i - x_i) = \oplus_{i} \mathbb{Z}$.
+  Since $1 = [M]$ gets mapped to 1 in $H_n(M, M - x_i)$, $j([M]) = \sum_i k_i(\mu_i)$ where $k_i$ is the map $H_n(B_i, B_i - x_i) \rightarrow H_n(M, M - f^{-1}(y))$.
+  Furthermore, $f_{\ast}(\mu_i) = \epsilon_i$, so $f_{\ast}(k_i(\mu_i)) = \epsilon_i$.
+  Therefore, $f_{\ast}([M]) = f_{\ast}(\sum k_i(\mu_i)) = \sum f_{\ast}(k_i(\mu_i)) = \sum \epsilon_i$.
+\end{exer}
 
 \end{document}
 
