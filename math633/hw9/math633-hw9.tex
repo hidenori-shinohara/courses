@@ -69,6 +69,25 @@
   In other words, either $F_1 \subset C(x, R)$ or $F_2 \setminus c(x, R)$.
 \end{exer}
 
+\begin{exer}{(Problem 2(a))}
+  We first assume $\omega = 0$.
+  This is reasonable because the following argument can be extended to general cases by translating every function by $\omega$.
+  If $r, \theta$ are continuous, it is clear that $\alpha$ is continuous.
+  Suppose $\alpha$ is continuous.
+  Let $r(t) = \abs{\alpha(t)}$.
+  Then $r(t):[0, 1] \rightarrow (0, \infty)$ is continuous.
+  Moreover, $\alpha(t) = r(t)e^{i\theta(t)}$, so $r(t) = \abs{r(t)} = \abs{r(t)e^{i\theta(t)}} = \abs{\alpha(t)}$, so this is the only possibility for $r(t)$.
+
+  By using the principal branch of logarithm and translation, we can find $\theta(t)$ locally.
+  Since the logarithm function and translation function are both continuous, such local $\theta$'s are continuous.
+  Since $[0, 1]$ is compact, we can find a finite cover of $[0, 1]$ such that we have $\theta(t)$ for each open set.
+  Two $\theta(t)$ can be patched for any two overlapping open sets by adding $2k\pi$ for an appropriate value of $k$.
+  Therefore, we can find $\theta$ that is continuous and satisfies $\alpha(t) = r(t)e^{i\theta(t)}$.
+  Any other functions $\gamma(t)$ that satisfy the conditions must satisfy $1 = \alpha(t) / \alpha(t) = (r(t)e^{i\theta(t)}) / (r(t)e^{i\gamma(t)}) = e^{i(\theta(t) - \gamma(t))}$, so $\theta(t) - \gamma(t) = 2k\pi$ for some fixed $k \in \mathbb{Z}$.
+  
+  Hence, we have shown that $\alpha$ is continuous if and only if such continuous $r, \theta$ exist and the choice of $r, \theta$ are unique up to an additive constant for $\theta$.
+\end{exer}
+
 \end{document}
 
 
