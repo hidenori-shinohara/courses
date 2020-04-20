@@ -66,6 +66,42 @@
 \end{abstract}
 \tableofcontents
 
+\section{Manifolds}
+
+\begin{defn}
+  A topological manifold is a separable Hausdorff space such that every point has a neighborhood which is homeomorphic to an open subset of $\mathbb{R}^n_{+}$.
+  Each pair $(U_{\alpha}, \phi_{\alpha})$ containing a neighborhood and a homeomorphism is called a chart, and a collection of charts covering the manifold is called an atlas of the manifold.
+\end{defn}
+
+\begin{defn}
+  A topological manifold is called a $C^r$-manifold if, for every pair of charts in the given atlas, the transition function $\phi_{\alpha} \circ \phi_{\beta}^{-1}$ is $C^r$.
+\end{defn}
+
+This definition makes sense because $\phi_{\alpha} \circ \phi_{\beta}^{-1}$ maps $U_{\beta}$ into $U_{\alpha}$, both of which are open subsets of $\mathbb{R}^n_{+}$, thus the usual calculus definition of $C^r$ is applied.
+More rigorously, a $C^r$-manifold is $(X, \mathcal{T}, \mathcal{A})$ where $X$ is the set, $\mathcal{T}$ is the set of open subsets of $X$, and $\mathcal{A}$ is the atlas of $X$.
+However, just like we normally say a topological space $X$ instead of $(X, \mathcal{T})$, we normally just say a $C^r$-manifold $X$ without specifying the atlas.
+
+\begin{defn}
+  Let $X, X'$ be $C^r$-manifolds.
+  Then a map $f: X \rightarrow X'$ is called a $C^r$-map if $\phi_{\alpha} \circ f \circ \phi_{\beta}^{-1}$ is $C^r$ for $\alpha, \beta$.
+  Moreover, $f$ is called a $C^r$-diffeomorphism if $f$ is bijective and both $f$ and $f^{-1}$ are $C^r$-maps.
+\end{defn}
+
+Again, in this definition, the usual calculus definition of $C^r$ is used for $\phi_{\alpha} \circ f \circ \phi_{\beta}^{-1}$.
+
+\begin{defn}
+  Let $X$ be a topological manifold.
+  Let $A, A'$ be two atlases of $X$ such that $(X, A)$ and $(X, A')$ are both $C^r$ manifolds.
+  The two structures are called isotopic if the ``identity" map $(X, A) \mapsto (X, A')$ is isotopic to a $C^r$-diffeomorphism between $(X, A)$ and $(X, A')$.
+\end{defn}
+
+We will usually consider structures up to isotopy.
+
+\begin{exmp}
+  TODO
+  Examples of isotopic structures.
+\end{exmp}
+
 \end{document}
 
 
