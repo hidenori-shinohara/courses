@@ -1,0 +1,90 @@
+\documentclass[12pt, psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{semantic}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Math 633 (Homework 11)}
+\author{Hidenori Shinohara}
+\maketitle
+
+\begin{thm}
+  If a function $f$ is holomorphic in an open set that contains a simple closed piecewise-smooth curve $\Gamma$ and its interior, then
+  \begin{align*}
+    \int_{\Gamma} f = 0.
+  \end{align*}
+\end{thm}
+
+\begin{proof}
+  Let $\Omega$ denote the interior of $\Gamma$.
+  Let $\mathcal{O}$ denote an open set on which $f$ is holomorphic and which contains $\Gamma$ and $\Omega$.
+  Such an open set must exist as it is given in the problem statement.
+
+  Choose $\epsilon > 0$ such that $N(x, \epsilon) \subset \mathcal{O}$ for each $x \in \Gamma$.
+  This is possible because $\Gamma$ is a compact subset of an open set $\mathcal{O}$.
+
+  Next, let $P_1, \cdots, P_n$ denote the consecutive points where smooth parts of $\Gamma$ join.
+  We may pick $\delta < \epsilon / 10$ such that each circle $C_j$ centered at a point $P_j$ and of radius $\delta$ intersects $\Gamma$ in precisely two distinct points.
+  This is possible by Lemma 2.10 because for each $P_j = \Gamma(t_j)$, $C_j$ intersects $\Gamma([0, t_j])$ and $\Gamma([t_j, 1])$ once each.
+
+  These two points on $C_j$ determine two arcs of circles and one is entirely contained in $\Omega$ and the other one does not intersect $\Omega$.
+  TODO
+
+\end{proof}
+
+\end{document}
+
+
