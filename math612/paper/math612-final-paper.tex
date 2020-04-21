@@ -1,4 +1,4 @@
-\documentclass[12pt, psamsfonts]{amsart}
+\documentclass[11pt, psamsfonts]{amsart}
 
 %-------Packages---------
 \usepackage{amssymb,amsfonts}
@@ -110,9 +110,96 @@ We will usually consider structures up to isotopy.
   A space $X$ is said to be a singular manifold if the complement of a finite subset of $X$ is a smooth manifold.
 \end{defn}
 
+
 \begin{defn}
-TODO
-  Tangent bundle
+  Let $X$ be a smooth manifold.
+  A derivation at $p \in X$ is a linear map $v: C^{\infty}(X) \rightarrow \mathbb{R}$ such that
+
+  \begin{align*}
+    v(fg) = f(p)vg + g(p)vf
+  \end{align*}
+  for all $f, g \in C^{\infty}(X)$.
+
+  This corresponds to ``arrows that are tangent to $X$ and whose basepoints are attached to $X$ at $p$" even though it may not be easy to see that from this definition.
+\end{defn}
+
+\begin{defn}
+  The tangent space $T_pX$ to $X$ at $p$ is the vector space of all derivations of $C^{\infty}(X)$ at $p$.
+\end{defn}
+
+
+\begin{defn}
+  The tangent bundle $TX$ is the disjoint union $\coprod_{p \in X} T_pX$.
+\end{defn}
+
+Note that given the projection $\pi: TX \rightarrow X$, $\pi^{-1}(p)$ is a vector space isomorphic to $\mathbb{R}^n$ where $X$ is an $n$-dimensional manifold.
+
+Next, we will define an orientation of a manifold using a tangent bundle.
+
+\begin{defn}
+  Two ordered bases $(E_1, \cdots, E_n)$ and $(\tilde{E}_1, \cdots, \tilde{E}_n)$ for $V$ are consistently oriented if the transition matrix $(B^j_i)$, defined by
+  \begin{align*}
+    E_i = B^j_i \tilde{E}_j
+  \end{align*}
+
+  has positive determinant.
+\end{defn}
+
+Since the transition matrix always has nonzero determinant, by fixing an ordered basis, we can split all ordered bases into two disjoint sets, one of which contains consistently oriented bases.
+This leads to the following definition:
+
+\begin{defn}
+  A vector space with a choice of orientation is an oriented vector space.
+\end{defn}
+
+\begin{defn}
+  The orientation $[e_1, \cdots, e_n]$ of $\mathbb{R}^n$ determined by the standard basis is called the standard orientation.
+\end{defn}
+
+This definition can be applied to a tangent space because, even though the definition of a tangent space may seem complicated, it is a vector space.
+
+% \begin{defn}
+%   A pointwise orientation on $M$ is defined to be a choice of orientation of each tangent space.
+% \end{defn}
+% 
+
+% \begin{defn}
+%   A local frame of $TX$ is $(E_1, \cdots, E_n)$ such that $(E_1\vert_p, \cdots, E_n\vert_p)$ is a basis of $T_pX$.
+% \end{defn}
+% 
+% \begin{defn}
+%   If $(E_i)$ is a local frame for $TX$, we say that $(E_i)$ is oriented if $(E_1\vert_p, \cdots, E_n\vert_p)$ is a positively oriented basis for $T_pX$ for each $p \in X$.
+% \end{defn}
+
+\begin{defn}
+  $M, N$ are smooth manifolds with or without boundary, and $F: M \rightarrow N$ is a smooth map.
+  The differential of $F$ at $p$ is the linear map $dF_p: T_pM \rightarrow T_{F(p)}N$ defined by
+  \begin{align*}
+    dF_p(v) := f \mapsto v(f \circ F)
+  \end{align*}
+  Equivalently, $\forall v \in T_pM, \forall f \in C^{\infty}(N), dF_p(v)(f) = v(f \circ F)$.
+  This corresponds to ``the directional derivative of $F$ at $p$ in the direction of the arrow $v$."
+\end{defn}
+
+\begin{defn}
+  A consistent choice of orientation of the tangent space at each point of $X$ is called an orientation of $X$.
+  A choice is consistent if and only if for each point in $X$, there is a chart $(V, \phi)$ mapping into $\mathbb{R}^n$ with its standard orientation, such that $d\phi_p$ preserves orientation at every pint $p$ of $V$.
+\end{defn}
+
+\begin{defn}
+  A manifold is orientable if it admits an orientation and it is said to be oriented if an orientation of $X$ is fixed.
+\end{defn}
+
+\begin{thm}
+  An orientation as defined above specified a class $[X]$ in $H_n(X, \partial X; \mathbb{Z}$, called the fundamental class of the oriented manifold.
+\end{thm}
+
+\begin{defn}
+  A complex function is said to be holomorphic if it is differentiable at every point.
+\end{defn}
+
+\begin{defn}
+  An atlas $\{ (U_{\alpha}, \phi_{\alpha}) \vert \alpha \in A_{\mathbb{C}} \}$ on a real $2n$-dimensional manifold $X$ is a complex structure if each $\phi_{\alpha}$ is a homeomorphism between $U_{\alhpa}$ and an open subset of $\mathbb{C}^n$ which is identified with $\mathbb{R}^{2n}$ and the transition functions $\phi_{\beta} \circ \phi_{\alpha}^{-1}$ is holomorphic.
 \end{defn}
 
 \end{document}
