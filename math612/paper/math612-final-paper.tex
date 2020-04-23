@@ -199,7 +199,7 @@ This definition can be applied to a tangent space because, even though the defin
 \end{defn}
 
 \begin{defn}
-  An atlas $\{ (U_{\alpha}, \phi_{\alpha}) \vert \alpha \in A_{\mathbb{C}} \}$ on a real $2n$-dimensional manifold $X$ is a complex structure if each $\phi_{\alpha}$ is a homeomorphism between $U_{\alhpa}$ and an open subset of $\mathbb{C}^n$ which is identified with $\mathbb{R}^{2n}$ and the transition functions $\phi_{\beta} \circ \phi_{\alpha}^{-1}$ is holomorphic.
+  An atlas $\{ (U_{\alpha}, \phi_{\alpha}) \vert \alpha \in A_{\mathbb{C}} \}$ on a real $2n$-dimensional manifold $X$ is a complex structure if each $\phi_{\alpha}$ is a homeomorphism between $U_{\alpha}$ and an open subset of $\mathbb{C}^n$ which is identified with $\mathbb{R}^{2n}$ and the transition functions $\phi_{\beta} \circ \phi_{\alpha}^{-1}$ is holomorphic.
 \end{defn}
 
 \begin{exmp}
@@ -207,6 +207,13 @@ This definition can be applied to a tangent space because, even though the defin
   Let $\phi_{\alpha}: (x, y) \mapsto (x, y)$ and $\phi_{\beta}: (x, y) \mapsto(x, -y)$.
   $(X, \phi_{\alpha}), (X, \phi_{\beta})$ are both smooth charts of $X$ and they are compatible.
   However, if we identify $\mathbb{R}^2$ with $\mathbb{C}$, the transition function $\phi_{\beta} \circ \phi_{\alpha}^{-1}$ is exactly the complex conjugate function.
+  \begin{center}
+    \begin{tikzcd} 
+      \mathbb{R}^2 \arrow[r, leftrightarrow] & \mathbb{C} \arrow[dd, "\phi_{\beta} \circ \phi_{\alpha}^{-1}"] \\
+      X \arrow[u, "\phi_{\alpha}"] \arrow[d, "\phi_{\beta}"] &  \\
+      \mathbb{R}^2 \arrow[r, leftrightarrow] & \mathbb{C}
+    \end{tikzcd}
+  \end{center}
   From complex analysis, we know that the conjugate function is not holomorphic.
   Therefore, an atlas containing $\phi_{\alpha}$ and $\phi_{\beta}$ is not a complex structure.
   Of course, the atlas only containing $(X, \phi_{\alpha})$ is indeed a complex structure.
