@@ -191,7 +191,7 @@ This definition can be applied to a tangent space because, even though the defin
 \end{defn}
 
 \begin{thm}
-  An orientation as defined above specified a class $[X]$ in $H_n(X, \partial X; \mathbb{Z}$, called the fundamental class of the oriented manifold.
+  An orientation as defined above specified a class $[X]$ in $H_n(X, \partial X; \mathbb{Z})$, called the fundamental class of the oriented manifold.
 \end{thm}
 
 \begin{defn}
@@ -222,6 +222,21 @@ This definition can be applied to a tangent space because, even though the defin
 \end{thm}
 
 By this theorem (Theorem 1.1.6 in \textit{4-Manifolds and Kirby Calculus}), classifying $C^r$-manifolds up to isotopy for any $r < \infty$ is simply a subproblem of the classification problem for $r = \infty$ because any given $C^r$-manifold for $r \in \mathbb{N}$ can be given a unique (up to isotopy) $C^{\infty}$ structure.
+
+\section{4-manifolds}
+
+\begin{defn}
+  The symmetric bilinear form
+  \begin{align*}
+    Q_X:H^2(X, \partial X; \mathbb{Z}) \times H^2(X, \partial X; \mathbb{Z}) \rightarrow \mathbb{Z}
+  \end{align*}
+  defined by $Q_X(a, b) = \ev{a \smile b, [X]} = a \cdot b \in \mathbb{Z}$ is called the intersection form of $X$.
+\end{defn}
+
+When $X$ is oriented, it admits a fundamental class $[X] \in H_4(X, \partial X; \mathbb{Z})$.
+The cup product $a \smile b: H_4(X, \partial X; \mathbb{Z}) \rightarrow \mathbb{Z})$ thus can be applied to $[X]$, so this definition makes sense.
+The intersection form is bilinear because the cup product is bilinear.
+TODO: Why is this symmetric?
 
 \end{document}
 
