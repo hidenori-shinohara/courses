@@ -190,7 +190,7 @@ This definition can be applied to a tangent space because, even though the defin
   A manifold is orientable if it admits an orientation and it is said to be oriented if an orientation of $X$ is fixed.
 \end{defn}
 
-\section{Homology and Cohomology}
+\section{Homology}
 
 \begin{defn}
   A continuous map $\delta^n \rightarrow X$ is called a singular $n$-simplex.
@@ -262,6 +262,40 @@ This definition can be applied to a tangent space because, even though the defin
 \end{thm}
 
 By this theorem (Theorem 1.1.6 in \textit{4-Manifolds and Kirby Calculus}), classifying $C^r$-manifolds up to isotopy for any $r < \infty$ is simply a subproblem of the classification problem for $r = \infty$ because any given $C^r$-manifold for $r \in \mathbb{N}$ can be given a unique (up to isotopy) $C^{\infty}$ structure.
+
+\section{Cohomology}
+
+\begin{defn}
+  $C^n(X, A; R)$ is defined to be the dual group $\Hom(C_n(X, A), R)$.
+\end{defn}
+
+\begin{defn}
+  A coboundary map $\delta: C^n(X, A; R) \rightarrow C^{n + 1}(X, A; R)$ is defined to be
+  \begin{align*}
+    \delta\phi(\sigma) = \sum_i (-1)^i \phi(\sigma\vert_{[v_0, \cdots, \hat{v_i}, \cdots, v_{n + 1}]}).
+  \end{align*}
+\end{defn}
+
+\begin{defn}
+  The relative cohomology group $H^n(X, A; R)$ is defined to be $\ker(\delta) / \Im(\delta)$.
+\end{defn}
+
+\begin{defn}
+  For cochains $\phi \in C^k(X; R)$ and $\psi \in C^l(X; R)$, the cup product $\phi \smile \psi \in C^{k + l}(X; R)$ is the cochain whose value on a singular simplex $\sigma: \Delta^{k + l} \rightarrow X$ is given by the formula
+  \begin{align*}
+    (\phi \smile \psi)(\sigma) = \phi(\sigma\vert_{[v_0, \cdots, v_k]})\psi(\sigma\vert_{[v_k, \cdots, v_{k + l}]})
+  \end{align*}
+  where the right hand-side is the product in $R$.
+\end{defn}
+
+By Lemma 3.6[Hatcher], we know that the cup product of two cocycles is a cocycle, and the cup product of a cocycle and a coboundary is a coboundary.
+Therefore, the cup product above induces
+
+\begin{align*}
+  H^k(X; R) \times H^l(X; R) \xrightarrow{\smile} H^{k + l}(X; R).
+\end{align*}
+
+We will use the cup product to understand 4-manifolds.
 
 \section{4-manifolds}
 
