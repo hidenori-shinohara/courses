@@ -64,7 +64,7 @@
 
 \begin{abstract}
   This is based on the book \textit{4-Manifolds and Kirby Calculus} by Robert E. Gompf and Andras I. Stipsicz.
-  We will start by defining manifolds and tangent bundles, and introduce the cup product as a tool to work with 4-manifolds.
+  We will start by defining manifolds and tangent bundles, and introduce the cup product to define the intersection form as a tool to work with 4-manifolds.
 \end{abstract}
 \tableofcontents
 
@@ -297,6 +297,7 @@ We will use the cup product to understand 4-manifolds.
 \section{4-manifolds}
 
 \begin{defn}
+  Let $X$ be a compact, oriented, topological 4-manifold.
   The symmetric bilinear form
   \begin{align*}
     Q_X:H^2(X, \partial X; \mathbb{Z}) \times H^2(X, \partial X; \mathbb{Z}) \rightarrow \mathbb{Z}
@@ -310,10 +311,22 @@ The intersection form is bilinear because the cup product is bilinear.
 
 The importance of the intersection form comes from the observation that $Q_X(a, b)$ can be interpreted as the intersection number of certain submanifolds in $X$.
 
-TODO(Add an example and a picture.)
-
 \begin{exmp}
-  Let $X = \mathbb{R}^4$.
+  Let $X = \Delta^4 \subset \mathbb{R}^4$.
+  Then $X$ is a compact, oriented, topological 4-manifold with the standard orientation.
+  Define $A:\Delta^2 \mapsto X$ by $(x, y) \mapsto (x, y, 0, 0)$.
+  Similarly, define $B$ by $(x, y) \mapsto (0, 0, x, y)$.
+  Then $A, B \in C_2(X)$.
+  Let $a, b \in \Hom(C_2(X; \partial X); \mathbb{Z})$ that such that 
+  \begin{align*}
+    a([A]) &= 1, \\
+    a([B]) &= 0, \\
+    b([A]) &= 0, \\
+    b([B]) &= 1.
+  \end{align*}
+  Because we chose the standard orientation, the fundamental element $[X] \in H_4(X, \partial X; \mathbb{Z})$ is the coset represented by the 4-simplex $\Id: (x, y, z, w) \mapsto (x, y, z, w)$.
+  Then $(a \smile b)([X]) = a([X]\vert_{[v_0, v_1, v_2]})b([X]\vert_{[v_2, v_3, v_4]}) = 1 \cdot 1 = 1$.
+  The number of intersections between $A(\Delta^2)$ and $B(\Delta^2)$ is indeed 1 because $(0, 0, 0, 0)$ is the only point at which $A(\Delta^2)$ and $B(\Delta^2)$ intersect.
 \end{exmp}
 \end{document}
 
