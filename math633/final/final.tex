@@ -93,6 +93,25 @@
   Therefore, in the annulus, $p$ has 5 - 2 = 3 zeros.
 \end{exer}
 
+\begin{exer}{(7)}
+  Let $R > a^2$ be given.
+  Let $T_1 = [-R, R]$ and $T_2$ be the upper half of the circle centered at 0 with radius $R$.
+  Let $f(z) = \exp(iz) / (z^2 + a^2)$.
+
+  \begin{itemize}
+    \item
+      $\int_{T_1 + T_2} f(z)$ can be calculated using residues.
+      The only singularity of $f$ is $ia$.
+      Since it is a simple pole, the residue is $\lim_{z \rightarrow ia} (z - ia)\exp(iz) / (z^2 + a^2) = \exp(-a) / 2ia$ by Theorem 1.4 on P.76.
+      By the residue formula, $\int_{T_1 + T_2} f(z) = \pi\exp(-a) / 2a$.
+    \item
+      $\int_{T_2} f(z) = 0$.
+      TODO: Show this!
+  \end{itemize}
+  Based on these, we obtain that $\int_{T_1} f(z) = \pi e^{-a} / 2a$.
+  The desired integral is the real part of $\int_{T_1} f(z)$, and it is simply $\pi e^{-a} / 2a$.
+\end{exer}
+
 \end{document}
 
 
