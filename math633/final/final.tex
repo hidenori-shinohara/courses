@@ -67,6 +67,17 @@
   Therefore, $f$ cannot attain a minimum value in $\Omega$.
 \end{exer}
 
+\begin{exer}{(2)}
+  It suffices to show that, for every $R > 0$, $f$ is holomorphic on the open disk centered at 0 with radius $R$.
+  Let $R > 0$ be given.
+  Let $T$ be a triangle inside the open disk $D$ centered at 0 with radius $R$.
+  If none of the three edges of $T$ lies on the $x$ or $y$ axis, then $\int_{T} f(z) dz = 0$.
+  Suppose some of the three edges of $T$ lies on the $x$ and/or $y$ axis.
+  Then $T_n = T + (1 + i) / n$ lies in $D$ for any $n \geq N$ for a sufficiently large $N$.
+  Since none of the three edges of $T_n$ lies on the $x$ or $y$ axis, $\int_{T_n} f = 0$ for any $n \geq N$.
+  Then $\int_{T} f = \lim_{n \rightarrow \infty} \int_{T_n} f = 0$.
+\end{exer}
+
 \end{document}
 
 
