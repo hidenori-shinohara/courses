@@ -78,6 +78,18 @@
   Then $\int_{T} f = \lim_{n \rightarrow \infty} \int_{T_n} f = 0$.
 \end{exer}
 
+\begin{exer}{(3)}
+  Since $\abs{f} = \abs{g}$, $f$ and $g$ have poles at the same places.
+  Let $z_0$ be a point at which $f$ and $g$ are defined and $g(z_0) \ne 0$.
+  Let $\epsilon > 0$ be given such that $f$ and $g$ are defined and $g(z) \ne 0$ for all $\abs{z - z_0} < \epsilon$.
+  If no such $\epsilon$ exists, then $f = g = 0$ and we are done.
+  Then the function $f / g$ is holomorphic on the open disk $D(z_0, \epsilon)$.
+  By the maximum modulus principle, $f / g$ must be constant in $D(z_0, \epsilon)$.
+  In other words, there exists a fixed $\theta$ at which $f / g = e^{i\theta}$ in $D(z_0, \epsilon)$.
+  If $f$ and $g$ are not always 0, such open sets can be patched to show that $f / g = e^{i\theta}$.
+  Otherwise, $f = g = 0$ so $f = e^{i\theta}g$ for any fixed $\theta$.
+\end{exer}
+
 \begin{exer}{(6)}
   Let $f = 3z^2$ and $g = z^5 + 1$.
   Then $\abs{f} > \abs{g}$ on the unit circle.
