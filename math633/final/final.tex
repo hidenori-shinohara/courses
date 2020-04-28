@@ -105,10 +105,19 @@
       Since it is a simple pole, the residue is $\lim_{z \rightarrow ia} (z - ia)\exp(iz) / (z^2 + a^2) = \exp(-a) / 2ia$ by Theorem 1.4 on P.76.
       By the residue formula, $\int_{T_1 + T_2} f(z) = \pi\exp(-a) / 2a$.
     \item
-      $\int_{T_2} f(z) = 0$.
-      TODO: Show this!
+      \begin{align*}
+        \abs{\int_{T_2} f(z)}
+          &= \abs{\int_{0}^{1} \frac{\exp(iRe^{\pi i t})}{R^2e^{2\pi it} + a^2} R\pi i e^{\pi i t} dt} \\
+          &\leq \int_{0}^{1} \abs{\frac{\exp(iRe^{\pi i t})}{R^2e^{2\pi it} + a^2} R\pi i e^{\pi i t}} dt \\
+          &\leq \int_{0}^{1} \frac{\abs{\exp(iRe^{\pi i t})}}{\abs{R^2e^{2\pi it} + a^2}} \abs{R\pi i e^{\pi i t}} dt \\
+          &\leq \int_{0}^{1} \frac{\exp(-\Im(R e^{\pi i t}))}{\abs{R^2e^{2\pi it} + a^2}} \abs{R\pi i e^{\pi i t}} dt \\
+          &\leq \int_{0}^{1} \frac{1}{\exp(R\sin(\pi t))\abs{R^2e^{2\pi it} + a^2}} \abs{R\pi i e^{\pi i t}} dt \\
+          &\leq \int_{0}^{1} \frac{1}{\exp(R\sin(\pi t))\abs{R^2e^{2\pi it} + a^2}} R\pi dt \\
+          &\leq \pi \int_{0}^{1} \frac{1}{\exp(R\sin(\pi t))\abs{Re^{2\pi it} + a^2 / R}} dt \\
+          &\rightarrow 0. % TODO!
+      \end{align*}
   \end{itemize}
-  Based on these, we obtain that $\int_{T_1} f(z) = \pi e^{-a} / 2a$.
+  Based on these, we obtain that $\int_{T_1} f(z) = \pi e^{-a} / 2a$ as $R \rightarrow \infty$.
   The desired integral is the real part of $\int_{T_1} f(z)$, and it is simply $\pi e^{-a} / 2a$.
 \end{exer}
 
